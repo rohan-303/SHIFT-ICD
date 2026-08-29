@@ -33,6 +33,12 @@ data/processed/*
 !data/processed/cms/2018_gem/
 data/processed/cms/2018_gem/*
 !data/processed/cms/2018_gem/manifest.json
+# Benchmark outputs are reproducible derived data; keep large JSONL files out of Git.
+data/benchmarks/*
+!data/benchmarks/cms_track_a/
+!data/benchmarks/cms_track_a/v1.0/
+data/benchmarks/cms_track_a/v1.0/*
+!data/benchmarks/cms_track_a/v1.0/manifest.json
 data/external/*
 artifacts/*
 !artifacts/data_audit/

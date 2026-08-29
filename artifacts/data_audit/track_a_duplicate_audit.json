@@ -1,0 +1,10 @@
+{
+  "exact_duplicate_source_description_examples": 3872,
+  "exact_duplicate_source_description_groups": 1936,
+  "exact_source_target_description_match_examples": 3878,
+  "identical_target_label_groups_with_multiple_codes": 0,
+  "near_duplicate_cross_partition_examples": 0,
+  "normalized_duplicate_source_description_groups": 1951,
+  "note": "Counts are audit metadata only; no descriptions or mappings are removed.",
+  "same_family_duplicate_description_groups": 0
+}

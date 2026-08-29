@@ -1,0 +1,29 @@
+benchmark_version: "1.0"
+canonical_schema_version: "1.0"
+generation_timestamp: "2026-08-29T00:00:00Z"
+random_seed: 20260829
+split_ratios:
+  train: 0.70
+  dev: 0.10
+  test: 0.20
+enumeration_limit: 1000
+lexical_thresholds:
+  exact: 0.90
+  high: 0.60
+  medium: 0.30
+mapping_complexity:
+  low_max_scenarios: 1
+  low_max_choice_lists: 2
+  low_max_alternatives: 5
+  low_max_mapping_sets: 5
+family_rules:
+  icd9_numeric: "three-character diagnosis category"
+  icd9_v_code: "three-character V category"
+  icd9_e_code: "three-character E category"
+  icd10: "three-character ICD-10-CM category"
+enabled_directions:
+  - ICD9CM_TO_ICD10CM
+  - ICD10CM_TO_ICD9CM
+enabled_split_protocols:
+  - stratified_source_held_out
+  - source_family_held_out

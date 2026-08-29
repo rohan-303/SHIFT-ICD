@@ -1,0 +1,131 @@
+{
+  "benchmark_version": "1.0",
+  "directions": {
+    "ICD10CM_TO_ICD9CM": {
+      "alternative_size": {
+        "ALTERNATIVE_MEDIUM": 51,
+        "ALTERNATIVE_SMALL": 3570,
+        "None": 68083
+      },
+      "approximate": {
+        "False": 3516,
+        "True": 68188
+      },
+      "combination": {
+        "False": 67463,
+        "True": 4241
+      },
+      "lexical_confusable": 55144,
+      "lexical_difficulty": {
+        "LEXICAL_EXACT": 2293,
+        "LEXICAL_HIGH": 4589,
+        "LEXICAL_LOW": 49558,
+        "LEXICAL_MEDIUM": 15264
+      },
+      "mapping_kind": {
+        "ALTERNATIVE": 3621,
+        "COMBINATION": 4053,
+        "COMBINATION_WITH_ALTERNATIVES": 188,
+        "NO_MAP": 731,
+        "SINGLE_APPROXIMATE": 59595,
+        "SINGLE_EXACT": 3516
+      },
+      "no_map": {
+        "False": 70973,
+        "True": 731
+      },
+      "total_examples": 71704
+    },
+    "split_audit": {
+      "ICD10CM_TO_ICD9CM": {
+        "family_count": 1910,
+        "mapping_kind": {
+          "dev": {
+            "ALTERNATIVE": 362,
+            "COMBINATION": 405,
+            "COMBINATION_WITH_ALTERNATIVES": 19,
+            "NO_MAP": 73,
+            "SINGLE_APPROXIMATE": 5959,
+            "SINGLE_EXACT": 352
+          },
+          "test": {
+            "ALTERNATIVE": 724,
+            "COMBINATION": 811,
+            "COMBINATION_WITH_ALTERNATIVES": 38,
+            "NO_MAP": 146,
+            "SINGLE_APPROXIMATE": 11919,
+            "SINGLE_EXACT": 703
+          },
+          "train": {
+            "ALTERNATIVE": 2535,
+            "COMBINATION": 2837,
+            "COMBINATION_WITH_ALTERNATIVES": 131,
+            "NO_MAP": 512,
+            "SINGLE_APPROXIMATE": 41717,
+            "SINGLE_EXACT": 2461
+          }
+        },
+        "source_family_held_out": {
+          "dev": 7164,
+          "test": 14332,
+          "train": 50208
+        },
+        "stratified_source_held_out": {
+          "dev": 7170,
+          "test": 14341,
+          "train": 50193
+        }
+      },
+      "ICD9CM_TO_ICD10CM": {
+        "family_count": 1042,
+        "mapping_kind": {
+          "dev": {
+            "ALTERNATIVE": 272,
+            "COMBINATION": 32,
+            "COMBINATION_WITH_ALTERNATIVES": 35,
+            "NO_MAP": 42,
+            "SINGLE_APPROXIMATE": 724,
+            "SINGLE_EXACT": 352
+          },
+          "test": {
+            "ALTERNATIVE": 542,
+            "COMBINATION": 64,
+            "COMBINATION_WITH_ALTERNATIVES": 69,
+            "NO_MAP": 85,
+            "SINGLE_APPROXIMATE": 1449,
+            "SINGLE_EXACT": 704
+          },
+          "train": {
+            "ALTERNATIVE": 1898,
+            "COMBINATION": 225,
+            "COMBINATION_WITH_ALTERNATIVES": 243,
+            "NO_MAP": 295,
+            "SINGLE_APPROXIMATE": 5071,
+            "SINGLE_EXACT": 2465
+          }
+        },
+        "source_family_held_out": {
+          "dev": 1458,
+          "test": 2908,
+          "train": 10201
+        },
+        "stratified_source_held_out": {
+          "dev": 1457,
+          "test": 2913,
+          "train": 10197
+        }
+      }
+    }
+  },
+  "duplicate_audit": {
+    "exact_duplicate_source_description_examples": 3872,
+    "exact_duplicate_source_description_groups": 1936,
+    "exact_source_target_description_match_examples": 3878,
+    "identical_target_label_groups_with_multiple_codes": 0,
+    "near_duplicate_cross_partition_examples": 0,
+    "normalized_duplicate_source_description_groups": 1951,
+    "note": "Counts are audit metadata only; no descriptions or mappings are removed.",
+    "same_family_duplicate_description_groups": 0
+  },
+  "scope": "source-level examples; no model training or retrieval"
+}

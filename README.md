@@ -25,7 +25,7 @@ Can a hierarchy-aware retrieval and reranking system combined with drift-aware u
 7. Set-valued/conformal prediction.
 8. Selective ACCEPT / REVIEW / ABSTAIN routing.
 
-No models have been implemented. The current milestone has acquired the authoritative CMS FY 2018 diagnosis GEM archives, recorded their checksums and archive members, inspected their raw fixed-width format, and generated non-transformative audit statistics. Raw downloads remain excluded from Git.
+No models have been implemented. The current milestone has acquired the authoritative CMS FY 2018 diagnosis GEM archives, generated the canonical source-level representation, and built the model-independent Track A Benchmark v1.0. Raw downloads and large derived JSONL outputs remain excluded from Git; manifests and lightweight audit JSON are tracked.
 
 ## Reproducibility philosophy
 
@@ -47,15 +47,22 @@ artifacts/     Explicitly generated experiment artifacts
 
 ## Current milestone
 
-Track A now has a canonical structured representation built from the immutable CMS FY 2018 diagnosis GEM archives. `data/processed/cms/2018_gem/source_mappings.jsonl` is the authoritative nested source-level representation; the normalized Parquet is one record per raw GEM row, and the source-summary Parquet is for analysis. These are distinct from future benchmark examples and no model or split has been implemented.
+Track A now has a canonical structured representation and a reproducible v1.0 benchmark built from the immutable CMS FY 2018 diagnosis GEM archives. `all_examples.jsonl` contains one complete source-level example per `(direction, source_code)`; compact protocol and slice references prevent duplicating nested gold structures. The benchmark includes independent forward/backward tasks, source-held-out and family-held-out splits, symbolic combination evaluation contracts, lexical audit metadata, reverse-relation leakage audits, and target-component feasibility audits. Large derived files are rebuilt locally and the tracked manifest records their hashes.
 
-Rebuild with:
+Rebuild the canonical representation with:
 
 ```bash
 python scripts/build_cms_canonical.py --project-root . --force
 ```
 
-See [`docs/canonical_gem_representation.md`](docs/canonical_gem_representation.md) for the schema and CMS combination semantics.
+Build and validate Track A with:
+
+```bash
+python scripts/build_track_a_benchmark.py --project-root . --force
+env -u PYTHONPATH .venv/Scripts/python.exe scripts/validate_track_a_benchmark.py
+```
+
+See [`docs/track_a_benchmark_protocol.md`](docs/track_a_benchmark_protocol.md) for the schema, task contracts, split policy, and CMS combination semantics.
 
 ## Important limitation
 
