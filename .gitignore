@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Environments
+.venv/
+venv/
+env/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Data and generated outputs
+# Raw downloads stay out of Git; provenance manifests and lightweight audit JSON stay tracked.
+data/raw/*
+!data/raw/cms/
+data/raw/cms/*
+!data/raw/cms/2018_gem/
+data/raw/cms/2018_gem/*
+!data/raw/cms/2018_gem/manifest.json
+data/interim/*
+data/processed/*
+data/external/*
+artifacts/*
+!artifacts/data_audit/
+!artifacts/data_audit/*.json
+reports/figures/*
+reports/tables/*
+reports/error_analysis/*
+
+# Notebooks' transient state
+.ipynb_checkpoints/
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

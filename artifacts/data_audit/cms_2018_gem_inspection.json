@@ -1,0 +1,133 @@
+{
+  "archive": "data\\raw\\cms\\2018_gem\\2018-icd-10-cm-general-equivalence-mappings.zip",
+  "members": [
+    {
+      "file_size_bytes": 1713453,
+      "filename": "2018_I10gem.txt",
+      "gem_profile": {
+        "approximate_mapping_rows": 78071,
+        "choice_list_values": {
+          "0": 72560,
+          "1": 4537,
+          "2": 4311,
+          "3": 159,
+          "4": 26
+        },
+        "combination_mapping_rows": 9033,
+        "flag_field_width": 5,
+        "flag_values": {
+          "00000": 3522,
+          "10000": 68307,
+          "10111": 4480,
+          "10112": 4254,
+          "10113": 159,
+          "10114": 26,
+          "10121": 53,
+          "10122": 53,
+          "10131": 2,
+          "10132": 2,
+          "10141": 1,
+          "10142": 1,
+          "10151": 1,
+          "10152": 1,
+          "11000": 731
+        },
+        "line_lengths": {
+          "19": 81593
+        },
+        "mapping_direction": "ICD-10-CM to ICD-9-CM",
+        "maximum_target_rows_for_one_source": 12,
+        "member": "ICD-10-CM to ICD-9-CM",
+        "no_map_records": 731,
+        "sample_records": [
+          "A000    0010  00000",
+          "A001    0011  00000",
+          "A009    0019  00000"
+        ],
+        "scenario_values": {
+          "0": 72560,
+          "1": 8919,
+          "2": 106,
+          "3": 4,
+          "4": 2,
+          "5": 2
+        },
+        "source_codes_multiple_rows": 7862,
+        "source_field_width": 8,
+        "target_field_width": 6,
+        "total_raw_mapping_rows": 81593,
+        "unique_source_codes": 71704,
+        "unique_target_codes": 11691
+      }
+    },
+    {
+      "file_size_bytes": 522060,
+      "filename": "2018_I9gem.txt",
+      "gem_profile": {
+        "approximate_mapping_rows": 21338,
+        "choice_list_values": {
+          "0": 22522,
+          "1": 990,
+          "2": 1344,
+          "3": 4
+        },
+        "combination_mapping_rows": 2338,
+        "flag_field_width": 5,
+        "flag_values": {
+          "00000": 3522,
+          "10000": 18578,
+          "10111": 853,
+          "10112": 1151,
+          "10121": 71,
+          "10122": 115,
+          "10123": 2,
+          "10131": 34,
+          "10132": 48,
+          "10133": 2,
+          "10141": 20,
+          "10142": 26,
+          "10151": 6,
+          "10152": 2,
+          "10161": 6,
+          "10162": 2,
+          "11000": 422
+        },
+        "line_lengths": {
+          "19": 24860
+        },
+        "mapping_direction": "ICD-9-CM to ICD-10-CM",
+        "maximum_target_rows_for_one_source": 533,
+        "member": "ICD-9-CM to ICD-10-CM",
+        "no_map_records": 422,
+        "sample_records": [
+          "0010  A000    00000",
+          "0011  A001    00000",
+          "0019  A009    00000"
+        ],
+        "scenario_values": {
+          "0": 22522,
+          "1": 2004,
+          "2": 188,
+          "3": 84,
+          "4": 46,
+          "5": 8,
+          "6": 8
+        },
+        "source_codes_multiple_rows": 3380,
+        "source_field_width": 6,
+        "target_field_width": 8,
+        "total_raw_mapping_rows": 24860,
+        "unique_source_codes": 14567,
+        "unique_target_codes": 17514
+      }
+    },
+    {
+      "file_size_bytes": 394379,
+      "filename": "Dxgem_guide_2018.pdf"
+    },
+    {
+      "file_size_bytes": 412137,
+      "filename": "GemsTechDoc_2018.pdf"
+    }
+  ]
+}

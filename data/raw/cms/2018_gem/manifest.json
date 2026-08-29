@@ -1,0 +1,158 @@
+{
+  "manifest_version": "1.0",
+  "created_by": "SHIFT-ICD provenance milestone",
+  "created_at": "2026-08-29T03:47:20Z",
+  "raw_directory": "data/raw/cms/2018_gem",
+  "artifacts": [
+    {
+      "source_organization": "Centers for Medicare & Medicaid Services (CMS)",
+      "resource_name": "2018 General Equivalence Mappings (GEMs)",
+      "release_year": 2018,
+      "mapping_direction": "contains forward and reverse diagnosis GEM files",
+      "source_url": "https://www.cms.gov/medicare/coding/icd10/downloads/2018-icd-10-cm-general-equivalence-mappings.zip",
+      "official_landing_page": "https://www.cms.gov/medicare/coding-billing/icd-10-codes/icd-10-cm-icd-10-pcs-gem-archive",
+      "download_date": "2026-08-28",
+      "local_filename": "2018-icd-10-cm-general-equivalence-mappings.zip",
+      "file_size_bytes": 1114989,
+      "sha256": "1c5e5f14026ace48437a0d1c485d282fb5d171c357c6ab4f7798fc0a1e3624a2",
+      "archive_format": "ZIP",
+      "content_format": "mixed archive members; see archive_members",
+      "license_or_terms": "CMS public distribution; separate license statement not identified on inspected landing page. Consult CMS terms before redistribution.",
+      "notes": "ZIP archive with 2018_I9gem.txt, 2018_I10gem.txt, and two technical PDF documents.",
+      "archive_members": [
+        {
+          "filename": "2018_I10gem.txt",
+          "file_size_bytes": 1713453,
+          "compressed_size_bytes": 245157,
+          "compression": 8
+        },
+        {
+          "filename": "2018_I9gem.txt",
+          "file_size_bytes": 522060,
+          "compressed_size_bytes": 93270,
+          "compression": 8
+        },
+        {
+          "filename": "Dxgem_guide_2018.pdf",
+          "file_size_bytes": 394379,
+          "compressed_size_bytes": 379772,
+          "compression": 8
+        },
+        {
+          "filename": "GemsTechDoc_2018.pdf",
+          "file_size_bytes": 412137,
+          "compressed_size_bytes": 396254,
+          "compression": 8
+        }
+      ]
+    },
+    {
+      "source_organization": "Centers for Medicare & Medicaid Services (CMS)",
+      "resource_name": "2018 Code Descriptions in Tabular Order",
+      "release_year": 2018,
+      "mapping_direction": "ICD-10-CM diagnosis descriptions",
+      "source_url": "https://www.cms.gov/medicare/coding/icd10/downloads/2018-icd-10-code-descriptions.zip",
+      "official_landing_page": "https://www.cms.gov/medicare/coding-billing/icd-10-codes/icd-10-cm-icd-10-pcs-gem-archive",
+      "download_date": "2026-08-28",
+      "local_filename": "2018-icd-10-code-descriptions.zip",
+      "file_size_bytes": 2775671,
+      "sha256": "d4954a3fa02e0bfbecb10b20864198dfa50862ded93f2d9d7313e9fe07ef0dfc",
+      "archive_format": "ZIP",
+      "content_format": "mixed archive members; see archive_members",
+      "license_or_terms": "CMS/NCHS public distribution; separate license statement not identified on inspected landing page. Consult CMS terms before redistribution.",
+      "notes": "ZIP archive with text, addenda, and PDF representations.",
+      "archive_members": [
+        {
+          "filename": "icd10cm_order_2018.txt",
+          "file_size_bytes": 14076464,
+          "compressed_size_bytes": 1432278,
+          "compression": 8
+        },
+        {
+          "filename": "icd10cm_order_addenda_2018.txt",
+          "file_size_bytes": 189662,
+          "compressed_size_bytes": 17186,
+          "compression": 8
+        },
+        {
+          "filename": "icd10cmCodesFile.pdf",
+          "file_size_bytes": 341631,
+          "compressed_size_bytes": 326905,
+          "compression": 8
+        },
+        {
+          "filename": "icd10OrderFiles.pdf",
+          "file_size_bytes": 431216,
+          "compressed_size_bytes": 411894,
+          "compression": 8
+        },
+        {
+          "filename": "icd10cm_codes_2018.txt",
+          "file_size_bytes": 6154304,
+          "compressed_size_bytes": 576841,
+          "compression": 8
+        },
+        {
+          "filename": "icd10cm_codes_addenda_2018.txt",
+          "file_size_bytes": 102280,
+          "compressed_size_bytes": 9803,
+          "compression": 8
+        }
+      ]
+    },
+    {
+      "source_organization": "Centers for Medicare & Medicaid Services (CMS)",
+      "resource_name": "Version 32 Full and Abbreviated Code Titles",
+      "release_year": "Version 32 / effective October 1, 2014",
+      "mapping_direction": "ICD-9-CM diagnosis and procedure descriptions",
+      "source_url": "https://www.cms.gov/medicare/coding/icd9providerdiagnosticcodes/downloads/icd-9-cm-v32-master-descriptions.zip",
+      "official_landing_page": "https://www.cms.gov/medicare/coding-billing/icd-10-codes/icd-10-cm-icd-10-pcs-gem-archive",
+      "download_date": "2026-08-28",
+      "local_filename": "icd-9-cm-v32-master-descriptions.zip",
+      "file_size_bytes": 1079497,
+      "sha256": "45a7d05ddcadf124af88375b64cdf068bb1e3f999ce7fdacb91f65f4e6d55f08",
+      "archive_format": "ZIP",
+      "content_format": "mixed archive members; see archive_members",
+      "license_or_terms": "CMS public distribution; separate license statement not identified on inspected landing page. Consult CMS terms before redistribution.",
+      "notes": "Diagnosis title text is relevant to the diagnosis GEM; surgery title members are retained in the raw archive.",
+      "archive_members": [
+        {
+          "filename": "CMS32_DESC_LONG_DX.txt",
+          "file_size_bytes": 897559,
+          "compressed_size_bytes": 153702,
+          "compression": 8
+        },
+        {
+          "filename": "CMS32_DESC_LONG_SG.txt",
+          "file_size_bytes": 182309,
+          "compressed_size_bytes": 40163,
+          "compression": 8
+        },
+        {
+          "filename": "CMS32_DESC_LONG_SHORT_DX.xlsx",
+          "file_size_bytes": 664056,
+          "compressed_size_bytes": 557328,
+          "compression": 8
+        },
+        {
+          "filename": "CMS32_DESC_LONG_SHORT_SG.xlsx",
+          "file_size_bytes": 194297,
+          "compressed_size_bytes": 167125,
+          "compression": 8
+        },
+        {
+          "filename": "CMS32_DESC_SHORT_DX.txt",
+          "file_size_bytes": 418158,
+          "compressed_size_bytes": 124936,
+          "compression": 8
+        },
+        {
+          "filename": "CMS32_DESC_SHORT_SG.txt",
+          "file_size_bytes": 107145,
+          "compressed_size_bytes": 35469,
+          "compression": 8
+        }
+      ]
+    }
+  ]
+}
