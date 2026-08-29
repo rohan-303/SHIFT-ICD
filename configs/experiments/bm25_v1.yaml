@@ -1,0 +1,22 @@
+experiment: bm25_v1
+benchmark_version: "1.0"
+canonical_schema_version: "1.0"
+seed: 20260829
+k_values: [1, 5, 10, 25, 50, 100]
+top_k: 100
+primary_text: q1_long_only
+ablation_texts: [q1_long_only, q2_short_plus_long]
+default:
+  k1: 1.5
+  b: 0.75
+grid:
+  k1: [0.8, 1.2, 1.5, 2.0]
+  b: [0.25, 0.50, 0.75, 1.00]
+selection:
+  direction: ICD9CM_TO_ICD10CM
+  split: dev
+  primary_metric: noncombination_answerable_hit_at_10
+  secondary_metric: complex_complete_scenario_at_10
+bootstrap:
+  seed: 20260829
+  replicates: 1000

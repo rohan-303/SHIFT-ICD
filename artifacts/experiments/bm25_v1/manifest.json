@@ -1,0 +1,33 @@
+{
+  "benchmark_version": "1.0",
+  "canonical_schema_version": "1.0",
+  "experiment": "bm25_v1",
+  "files": {
+    "config.json": "90d9bc56e40e387fd5c17ee2ffb0e18780d4d0595fd8223f527c183b7728a74d",
+    "corpus_profile.json": "01f49975752eafe04b8f7503c8e2f9c2c6a379ee93818ebfdaea6358fabdcb6a",
+    "dev_metrics.json": "2f38d3b079aa08a653f53dd8369034b6e05f96aa3c70f791164355e1de17b0e6",
+    "environment.json": "346daac2b6403b5268e8d7ac545b50002974fa205db67c345f12b8959fcb18c5",
+    "error_summary.json": "49116b91c3d801f7febb6b476f52927b1287944227b04d1bab1a179595a3e5da",
+    "no_map_diagnostics.json": "cd63a12367ec8dd16ff90b6b26f8d7b99e920bece7c153e83d14faa89aad5cfc",
+    "q2_dev_ablation.json": "8c5e6471ddc6a911f0eb8a3d1feeb1375880166b4cce66944c0fe7f6a9e38a07",
+    "rankings/bm25_dev-tuned.jsonl": "9b7b25f7dd8c4d9a866cb620b72ef7dcacff15e35b0c79e179814b7cb0ac3be4",
+    "rankings_forward_stratified/bm25_dev-tuned.jsonl": "0035302783b7392881e7639344b784f465e0e6e223c4f17f828f278226530ef9",
+    "reports/bm25_v1_baseline_report.md": "6642297ba14ee5cea1d3bc5fd3b4e4f53a098040c448ea6611067955b966c4eb",
+    "reports/figures/bm25_v1/bm25_by_lexical_difficulty.svg": "2451e13129b4c8d2c287dcf4f3ecdf57417553f9dab6079657544b8d7a58a232",
+    "reports/figures/bm25_v1/bm25_by_mapping_kind.svg": "2a7f7a72d18e566f3fb0d281b455a3ab438677bbff9add09f07c258da60895f2",
+    "reports/figures/bm25_v1/hit_at_k_curve.svg": "3c9f0e1cc4859d82398d2f7ec4e56a8625c6fd58eeaa125bf621ebaacc53c3e8",
+    "reports/figures/bm25_v1/mapped_vs_no_map_top_score.svg": "22947bbbfafc4b56778df120a5cadfe4333e8027e6ef70482ef76a71642e5e2f",
+    "reports/tables/bm25_v1/baseline_overall.csv": "eb29d754712e527f269faf7076edee69afd64d05b5363f087092df9901d7e5a0",
+    "reports/tables/bm25_v1/bm25_by_alternative_size.csv": "e052b7550be75879e0d629df5f7a331726d637b010d27c1021be34b2c3eabd10",
+    "reports/tables/bm25_v1/bm25_by_lexical_difficulty.csv": "db28b5f59b91a01ce1a175dab2da6b041d4e7f03a795cdfb40d9e95a731e5292",
+    "reports/tables/bm25_v1/bm25_by_mapping_kind.csv": "705168db18bc0d7923b427d103935c2ac4389d2479e6020bc43d6b77e2e0e8a8",
+    "reports/tables/bm25_v1/bm25_combination_retrieval.csv": "f7bb5891e492dd4e7f6718cb4a01cbc27e36b4a6d62c29740a150e1ee3bdf44a",
+    "reports/tables/bm25_v1/bm25_forward_backward.csv": "fa6aa34eb7d3e154728efdc42afd35fbceeda26b8c0b9bed138f52766e1ce255",
+    "reports/tables/bm25_v1/bm25_no_map_score_summary.csv": "0c825eb4f354eaa7cf7c4586ae51cfaa19073d0e37fd00d7b16222134df2dc3e",
+    "reports/tables/bm25_v1/bm25_split_comparison.csv": "4e185b2e975c3bdc2bf427d0668c5e1b7914989389f6b44bee4f7a0a8aeb5ab7",
+    "selection.json": "d090b23407438e8e416359be2da8d62d8397f562cab51e6dedffa4b7647de274",
+    "slice_metrics.json": "77f85c689cd29538ae1d3216ac7df0814784f31ef1c119d625916d24c8cbd924",
+    "test_metrics.json": "a4127cf97c3135a553a2751f027913f17fa32f38ef1d248e4c17693abb4156e4"
+  },
+  "selection_frozen": true
+}

@@ -1,0 +1,35 @@
+{
+  "dev_noncombination_answerable_hit_at_10": 0.7729970326409495,
+  "frozen_parameters": {
+    "b": 0.75,
+    "k1": 2.0
+  },
+  "q1_selected_dev_hit_at_10": 0.7737388724035609,
+  "q2_profiles": {
+    "ICD10CM_TO_ICD9CM": {
+      "average_token_length": 9.76535500427716,
+      "concept_count": 11690,
+      "descriptions_available": 11689,
+      "descriptions_missing": 1,
+      "duplicate_normalized_description_concepts": 2,
+      "duplicate_normalized_description_groups": 1,
+      "median_token_length": 9.0,
+      "target_version": "ICD-9-CM",
+      "text_representation": "q2_short_plus_long",
+      "vocabulary_size": 8739
+    },
+    "ICD9CM_TO_ICD10CM": {
+      "average_token_length": 16.222577513846858,
+      "concept_count": 17513,
+      "descriptions_available": 17513,
+      "descriptions_missing": 0,
+      "duplicate_normalized_description_concepts": 2,
+      "duplicate_normalized_description_groups": 1,
+      "median_token_length": 15,
+      "target_version": "ICD-10-CM",
+      "text_representation": "q2_short_plus_long",
+      "vocabulary_size": 7183
+    }
+  },
+  "representation": "q2_short_plus_long"
+}

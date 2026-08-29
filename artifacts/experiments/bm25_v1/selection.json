@@ -1,0 +1,109 @@
+{
+  "frozen": true,
+  "grid": [
+    {
+      "b": 0.25,
+      "complex_complete_scenario_at_10": 0.08955223880597014,
+      "k1": 0.8,
+      "noncombination_answerable_hit_at_10": 0.7529673590504451
+    },
+    {
+      "b": 0.5,
+      "complex_complete_scenario_at_10": 0.11940298507462686,
+      "k1": 0.8,
+      "noncombination_answerable_hit_at_10": 0.7640949554896143
+    },
+    {
+      "b": 0.75,
+      "complex_complete_scenario_at_10": 0.14925373134328357,
+      "k1": 0.8,
+      "noncombination_answerable_hit_at_10": 0.7722551928783383
+    },
+    {
+      "b": 1.0,
+      "complex_complete_scenario_at_10": 0.14925373134328357,
+      "k1": 0.8,
+      "noncombination_answerable_hit_at_10": 0.7737388724035609
+    },
+    {
+      "b": 0.25,
+      "complex_complete_scenario_at_10": 0.08955223880597014,
+      "k1": 1.2,
+      "noncombination_answerable_hit_at_10": 0.7514836795252225
+    },
+    {
+      "b": 0.5,
+      "complex_complete_scenario_at_10": 0.13432835820895522,
+      "k1": 1.2,
+      "noncombination_answerable_hit_at_10": 0.766320474777448
+    },
+    {
+      "b": 0.75,
+      "complex_complete_scenario_at_10": 0.14925373134328357,
+      "k1": 1.2,
+      "noncombination_answerable_hit_at_10": 0.7722551928783383
+    },
+    {
+      "b": 1.0,
+      "complex_complete_scenario_at_10": 0.16417910447761194,
+      "k1": 1.2,
+      "noncombination_answerable_hit_at_10": 0.7729970326409495
+    },
+    {
+      "b": 0.25,
+      "complex_complete_scenario_at_10": 0.08955223880597014,
+      "k1": 1.5,
+      "noncombination_answerable_hit_at_10": 0.7514836795252225
+    },
+    {
+      "b": 0.5,
+      "complex_complete_scenario_at_10": 0.13432835820895522,
+      "k1": 1.5,
+      "noncombination_answerable_hit_at_10": 0.7678041543026706
+    },
+    {
+      "b": 0.75,
+      "complex_complete_scenario_at_10": 0.14925373134328357,
+      "k1": 1.5,
+      "noncombination_answerable_hit_at_10": 0.7729970326409495
+    },
+    {
+      "b": 1.0,
+      "complex_complete_scenario_at_10": 0.16417910447761194,
+      "k1": 1.5,
+      "noncombination_answerable_hit_at_10": 0.7700296735905044
+    },
+    {
+      "b": 0.25,
+      "complex_complete_scenario_at_10": 0.08955223880597014,
+      "k1": 2.0,
+      "noncombination_answerable_hit_at_10": 0.7507418397626113
+    },
+    {
+      "b": 0.5,
+      "complex_complete_scenario_at_10": 0.14925373134328357,
+      "k1": 2.0,
+      "noncombination_answerable_hit_at_10": 0.7707715133531158
+    },
+    {
+      "b": 0.75,
+      "complex_complete_scenario_at_10": 0.16417910447761194,
+      "k1": 2.0,
+      "noncombination_answerable_hit_at_10": 0.7737388724035609
+    },
+    {
+      "b": 1.0,
+      "complex_complete_scenario_at_10": 0.16417910447761194,
+      "k1": 2.0,
+      "noncombination_answerable_hit_at_10": 0.7685459940652819
+    }
+  ],
+  "metric": "noncombination_answerable_hit_at_10",
+  "secondary_tie_break": "complex_complete_scenario_at_10",
+  "winner": {
+    "b": 0.75,
+    "complex_complete_scenario_at_10": 0.16417910447761194,
+    "k1": 2.0,
+    "noncombination_answerable_hit_at_10": 0.7737388724035609
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "failure_category_policy": "placeholder left null; no unsupported clinical judgment",
+  "forward_top10_failure_sample_size": 100
+}

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500" viewBox="0 0 900 500">
+<rect width="100%" height="100%" fill="white"/>
+<text x="450.0" y="28" text-anchor="middle" font-family="sans-serif" font-size="20">BM25 by lexical difficulty</text>
+<text x="18" y="250.0" transform="rotate(-90 18 250.0)" text-anchor="middle" font-family="sans-serif">Hit@10</text>
+<polyline fill="none" stroke="#1f77b4" stroke-width="3" points="90.0,60.0 346.7,61.6 603.3,324.6 860.0,85.0"/>
+<circle cx="90.0" cy="60.0" r="4" fill="#1f77b4"/><text x="90.0" y="460" text-anchor="middle" font-family="sans-serif" font-size="11">LEXICAL_EXACT</text>
+<circle cx="346.7" cy="61.6" r="4" fill="#1f77b4"/><text x="346.7" y="460" text-anchor="middle" font-family="sans-serif" font-size="11">LEXICAL_HIGH</text>
+<circle cx="603.3" cy="324.6" r="4" fill="#1f77b4"/><text x="603.3" y="460" text-anchor="middle" font-family="sans-serif" font-size="11">LEXICAL_LOW</text>
+<circle cx="860.0" cy="85.0" r="4" fill="#1f77b4"/><text x="860.0" y="460" text-anchor="middle" font-family="sans-serif" font-size="11">LEXICAL_MEDIUM</text>
+</svg>
