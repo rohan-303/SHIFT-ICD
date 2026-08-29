@@ -29,6 +29,10 @@ data/raw/cms/2018_gem/*
 !data/raw/cms/2018_gem/manifest.json
 data/interim/*
 data/processed/*
+!data/processed/cms/
+!data/processed/cms/2018_gem/
+data/processed/cms/2018_gem/*
+!data/processed/cms/2018_gem/manifest.json
 data/external/*
 artifacts/*
 !artifacts/data_audit/

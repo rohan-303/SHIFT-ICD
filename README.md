@@ -47,7 +47,15 @@ artifacts/     Explicitly generated experiment artifacts
 
 ## Current milestone
 
-Create and review the project foundation, benchmark specification, governance rules, and reproducibility contract. Dataset inspection and acquisition are intentionally deferred to the next milestone.
+Track A now has a canonical structured representation built from the immutable CMS FY 2018 diagnosis GEM archives. `data/processed/cms/2018_gem/source_mappings.jsonl` is the authoritative nested source-level representation; the normalized Parquet is one record per raw GEM row, and the source-summary Parquet is for analysis. These are distinct from future benchmark examples and no model or split has been implemented.
+
+Rebuild with:
+
+```bash
+python scripts/build_cms_canonical.py --project-root . --force
+```
+
+See [`docs/canonical_gem_representation.md`](docs/canonical_gem_representation.md) for the schema and CMS combination semantics.
 
 ## Important limitation
 

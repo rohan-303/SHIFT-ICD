@@ -1,0 +1,263 @@
+{
+  "canonical_schema_version": "1.0",
+  "description_coverage": {
+    "ICD10CM_TO_ICD9CM": {
+      "source": {
+        "missing_long_codes": [],
+        "missing_long_description": 0,
+        "missing_short_codes": [],
+        "missing_short_description": 0,
+        "unique_codes": 71704,
+        "with_long_description": 71704,
+        "with_short_description": 71704
+      },
+      "target": {
+        "missing_long_codes": [
+          "v5889"
+        ],
+        "missing_long_description": 1,
+        "missing_short_codes": [
+          "v5889"
+        ],
+        "missing_short_description": 1,
+        "unique_codes": 11690,
+        "with_long_description": 11689,
+        "with_short_description": 11689
+      }
+    },
+    "ICD9CM_TO_ICD10CM": {
+      "source": {
+        "missing_long_codes": [],
+        "missing_long_description": 0,
+        "missing_short_codes": [],
+        "missing_short_description": 0,
+        "unique_codes": 14567,
+        "with_long_description": 14567,
+        "with_short_description": 14567
+      },
+      "target": {
+        "missing_long_codes": [],
+        "missing_long_description": 0,
+        "missing_short_codes": [],
+        "missing_short_description": 0,
+        "unique_codes": 17513,
+        "with_long_description": 17513,
+        "with_short_description": 17513
+      }
+    }
+  },
+  "directions": {
+    "ICD10CM_TO_ICD9CM": {
+      "approximate_only_concepts": 68182,
+      "cases_exceeding_enumeration_safety_threshold": 0,
+      "choice_list_count_distribution": {
+        "0": 67463,
+        "10": 1,
+        "2": 4029,
+        "3": 133,
+        "4": 77,
+        "6": 1
+      },
+      "combination_concepts": 4241,
+      "combination_with_alternative_concepts": 188,
+      "direction": "ICD10CM_TO_ICD9CM",
+      "enumeration_safety_limit": 1000,
+      "exact_only_concepts": 3516,
+      "extreme_raw_row_case": {
+        "choice_list_count": 0,
+        "mapping_kind": "ALTERNATIVE",
+        "scenario_count": 0,
+        "source_code": "F458",
+        "target_row_count": 12,
+        "valid_mapping_set_count": 12
+      },
+      "mapping_kind_counts": {
+        "ALTERNATIVE": 3621,
+        "COMBINATION": 4053,
+        "COMBINATION_WITH_ALTERNATIVES": 188,
+        "NO_MAP": 731,
+        "SINGLE_APPROXIMATE": 59595,
+        "SINGLE_EXACT": 3516
+      },
+      "maximum_theoretical_mapping_set_count": 12,
+      "mixed_exact_approximate_concepts": 6,
+      "multi_row_concepts": 7862,
+      "multi_scenario_concepts": 53,
+      "no_map_concepts": 731,
+      "scenario_count_distribution": {
+        "0": 67463,
+        "1": 4188,
+        "2": 51,
+        "3": 1,
+        "5": 1
+      },
+      "single_target_concepts": 63111,
+      "source_concepts": 71704,
+      "theoretical_mapping_set_count_distribution": {
+        "0": 731,
+        "1": 67117,
+        "10": 2,
+        "12": 1,
+        "2": 3103,
+        "3": 469,
+        "4": 159,
+        "5": 70,
+        "6": 23,
+        "7": 10,
+        "8": 14,
+        "9": 5
+      },
+      "unique_target_count_distribution": {
+        "0": 731,
+        "1": 63111,
+        "10": 5,
+        "12": 1,
+        "2": 6770,
+        "3": 746,
+        "4": 192,
+        "5": 97,
+        "6": 24,
+        "7": 11,
+        "8": 10,
+        "9": 6
+      }
+    },
+    "ICD9CM_TO_ICD10CM": {
+      "approximate_only_concepts": 11045,
+      "cases_exceeding_enumeration_safety_threshold": 0,
+      "choice_list_count_distribution": {
+        "0": 13899,
+        "12": 2,
+        "2": 605,
+        "4": 33,
+        "5": 2,
+        "6": 10,
+        "7": 2,
+        "8": 14
+      },
+      "combination_concepts": 668,
+      "combination_with_alternative_concepts": 347,
+      "direction": "ICD9CM_TO_ICD10CM",
+      "enumeration_safety_limit": 1000,
+      "exact_only_concepts": 3521,
+      "extreme_raw_row_case": {
+        "choice_list_count": 0,
+        "mapping_kind": "ALTERNATIVE",
+        "scenario_count": 0,
+        "source_code": "V5412",
+        "target_row_count": 533,
+        "valid_mapping_set_count": 533
+      },
+      "mapping_kind_counts": {
+        "ALTERNATIVE": 2712,
+        "COMBINATION": 321,
+        "COMBINATION_WITH_ALTERNATIVES": 347,
+        "NO_MAP": 422,
+        "SINGLE_APPROXIMATE": 7244,
+        "SINGLE_EXACT": 3521
+      },
+      "maximum_theoretical_mapping_set_count": 533,
+      "mixed_exact_approximate_concepts": 1,
+      "multi_row_concepts": 3380,
+      "multi_scenario_concepts": 63,
+      "no_map_concepts": 422,
+      "scenario_count_distribution": {
+        "0": 13899,
+        "1": 605,
+        "2": 35,
+        "3": 12,
+        "4": 14,
+        "6": 2
+      },
+      "single_target_concepts": 10765,
+      "source_concepts": 14567,
+      "theoretical_mapping_set_count_distribution": {
+        "0": 422,
+        "1": 11070,
+        "10": 7,
+        "106": 1,
+        "11": 2,
+        "12": 12,
+        "129": 1,
+        "13": 5,
+        "132": 1,
+        "14": 1,
+        "145": 1,
+        "15": 4,
+        "152": 1,
+        "159": 2,
+        "16": 9,
+        "17": 2,
+        "18": 3,
+        "19": 1,
+        "2": 1633,
+        "20": 8,
+        "213": 1,
+        "22": 1,
+        "23": 1,
+        "24": 3,
+        "25": 2,
+        "27": 2,
+        "28": 1,
+        "3": 568,
+        "31": 1,
+        "39": 1,
+        "4": 454,
+        "40": 1,
+        "5": 94,
+        "528": 1,
+        "533": 1,
+        "6": 105,
+        "60": 2,
+        "66": 1,
+        "7": 43,
+        "8": 64,
+        "9": 34
+      },
+      "unique_target_count_distribution": {
+        "0": 422,
+        "1": 10765,
+        "10": 16,
+        "106": 1,
+        "11": 2,
+        "12": 22,
+        "129": 1,
+        "13": 5,
+        "132": 1,
+        "14": 1,
+        "145": 1,
+        "15": 4,
+        "152": 1,
+        "159": 2,
+        "16": 9,
+        "17": 2,
+        "18": 1,
+        "19": 1,
+        "2": 1776,
+        "20": 8,
+        "213": 1,
+        "22": 1,
+        "23": 1,
+        "24": 5,
+        "25": 2,
+        "27": 2,
+        "28": 1,
+        "3": 628,
+        "31": 1,
+        "39": 1,
+        "4": 518,
+        "40": 1,
+        "5": 113,
+        "528": 1,
+        "533": 1,
+        "6": 71,
+        "60": 2,
+        "66": 1,
+        "7": 80,
+        "8": 60,
+        "9": 35
+      }
+    }
+  },
+  "profiling_scope": "canonical source-level representation; no train/dev/test splits"
+}

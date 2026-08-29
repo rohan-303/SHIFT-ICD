@@ -17,7 +17,7 @@ Every experiment must be reconstructable from a clean checkout, documented envir
 - Perform train/dev/test leakage checks.
 - Never use the test set for model selection or threshold tuning.
 - Implement benchmark split logic programmatically.
-- Add unit tests for parsers, mapping normalization, and split generation.
+- Add unit tests for parsers, canonical mapping reconstruction, and future split generation.
 
 ## Evidence levels
 

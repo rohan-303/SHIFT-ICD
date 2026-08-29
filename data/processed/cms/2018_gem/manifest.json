@@ -1,0 +1,31 @@
+{
+  "canonical_schema_version": "1.0",
+  "generated_at": "2026-08-29T04:26:04.196708+00:00",
+  "outputs": [
+    {
+      "file_size_bytes": 4936522,
+      "filename": "normalized_rows.parquet",
+      "sha256": "bc26053e51fb8799fcb1e5bbb6d04ad05df66ada3ca8fd88539abfac7ff13ef2"
+    },
+    {
+      "file_size_bytes": 77088415,
+      "filename": "source_mappings.jsonl",
+      "sha256": "40e04d54e19c57a1ed82497b5f8392aa709ce7435435da85d7d0fa6e846dfac3"
+    },
+    {
+      "file_size_bytes": 1690465,
+      "filename": "source_mappings.parquet",
+      "sha256": "8ac066616a7ef453fd415f1fcb5514a7e832a715b76deebf40211de6872d3b3d"
+    }
+  ],
+  "processing_script": "scripts/build_cms_canonical.py",
+  "raw_archive_hashes": {
+    "2018-icd-10-cm-general-equivalence-mappings.zip": "1c5e5f14026ace48437a0d1c485d282fb5d171c357c6ab4f7798fc0a1e3624a2",
+    "2018-icd-10-code-descriptions.zip": "d4954a3fa02e0bfbecb10b20864198dfa50862ded93f2d9d7313e9fe07ef0dfc",
+    "icd-9-cm-v32-master-descriptions.zip": "45a7d05ddcadf124af88375b64cdf068bb1e3f999ce7fdacb91f65f4e6d55f08"
+  },
+  "row_counts": {
+    "normalized_rows": 106453,
+    "source_mappings": 86271
+  }
+}

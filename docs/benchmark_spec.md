@@ -20,7 +20,7 @@ The benchmark will preserve the mapping records and their flags. Planned slices 
 - hierarchy siblings;
 - hierarchy parent/child confusions.
 
-The source format, fields, flags, release identity, and licensing/terms must be inspected before any dataset is downloaded or parsed. No final split files will be created in this milestone.
+The source format, fields, flags, release identity, and licensing/terms must be inspected before any dataset is downloaded or parsed. The canonical Track A object is now source-level and preserves symbolic scenario → choice-list → alternative structure. Raw GEM rows, canonical source mappings, and future benchmark examples are separate layers. No final split files will be created in this milestone.
 
 ## Track B — WHO ICD-10 → ICD-11 MMS
 
