@@ -17,6 +17,41 @@ def load(path):
     return pd.DataFrame(json.loads(path.read_text())["rows"])
 
 
+def add_positive_set_size(rows):
+    result = []
+    for row in rows:
+        item = dict(row)
+        targets = item.get("valid_target_codes", [])
+        if isinstance(targets, str):
+            targets = json.loads(targets)
+        size = len(set(targets or []))
+        item["positive_set_size"] = size
+        item["alternative_size"] = (
+            "1" if size == 1 else "2-5" if size <= 5 else "6-20" if size <= 20 else "21-100" if size <= 100 else ">100"
+        )
+        result.append(item)
+    return result
+
+
+def reduce_seed_slice(rows, group, metrics):
+    frame = pd.DataFrame(add_positive_set_size(rows))
+    if frame.empty:
+        return []
+    output = []
+    for keys, data in frame.groupby(group, dropna=False):
+        if not isinstance(keys, tuple):
+            keys = (keys,)
+        row = dict(zip(group, keys, strict=True))
+        row["n"] = int(data["benchmark_id"].nunique()) if "benchmark_id" in data else len(data)
+        for metric_name in metrics:
+            row[metric_name] = float(data[metric_name].mean()) if metric_name in data else None
+        if "direction" in data:
+            row["direction"] = str(data["direction"].iloc[0])
+        row.update({"protocol": "shift_map_v1", "experiment_version": "1.0", "partition": "test"})
+        output.append(row)
+    return output
+
+
 def ranking_frame(path):
     return pd.DataFrame(json.loads(line) for line in path.read_text(encoding="utf8").splitlines())
 
@@ -29,24 +64,7 @@ def bootstrap_delta(a, b, seed=2026, n_boot=5000):
 
 
 def metric(df, group, metrics):
-    rows = []
-    for keys, g in df.groupby(group, dropna=False):
-        if not isinstance(keys, tuple):
-            keys = (keys,)
-        r = dict(zip(group, keys, strict=True))
-        r.update(
-            {
-                "n": len(g),
-                "protocol": "shift_map_v1",
-                "experiment_version": "1.0",
-                "partition": "test",
-                "direction": str(g.direction.iloc[0]),
-            }
-        )
-        for m in metrics:
-            r[m] = float(g[m].mean()) if m in g else None
-        rows.append(r)
-    return pd.DataFrame(rows)
+    return pd.DataFrame(reduce_seed_slice(df.to_dict("records"), group, metrics))
 
 
 def main():
@@ -58,7 +76,12 @@ def main():
         d["seed"] = json.loads(p.read_text()).get("seed")
         frames.append(d)
     all_d = pd.concat(frames, ignore_index=True)
-    all_d["alternative_size"] = pd.cut(all_d["n"], bins=[0, 1, 5, 20, 100, float("inf")], labels=["1", "2-5", "6-20", "21-100", ">100"])
+    all_d = pd.DataFrame(add_positive_set_size(all_d.to_dict("records")))
+    all_d["alternative_size"] = pd.cut(
+        all_d["positive_set_size"],
+        bins=[0, 1, 5, 20, 100, float("inf")],
+        labels=["1", "2-5", "6-20", "21-100", ">100"],
+    )
     metrics = [
         "Hit@1",
         "Hit@5",
@@ -77,10 +100,16 @@ def main():
         ("final_mapping_kind", ["direction", "mapping_kind"]),
         ("final_alternative_size", ["direction", "alternative_size"]),
         ("final_family_held_out", ["direction", "source_family_split"]),
-        ("final_backward_transfer", ["direction"]),
-        ("final_combination_transfer", ["direction", "mapping_kind"]),
     ]:
         metric(all_d, group, metrics).to_csv(TABLE / f"{name}.csv", index=False)
+    metric(all_d[all_d.direction == "ICD10CM_TO_ICD9CM"], ["direction"], metrics).to_csv(
+        TABLE / "final_backward_transfer.csv", index=False
+    )
+    metric(
+        all_d[all_d.mapping_kind.str.contains("COMBINATION")],
+        ["direction", "mapping_kind"],
+        metrics,
+    ).to_csv(TABLE / "final_combination_transfer.csv", index=False)
     overall = all_d[
         (all_d.direction == "ICD9CM_TO_ICD10CM")
         & (all_d.split == "test")
@@ -102,16 +131,7 @@ def main():
         rows.append(r)
     pd.DataFrame(rows).to_csv(TABLE / "final_three_seed_results.csv", index=False)
     pd.DataFrame(
-        [
-            {
-                "direction": "ICD9CM_TO_ICD10CM",
-                "protocol": "shift_map_v1",
-                "partition": "test",
-                "experiment_version": "1.0",
-                "n": len(overall),
-                **{m: float(overall[m].mean()) for m in metrics},
-            }
-        ]
+        reduce_seed_slice(overall.to_dict("records"), ["direction"], metrics)
     ).to_csv(TABLE / "final_forward_overall.csv", index=False)
     no = all_d[all_d.mapping_kind == "NO_MAP"]
     metric(no, ["direction"], ["top1_score", "top2_score", "mean_top5_similarity"]).to_csv(
@@ -155,10 +175,14 @@ def main():
     pd.DataFrame(out).to_csv(TABLE / "final_paired_comparisons.csv", index=False)
     manifest = {
         "experiment": "shift_map_v1",
+        "protocol": "1.0",
         "tables": sorted(p.name for p in TABLE.glob("*.csv")),
+        "figures": sorted(p.name for p in (ROOT / "reports/figures/shift_map_v1").glob("*.png")),
         "test_rows": len(all_d),
         "test_lock_sha256": hashlib.sha256((OUT / "test_lock.json").read_bytes()).hexdigest(),
         "test_data_used": True,
+        "checkpoints_committed": False,
+        "weights_published": False,
     }
     (OUT / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
     print(json.dumps(manifest, indent=2))

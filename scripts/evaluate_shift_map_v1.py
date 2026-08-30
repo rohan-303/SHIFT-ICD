@@ -45,6 +45,8 @@ def metrics(
         take = min(100, len(codes))
         idx = np.argpartition(-scores, take - 1)[:take]
         ranked = [codes[i] for i in sorted(idx.tolist(), key=lambda i: (-float(scores[i]), codes[i]))]
+        valid = set(x.valid_target_codes)
+        complex_kind = x.mapping_kind in {"COMBINATION", "COMBINATION_WITH_ALTERNATIVES", "MULTI_SCENARIO"}
         row = {
             "benchmark_id": x.benchmark_id,
             "direction": x.direction,
@@ -52,13 +54,12 @@ def metrics(
             "source_family_split": x.source_family_split,
             "mapping_kind": x.mapping_kind,
             "lexical_difficulty": x.lexical_metadata.get("lexical_difficulty"),
-            "n": 1,
+            "valid_target_codes": sorted(valid),
+            "n": len(valid),
             "top1_score": float(scores[idx].max()),
             "top2_score": float(sorted(scores[idx], reverse=True)[1]) if len(idx) > 1 else float(scores[idx].max()),
             "mean_top5_similarity": float(np.mean(sorted(scores[idx], reverse=True)[:5])),
         }
-        valid = set(x.valid_target_codes)
-        complex_kind = x.mapping_kind in {"COMBINATION", "COMBINATION_WITH_ALTERNATIVES", "MULTI_SCENARIO"}
         for k in (1, 5, 10, 25, 50, 100):
             top = ranked[:k]
             row[f"Hit@{k}"] = int(bool(valid.intersection(top))) if valid and not complex_kind else None

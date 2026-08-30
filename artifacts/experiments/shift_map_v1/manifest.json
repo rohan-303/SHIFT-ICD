@@ -1,7 +1,6 @@
 {
   "experiment": "shift_map_v1",
   "protocol": "1.0",
-  "test_lock_sha256": "e4258a0bc85faf9f85b01d5281550ffa2ddd885da8fb0e421970eecb91def58a",
   "tables": [
     "dev_learning_rate_ablation.csv",
     "dev_negative_strategy_ablation.csv",
@@ -32,6 +31,8 @@
     "training_curves.png",
     "zero_shot_vs_shift_map.png"
   ],
+  "test_rows": 51762,
+  "test_lock_sha256": "e4258a0bc85faf9f85b01d5281550ffa2ddd885da8fb0e421970eecb91def58a",
   "test_data_used": true,
   "checkpoints_committed": false,
   "weights_published": false

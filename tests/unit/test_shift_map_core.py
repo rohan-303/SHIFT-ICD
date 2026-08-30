@@ -71,3 +71,24 @@ def test_l2_is_stable_count_normalized_set_loss():
     loss = l2_set_positive_infonce(q, c, [[0, 1]], temperature=0.05)
     assert math.isfinite(float(loss))
     assert loss < 1.0
+
+
+def test_aggregation_uses_valid_target_set_size_not_row_n():
+    from aggregate_shift_map_v1 import add_positive_set_size
+
+    rows = [{"n": 1, "valid_target_codes": ["A", "B"]}, {"n": 1, "valid_target_codes": ["C"]}]
+    result = add_positive_set_size(rows)
+    assert [row["alternative_size"] for row in result] == ["2-5", "1"]
+
+
+def test_aggregation_reduces_slice_metrics_across_seeds():
+    from aggregate_shift_map_v1 import reduce_seed_slice
+
+    rows = [
+        {"seed": 17, "mapping_kind": "SINGLE_EXACT", "Hit@10": 0.8},
+        {"seed": 42, "mapping_kind": "SINGLE_EXACT", "Hit@10": 0.6},
+    ]
+    result = reduce_seed_slice(rows, ["mapping_kind"], ["Hit@10"])
+    assert len(result) == 1
+    assert result[0]["n"] == 2
+    assert result[0]["Hit@10"] == 0.7
