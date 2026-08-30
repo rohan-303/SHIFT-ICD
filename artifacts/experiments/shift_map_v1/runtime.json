@@ -1,0 +1,136 @@
+{
+  "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "torch": "2.7.1+cu126",
+  "precision": "float32",
+  "micro_batch_size": 8,
+  "gradient_accumulation": 4,
+  "effective_source_batch_size": 32,
+  "checkpoint_sizes": [
+    {
+      "run_id": "final_seed17",
+      "epoch": "epoch_1",
+      "bytes": 438922341,
+      "files": 11,
+      "sha256": "2d7b9baf41ea16c2a47f28853ae92ed85173c80fc6cf46cdc3eb1f2f6be7c9a7"
+    },
+    {
+      "run_id": "final_seed17",
+      "epoch": "epoch_1_dev.json",
+      "bytes": 0,
+      "files": 0,
+      "sha256": null
+    },
+    {
+      "run_id": "final_seed17",
+      "epoch": "epoch_2",
+      "bytes": 438922341,
+      "files": 11,
+      "sha256": "c68a34cafd170ad89704f20f19be0602a7fd9f9239802476874829e338bdd400"
+    },
+    {
+      "run_id": "final_seed17",
+      "epoch": "epoch_2_dev.json",
+      "bytes": 0,
+      "files": 0,
+      "sha256": null
+    },
+    {
+      "run_id": "final_seed17",
+      "epoch": "epoch_3",
+      "bytes": 438922341,
+      "files": 11,
+      "sha256": "cf1220fc7d882e2714bb6c3795cc086973ac8e2bd01076550948313506ebea3c"
+    },
+    {
+      "run_id": "final_seed17",
+      "epoch": "epoch_3_dev.json",
+      "bytes": 0,
+      "files": 0,
+      "sha256": null
+    },
+    {
+      "run_id": "final_seed2026",
+      "epoch": "epoch_1",
+      "bytes": 438922341,
+      "files": 11,
+      "sha256": "9e4bc0825fc05b2cd8b7ab022fd6f762e139a009ec3f20261d856a89dda72257"
+    },
+    {
+      "run_id": "final_seed2026",
+      "epoch": "epoch_1_dev.json",
+      "bytes": 0,
+      "files": 0,
+      "sha256": null
+    },
+    {
+      "run_id": "final_seed2026",
+      "epoch": "epoch_2",
+      "bytes": 438922341,
+      "files": 11,
+      "sha256": "134fe174288471c3f013ebe5f72b0529e9606f5d2687fa4f026b61d2895a8fc5"
+    },
+    {
+      "run_id": "final_seed2026",
+      "epoch": "epoch_2_dev.json",
+      "bytes": 0,
+      "files": 0,
+      "sha256": null
+    },
+    {
+      "run_id": "final_seed2026",
+      "epoch": "epoch_3",
+      "bytes": 438922341,
+      "files": 11,
+      "sha256": "29fd06c04ae7404d0f7ca3fba36eb5dbb8a80481e3d5ee802155a7b014d164ff"
+    },
+    {
+      "run_id": "final_seed2026",
+      "epoch": "epoch_3_dev.json",
+      "bytes": 0,
+      "files": 0,
+      "sha256": null
+    },
+    {
+      "run_id": "final_seed42",
+      "epoch": "epoch_1",
+      "bytes": 438922341,
+      "files": 11,
+      "sha256": "4abf61c52c76362b781e11069d1a32fb84c1d85c85f9f76644ddb5b1a63fbe63"
+    },
+    {
+      "run_id": "final_seed42",
+      "epoch": "epoch_1_dev.json",
+      "bytes": 0,
+      "files": 0,
+      "sha256": null
+    },
+    {
+      "run_id": "final_seed42",
+      "epoch": "epoch_2",
+      "bytes": 438922341,
+      "files": 11,
+      "sha256": "60c856de10ebf959126044a4d2b4fcc1f729be4c207952a5151cf07d6ae2fa91"
+    },
+    {
+      "run_id": "final_seed42",
+      "epoch": "epoch_2_dev.json",
+      "bytes": 0,
+      "files": 0,
+      "sha256": null
+    },
+    {
+      "run_id": "final_seed42",
+      "epoch": "epoch_3",
+      "bytes": 438922341,
+      "files": 11,
+      "sha256": "9f4c44013c1c685322447c545d9bb32d4d0a7608df28cfedd260e0bdc68b0f37"
+    },
+    {
+      "run_id": "final_seed42",
+      "epoch": "epoch_3_dev.json",
+      "bytes": 0,
+      "files": 0,
+      "sha256": null
+    }
+  ]
+}

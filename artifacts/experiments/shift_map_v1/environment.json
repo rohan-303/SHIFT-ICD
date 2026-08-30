@@ -1,0 +1,9 @@
+{
+  "python": "3.11.15",
+  "torch": "2.7.1+cu126",
+  "cuda_available": true,
+  "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "cuda_version": "12.6",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "commit": "721f84c84b9fac80b976407a8c8212b8588973d6"
+}

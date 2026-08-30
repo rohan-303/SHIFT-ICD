@@ -1,0 +1,27 @@
+{
+  "benchmark_all_examples_sha256": "09be6cb7461533cbc39ae043e1cf1faea3976fde8cc15b4d5aad5efb0b6a9a14",
+  "benchmark_manifest_sha256": "5464b14e2857affd3bff3801e6497d4342449976a006325f6189271bfcabfd47",
+  "benchmark_version": "1.0",
+  "dev_data_used": false,
+  "eligible_source_count": 9434,
+  "excluded_combination_count": 468,
+  "excluded_no_map_count": 295,
+  "experiment": "shift_map_v1",
+  "generation_script_version": "scripts/mine_shift_map_v1_negatives.py",
+  "negative_miner_config": {
+    "base_model_revision": "167aab527b238a50ca65224e6319215d2ff4fc9f",
+    "seed": 20260830,
+    "strategies": [
+      "N1_RANDOM",
+      "N2_LEXICAL_HARD",
+      "N3_DENSE_HARD",
+      "N4_SAME_FAMILY_HARD",
+      "N5_MIXED"
+    ]
+  },
+  "negative_set_hash": "22421e09247220663b109e0ca6abc994c70446928a518ef93eee2f0e1524844c",
+  "positive_relation_count": 15588,
+  "source_ids_sha256": "e9ffbaa4f5542aaf3c46ef9a11457054e7de094ad597306cebc317aea827f7d4",
+  "test_data_used": false,
+  "train_partition_hash": "2807a682af342b59a680dd0fa9e536ac66f757d20e92fc0d727d3ed4169be0e9"
+}

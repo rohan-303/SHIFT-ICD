@@ -1,0 +1,38 @@
+{
+  "experiment": "shift_map_v1",
+  "protocol": "1.0",
+  "test_lock_sha256": "e4258a0bc85faf9f85b01d5281550ffa2ddd885da8fb0e421970eecb91def58a",
+  "tables": [
+    "dev_learning_rate_ablation.csv",
+    "dev_negative_strategy_ablation.csv",
+    "dev_positive_policy_ablation.csv",
+    "final_alternative_size.csv",
+    "final_backward_transfer.csv",
+    "final_combination_transfer.csv",
+    "final_complementarity.csv",
+    "final_family_held_out.csv",
+    "final_forward_overall.csv",
+    "final_lexical_difficulty.csv",
+    "final_mapping_kind.csv",
+    "final_no_map_diagnostics.csv",
+    "final_paired_comparisons.csv",
+    "final_three_seed_results.csv",
+    "training_population.csv",
+    "training_runtime.csv"
+  ],
+  "figures": [
+    "combination_transfer.png",
+    "complementarity.png",
+    "dev_negative_strategy_ablation.png",
+    "dev_positive_policy_ablation.png",
+    "family_held_out.png",
+    "lexical_difficulty.png",
+    "mapping_kind.png",
+    "representation_drift.png",
+    "training_curves.png",
+    "zero_shot_vs_shift_map.png"
+  ],
+  "test_data_used": true,
+  "checkpoints_committed": false,
+  "weights_published": false
+}

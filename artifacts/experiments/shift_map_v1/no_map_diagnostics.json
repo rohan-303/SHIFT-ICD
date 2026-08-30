@@ -1,0 +1,5 @@
+{
+  "source_table": "final_no_map_diagnostics.csv",
+  "data": "direction,n,protocol,experiment_version,partition,top1_score,top2_score,mean_top5_similarity\nICD10CM_TO_ICD9CM,438,shift_map_v1,1.0,test,0.7324944320879027,0.7041617031783274,0.6911229538863108\nICD9CM_TO_ICD10CM,255,shift_map_v1,1.0,test,0.9395333388272453,0.8773934364318847,0.8665956670162724\n",
+  "post_hoc": true
+}

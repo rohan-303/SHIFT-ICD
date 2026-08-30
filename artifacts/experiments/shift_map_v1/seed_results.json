@@ -1,0 +1,80 @@
+[
+  {
+    "seed": 17,
+    "run_id": "final_seed17",
+    "dev": {
+      "CompleteScenarioRetrieval@1": 0.0,
+      "CompleteScenarioRetrieval@10": 0.23880597014925373,
+      "CompleteScenarioRetrieval@100": 0.8208955223880597,
+      "CompleteScenarioRetrieval@25": 0.3880597014925373,
+      "CompleteScenarioRetrieval@5": 0.08955223880597014,
+      "CompleteScenarioRetrieval@50": 0.5671641791044776,
+      "Hit@1": 0.7470326409495549,
+      "Hit@10": 0.9384272997032641,
+      "Hit@100": 0.9888724035608308,
+      "Hit@25": 0.9718100890207715,
+      "Hit@5": 0.9102373887240356,
+      "Hit@50": 0.9829376854599406,
+      "LEXICAL_LOW_Hit@100": 0.9675324675324676,
+      "MRR": 0.8179450058071176,
+      "answerable_n": 1415,
+      "applicable_metric_n": 1348,
+      "combination_n": 67,
+      "n": 1457
+    },
+    "checkpoint": "epoch_3",
+    "checkpoint_sha256": "cf1220fc7d882e2714bb6c3795cc086973ac8e2bd01076550948313506ebea3c"
+  },
+  {
+    "seed": 42,
+    "run_id": "final_seed42",
+    "dev": {
+      "CompleteScenarioRetrieval@1": 0.0,
+      "CompleteScenarioRetrieval@10": 0.23880597014925373,
+      "CompleteScenarioRetrieval@100": 0.8059701492537313,
+      "CompleteScenarioRetrieval@25": 0.40298507462686567,
+      "CompleteScenarioRetrieval@5": 0.07462686567164178,
+      "CompleteScenarioRetrieval@50": 0.5522388059701493,
+      "Hit@1": 0.7425816023738873,
+      "Hit@10": 0.9413946587537092,
+      "Hit@100": 0.9903560830860534,
+      "Hit@25": 0.973293768545994,
+      "Hit@5": 0.9094955489614244,
+      "Hit@50": 0.9829376854599406,
+      "LEXICAL_LOW_Hit@100": 0.9718614718614719,
+      "MRR": 0.8170075831794693,
+      "answerable_n": 1415,
+      "applicable_metric_n": 1348,
+      "combination_n": 67,
+      "n": 1457
+    },
+    "checkpoint": "epoch_3",
+    "checkpoint_sha256": "9f4c44013c1c685322447c545d9bb32d4d0a7608df28cfedd260e0bdc68b0f37"
+  },
+  {
+    "seed": 2026,
+    "run_id": "final_seed2026",
+    "dev": {
+      "CompleteScenarioRetrieval@1": 0.0,
+      "CompleteScenarioRetrieval@10": 0.22388059701492538,
+      "CompleteScenarioRetrieval@100": 0.835820895522388,
+      "CompleteScenarioRetrieval@25": 0.40298507462686567,
+      "CompleteScenarioRetrieval@5": 0.11940298507462686,
+      "CompleteScenarioRetrieval@50": 0.5671641791044776,
+      "Hit@1": 0.7433234421364985,
+      "Hit@10": 0.9369436201780416,
+      "Hit@100": 0.9896142433234422,
+      "Hit@25": 0.9703264094955489,
+      "Hit@5": 0.9080118694362018,
+      "Hit@50": 0.9814540059347181,
+      "LEXICAL_LOW_Hit@100": 0.9696969696969697,
+      "MRR": 0.816088267157962,
+      "answerable_n": 1415,
+      "applicable_metric_n": 1348,
+      "combination_n": 67,
+      "n": 1457
+    },
+    "checkpoint": "epoch_3",
+    "checkpoint_sha256": "29fd06c04ae7404d0f7ca3fba36eb5dbb8a80481e3d5ee802155a7b014d164ff"
+  }
+]

@@ -52,6 +52,27 @@ artifacts/experiments/dense_v1/*.npy
 !artifacts/embeddings/
 artifacts/embeddings/dense_v1/*
 !artifacts/embeddings/dense_v1/*.json
+# Step 7 checkpoints and local training data remain outside Git.
+artifacts/models/
+artifacts/experiments/shift_map_v1/
+artifacts/experiments/shift_map_v1/*
+!artifacts/experiments/shift_map_v1/protocol.json
+!artifacts/experiments/shift_map_v1/environment.json
+!artifacts/experiments/shift_map_v1/training_population.json
+!artifacts/experiments/shift_map_v1/positive_policy_ablation.json
+!artifacts/experiments/shift_map_v1/negative_strategy_ablation.json
+!artifacts/experiments/shift_map_v1/learning_rate_ablation.json
+!artifacts/experiments/shift_map_v1/negative_mining_profile.json
+!artifacts/experiments/shift_map_v1/test_lock.json
+!artifacts/experiments/shift_map_v1/seed_results.json
+!artifacts/experiments/shift_map_v1/test_metrics.json
+!artifacts/experiments/shift_map_v1/slice_metrics.json
+!artifacts/experiments/shift_map_v1/paired_comparisons.json
+!artifacts/experiments/shift_map_v1/representation_drift.json
+!artifacts/experiments/shift_map_v1/no_map_diagnostics.json
+!artifacts/experiments/shift_map_v1/runtime.json
+!artifacts/experiments/shift_map_v1/manifest.json
+!artifacts/experiments/shift_map_v1/negative_mining_manifest.json
 reports/figures/*
 !reports/figures/dense_v1/
 !reports/figures/dense_v1/*.png

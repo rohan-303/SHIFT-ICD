@@ -1,0 +1,49 @@
+{
+  "experiment": "shift_map_v1",
+  "version": "1.0",
+  "question": "Can cross-version supervised contrastive adaptation of a biomedical concept encoder improve ICD mapping retrieval beyond zero-shot BioLORD while retaining generalization?",
+  "base_model": "FremyCompany/BioLORD-2023",
+  "base_revision": "167aab527b238a50ca65224e6319215d2ff4fc9f",
+  "direction": "ICD9CM_TO_ICD10CM",
+  "training_partition": "forward stratified train",
+  "dev_partition": "forward stratified dev",
+  "test_locked_until": "test_lock.json",
+  "positive_policies": [
+    "P0",
+    "P1",
+    "P2"
+  ],
+  "losses": [
+    "L1_masked_single_positive_infonce",
+    "L2_set_positive_infonce"
+  ],
+  "negative_strategies": [
+    "N1_RANDOM",
+    "N2_LEXICAL_HARD",
+    "N3_DENSE_HARD",
+    "N4_SAME_FAMILY_HARD",
+    "N5_MIXED"
+  ],
+  "selection_criterion": [
+    "Hit@100",
+    "CompleteScenarioRetrieval@100",
+    "Hit@10",
+    "MRR",
+    "LEXICAL_LOW_Hit@100"
+  ],
+  "optimizer": "AdamW",
+  "learning_rate_candidates": [
+    5e-06,
+    1e-05,
+    2e-05
+  ],
+  "temperature": 0.05,
+  "max_epochs": 3,
+  "warmup_ratio": 0.1,
+  "max_sequence_length": 64,
+  "effective_source_batch_size": 32,
+  "symmetric_loss": false,
+  "combination_pairwise_training": false,
+  "no_map_contrastive_training": false,
+  "test_data_used_for_selection": false
+}

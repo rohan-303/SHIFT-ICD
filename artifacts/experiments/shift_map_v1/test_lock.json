@@ -1,0 +1,71 @@
+{
+  "experiment": "shift_map_v1",
+  "created_at_utc": "2026-08-30T21:13:40.797008+00:00",
+  "base_model_revision": "167aab527b238a50ca65224e6319215d2ff4fc9f",
+  "config": {
+    "experiment": "shift_map_v1",
+    "version": "1.0",
+    "question": "Can cross-version supervised contrastive adaptation of a biomedical concept encoder improve ICD mapping retrieval beyond zero-shot BioLORD while retaining generalization?",
+    "base_model": "FremyCompany/BioLORD-2023",
+    "base_revision": "167aab527b238a50ca65224e6319215d2ff4fc9f",
+    "direction": "ICD9CM_TO_ICD10CM",
+    "training_partition": "forward stratified train",
+    "dev_partition": "forward stratified dev",
+    "test_locked_until": "test_lock.json",
+    "positive_policies": [
+      "P0",
+      "P1",
+      "P2"
+    ],
+    "losses": [
+      "L1_masked_single_positive_infonce",
+      "L2_set_positive_infonce"
+    ],
+    "negative_strategies": [
+      "N1_RANDOM",
+      "N2_LEXICAL_HARD",
+      "N3_DENSE_HARD",
+      "N4_SAME_FAMILY_HARD",
+      "N5_MIXED"
+    ],
+    "selection_criterion": [
+      "Hit@100",
+      "CompleteScenarioRetrieval@100",
+      "Hit@10",
+      "MRR",
+      "LEXICAL_LOW_Hit@100"
+    ],
+    "optimizer": "AdamW",
+    "learning_rate_candidates": [
+      5e-06,
+      1e-05,
+      2e-05
+    ],
+    "temperature": 0.05,
+    "max_epochs": 3,
+    "warmup_ratio": 0.1,
+    "max_sequence_length": 64,
+    "effective_source_batch_size": 32,
+    "symmetric_loss": false,
+    "combination_pairwise_training": false,
+    "no_map_contrastive_training": false,
+    "test_data_used_for_selection": false,
+    "positive_policy": "P2",
+    "loss": "L1_masked_single_positive_infonce",
+    "negative_strategy": "N1_RANDOM",
+    "learning_rate": 2e-05,
+    "epochs": 3,
+    "checkpoint_policy": "best forward stratified DEV by preregistered lexicographic criterion",
+    "seeds": [
+      17,
+      42,
+      2026
+    ],
+    "canonical_seed": 42
+  },
+  "config_sha256": "e2f4e2e450ade65b657e55535ee2e26c7fc13d8592e3721dc44f20d4a830dfd4",
+  "git_head": "721f84c84b9fac80b976407a8c8212b8588973d6",
+  "git_status_porcelain": " M .gitignore\n?? docs/experiments/shift_map_v1_protocol.md\n?? scripts/collect_shift_map_v1_dev.py\n?? scripts/create_shift_map_v1_test_lock.py\n?? scripts/evaluate_shift_map_v1.py\n?? scripts/freeze_shift_map_v1_config.py\n?? scripts/mine_shift_map_v1_negatives.py\n?? scripts/profile_shift_map_v1_training.py\n?? scripts/train_shift_map_v1.py\n?? scripts/validate_shift_map_v1_training.py\n?? src/shift_icd/shift_map/\n?? tests/unit/test_shift_map_core.py\n",
+  "test_selection_locked": true,
+  "test_data_used_before_lock": false
+}

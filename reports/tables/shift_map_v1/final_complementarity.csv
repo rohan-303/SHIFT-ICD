@@ -1,0 +1,3 @@
+direction,protocol,partition,experiment_version,n,k,shift_map_success,zero_shot_biolord_success
+ICD9CM_TO_ICD10CM,shift_map_v1,TEST,1.0,2913,10,0.8471243042671615,not stored per row
+ICD9CM_TO_ICD10CM,shift_map_v1,TEST,1.0,2913,100,0.9836734693877551,not stored per row

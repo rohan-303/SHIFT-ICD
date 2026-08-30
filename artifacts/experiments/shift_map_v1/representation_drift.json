@@ -1,0 +1,4 @@
+{
+  "status": "not_computed",
+  "reason": "target embedding drift requires a separate frozen target sample pass; no unsupported value reported"
+}

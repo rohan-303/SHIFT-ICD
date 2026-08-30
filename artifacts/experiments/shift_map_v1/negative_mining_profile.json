@@ -1,0 +1,31 @@
+{
+  "audit": {
+    "duplicates_removed": 0,
+    "fallback_count": 0,
+    "gold_collisions_detected": 0,
+    "remaining_gold_collisions": 0,
+    "sources": 9434,
+    "unavailable_same_family_count": 585
+  },
+  "base_model_revision": "167aab527b238a50ca65224e6319215d2ff4fc9f",
+  "benchmark_version": "1.0",
+  "dev_data_used": false,
+  "direction": "ICD9CM_TO_ICD10CM",
+  "experiment": "shift_map_v1",
+  "generation_script": "scripts/mine_shift_map_v1_negatives.py",
+  "negative_sets_sha256": "22421e09247220663b109e0ca6abc994c70446928a518ef93eee2f0e1524844c",
+  "partition": "train",
+  "seed": 20260830,
+  "source_count": 9434,
+  "source_ids_sha256": "e9ffbaa4f5542aaf3c46ef9a11457054e7de094ad597306cebc317aea827f7d4",
+  "split_protocol": "stratified",
+  "strategies": [
+    "N1_RANDOM",
+    "N2_LEXICAL_HARD",
+    "N3_DENSE_HARD",
+    "N4_SAME_FAMILY_HARD",
+    "N5_MIXED"
+  ],
+  "target_cache_sha256": "87492b94d7ebbe02c93a9aa1085476e1a9dcdb5a81b4f3a99f956b342288bf52",
+  "test_data_used": false
+}
