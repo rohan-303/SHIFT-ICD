@@ -1,0 +1,10 @@
+{
+  "benchmark_manifest_sha256": "5464b14e2857affd3bff3801e6497d4342449976a006325f6189271bfcabfd47",
+  "cuda": "12.6",
+  "cuda_available": true,
+  "git_commit": "08ee57bdbdebd29728021451f59ec85598ed51b2",
+  "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.15 (main, Jul 23 2026, 14:42:43) [MSC v.1944 64 bit (AMD64)]",
+  "torch": "2.7.1+cu126"
+}

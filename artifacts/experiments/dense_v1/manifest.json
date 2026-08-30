@@ -1,0 +1,20 @@
+{
+  "experiment": "dense_v1",
+  "benchmark_version": "1.0",
+  "files": [
+    "complementarity.json",
+    "config.json",
+    "dev_metrics.json",
+    "environment.json",
+    "manifest.json",
+    "models.json",
+    "no_map_diagnostics.json",
+    "oracle_union.json",
+    "paired_comparisons.json",
+    "runtime.json",
+    "selection.json",
+    "test_metrics.json",
+    "test_metrics_analysis.json"
+  ],
+  "rankings_ignored": true
+}

@@ -1,0 +1,98 @@
+[
+  {
+    "model": "SapBERT",
+    "group": "NO_MAP",
+    "n": 85,
+    "max_similarity_mean": 0.7084645874360028,
+    "margin_mean": 0.04803970841800465,
+    "mean_top5_mean": 0.6470328232821296,
+    "max_similarity_median": 0.7195645570755005,
+    "margin_median": 0.03435629606246948,
+    "mean_top5_median": 0.6499585151672364,
+    "label": "POST-HOC DIAGNOSTIC ONLY"
+  },
+  {
+    "model": "SapBERT",
+    "group": "ANSWERABLE",
+    "n": 2828,
+    "max_similarity_mean": 0.8385300309077179,
+    "margin_mean": 0.10126600034081784,
+    "mean_top5_mean": 0.721984238208099,
+    "max_similarity_median": 0.84597048163414,
+    "margin_median": 0.0714055597782135,
+    "mean_top5_median": 0.7259642243385316,
+    "label": "POST-HOC DIAGNOSTIC ONLY"
+  },
+  {
+    "model": "BioLORD-2023",
+    "group": "NO_MAP",
+    "n": 85,
+    "max_similarity_mean": 0.8110741012236651,
+    "margin_mean": 0.035656654834747316,
+    "mean_top5_mean": 0.7580614893576679,
+    "max_similarity_median": 0.8312804698944092,
+    "margin_median": 0.018273651599884033,
+    "mean_top5_median": 0.778844165802002,
+    "label": "POST-HOC DIAGNOSTIC ONLY"
+  },
+  {
+    "model": "BioLORD-2023",
+    "group": "ANSWERABLE",
+    "n": 2828,
+    "max_similarity_mean": 0.8843778192659753,
+    "margin_mean": 0.07849048876863558,
+    "mean_top5_mean": 0.7860549577160131,
+    "max_similarity_median": 0.9043866097927094,
+    "margin_median": 0.044346749782562256,
+    "mean_top5_median": 0.7939328372478485,
+    "label": "POST-HOC DIAGNOSTIC ONLY"
+  },
+  {
+    "model": "MedCPT",
+    "group": "NO_MAP",
+    "n": 85,
+    "max_similarity_mean": 0.8626175417619593,
+    "margin_mean": 0.020121023234199075,
+    "mean_top5_mean": 0.8339903114823733,
+    "max_similarity_median": 0.8639907836914062,
+    "margin_median": 0.009986162185668945,
+    "mean_top5_median": 0.8326968193054199,
+    "label": "POST-HOC DIAGNOSTIC ONLY"
+  },
+  {
+    "model": "MedCPT",
+    "group": "ANSWERABLE",
+    "n": 2828,
+    "max_similarity_mean": 0.9121925562957389,
+    "margin_mean": 0.0476830175944737,
+    "mean_top5_mean": 0.8523142451528444,
+    "max_similarity_median": 0.919732540845871,
+    "margin_median": 0.02263951301574707,
+    "mean_top5_median": 0.8579406023025513,
+    "label": "POST-HOC DIAGNOSTIC ONLY"
+  },
+  {
+    "model": "Qwen3-Embedding-0.6B",
+    "group": "NO_MAP",
+    "n": 85,
+    "max_similarity_mean": 0.7541270936236663,
+    "margin_mean": 0.020709300041198732,
+    "mean_top5_mean": 0.7241135943637175,
+    "max_similarity_median": 0.7589204907417297,
+    "margin_median": 0.015526890754699707,
+    "mean_top5_median": 0.728836739063263,
+    "label": "POST-HOC DIAGNOSTIC ONLY"
+  },
+  {
+    "model": "Qwen3-Embedding-0.6B",
+    "group": "ANSWERABLE",
+    "n": 2828,
+    "max_similarity_mean": 0.7807048493219063,
+    "margin_mean": 0.038274341227310216,
+    "mean_top5_mean": 0.7334300675920751,
+    "max_similarity_median": 0.7876200079917908,
+    "margin_median": 0.022681623697280884,
+    "mean_top5_median": 0.7352338850498199,
+    "label": "POST-HOC DIAGNOSTIC ONLY"
+  }
+]

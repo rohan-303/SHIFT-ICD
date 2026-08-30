@@ -1,0 +1,9 @@
+model,k,both,bm25_succeeds_dense_fails,dense_succeeds_bm25_fails,both_fail,direction,protocol,partition,n,experiment_version
+SapBERT,10,2121,94,331,367,ICD9CM_to_ICD10CM,stratified,TEST,2913,1.0
+SapBERT,100,2482,52,218,161,ICD9CM_to_ICD10CM,stratified,TEST,2913,1.0
+BioLORD-2023,10,2162,53,438,260,ICD9CM_to_ICD10CM,stratified,TEST,2913,1.0
+BioLORD-2023,100,2528,6,257,122,ICD9CM_to_ICD10CM,stratified,TEST,2913,1.0
+MedCPT,10,2082,133,315,383,ICD9CM_to_ICD10CM,stratified,TEST,2913,1.0
+MedCPT,100,2485,49,206,173,ICD9CM_to_ICD10CM,stratified,TEST,2913,1.0
+Qwen3-Embedding-0.6B,10,2156,59,389,309,ICD9CM_to_ICD10CM,stratified,TEST,2913,1.0
+Qwen3-Embedding-0.6B,100,2524,10,238,141,ICD9CM_to_ICD10CM,stratified,TEST,2913,1.0

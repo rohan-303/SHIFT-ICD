@@ -1,0 +1,50 @@
+[
+  {
+    "model": "SapBERT",
+    "k": 10,
+    "oracle_union_coverage": 0.8740130449708204,
+    "label": "ORACLE COMPLEMENTARITY CEILING"
+  },
+  {
+    "model": "SapBERT",
+    "k": 100,
+    "oracle_union_coverage": 0.9447305183659458,
+    "label": "ORACLE COMPLEMENTARITY CEILING"
+  },
+  {
+    "model": "BioLORD-2023",
+    "k": 10,
+    "oracle_union_coverage": 0.9107449364915894,
+    "label": "ORACLE COMPLEMENTARITY CEILING"
+  },
+  {
+    "model": "BioLORD-2023",
+    "k": 100,
+    "oracle_union_coverage": 0.9581187778922073,
+    "label": "ORACLE COMPLEMENTARITY CEILING"
+  },
+  {
+    "model": "MedCPT",
+    "k": 10,
+    "oracle_union_coverage": 0.8685204256779951,
+    "label": "ORACLE COMPLEMENTARITY CEILING"
+  },
+  {
+    "model": "MedCPT",
+    "k": 100,
+    "oracle_union_coverage": 0.9406110538963268,
+    "label": "ORACLE COMPLEMENTARITY CEILING"
+  },
+  {
+    "model": "Qwen3-Embedding-0.6B",
+    "k": 10,
+    "oracle_union_coverage": 0.893923789907312,
+    "label": "ORACLE COMPLEMENTARITY CEILING"
+  },
+  {
+    "model": "Qwen3-Embedding-0.6B",
+    "k": 100,
+    "oracle_union_coverage": 0.9515962924819773,
+    "label": "ORACLE COMPLEMENTARITY CEILING"
+  }
+]

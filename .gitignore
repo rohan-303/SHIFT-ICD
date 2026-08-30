@@ -43,8 +43,21 @@ data/external/*
 artifacts/*
 !artifacts/data_audit/
 !artifacts/data_audit/*.json
+!artifacts/experiments/
+artifacts/experiments/bm25_v1/
+artifacts/experiments/bm25_v1_1/
+!artifacts/experiments/dense_v1/
+artifacts/experiments/dense_v1/rankings/
+artifacts/experiments/dense_v1/*.npy
+!artifacts/embeddings/
+artifacts/embeddings/dense_v1/*
+!artifacts/embeddings/dense_v1/*.json
 reports/figures/*
+!reports/figures/dense_v1/
+!reports/figures/dense_v1/*.png
 reports/tables/*
+!reports/tables/dense_v1/
+!reports/tables/dense_v1/*.csv
 reports/error_analysis/*
 
 # Notebooks' transient state

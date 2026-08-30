@@ -1,0 +1,5 @@
+{
+  "note": "Encoding and retrieval timings are recorded in model cache manifests; exact CPU/GPU definitions preserved.",
+  "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "torch_dtype": "float32 embeddings; model inference autocast disabled"
+}
