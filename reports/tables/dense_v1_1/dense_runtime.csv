@@ -1,0 +1,5 @@
+model,experiment_version,device,batch_size,dtype,model_load_seconds,target_encoding_seconds,query_encoding_seconds,exact_retrieval_seconds,mean_query_latency_seconds,median_query_latency_seconds,p95_query_latency_seconds,gpu_peak_allocated_bytes,cpu_peak_rss_bytes,note
+SapBERT,1.1,cuda,see dense_v1 config,float32 embeddings,,,,,,,,,,Original v1 runtime artifact did not retain per-model timing fields; unavailable without rerunning encoders.
+BioLORD-2023,1.1,cuda,see dense_v1 config,float32 embeddings,,,,,,,,,,Original v1 runtime artifact did not retain per-model timing fields; unavailable without rerunning encoders.
+MedCPT,1.1,cuda,see dense_v1 config,float32 embeddings,,,,,,,,,,Original v1 runtime artifact did not retain per-model timing fields; unavailable without rerunning encoders.
+Qwen3-Embedding-0.6B,1.1,cuda,see dense_v1 config,float32 embeddings,,,,,,,,,,Original v1 runtime artifact did not retain per-model timing fields; unavailable without rerunning encoders.

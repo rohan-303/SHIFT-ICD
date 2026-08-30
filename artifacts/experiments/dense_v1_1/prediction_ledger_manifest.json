@@ -1,0 +1,14 @@
+{
+  "experiment_version": "1.1",
+  "format": "CSV",
+  "rows": 17478,
+  "systems": [
+    "BM25",
+    "SapBERT",
+    "BioLORD-2023",
+    "MedCPT",
+    "Qwen3-Embedding-0.6B",
+    "BM25 + BioLORD RRF"
+  ],
+  "population": "forward_stratified_test"
+}

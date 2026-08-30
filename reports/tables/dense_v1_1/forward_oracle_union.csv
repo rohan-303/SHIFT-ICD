@@ -1,0 +1,9 @@
+model,k,sample_population,direction,split_protocol,partition,benchmark_version,experiment_version,n_total,oracle_union_coverage,label
+SapBERT,10,forward_stratified_test,ICD9CM_to_ICD10CM,source_stratified,stratified_test,1.0,1.1,2913,0.8674905595605904,ORACLE UNION; NON-DEPLOYABLE DIAGNOSTIC
+SapBERT,100,forward_stratified_test,ICD9CM_to_ICD10CM,source_stratified,stratified_test,1.0,1.1,2913,0.943700652248541,ORACLE UNION; NON-DEPLOYABLE DIAGNOSTIC
+BioLORD-2023,10,forward_stratified_test,ICD9CM_to_ICD10CM,source_stratified,stratified_test,1.0,1.1,2913,0.9066254720219705,ORACLE UNION; NON-DEPLOYABLE DIAGNOSTIC
+BioLORD-2023,100,forward_stratified_test,ICD9CM_to_ICD10CM,source_stratified,stratified_test,1.0,1.1,2913,0.9581187778922073,ORACLE UNION; NON-DEPLOYABLE DIAGNOSTIC
+MedCPT,10,forward_stratified_test,ICD9CM_to_ICD10CM,source_stratified,stratified_test,1.0,1.1,2913,0.8674905595605904,ORACLE UNION; NON-DEPLOYABLE DIAGNOSTIC
+MedCPT,100,forward_stratified_test,ICD9CM_to_ICD10CM,source_stratified,stratified_test,1.0,1.1,2913,0.9399244764847237,ORACLE UNION; NON-DEPLOYABLE DIAGNOSTIC
+Qwen3-Embedding-0.6B,10,forward_stratified_test,ICD9CM_to_ICD10CM,source_stratified,stratified_test,1.0,1.1,2913,0.8922073463783041,ORACLE UNION; NON-DEPLOYABLE DIAGNOSTIC
+Qwen3-Embedding-0.6B,100,forward_stratified_test,ICD9CM_to_ICD10CM,source_stratified,stratified_test,1.0,1.1,2913,0.9515962924819773,ORACLE UNION; NON-DEPLOYABLE DIAGNOSTIC

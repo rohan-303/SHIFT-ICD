@@ -1,0 +1,34 @@
+[
+  {
+    "category": "BioLORD_succeeds_RRF_fails",
+    "k": 10,
+    "n": 152,
+    "fixed_rrf_k": 60,
+    "population": "forward_stratified_test",
+    "interpretation": "descriptive fixed-RRF failure analysis; no tuning"
+  },
+  {
+    "category": "RRF_succeeds_BioLORD_fails",
+    "k": 10,
+    "n": 62,
+    "fixed_rrf_k": 60,
+    "population": "forward_stratified_test",
+    "interpretation": "descriptive fixed-RRF failure analysis; no tuning"
+  },
+  {
+    "category": "BioLORD_succeeds_RRF_fails",
+    "k": 100,
+    "n": 12,
+    "fixed_rrf_k": 60,
+    "population": "forward_stratified_test",
+    "interpretation": "descriptive fixed-RRF failure analysis; no tuning"
+  },
+  {
+    "category": "RRF_succeeds_BioLORD_fails",
+    "k": 100,
+    "n": 5,
+    "fixed_rrf_k": 60,
+    "population": "forward_stratified_test",
+    "interpretation": "descriptive fixed-RRF failure analysis; no tuning"
+  }
+]

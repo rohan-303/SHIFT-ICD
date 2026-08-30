@@ -1,0 +1,32 @@
+{
+  "experiment_version": "1.1",
+  "benchmark_version": "1.0",
+  "scope_audit": [
+    {
+      "sample_population": "forward_stratified_test",
+      "n": 2913,
+      "systems": 6,
+      "ids_consistent": true
+    },
+    {
+      "sample_population": "forward_family_held_out_test",
+      "n": 2908,
+      "systems": 6,
+      "ids_consistent": true
+    },
+    {
+      "sample_population": "backward_stratified_test",
+      "n": 14341,
+      "systems": 6,
+      "ids_consistent": true
+    },
+    {
+      "sample_population": "backward_family_held_out_test",
+      "n": 14332,
+      "systems": 6,
+      "ids_consistent": true
+    }
+  ],
+  "test_selection_used": false,
+  "source": "frozen dense_v1 rankings and bm25_test_rows"
+}

@@ -1,0 +1,5 @@
+sample_population,direction,n_multi_scenario,metric
+forward_stratified_test,ICD9CM_to_ICD10CM,0,not computed when zero
+forward_family_held_out_test,ICD9CM_to_ICD10CM,0,not computed when zero
+backward_stratified_test,ICD10CM_to_ICD9CM,0,not computed when zero
+backward_family_held_out_test,ICD10CM_to_ICD9CM,0,not computed when zero

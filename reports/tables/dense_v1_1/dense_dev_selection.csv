@@ -1,0 +1,5 @@
+model,selected,test_performance_used,criterion
+SapBERT,False,False,noncombination Hit@100 > CompleteScenarioRetrieval@100 > Hit@10 > MRR
+BioLORD-2023,True,False,noncombination Hit@100 > CompleteScenarioRetrieval@100 > Hit@10 > MRR
+MedCPT,False,False,noncombination Hit@100 > CompleteScenarioRetrieval@100 > Hit@10 > MRR
+Qwen3-Embedding-0.6B,False,False,noncombination Hit@100 > CompleteScenarioRetrieval@100 > Hit@10 > MRR

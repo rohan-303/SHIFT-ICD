@@ -1,0 +1,5 @@
+category,k,n,fixed_rrf_k,population,interpretation
+BioLORD_succeeds_RRF_fails,10,152,60,forward_stratified_test,descriptive fixed-RRF failure analysis; no tuning
+RRF_succeeds_BioLORD_fails,10,62,60,forward_stratified_test,descriptive fixed-RRF failure analysis; no tuning
+BioLORD_succeeds_RRF_fails,100,12,60,forward_stratified_test,descriptive fixed-RRF failure analysis; no tuning
+RRF_succeeds_BioLORD_fails,100,5,60,forward_stratified_test,descriptive fixed-RRF failure analysis; no tuning

@@ -1,0 +1,26 @@
+[
+  {
+    "sample_population": "forward_stratified_test",
+    "direction": "ICD9CM_to_ICD10CM",
+    "n_multi_scenario": 0,
+    "metric": "not computed when zero"
+  },
+  {
+    "sample_population": "forward_family_held_out_test",
+    "direction": "ICD9CM_to_ICD10CM",
+    "n_multi_scenario": 0,
+    "metric": "not computed when zero"
+  },
+  {
+    "sample_population": "backward_stratified_test",
+    "direction": "ICD10CM_to_ICD9CM",
+    "n_multi_scenario": 0,
+    "metric": "not computed when zero"
+  },
+  {
+    "sample_population": "backward_family_held_out_test",
+    "direction": "ICD10CM_to_ICD9CM",
+    "n_multi_scenario": 0,
+    "metric": "not computed when zero"
+  }
+]
