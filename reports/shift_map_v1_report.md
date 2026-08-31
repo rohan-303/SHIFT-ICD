@@ -95,7 +95,7 @@ The committed Step 7 namespace contains the protocol, source modules, training/e
 Verified gates:
 
 ```text
-pytest: 54 passed
+pytest: 56 passed
 Ruff: All checks passed
 mypy: Success: no issues found in 27 source files
 training contamination validator: passed
