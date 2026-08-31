@@ -1,0 +1,9 @@
+{
+  "status": "REPRODUCED",
+  "checkpoint": "artifacts/models/shift_map_v1/final_seed42/epoch_3",
+  "rows": 17254,
+  "output_sha256": "3090ba9e290304d83bf5af0c3a20378f43fbf2d553000de9a85a70fa7cc563fa",
+  "ordinary_forward_n": 2695,
+  "metrics": {"Hit@1": 0.019666, "Hit@5": 0.735807, "Hit@10": 0.847124, "Hit@100": 0.983673, "MRR": 0.353663},
+  "training_occurred": false
+}

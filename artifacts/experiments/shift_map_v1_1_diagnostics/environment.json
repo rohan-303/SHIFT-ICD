@@ -1,0 +1,11 @@
+{
+  "repository": "C:\\Users\\rohan\\SHIFT-ICD",
+  "branch": "main",
+  "git_status_before_diagnostics": "## main",
+  "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "gpu_memory_mib": 6144,
+  "torch": "2.7.1+cu126",
+  "precision": "float32",
+  "training_occurred": false,
+  "optimizer_created": false
+}

@@ -92,3 +92,17 @@ def test_aggregation_reduces_slice_metrics_across_seeds():
     assert len(result) == 1
     assert result[0]["n"] == 2
     assert result[0]["Hit@10"] == 0.7
+
+
+def test_dense_target_corpus_is_direction_scoped():
+    import pandas as pd
+    from run_dense_v1 import FORWARD, build_corpora
+
+    frame = pd.DataFrame(
+        [
+            {"direction": FORWARD, "target_code": "A", "target_label": "forward", "target_short_description": "", "row_id": 1},
+            {"direction": "ICD10CM_TO_ICD9CM", "target_code": "A", "target_label": "backward", "target_short_description": "", "row_id": 2},
+        ]
+    )
+    corpora = build_corpora(frame)
+    assert corpora[FORWARD] == {"A": "forward"}

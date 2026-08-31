@@ -1,0 +1,6 @@
+{
+  "status": "BLOCKED_AT_PIPELINE_PARITY",
+  "recommended_next_step": "Step 7.2 corrected SHIFT-MAP v1 rerun",
+  "do_not": ["retrain in Step 7.1", "change objective", "change learning rate", "change negative strategy", "implement SHIFT-MAP v2"],
+  "requirements": ["direction-specific target corpora", "same corrected path for zero-shot and fine-tuned models", "new experiment version", "new TEST lock", "explicit TEST-reuse disclosure"]
+}

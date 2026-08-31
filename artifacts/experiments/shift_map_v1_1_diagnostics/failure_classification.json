@@ -1,0 +1,5 @@
+{
+  "primary": {"class": "F1_EVALUATION_BUG", "status": "CONFIRMED", "evidence": ["Original Step 7 path fails zero-shot parity", "Direction-specific corpus probe exactly restores frozen baseline"]},
+  "secondary": {"class": "F2_CHECKPOINT_INFERENCE_PIPELINE_BUG", "status": "CONFIRMED", "scope": "target corpus construction"},
+  "unsupported_until_corrected_rerun": ["F3_EMBEDDING_COLLAPSE", "F4_SCORE_COMPRESSION", "F5_TARGET_HUBNESS", "F6_OBJECTIVE_MISALIGNMENT", "F7_EASY_NEGATIVE_SATURATION", "F8_POSITIVE_SAMPLING_UNDERCOVERAGE", "F10_OVERFITTING", "F11_DIRECTIONAL_SPECIALIZATION", "F12_GENUINE_FINE_TUNING_DEGRADATION"]
+}

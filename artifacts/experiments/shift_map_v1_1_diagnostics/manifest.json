@@ -1,0 +1,39 @@
+{
+  "experiment": "shift_map_v1_1_diagnostics",
+  "version": "1.0",
+  "status": "BLOCKED_AT_PIPELINE_PARITY",
+  "scope": "diagnose_step_7_failure_without_retraining",
+  "training_occurred": false,
+  "optimizer_created": false,
+  "checkpoint_modified": false,
+  "frozen_baselines_modified": false,
+  "primary_failure": "F1_EVALUATION_BUG",
+  "secondary_failure": "F2_TARGET_CORPUS_DIRECTION_SCOPE",
+  "reproduction_output_sha256": "3090ba9e290304d83bf5af0c3a20378f43fbf2d553000de9a85a70fa7cc563fa",
+  "test_lock_sha256": "e4258a0bc85faf9f85b01d5281550ffa2ddd885da8fb0e421970eecb91def58a",
+  "base_model_revision": "167aab527b238a50ca65224e6319215d2ff4fc9f",
+  "artifacts": [
+    "environment.json",
+    "reproduction.json",
+    "reproduction_probe.json",
+    "pipeline_parity.json",
+    "zero_shot_original_path_probe.json",
+    "zero_shot_directional_probe.json",
+    "failure_classification.json",
+    "next_step_decision.json",
+    "manifest.json"
+  ],
+  "unrun_due_to_stop_rule": [
+    "score_distribution",
+    "rank_distribution",
+    "hubness",
+    "anisotropy",
+    "representation_drift",
+    "positive_similarity",
+    "negative_similarity",
+    "margin_analysis",
+    "train_dev_test_comparison",
+    "loss_saturation",
+    "alternative_sampling"
+  ]
+}

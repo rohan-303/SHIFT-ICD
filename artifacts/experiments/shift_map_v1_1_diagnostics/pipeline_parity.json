@@ -1,0 +1,9 @@
+{
+  "status": "FAILED_ORIGINAL_PATH_CONFIRMED_CORRECTED_PROBE_PASSED",
+  "original_step7_path": {"Hit@1": 0.024119, "Hit@5": 0.725788, "Hit@10": 0.830798, "Hit@100": 0.971429, "MRR": 0.352961},
+  "frozen_zero_shot_baseline": {"Hit@1": 0.717996, "Hit@5": 0.882004, "Hit@10": 0.921336, "Hit@100": 0.984045, "MRR": 0.792142},
+  "corrected_directional_corpus_probe": {"Hit@1": 0.717996, "Hit@5": 0.882004, "Hit@10": 0.921336, "Hit@100": 0.984045, "MRR": 0.792142},
+  "root_cause": "Step 7 evaluator built a target dictionary across both directions, allowing overlapping code strings to overwrite direction-specific target descriptions.",
+  "zero_shot_parity_gate": "FAILED_ORIGINAL_PATH",
+  "broader_model_diagnostics_allowed": false
+}
