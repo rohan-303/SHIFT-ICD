@@ -1,0 +1,111 @@
+{
+  "artifacts": [
+    {
+      "local_filename": "alternative_size.json",
+      "sha256": "cf90a114036bb9ea4b5c39d2dcdcefd3dd4ceac19419f04b95d0db073395be65"
+    },
+    {
+      "local_filename": "backward_parity.json",
+      "sha256": "57c6e94f1dae62ee7e946b81b6a0b0c5efa15013102140efaed2e07b24c5b909"
+    },
+    {
+      "local_filename": "backward_transfer.json",
+      "sha256": "50d68f808d15d3848c4c1126dc29f5890d0e0f5796c34e8091fb9f11dc139120"
+    },
+    {
+      "local_filename": "combination_metrics.json",
+      "sha256": "83d688b3dc539a050e0002a6ace3e34248b9f3c58d31f708987871f6fcd06e22"
+    },
+    {
+      "local_filename": "complementarity.json",
+      "sha256": "dacbc031cfdad9cac87b3fe09db5af23af083a0aa342df1bbacd1412e0253423"
+    },
+    {
+      "local_filename": "decision.json",
+      "sha256": "1cdfdcce0ca3f90f9777028cbd60fd5af97c5a4bc1f0f50af86abdf4076992f0"
+    },
+    {
+      "local_filename": "evaluator_fix.json",
+      "sha256": "ffb2d77903e0d09a896a5b0344148629b046dab6154c7f495dce6dbce8716ddb"
+    },
+    {
+      "local_filename": "forward_test_metrics.json",
+      "sha256": "e18cade19dad68b3de4bc007fb75ab4b3fe8ccc7c21fc581685f2ab505d7752f"
+    },
+    {
+      "local_filename": "hubness.json",
+      "sha256": "14de9520ace81762426ce0d2c6fd4fb9129895959e4ed897a91cb391a951a63e"
+    },
+    {
+      "local_filename": "learning_rate_replay.json",
+      "sha256": "34e8e48320e3c9bcdb80c1f5741bb30106a56098453a2a567b22ef01675b71c8"
+    },
+    {
+      "local_filename": "lexical_slices.json",
+      "sha256": "c4e30200a7b014c05449fd45d2ecd6f61548b43372c899fd29121485f1eec6ca"
+    },
+    {
+      "local_filename": "mapping_kind.json",
+      "sha256": "d61e2abe33c0ef8c4ce8c8554a5b9f9b69cda60f1d473a7b878a2eb7e5c5fac5"
+    },
+    {
+      "local_filename": "negative_description_audit.json",
+      "sha256": "2737e3f1084ce3606e85951d65ff86562908f55511db966a81fb3a245f3d8061"
+    },
+    {
+      "local_filename": "negative_strategy_replay.json",
+      "sha256": "66d224bc877f1564a88aa2318526909309657041d9966c8463bc7404b1fb2599"
+    },
+    {
+      "local_filename": "no_map_diagnostics.json",
+      "sha256": "b80e137a0fb100b77628e05a731e99257061c3e965baf81e26394dd261cea471"
+    },
+    {
+      "local_filename": "paired_comparisons.json",
+      "sha256": "b0533360b3bb5061a6d75bcf7a0c3ed0e6af3fe0dda7f64bc1c75d0933f04875"
+    },
+    {
+      "local_filename": "positive_description_audit.json",
+      "sha256": "c49cef775600080c15c6e4c146f8f247c691dda234b4058c3b2ef9acb3d6dd25"
+    },
+    {
+      "local_filename": "positive_policy_replay.json",
+      "sha256": "1c0ff63ecea4ed9214c91ce9ed537d06d2d3db2f94039ad91eb2c06402548c3c"
+    },
+    {
+      "local_filename": "rank_distribution.json",
+      "sha256": "9626b463c5c21fa3c53a1f80dccc5b46aea1b8b3bcc81b9709691549a5f63e82"
+    },
+    {
+      "local_filename": "representation_drift.json",
+      "sha256": "fa764bd960c65be6a2376e58566e0e2170945bb32c09c56e30e491fd710948cd"
+    },
+    {
+      "local_filename": "score_diagnostics.json",
+      "sha256": "1ab05e9e94e935bf2ff0fb80215bbdcf3edfe80548247cf80619e33b0c5feecf"
+    },
+    {
+      "local_filename": "seed_dev_replay.json",
+      "sha256": "a5139c56480e19f398e31172e06179c2fe32d9aa4e883e6cc0a15dd98ab58162"
+    },
+    {
+      "local_filename": "selection_replay.json",
+      "sha256": "ea732dd1454efef65525a100a353befc9f30d26b2889b6f4c2df149e6d805615"
+    },
+    {
+      "local_filename": "training_direction_audit.json",
+      "sha256": "9c8ae4179512b0024f852d045b945e24d938121ad258971910f81718b60ffee1"
+    },
+    {
+      "local_filename": "zero_shot_parity.json",
+      "sha256": "14784ebce8a107794514f9f2ba005289a63d09b2caf7f3a269550e6cdc05f401"
+    }
+  ],
+  "benchmark_version": "1.0",
+  "evaluator_version": "2.0",
+  "experiment": "shift_map_v1_2",
+  "experiment_version": "1.2",
+  "optimizer_created": false,
+  "prior_test_exposure": true,
+  "training_occurred": false
+}

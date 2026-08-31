@@ -1,0 +1,4 @@
+{
+  "reason": "embedding matrices were not persisted; a new diagnostic encoding run is required and is outside this completed replay artifact",
+  "status": "NOT_AVAILABLE"
+}

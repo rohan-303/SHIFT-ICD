@@ -1,0 +1,44 @@
+{
+  "configuration_validity": "INVALIDATED_FOR_ORIGINAL_FINAL_CONFIG_BECAUSE_CORRECTED_DEV_LOSS_WINNER_IS_L2",
+  "corrected_canonical_seed": 42,
+  "corrected_epoch_selections": {
+    "17": {
+      "epoch": 3,
+      "selection_key": [
+        0.9888724035608308,
+        0.8208955223880597,
+        0.9384272997032641,
+        0.8179450058071176
+      ]
+    },
+    "2026": {
+      "epoch": 3,
+      "selection_key": [
+        0.9896142433234422,
+        0.835820895522388,
+        0.9369436201780416,
+        0.8160882671579621
+      ]
+    },
+    "42": {
+      "epoch": 3,
+      "selection_key": [
+        0.9903560830860534,
+        0.8059701492537313,
+        0.9413946587537092,
+        0.8170075831794696
+      ]
+    }
+  },
+  "criterion": [
+    "noncombination_answerable_Hit@100",
+    "CompleteScenarioRetrieval@100",
+    "Hit@10",
+    "MRR"
+  ],
+  "learning_rate_winner": "2e-5",
+  "loss_winner": "L2",
+  "negative_strategy_winner": "N1_RANDOM",
+  "positive_policy_winner": "P2",
+  "test_used_for_selection": false
+}

@@ -1,0 +1,20 @@
+{
+  "1": {
+    "both_fail": 639,
+    "both_succeed": 1869,
+    "fine_tuned_only": 121,
+    "zero_shot_only": 66
+  },
+  "10": {
+    "both_fail": 137,
+    "both_succeed": 2471,
+    "fine_tuned_only": 75,
+    "zero_shot_only": 12
+  },
+  "100": {
+    "both_fail": 18,
+    "both_succeed": 2651,
+    "fine_tuned_only": 25,
+    "zero_shot_only": 1
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "P0": {
+    "CompleteScenarioRetrieval@1": 0.0,
+    "CompleteScenarioRetrieval@10": 0.16417910447761194,
+    "CompleteScenarioRetrieval@100": 0.7910447761194029,
+    "CompleteScenarioRetrieval@25": 0.34328358208955223,
+    "CompleteScenarioRetrieval@5": 0.07462686567164178,
+    "CompleteScenarioRetrieval@50": 0.5223880597014925,
+    "Hit@1": 0.7106824925816023,
+    "Hit@10": 0.9228486646884273,
+    "Hit@100": 0.9844213649851632,
+    "Hit@25": 0.9591988130563798,
+    "Hit@5": 0.8820474777448071,
+    "Hit@50": 0.9703264094955489,
+    "MRR": 0.7885283698087479,
+    "complex_n": 67,
+    "epoch": 2,
+    "n": 1457,
+    "ordinary_n": 1348,
+    "run_id": "dev_p0_l1_random",
+    "selection_key": [
+      0.9844213649851632,
+      0.7910447761194029,
+      0.9228486646884273,
+      0.7885283698087479
+    ]
+  },
+  "P1": {
+    "CompleteScenarioRetrieval@1": 0.0,
+    "CompleteScenarioRetrieval@10": 0.23880597014925373,
+    "CompleteScenarioRetrieval@100": 0.8208955223880597,
+    "CompleteScenarioRetrieval@25": 0.40298507462686567,
+    "CompleteScenarioRetrieval@5": 0.07462686567164178,
+    "CompleteScenarioRetrieval@50": 0.5970149253731343,
+    "Hit@1": 0.7359050445103857,
+    "Hit@10": 0.9339762611275965,
+    "Hit@100": 0.9866468842729971,
+    "Hit@25": 0.9703264094955489,
+    "Hit@5": 0.8961424332344213,
+    "Hit@50": 0.9814540059347181,
+    "MRR": 0.8078478381227091,
+    "complex_n": 67,
+    "epoch": 3,
+    "n": 1457,
+    "ordinary_n": 1348,
+    "run_id": "dev_p1_l1_random",
+    "selection_key": [
+      0.9866468842729971,
+      0.8208955223880597,
+      0.9339762611275965,
+      0.8078478381227091
+    ]
+  },
+  "P2": {
+    "CompleteScenarioRetrieval@1": 0.0,
+    "CompleteScenarioRetrieval@10": 0.2537313432835821,
+    "CompleteScenarioRetrieval@100": 0.835820895522388,
+    "CompleteScenarioRetrieval@25": 0.40298507462686567,
+    "CompleteScenarioRetrieval@5": 0.08955223880597014,
+    "CompleteScenarioRetrieval@50": 0.5671641791044776,
+    "Hit@1": 0.7359050445103857,
+    "Hit@10": 0.9369436201780416,
+    "Hit@100": 0.9866468842729971,
+    "Hit@25": 0.9703264094955489,
+    "Hit@5": 0.8991097922848664,
+    "Hit@50": 0.9814540059347181,
+    "MRR": 0.8090234339061506,
+    "complex_n": 67,
+    "epoch": 3,
+    "n": 1457,
+    "ordinary_n": 1348,
+    "run_id": "dev_p2_l1_random",
+    "selection_key": [
+      0.9866468842729971,
+      0.835820895522388,
+      0.9369436201780416,
+      0.8090234339061506
+    ]
+  }
+}

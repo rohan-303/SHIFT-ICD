@@ -1,0 +1,13 @@
+{
+  "fine_tuned_seed42": {
+    "mean_top5_similarity": 0.8253913184252548,
+    "top1_score": 0.9042738771319921,
+    "top2_score": 0.8403590171352678
+  },
+  "top10_score_spread": "NOT_PERSISTED",
+  "zero_shot": {
+    "mean_top5_similarity": 0.7852381203864556,
+    "top1_score": 0.8822388475370129,
+    "top2_score": 0.8049982283539351
+  }
+}

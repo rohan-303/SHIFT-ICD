@@ -1,0 +1,120 @@
+{
+  "authoritative_target_corpus": {
+    "corpus_hash": "a394fe6a0055b13e2df4eaeb4ac4b739e7d8d54277adb02f9bdecff67ad80a3a",
+    "count": 17513,
+    "terminology_version": "CMS FY2018"
+  },
+  "caveat": "Historical batch-level target strings were not persisted; integrity is reconstructed from immutable codes, manifests, and the target lookup implementation.",
+  "components": [
+    {
+      "affected": false,
+      "candidate_count": 17513,
+      "component": "random negative mining",
+      "direction_scoped": true,
+      "evidence": "negative_mining_manifest.json direction + forward target cache hash"
+    },
+    {
+      "affected": false,
+      "candidate_count": 17513,
+      "component": "lexical hard negative mining",
+      "direction_scoped": true,
+      "evidence": "negative_mining_manifest.json and miner forward corpus"
+    },
+    {
+      "affected": false,
+      "candidate_count": 17513,
+      "component": "dense hard negative mining",
+      "direction_scoped": true,
+      "evidence": "negative_mining_manifest.json and frozen forward embedding cache"
+    },
+    {
+      "affected": false,
+      "candidate_count": 17513,
+      "component": "same-family negative mining",
+      "direction_scoped": true,
+      "evidence": "negative_mining_manifest.json direction"
+    },
+    {
+      "affected": false,
+      "candidate_count": 17513,
+      "component": "mixed negative generation",
+      "direction_scoped": true,
+      "evidence": "composed only from audited forward negative sets"
+    },
+    {
+      "affected": false,
+      "candidate_count": 17513,
+      "component": "positive-target description lookup",
+      "direction_scoped": true,
+      "evidence": "train_shift_map_v1.py now reconstructs the frozen intended lookup from authoritative corpus; historical code used the forward target cache"
+    },
+    {
+      "affected": false,
+      "candidate_count": 17513,
+      "component": "training batch target-text lookup",
+      "direction_scoped": true,
+      "evidence": "candidate codes are positive/negative codes and lookup is forward-only"
+    }
+  ],
+  "direction": "ICD9CM_TO_ICD10CM",
+  "evaluator_version": "2.0",
+  "experiment": "shift_map_v1_2",
+  "negative_description_audit": {
+    "DENSE": {
+      "description_lookup_source": "authoritative forward corpus",
+      "gold_collisions": 0,
+      "historical_text_file_available": false,
+      "missing_descriptions": 0,
+      "negative_codes": 9434,
+      "non_icd10_codes": 0,
+      "unique_codes": 5684
+    },
+    "LEXICAL": {
+      "description_lookup_source": "authoritative forward corpus",
+      "gold_collisions": 0,
+      "historical_text_file_available": false,
+      "missing_descriptions": 0,
+      "negative_codes": 9434,
+      "non_icd10_codes": 0,
+      "unique_codes": 4746
+    },
+    "MIXED": {
+      "description_lookup_source": "authoritative forward corpus",
+      "gold_collisions": 0,
+      "historical_text_file_available": false,
+      "missing_descriptions": 0,
+      "negative_codes": 37736,
+      "non_icd10_codes": 0,
+      "unique_codes": 14223
+    },
+    "RANDOM": {
+      "description_lookup_source": "authoritative forward corpus",
+      "gold_collisions": 0,
+      "historical_text_file_available": false,
+      "missing_descriptions": 0,
+      "negative_codes": 37736,
+      "non_icd10_codes": 0,
+      "unique_codes": 15540
+    },
+    "SAME_FAMILY": {
+      "description_lookup_source": "authoritative forward corpus",
+      "gold_collisions": 0,
+      "historical_text_file_available": false,
+      "missing_descriptions": 0,
+      "negative_codes": 9434,
+      "non_icd10_codes": 0,
+      "unique_codes": 5356
+    }
+  },
+  "optimizer_created": false,
+  "positive_description_audit": {
+    "correct_description_matches": 15588,
+    "cross_direction_collisions": 0,
+    "literal_historical_batch_text_available": false,
+    "mismatches": 0,
+    "missing_descriptions": 0,
+    "positive_relations_audited": 15588
+  },
+  "training_clean_for_intended_forward_design": true,
+  "training_occurred": false
+}

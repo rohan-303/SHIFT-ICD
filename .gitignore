@@ -54,6 +54,12 @@ artifacts/embeddings/dense_v1/*
 !artifacts/embeddings/dense_v1/*.json
 # Step 7 checkpoints and local training data remain outside Git.
 artifacts/models/
+!artifacts/experiments/shift_map_v1_2/
+artifacts/experiments/shift_map_v1_2/zero_shot_test.json
+artifacts/experiments/shift_map_v1_2/zero_shot_dev.json
+artifacts/experiments/shift_map_v1_2/test_seed*.json
+artifacts/experiments/shift_map_v1_2/dev_replay.json
+artifacts/experiments/shift_map_v1_2/dev_replay_parts/
 artifacts/experiments/shift_map_v1/
 artifacts/experiments/shift_map_v1/*
 !artifacts/experiments/shift_map_v1/protocol.json

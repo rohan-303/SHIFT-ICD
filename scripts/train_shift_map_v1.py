@@ -13,6 +13,7 @@ import torch
 from sentence_transformers import SentenceTransformer
 
 from shift_icd.benchmark.schemas import BenchmarkExample
+from shift_icd.dense.corpus import FORWARD, build_target_corpus
 from shift_icd.evaluation.retrieval import choice_list_recall_at_k, complete_scenario_retrieval_at_k
 from shift_icd.shift_map.losses import l1_masked_single_infonce, l2_set_positive_infonce
 from shift_icd.shift_map.training import TrainingExample, eligible_examples, sample_positive, source_balanced_epoch
@@ -227,12 +228,11 @@ def main() -> None:
         train_rows = train_rows[: args.limit_sources]
     negatives = load_negatives()
     target_meta = json.loads(TARGET_CACHE.read_text(encoding="utf-8"))
-    target_texts_global = {code: "" for code in target_meta["codes"]}
     normalized = __import__("pandas").read_parquet(ROOT / "data/processed/cms/2018_gem/normalized_rows.parquet")
-    for item in normalized[normalized.target_code.notna()].itertuples(index=False):
-        code = str(item.target_code)
-        if code in target_texts_global and not target_texts_global[code]:
-            target_texts_global[code] = str(item.target_label or item.target_short_description or "")
+    forward_corpus = build_target_corpus(normalized, FORWARD)
+    if target_meta["codes"] != list(forward_corpus.codes):
+        raise RuntimeError("frozen BioLORD target cache code order does not match authoritative forward corpus")
+    target_texts_global = forward_corpus.as_dict()
     dev = [example for example in all_examples if example.direction == "ICD9CM_TO_ICD10CM" and example.split == "dev"]
     if args.limit_dev is not None:
         dev = dev[: args.limit_dev]

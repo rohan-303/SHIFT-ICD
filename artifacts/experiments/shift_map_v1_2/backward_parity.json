@@ -1,0 +1,8 @@
+{
+  "corpus_count": 11690,
+  "forward_test_runner": {
+    "backward_rows": 14341
+  },
+  "note": "Frozen backward reference is persisted in dense_v1_1; corrected runner produced 14,341 rows.",
+  "parity": "PASS_STRUCTURAL_CORPUS_HASH_AND_DIRECTION_GATE"
+}

@@ -1,0 +1,31 @@
+{
+  "fine_tuned_seed42": {
+    "Hit@1": null,
+    "Hit@10": null,
+    "Hit@100": null,
+    "Hit@25": null,
+    "Hit@5": null,
+    "Hit@50": null,
+    "MRR": null,
+    "n": 85,
+    "ordinary_n": 0
+  },
+  "metrics": [
+    "max_cosine_similarity",
+    "top1_top2_margin",
+    "mean_top5_similarity"
+  ],
+  "no_threshold_classifier_calibration": true,
+  "status": "AVAILABLE",
+  "zero_shot": {
+    "Hit@1": null,
+    "Hit@10": null,
+    "Hit@100": null,
+    "Hit@25": null,
+    "Hit@5": null,
+    "Hit@50": null,
+    "MRR": null,
+    "n": 85,
+    "ordinary_n": 0
+  }
+}

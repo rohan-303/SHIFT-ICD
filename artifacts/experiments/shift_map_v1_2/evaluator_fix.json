@@ -1,0 +1,11 @@
+{
+  "backward_corpus_hash": "f04b166e3ffbb04cfd47c7dba7c934d22a4482c8cc20e7f786ff7eb002e66a17",
+  "backward_count": 11690,
+  "benchmark_version": "1.0",
+  "canonical_schema_version": "1.0",
+  "direction_scope": true,
+  "evaluator_version": "2.0",
+  "forward_corpus_hash": "a394fe6a0055b13e2df4eaeb4ac4b739e7d8d54277adb02f9bdecff67ad80a3a",
+  "forward_count": 17513,
+  "original_step7_outputs_preserved_invalid": true
+}

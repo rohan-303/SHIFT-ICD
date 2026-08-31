@@ -1,0 +1,47 @@
+{
+  "DENSE": {
+    "description_lookup_source": "authoritative forward corpus",
+    "gold_collisions": 0,
+    "historical_text_file_available": false,
+    "missing_descriptions": 0,
+    "negative_codes": 9434,
+    "non_icd10_codes": 0,
+    "unique_codes": 5684
+  },
+  "LEXICAL": {
+    "description_lookup_source": "authoritative forward corpus",
+    "gold_collisions": 0,
+    "historical_text_file_available": false,
+    "missing_descriptions": 0,
+    "negative_codes": 9434,
+    "non_icd10_codes": 0,
+    "unique_codes": 4746
+  },
+  "MIXED": {
+    "description_lookup_source": "authoritative forward corpus",
+    "gold_collisions": 0,
+    "historical_text_file_available": false,
+    "missing_descriptions": 0,
+    "negative_codes": 37736,
+    "non_icd10_codes": 0,
+    "unique_codes": 14223
+  },
+  "RANDOM": {
+    "description_lookup_source": "authoritative forward corpus",
+    "gold_collisions": 0,
+    "historical_text_file_available": false,
+    "missing_descriptions": 0,
+    "negative_codes": 37736,
+    "non_icd10_codes": 0,
+    "unique_codes": 15540
+  },
+  "SAME_FAMILY": {
+    "description_lookup_source": "authoritative forward corpus",
+    "gold_collisions": 0,
+    "historical_text_file_available": false,
+    "missing_descriptions": 0,
+    "negative_codes": 9434,
+    "non_icd10_codes": 0,
+    "unique_codes": 5356
+  }
+}

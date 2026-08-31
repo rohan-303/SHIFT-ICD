@@ -1,0 +1,12 @@
+{
+  "corrected_dev_selects_original_config": false,
+  "evidence": {
+    "loss_winner": "L2",
+    "original_loss": "L1"
+  },
+  "next_path": "C",
+  "outcome": "R7_CONFIGURATION_SELECTION_INVALIDATED",
+  "recommendation": "Step 7.3 exact retraining with corrected DEV-selected L2 configuration",
+  "shift_map_v2_safe": false,
+  "training_clean": true
+}

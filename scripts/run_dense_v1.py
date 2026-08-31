@@ -16,6 +16,7 @@ import pandas as pd
 import torch
 
 from shift_icd.benchmark.schemas import BenchmarkExample
+from shift_icd.dense.corpus import BACKWARD, FORWARD, build_target_corpus
 from shift_icd.dense.models import ModelSpec, load_encoder
 from shift_icd.dense.text import clean_dense_text
 from shift_icd.evaluation.retrieval import choice_list_recall_at_k, complete_scenario_retrieval_at_k, hit_at_k
@@ -25,8 +26,6 @@ BENCHMARK = ROOT / "data/benchmarks/cms_track_a/v1.0"
 OUT = ROOT / "artifacts/experiments/dense_v1"
 EMBED = ROOT / "artifacts/embeddings/dense_v1"
 K_VALUES = (1, 5, 10, 25, 50, 100)
-FORWARD = "ICD9CM_TO_ICD10CM"
-BACKWARD = "ICD10CM_TO_ICD9CM"
 SPECS = (
     ModelSpec("SapBERT", "cambridgeltl/SapBERT-from-PubMedBERT-fulltext", "090663c3ae57bf35ffe4d0d468a2a88d03051a4d", "transformers_cls", "Apache-2.0", 768),
     ModelSpec("BioLORD-2023", "FremyCompany/BioLORD-2023", "167aab527b238a50ca65224e6319215d2ff4fc9f", "sentence_transformer", "other (model-card terms)", 768),
@@ -53,16 +52,8 @@ def load_examples() -> list[BenchmarkExample]:
 
 
 def build_corpora(rows: pd.DataFrame) -> dict[str, dict[str, str]]:
-    corpora: dict[str, dict[str, str]] = {FORWARD: {}, BACKWARD: {}}
-    for direction in (FORWARD, BACKWARD):
-        frame = rows[(rows.direction == direction) & rows.target_code.notna()].copy()
-        for row in frame.sort_values(["target_code", "row_id"]).itertuples(index=False):
-            code = str(row.target_code)
-            if code not in corpora[direction]:
-                long = "" if pd.isna(row.target_label) else str(row.target_label)
-                short = "" if pd.isna(row.target_short_description) else str(row.target_short_description)
-                corpora[direction][code] = clean_dense_text(long or short)
-    return corpora
+    """Compatibility wrapper around the authoritative direction-scoped builder."""
+    return {direction: build_target_corpus(rows, direction).as_dict() for direction in (FORWARD, BACKWARD)}
 
 
 def source_text(example: BenchmarkExample) -> str:

@@ -1,0 +1,25 @@
+{
+  "complex_supervision_excluded": true,
+  "fine_tuned_seed42": {
+    "Hit@1": null,
+    "Hit@10": null,
+    "Hit@100": null,
+    "Hit@25": null,
+    "Hit@5": null,
+    "Hit@50": null,
+    "MRR": null,
+    "n": 133,
+    "ordinary_n": 0
+  },
+  "zero_shot": {
+    "Hit@1": null,
+    "Hit@10": null,
+    "Hit@100": null,
+    "Hit@25": null,
+    "Hit@5": null,
+    "Hit@50": null,
+    "MRR": null,
+    "n": 133,
+    "ordinary_n": 0
+  }
+}

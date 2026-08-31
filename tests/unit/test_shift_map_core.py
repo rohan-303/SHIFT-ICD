@@ -96,13 +96,62 @@ def test_aggregation_reduces_slice_metrics_across_seeds():
 
 def test_dense_target_corpus_is_direction_scoped():
     import pandas as pd
-    from run_dense_v1 import FORWARD, build_corpora
+
+    from shift_icd.dense.corpus import build_target_corpus
 
     frame = pd.DataFrame(
         [
-            {"direction": FORWARD, "target_code": "A", "target_label": "forward", "target_short_description": "", "row_id": 1},
+            {"direction": "ICD9CM_TO_ICD10CM", "target_code": "A", "target_label": "forward", "target_short_description": "", "row_id": 1},
             {"direction": "ICD10CM_TO_ICD9CM", "target_code": "A", "target_label": "backward", "target_short_description": "", "row_id": 2},
         ]
     )
-    corpora = build_corpora(frame)
-    assert corpora[FORWARD] == {"A": "forward"}
+    corpus = build_target_corpus(frame, "ICD9CM_TO_ICD10CM")
+    assert corpus.codes == ("A",)
+    assert corpus.descriptions == ("forward",)
+
+
+def test_shift_map_v1_2_evaluator_version_and_selection_are_explicit():
+    import json
+    from pathlib import Path
+
+    root = Path(__file__).resolve().parents[2]
+    fix = json.loads((root / "artifacts/experiments/shift_map_v1_2/evaluator_fix.json").read_text())
+    selection = json.loads((root / "artifacts/experiments/shift_map_v1_2/selection_replay.json").read_text())
+    assert fix["evaluator_version"] == "2.0"
+    assert selection["test_used_for_selection"] is False
+    assert selection["corrected_canonical_seed"] in {17, 42, 2026}
+
+
+def test_shift_map_v1_historical_artifacts_are_preserved():
+    from pathlib import Path
+
+    root = Path(__file__).resolve().parents[2]
+    assert (root / "artifacts/experiments/shift_map_v1/test_lock.json").exists()
+    assert (root / "artifacts/experiments/shift_map_v1/test_metrics.json").exists()
+    assert (root / "artifacts/experiments/shift_map_v1_2/decision.json").exists()
+
+
+def test_shift_map_v1_2_paired_population_identity():
+    import json
+    from pathlib import Path
+
+    root = Path(__file__).resolve().parents[2]
+    parity = json.loads(
+        (root / "artifacts/experiments/shift_map_v1_2/zero_shot_parity.json").read_text()
+    )
+    decision = json.loads(
+        (root / "artifacts/experiments/shift_map_v1_2/decision.json").read_text()
+    )
+    assert parity["parity"] == "PASS"
+    assert decision["next_path"] == "C"
+    import pandas as pd
+
+    from shift_icd.dense.corpus import BACKWARD, FORWARD, build_target_corpus
+
+    frame = pd.read_parquet("data/processed/cms/2018_gem/normalized_rows.parquet")
+    forward = build_target_corpus(frame, FORWARD)
+    backward = build_target_corpus(frame, BACKWARD)
+    assert len(forward.codes) == 17513
+    assert len(backward.codes) == 11690
+    assert forward.terminology_version == backward.terminology_version == "CMS FY2018"
+    assert len(forward.corpus_hash) == len(backward.corpus_hash) == 64

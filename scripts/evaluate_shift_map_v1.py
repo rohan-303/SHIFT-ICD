@@ -10,6 +10,7 @@ import pandas as pd
 from sentence_transformers import SentenceTransformer
 
 from shift_icd.benchmark.schemas import BenchmarkExample
+from shift_icd.dense.corpus import BACKWARD, FORWARD, build_target_corpus
 from shift_icd.evaluation.retrieval import choice_list_recall_at_k, complete_scenario_retrieval_at_k
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -18,12 +19,12 @@ CANON = ROOT / "data/processed/cms/2018_gem/normalized_rows.parquet"
 
 
 def metrics(
-    examples: list[BenchmarkExample], model: SentenceTransformer, target_texts: dict[str, str], device: str
+    examples: list[BenchmarkExample], model: SentenceTransformer, target_texts: dict[str, str], device: str, batch_size: int = 128
 ) -> list[dict[str, object]]:
     codes = sorted(target_texts)
     target = model.encode(
         [target_texts[c] for c in codes],
-        batch_size=128,
+        batch_size=batch_size,
         show_progress_bar=False,
         convert_to_numpy=True,
         normalize_embeddings=True,
@@ -32,7 +33,7 @@ def metrics(
     ).astype(np.float32)
     query = model.encode(
         [x.source_label or "" for x in examples],
-        batch_size=128,
+        batch_size=batch_size,
         show_progress_bar=False,
         convert_to_numpy=True,
         normalize_embeddings=True,
@@ -79,27 +80,32 @@ def main() -> None:
     args = ap.parse_args()
     device = "cuda" if __import__("torch").cuda.is_available() else "cpu"
     df = pd.read_parquet(CANON)
-    target_texts = {str(c): str(g) for c, g in zip(df.target_code, df.target_label, strict=True) if pd.notna(c) and pd.notna(g)}
+    corpora = {direction: build_target_corpus(df, direction) for direction in (FORWARD, BACKWARD)}
     examples = [BenchmarkExample.model_validate_json(line) for line in BENCH.open(encoding="utf8")]
-    model = SentenceTransformer(args.model_dir, device=device)
-    rows = metrics([x for x in examples if x.direction == "ICD9CM_TO_ICD10CM" and x.split == "test"], model, target_texts, device)
-    rows += metrics(
-        [x for x in examples if x.direction == "ICD10CM_TO_ICD9CM" and x.split == "test"],
-        model,
-        {
-            str(c): str(g)
-            for c, g in zip(
-                df.loc[df.direction == "ICD10CM_TO_ICD9CM", "target_code"],
-                df.loc[df.direction == "ICD10CM_TO_ICD9CM", "target_label"],
-                strict=True,
-            )
-            if pd.notna(c) and pd.notna(g)
-        },
-        device,
-    )
+    model = SentenceTransformer(args.model_dir, device=device, trust_remote_code=True)
+    forward = [x for x in examples if x.direction == FORWARD and x.split == "test"]
+    backward = [x for x in examples if x.direction == BACKWARD and x.split == "test"]
+    rows = metrics(forward, model, corpora[FORWARD].as_dict(), device)
+    rows += metrics(backward, model, corpora[BACKWARD].as_dict(), device)
     Path(args.output).write_text(
         json.dumps(
-            {"experiment": "shift_map_v1", "seed": args.seed, "model_dir": args.model_dir, "test_data_used": True, "rows": rows}, indent=2
+            {
+                "experiment": "shift_map_v1_2",
+                "evaluator_version": "2.0",
+                "seed": args.seed,
+                "model_dir": args.model_dir,
+                "test_data_used": True,
+                "target_corpora": {
+                    direction: {
+                        "terminology_version": corpus.terminology_version,
+                        "count": len(corpus.codes),
+                        "corpus_hash": corpus.corpus_hash,
+                    }
+                    for direction, corpus in corpora.items()
+                },
+                "rows": rows,
+            },
+            indent=2,
         )
         + "\n",
         encoding="utf8",

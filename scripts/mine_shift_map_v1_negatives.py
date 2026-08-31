@@ -10,9 +10,9 @@ from typing import Any
 import numpy as np
 import pandas as pd
 import torch
-from run_bm25_v1 import build_corpora
 
 from shift_icd.benchmark.schemas import BenchmarkExample
+from shift_icd.dense.corpus import FORWARD, build_target_corpus
 from shift_icd.dense.models import ModelSpec, load_encoder
 from shift_icd.dense.text import clean_dense_text
 from shift_icd.retrieval.bm25 import BM25Index, tokenize
@@ -91,10 +91,10 @@ def main() -> None:
     seed = 20260830
     rows = load_rows()
     normalized = pd.read_parquet(ROOT / "data/processed/cms/2018_gem/normalized_rows.parquet")
-    corpora, _profiles = build_corpora(normalized, "q1_long_only")
-    target_codes = sorted(corpora["ICD9CM_TO_ICD10CM"])
+    forward_corpus = build_target_corpus(normalized, FORWARD)
+    target_codes = list(forward_corpus.codes)
     target_families = {code: code.replace(".", "")[:3].upper() for code in target_codes}
-    bm25 = BM25Index.from_documents(corpora["ICD9CM_TO_ICD10CM"], 2.0, 0.75)
+    bm25 = BM25Index.from_documents(forward_corpus.as_dict(), 2.0, 0.75)
 
     target_matrix = np.load(TARGET_CACHE).astype(np.float32)
     target_meta = json.loads(TARGET_META.read_text(encoding="utf-8"))
