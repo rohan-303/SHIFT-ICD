@@ -1,0 +1,13 @@
+# Minimal runtime dependencies for external Step 8 execution.
+# Install PyTorch from the host's compatible CUDA index/channel first.
+torch==2.7.1
+transformers==4.52.4
+tokenizers==0.21.4
+safetensors==0.5.3
+huggingface-hub==0.30.2
+numpy==2.4.6
+pandas==2.3.3
+scipy==1.17.1
+scikit-learn==1.9.0
+psutil==7.0.0
+PyYAML==6.0.3

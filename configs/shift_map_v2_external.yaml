@@ -1,0 +1,31 @@
+compute_handoff_version: "8.3"
+scientific_version: "2.0"
+model_id: ncbi/MedCPT-Cross-Encoder
+model_revision: 71caf65d4927987813984f4c284405a13fcca49
+max_length: 96
+candidate_k: 100
+padding: dynamic_longest
+input_fields:
+  - source_description
+  - target_description
+forbidden_model_fields:
+  - candidate_is_gold
+  - source_code
+  - target_code
+  - retriever_rank
+  - retriever_score
+  - mapping_kind
+  - split
+  - hierarchy
+zero_shot_dev_precision: FP32
+candidate_manifest: artifacts/candidates/shift_map_v2/manifest.json
+candidate_files:
+  train: artifacts/candidates/shift_map_v2/forward_stratified_train_k100.jsonl.gz
+  dev: artifacts/candidates/shift_map_v2/forward_stratified_dev_k100.jsonl.gz
+  test: artifacts/candidates/shift_map_v2/forward_stratified_test_k100.jsonl.gz
+chunk_sources: 50
+chunk_pairs: 5000
+external_artifact_root: artifacts/experiments/shift_map_v2_external_runs
+minimum_gpu_vram_gb: 8
+preferred_gpu_vram_gb: 12
+test_lock_required: true

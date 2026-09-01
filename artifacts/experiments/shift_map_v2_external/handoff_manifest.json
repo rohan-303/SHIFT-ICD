@@ -1,0 +1,19 @@
+{
+  "compute_handoff_version": "8.3",
+  "scientific_experiment_version": "2.0",
+  "git_commit_at_creation": "2c63a3628f0a364d0f7014b6b0a66db559e4fae3",
+  "files": [
+    {"path":"configs/shift_map_v2_external.yaml","bytes":962,"sha256":"494cf8936878b8022e9316273f8bf4638759c2946de9898a05d67514f8ae44fa"},
+    {"path":"requirements-step8.txt","bytes":318,"sha256":"65ce8a6eba4a48fd43d59d73dcd2e51fdd04a004b453297d928768affb3ce33d"},
+    {"path":"scripts/external_step8/run_step8.py","bytes":5997,"sha256":"a4d0df3f951e5ff139002931214b39bf553ac6d70876129d9467b1f1a74821eb"},
+    {"path":"scripts/external_step8/score_dev.py","bytes":4686,"sha256":"05f56ebeb87733940431c080ba2f92397cf67ca155fff7827deb8af02b7c18be"},
+    {"path":"scripts/external_step8/export_results.py","bytes":1464,"sha256":"5a803eb9dd099358bdc32da5805457cdebafca610686f08e831b4698ea838f51"},
+    {"path":"artifacts/experiments/shift_map_v2_external/data_manifest.json","bytes":2916,"sha256":"09f7fc5ac1a9fd353c398845db972ab056b55ba54f4a6d16034d136fd3999045"},
+    {"path":"artifacts/experiments/shift_map_v2_external/local_environment.json","bytes":588,"sha256":"336772af4948032abe8bbe5f6c62c1014a0118bc2ae15491120d7d6441d34f69"},
+    {"path":"artifacts/experiments/shift_map_v2_external/python_environment_lock.txt","bytes":1159,"sha256":"2736d88a58d454706adde7375dac16762adfa4687ccb0f2eaac5276fd954b622"},
+    {"path":"docs/experiments/shift_map_v2_external_execution.md","bytes":4403,"sha256":"016e37bcdbe8e007168a997c5e7d0ba0ecdcd01bc716f267dd165a2b62e7f361"}
+  ],
+  "test_lock": "NOT_CREATED",
+  "model_weights": "NOT_INCLUDED",
+  "large_files": "COPY_SEPARATELY"
+}
