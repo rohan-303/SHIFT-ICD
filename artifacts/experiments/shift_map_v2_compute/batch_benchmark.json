@@ -1,0 +1,107 @@
+{
+  "model_id": "ncbi/MedCPT-Cross-Encoder",
+  "model_revision": "71caf65d4927987813984f54c284405a13fcca49",
+  "device": "cuda:0",
+  "pairs": 1000,
+  "max_length": 96,
+  "thermal_policy": {
+    "soft_pause": 80,
+    "hard_stop": 83,
+    "resume": 72
+  },
+  "batch_results": [
+    {
+      "batch_size": 1,
+      "pairs": 1000,
+      "pairs_per_second": 77.27505588629008,
+      "wall_seconds": 12.940786499999376,
+      "mean_batch_tokens": 19.171,
+      "max_batch_tokens": 42,
+      "peak_allocated_bytes": 449675776,
+      "peak_reserved_bytes": 497025024,
+      "start_temperature": 51.0,
+      "maximum_temperature": 53.0,
+      "thermal_state": "OK"
+    },
+    {
+      "batch_size": 2,
+      "pairs": 1000,
+      "pairs_per_second": 134.88598431703255,
+      "wall_seconds": 7.413668700000926,
+      "mean_batch_tokens": 20.99,
+      "max_batch_tokens": 42,
+      "peak_allocated_bytes": 450723840,
+      "peak_reserved_bytes": 501219328,
+      "start_temperature": 53.0,
+      "maximum_temperature": 54.0,
+      "thermal_state": "OK"
+    },
+    {
+      "batch_size": 4,
+      "pairs": 1000,
+      "pairs_per_second": 253.7858311015251,
+      "wall_seconds": 3.940330299999914,
+      "mean_batch_tokens": 22.676,
+      "max_batch_tokens": 42,
+      "peak_allocated_bytes": 453369344,
+      "peak_reserved_bytes": 501219328,
+      "start_temperature": 54.0,
+      "maximum_temperature": 58.0,
+      "thermal_state": "OK"
+    },
+    {
+      "batch_size": 8,
+      "pairs": 1000,
+      "pairs_per_second": 502.3656650350344,
+      "wall_seconds": 1.9905818999995972,
+      "mean_batch_tokens": 24.832,
+      "max_batch_tokens": 42,
+      "peak_allocated_bytes": 459013632,
+      "peak_reserved_bytes": 501219328,
+      "start_temperature": 58.0,
+      "maximum_temperature": 64.0,
+      "thermal_state": "OK"
+    },
+    {
+      "batch_size": 16,
+      "pairs": 1000,
+      "pairs_per_second": 762.3455573662964,
+      "wall_seconds": 1.3117411000002903,
+      "mean_batch_tokens": 27.104,
+      "max_batch_tokens": 42,
+      "peak_allocated_bytes": 470530048,
+      "peak_reserved_bytes": 522190848,
+      "start_temperature": 64.0,
+      "maximum_temperature": 64.0,
+      "thermal_state": "OK"
+    },
+    {
+      "batch_size": 32,
+      "pairs": 1000,
+      "pairs_per_second": 1028.0384112155255,
+      "wall_seconds": 0.9727263000004314,
+      "mean_batch_tokens": 29.2,
+      "max_batch_tokens": 42,
+      "peak_allocated_bytes": 493792256,
+      "peak_reserved_bytes": 555745280,
+      "start_temperature": 64.0,
+      "maximum_temperature": 66.0,
+      "thermal_state": "OK"
+    }
+  ],
+  "fp32_fp16_parity": {
+    "n": 1000,
+    "fp32_seconds": 1.9472141999995074,
+    "fp16_seconds": 3.026342700000896,
+    "mean_abs_logit_difference": 0.007343999667093158,
+    "max_abs_logit_difference": 0.5193080902099609,
+    "spearman": 0.999994215994216,
+    "top1_pair_agreement": null,
+    "status": "MEASURED"
+  },
+  "maximum_temperature": 66.0,
+  "pause_count": 0,
+  "cooldown_seconds": 0.0,
+  "hard_stop": false,
+  "status": "COMPLETE"
+}

@@ -1,0 +1,16 @@
+{
+  "compute_experiment_version": "8.1",
+  "scientific_experiment_version": "2.0",
+  "model_id": "ncbi/MedCPT-Cross-Encoder",
+  "model_revision": "71caf65d4927987813984f54c284405a13fcca49",
+  "max_length": 96,
+  "candidate_k": 100,
+  "test_access": "FORBIDDEN",
+  "status": "NOT_COMPUTED",
+  "completed_sources": 100,
+  "expected_sources": 1457,
+  "completed_pairs": 10000,
+  "expected_pairs": 145700,
+  "metrics": "NOT COMPUTED",
+  "candidate_membership": "full invariant NOT COMPUTED"
+}

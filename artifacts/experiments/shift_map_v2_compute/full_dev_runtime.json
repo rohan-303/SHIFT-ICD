@@ -1,0 +1,15 @@
+{
+  "compute_experiment_version": "8.1",
+  "scientific_experiment_version": "2.0",
+  "model_id": "ncbi/MedCPT-Cross-Encoder",
+  "model_revision": "71caf65d4927987813984f54c284405a13fcca49",
+  "max_length": 96,
+  "candidate_k": 100,
+  "test_access": "FORBIDDEN",
+  "status": "INCOMPLETE",
+  "active_gpu_seconds": "NOT COMPUTED",
+  "wall_clock_seconds": "NOT COMPUTED",
+  "cooldown_seconds": 0.0,
+  "thermal_pause_count": 0,
+  "power_interruption": "AC disconnected"
+}

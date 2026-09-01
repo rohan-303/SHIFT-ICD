@@ -1,0 +1,17 @@
+{
+  "compute_experiment_version": "8.1",
+  "scientific_experiment_version": "2.0",
+  "model_id": "ncbi/MedCPT-Cross-Encoder",
+  "model_revision": "71caf65d4927987813984f54c284405a13fcca49",
+  "max_length": 96,
+  "candidate_k": 100,
+  "test_access": "FORBIDDEN",
+  "soft_pause_temp_c": 80,
+  "hard_stop_temp_c": 83,
+  "resume_temp_c": 72,
+  "max_observed_temp_c": 66,
+  "pause_count": 0,
+  "cooldown_seconds": 0.0,
+  "hard_stop": false,
+  "power_stop": true
+}

@@ -1,0 +1,20 @@
+{
+  "compute_experiment_version": "8.1",
+  "scientific_experiment_version": "2.0",
+  "model_id": "ncbi/MedCPT-Cross-Encoder",
+  "model_revision": "71caf65d4927987813984f54c284405a13fcca49",
+  "max_length": 96,
+  "candidate_k": 100,
+  "test_access": "FORBIDDEN",
+  "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "vram_total_mib": 6144,
+  "python": "3.11.15",
+  "cuda_device": "cuda:0",
+  "cpu_threads": 2,
+  "battery_percent_before": 80,
+  "ac_connected_before": true,
+  "battery_percent_at_stop": 79,
+  "ac_connected_at_stop": false,
+  "gpu_temperature_before_c": 49,
+  "gpu_temperature_at_stop_c": 62
+}

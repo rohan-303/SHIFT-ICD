@@ -1,0 +1,17 @@
+{
+  "expected_pairs": 145700,
+  "chunks": [
+    {
+      "chunk_id": "sources-000000-000050",
+      "start_pair": 0,
+      "end_pair": 5000,
+      "sha256": "d73f60776a540ea6d2b107ee0effcec2792635d79650a273955af1aa0bef07a1"
+    },
+    {
+      "chunk_id": "sources-000050-000100",
+      "start_pair": 5000,
+      "end_pair": 10000,
+      "sha256": "41e68160fe8bccbb34659a74faa361015cb5479e403df7c04268c7c2dd040825"
+    }
+  ]
+}

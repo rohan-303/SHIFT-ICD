@@ -1,0 +1,11 @@
+{
+  "compute_experiment_version": "8.1",
+  "scientific_experiment_version": "2.0",
+  "model_id": "ncbi/MedCPT-Cross-Encoder",
+  "model_revision": "71caf65d4927987813984f54c284405a13fcca49",
+  "max_length": 96,
+  "candidate_k": 100,
+  "test_access": "FORBIDDEN",
+  "status": "NOT_RUN",
+  "optimizer_steps": 0
+}

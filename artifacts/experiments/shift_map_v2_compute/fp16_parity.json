@@ -1,0 +1,16 @@
+{
+  "compute_experiment_version": "8.1",
+  "scientific_experiment_version": "2.0",
+  "model_id": "ncbi/MedCPT-Cross-Encoder",
+  "model_revision": "71caf65d4927987813984f54c284405a13fcca49",
+  "max_length": 96,
+  "candidate_k": 100,
+  "test_access": "FORBIDDEN",
+  "pairs": 1000,
+  "status": "MEASURED",
+  "mean_abs_logit_difference": 0.007343999667093158,
+  "max_abs_logit_difference": 0.5193080902099609,
+  "spearman": 0.999994215994216,
+  "top1_agreement": "NOT_RECORDED",
+  "precision_decision": "FP32 retained pending complete acceptance check"
+}

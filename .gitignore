@@ -44,6 +44,8 @@ artifacts/*
 !artifacts/data_audit/
 !artifacts/data_audit/*.json
 !artifacts/experiments/
+!artifacts/experiments/shift_map_v2_compute/
+artifacts/experiments/shift_map_v2_compute/zero_shot_dev_chunks/*.jsonl
 artifacts/experiments/bm25_v1/
 artifacts/experiments/bm25_v1_1/
 !artifacts/experiments/dense_v1/
@@ -85,6 +87,8 @@ reports/figures/*
 reports/tables/*
 !reports/tables/dense_v1/
 !reports/tables/dense_v1/*.csv
+!reports/tables/shift_map_v2_compute/
+!reports/tables/shift_map_v2_compute/*.csv
 reports/error_analysis/*
 
 # Notebooks' transient state
@@ -98,3 +102,7 @@ Thumbs.db
 
 # Step 7.3 large per-query evaluation ledgers remain local
 artifacts/experiments/shift_map_v1_3/test_seed*.json
+
+# Step 8.1 generated chunk scores and caches remain local
+artifacts/experiments/shift_map_v2_compute/zero_shot_dev_chunks/*.jsonl
+artifacts/experiments/shift_map_v2_compute/token_cache/

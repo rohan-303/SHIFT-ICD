@@ -1,0 +1,2 @@
+pairs,mean_abs_logit_difference,max_abs_logit_difference,spearman,top1_agreement
+1000,0.007343999667093158,0.5193080902099609,0.999994215994216,NOT_RECORDED
