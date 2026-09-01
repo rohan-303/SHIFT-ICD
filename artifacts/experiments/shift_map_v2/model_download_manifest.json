@@ -1,0 +1,32 @@
+{
+  "model_id": "ncbi/MedCPT-Cross-Encoder",
+  "revision": "71caf65d4927987813984f54c284405a13fcca49",
+  "architecture": "BertForSequenceClassification",
+  "parameter_count": "NOT_RECORDED_BEFORE_LOAD",
+  "hidden_size": 768,
+  "num_hidden_layers": 12,
+  "num_attention_heads": 12,
+  "max_position_embeddings": 512,
+  "classifier_output_shape": [
+    1
+  ],
+  "dtype": "float32",
+  "license": "other; model card license_name=public-domain; LICENSE file authoritative",
+  "provenance_url": "https://huggingface.co/ncbi/MedCPT-Cross-Encoder",
+  "paper_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10627406/",
+  "allowlist": [
+    "config.json",
+    "pytorch_model.bin",
+    "tokenizer.json",
+    "tokenizer_config.json",
+    "special_tokens_map.json",
+    "added_tokens.json",
+    "vocab.txt",
+    "LICENSE",
+    "README.md",
+    ".gitattributes"
+  ],
+  "expected_weight_bytes": 437998062,
+  "free_disk_bytes": 230071975936,
+  "recorded_at_utc": "2026-09-01T15:18:28.274095+00:00"
+}

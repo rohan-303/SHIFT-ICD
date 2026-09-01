@@ -1,0 +1,14 @@
+{
+  "experiment_version": "2.0",
+  "status": "BLOCKED_COMPUTE_FEASIBILITY",
+  "canonical_coverage_definition": "Forward ordinary sources with mapping kind SINGLE_EXACT, SINGLE_APPROXIMATE, or ALTERNATIVE; denominator includes every ordinary source, including retrieval misses; coverage is any valid gold target in frozen top-K candidates.",
+  "populations": {
+    "train": {"all_sources": 10197, "ordinary_sources": 9434, "eligible": 9343, "retrieval_misses": 91, "combinations": 468, "no_map": 295, "coverage_k100": 0.9903540385838456},
+    "dev": {"all_sources": 1457, "ordinary_sources": 1348, "eligible": 1331, "retrieval_misses": 17, "combinations": 67, "no_map": 42, "coverage_k100": 0.9873887240356083},
+    "test": {"all_sources": 2913, "ordinary_sources": 2695, "eligible": 2669, "retrieval_misses": 26, "combinations": 133, "no_map": 85, "coverage_k100": 0.9903525046382189}
+  },
+  "historical_value_0_990806": {"value": 0.9908062234794908, "fraction": "1401/1414", "status": "different_filtered_population; not canonical Step 8 end-to-end denominator"},
+  "canonical_test_miss_rate": 0.0096474953617811,
+  "candidate_files_unchanged": true,
+  "test_used_for_selection": false
+}
