@@ -1,19 +1,14 @@
 {
-  "compute_experiment_version": "8.1",
+  "compute_experiment_version": "8.2",
   "scientific_experiment_version": "2.0",
-  "model_id": "ncbi/MedCPT-Cross-Encoder",
-  "model_revision": "71caf65d4927987813984f54c284405a13fcca49",
-  "max_length": 96,
-  "candidate_k": 100,
-  "test_access": "FORBIDDEN",
-  "candidate_file_sha256": "ea7d94aa7f8e2d73d9d07dfff6d21a1b8e9a4a3db7837dd5dfa9f76feb92eafa",
   "split": "forward_stratified_dev",
   "expected_sources": 1457,
   "expected_pairs": 145700,
-  "chunk_sources": 50,
-  "batch_size": 32,
   "completed_sources": 100,
   "completed_pairs": 10000,
-  "resume_supported": true,
-  "status": "INTERRUPTED_AC_DISCONNECTED"
+  "remaining_sources": 1357,
+  "remaining_pairs": 135700,
+  "status": "INCOMPLETE_POWER_LOSS_STOP",
+  "metrics_status": "partial metrics are not scientific results",
+  "hit100_invariant": "NOT EVALUATED ON COMPLETE DEV"
 }

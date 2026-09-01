@@ -1,2 +1,2 @@
-status,active_seconds,wall_seconds,cooldown_seconds
-INCOMPLETE,NOT_COMPUTED,NOT_COMPUTED,0
+status,previous_pairs,new_pairs,total_pairs,expected_pairs,resume_count,power_loss_events,thermal_pause_count,active_gpu_seconds,wall_clock_seconds
+INCOMPLETE_POWER_LOSS_STOP,10000,0,10000,145700,1,1,0,NOT_COMPUTED,8.97

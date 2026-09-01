@@ -1,51 +1,76 @@
-# SHIFT-ICD Step 8.1 Compute Feasibility Report
+# SHIFT-ICD Step 8.2 Compute Feasibility Report
 
-**Compute experiment version:** `8.1`
+**Compute experiment version:** `8.2`
 **Scientific Step 8 version:** `2.0`
-**Status:** `CF4 — full MedCPT Step 8 not established as practical on current power window`
+**Status:** `CF4 — still not established because AC power was unreliable`
 
-## 1. Why Step 8.1 was required
+## 1. Step 8.1 prior interruption
 
-The prior GPU attempt reached 85°C and the CPU fallback exceeded the bounded window. Step 8.1 implemented guarded, resumable inference instead of repeating an opaque full run.
+Step 8.1 established a safe 1,000-pair GPU reference benchmark, reaching 66°C at batch 32. The initial full DEV run stopped after AC power disconnected at 100/1,457 sources and 10,000/145,700 pairs. This was not a thermal, OOM, model, candidate, or correctness failure.
 
-## 2. Frozen scientific contract
+## 2. Stable-power preflight
 
-MedCPT Cross-Encoder revision `71caf65d4927987813984f54c284405a13fcca49`; max length 96; frozen SHIFT-MAP v1.3 top-100 candidates; source and target descriptions only; no TEST access; no optimizer updates.
+A four-sample, 15-second preflight passed immediately before the resume attempt: all samples had `power_plugged=True`, battery 61%, and GPU temperature 50–51°C. During the resumed run, AC disconnected again at 64% battery. The runner emitted `POWER_LOSS_STOP` and exited without recomputing completed chunks or continuing on battery.
 
-## 3. Hardware and power
+## 3. Resume integrity
 
-RTX 3060 Laptop GPU, 6,144 MiB VRAM. Pre-run: 80% battery, AC connected, 49°C. During DEV execution AC disconnected at 100/1,457 sources and 62°C; the process was terminated immediately.
+The two existing chunks were revalidated before execution. Both SHA-256 hashes matched. The resumed runner skipped both chunks. No new chunk was persisted because AC disconnected before another atomic chunk completed. Existing state remains 100 sources and 10,000 pairs; remaining work is 1,357 sources and 135,700 pairs.
 
-## 4. Thermal safety policy
+## 4. Complete zero-shot DEV
 
-Soft pause 80°C; hard stop 83°C; resume 72°C. The reference benchmark reached 66°C with zero thermal pauses and zero thermal hard stops. The DEV run stopped for power loss, not thermal excess.
+Full DEV completion: **INCOMPLETE**. Only the existing 100-source/10,000-pair state is validly completed. The partial metrics are not reported as scientific results.
 
-## 5. Resumable inference design
+## 5. Hit@100 invariant
 
-`src/shift_icd/reranking/inference.py` provides deterministic ordering, chunk SHA-256, duplicate rejection, missing-range detection, persisted manifests, and thermal state handling. The DEV runner uses 50-source/5,000-pair chunks, batch 32, dynamic longest padding, and resume support. Two chunks (100 sources, 10,000 pairs) were persisted and hash-verified.
+The complete DEV Hit@100 invariant was not evaluated because full aggregation did not complete. No interpretation of partial metrics is permitted.
 
-## 6–8. Dynamic padding, FP32 reference, and FP16 parity
+## 6. Full DEV scientific metrics
 
-A deterministic 1,000-pair GPU reference used tokenizer-native `padding="longest"`, truncation, and max length 96. FP32 was the reference. FP16 mean absolute logit difference was `0.007343999667093158`, maximum difference `0.5193080902099609`, and Spearman `0.999994215994216`. Top-1 agreement was not recorded, so FP16 was not automatically promoted; FP32 is retained.
+Hit@1, Hit@3, Hit@5, Hit@10, Hit@25, Hit@50, Hit@100, MRR, NDCG@5, and NDCG@10: **NOT COMPUTED**.
 
-## 9. Batch benchmark
+## 7. Full DEV runtime
 
-Batch 1/2/4/8/16/32 achieved respectively 77.28/134.89/253.79/502.37/762.35/1028.04 pairs/s, with peak temperatures 53/54/58/64/64/66°C. Peak allocated VRAM ranged from 429.0 MiB to 471.0 MiB. Batch 32 was the largest measured safe reference batch under AC power.
+Complete active GPU runtime, complete wall-clock runtime, effective throughput, complete peak memory, and complete cooldown time: **NOT COMPUTED**. Resume attempt wall time was 8.97 seconds before power-loss stop; this is not a full-run runtime.
 
-## 10. Tokenization and pretokenization
+## 8. Thermal behavior
 
-Separate tokenization, host-transfer, and forward timers were not instrumented. Pretokenized-cache comparison was not executed. Dynamic padding itself was exercised.
+Thermal policy remains unchanged: soft pause 80°C, hard stop 83°C, resume 72°C. The resume attempt reached 57°C in the last recorded sample. Thermal pause count was zero. No process termination occurred due to temperature; the only stop was the required AC power-loss stop.
 
-## 11–18. Full DEV and training probes
+## 9. Tokenization profile
 
-Full DEV metrics are `NOT COMPUTED`: only 100/1,457 sources and 10,000/145,700 pairs completed. Hit@1, Hit@5, Hit@10, Hit@100, MRR, NDCG@10, full membership aggregation, and the Hit@100 invariant are therefore unavailable. BCE/listwise backward probes and FP16 training numerics were not run. No optimizer step occurred and no checkpoint was written. Training cost estimates are not computed.
+Separate tokenizer, host/device transfer, and forward-pass timing shares remain **NOT COMPUTED**. This was deferred because the required stable power window failed during resumed execution.
 
-## 19–21. Limitations, classification, continuation
+## 10. Pretokenization decision
 
-**CF4.** The short reference benchmark demonstrates safe inference under AC power, but complete DEV feasibility and training feasibility were not established because AC disconnected. This is an engineering/resource block, not a scientific/model failure. The main limiting factor is safe sustained execution on the laptop power envelope. The next milestone should resume from the validated 10,000-pair manifest only during an explicitly stable AC window or on suitable external compute. Do not replace MedCPT, change K, alter hypotheses, train, or access TEST.
+**NOT COMPUTED.** No cache-vs-on-the-fly controlled comparison was run.
+
+## 11–13. BCE, listwise, and memory feasibility
+
+BCE backward probe: **NOT RUN**. Listwise backward probe: **NOT RUN**. Training memory behavior and FP16 training numerics: **NOT RUN**. No optimizer updates occurred and no checkpoint was created.
+
+## 14. Weight immutability
+
+No model weights were written, no checkpoint was saved, and no optimizer step occurred. The runner was inference-only. A byte-level before/after model-cache comparison was not executed in this interruption-only milestone.
+
+## 15. Training cost projection
+
+**NOT COMPUTED**, because source-level forward/backward throughput was not measured.
+
+## 16. Resumable scientific staging plan
+
+The planned order remains: zero-shot DEV resume, BCE probe, listwise probe, negative-strategy runs, learning-rate runs, and final seeds 17, 42, and 2026. No scientific training was executed.
+
+## 17. Revised classification
+
+**CF4 — STILL NOT ESTABLISHED / UNSUITABLE POWER ENVIRONMENT.** The limiting factor is repeated AC disconnection, not GPU temperature or model compute. The short reference benchmark remains safe, but full DEV and training feasibility cannot be established without stable AC.
+
+## 18. Recommended next milestone
+
+Pause local GPU execution until the laptop has a verified stable AC connection or use suitable external compute. Resume from the existing hash-verified 10,000-pair manifest boundary. Do not replace MedCPT, change candidate K, alter max length or hypotheses, perform optimizer updates, or access TEST.
 
 ## Artifact paths
 
 - Protocol: `C:\Users\rohan\SHIFT-ICD\docs\experiments\shift_map_v2_compute_protocol.md`
 - Compute artifacts: `C:\Users\rohan\SHIFT-ICD\artifacts\experiments\shift_map_v2_compute\`
+- Chunk manifest: `C:\Users\rohan\SHIFT-ICD\artifacts\experiments\shift_map_v2_compute\zero_shot_dev_chunks\manifest.json`
 - Tables: `C:\Users\rohan\SHIFT-ICD\reports\tables\shift_map_v2_compute\`

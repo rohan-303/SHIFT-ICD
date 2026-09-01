@@ -1,0 +1,14 @@
+{
+  "compute_experiment_version": "8.2",
+  "split": "forward_stratified_dev",
+  "model_revision": "71caf65d4927987813984f54c284405a13fcca49",
+  "candidate_file_sha256": "ea7d94aa7f8e2d73d9d07dfff6d21a1b8e9a4a3db7837dd5dfa9f76feb92eafa",
+  "existing_chunks": 2,
+  "existing_pairs": 10000,
+  "existing_sources": 100,
+  "hash_validation": "PASSED",
+  "resume_attempts": 1,
+  "new_chunks_persisted": 0,
+  "power_loss_stop": "PASSED",
+  "completed_chunks_recomputed": 0
+}

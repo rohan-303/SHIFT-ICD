@@ -1,15 +1,17 @@
 {
-  "compute_experiment_version": "8.1",
-  "scientific_experiment_version": "2.0",
-  "model_id": "ncbi/MedCPT-Cross-Encoder",
-  "model_revision": "71caf65d4927987813984f54c284405a13fcca49",
-  "max_length": 96,
-  "candidate_k": 100,
-  "test_access": "FORBIDDEN",
-  "status": "INCOMPLETE",
-  "active_gpu_seconds": "NOT COMPUTED",
-  "wall_clock_seconds": "NOT COMPUTED",
+  "compute_experiment_version": "8.2",
+  "status": "INCOMPLETE_POWER_LOSS_STOP",
+  "previous_completed_pairs": 10000,
+  "newly_scored_pairs": 0,
+  "total_completed_pairs": 10000,
+  "expected_pairs": 145700,
+  "active_gpu_seconds": "NOT_COMPUTED_COMPLETE_DEV",
+  "wall_clock_seconds": 8.97,
   "cooldown_seconds": 0.0,
+  "power_loss_events": 1,
   "thermal_pause_count": 0,
-  "power_interruption": "AC disconnected"
+  "maximum_temperature_c": 57,
+  "peak_allocated_bytes": "NOT_RECORDED_RESUME",
+  "peak_reserved_bytes": "NOT_RECORDED_RESUME",
+  "resume_count": 1
 }

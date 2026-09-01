@@ -1,16 +1,22 @@
 {
-  "compute_experiment_version": "8.1",
+  "compute_experiment_version": "8.2",
   "scientific_experiment_version": "2.0",
-  "model_id": "ncbi/MedCPT-Cross-Encoder",
-  "model_revision": "71caf65d4927987813984f54c284405a13fcca49",
-  "max_length": 96,
-  "candidate_k": 100,
-  "test_access": "FORBIDDEN",
-  "status": "NOT_COMPUTED",
-  "completed_sources": 100,
-  "expected_sources": 1457,
-  "completed_pairs": 10000,
-  "expected_pairs": 145700,
-  "metrics": "NOT COMPUTED",
-  "candidate_membership": "full invariant NOT COMPUTED"
+  "split": "forward_stratified_dev",
+  "status": "NOT_COMPUTED_COMPLETE_DEV",
+  "partial_chunk_metrics": {
+    "sources": 100,
+    "pairs": 10000,
+    "interpretation": "not a full DEV scientific result"
+  },
+  "Hit@1": "NOT COMPUTED",
+  "Hit@3": "NOT COMPUTED",
+  "Hit@5": "NOT COMPUTED",
+  "Hit@10": "NOT COMPUTED",
+  "Hit@25": "NOT COMPUTED",
+  "Hit@50": "NOT COMPUTED",
+  "Hit@100": "NOT COMPUTED",
+  "MRR": "NOT COMPUTED",
+  "NDCG@5": "NOT COMPUTED",
+  "NDCG@10": "NOT COMPUTED",
+  "hit100_candidate_invariant": "NOT COMPUTED ON COMPLETE DEV"
 }

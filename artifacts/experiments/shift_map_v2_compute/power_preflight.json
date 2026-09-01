@@ -1,0 +1,14 @@
+{
+  "compute_experiment_version": "8.2",
+  "status": "POWER_LOSS_STOP",
+  "stable_window_samples": 4,
+  "stable_window_seconds": 15,
+  "preflight_samples": [
+    {"battery_percent": 61, "power_plugged": true, "gpu_temperature_c": 51},
+    {"battery_percent": 61, "power_plugged": true, "gpu_temperature_c": 50},
+    {"battery_percent": 61, "power_plugged": true, "gpu_temperature_c": 50},
+    {"battery_percent": 61, "power_plugged": true, "gpu_temperature_c": 50}
+  ],
+  "execution_power_loss": {"battery_percent": 64, "power_plugged": false, "gpu_temperature_c": 57},
+  "policy": "do not continue GPU scoring on battery"
+}

@@ -27,6 +27,11 @@ def temp():
  import subprocess
  return float(subprocess.run(['nvidia-smi','--query-gpu=temperature.gpu','--format=csv,noheader,nounits'],capture_output=True,text=True,check=True).stdout.strip().splitlines()[0])
 
+def power_plugged():
+ import psutil
+ battery=psutil.sensors_battery()
+ return bool(battery and battery.power_plugged)
+
 def main():
  p=argparse.ArgumentParser();p.add_argument('--snapshot',required=True);p.add_argument('--batch-size',type=int,default=32);p.add_argument('--chunk-sources',type=int,default=50);p.add_argument('--max-length',type=int,default=96);a=p.parse_args()
  groups=load_groups(); candidate_hash=hashlib.sha256(CAND.read_bytes()).hexdigest(); OUT.mkdir(parents=True,exist_ok=True)
@@ -41,10 +46,11 @@ def main():
   for g in groups[gs:ge]: pairs.extend((r['source_description'],r['target_description']) for r in g['rows'])
   vals=[]
   for i in range(0,len(pairs),a.batch_size):
+   if not power_plugged():
+    m.save(); print('POWER_LOSS_STOP',flush=True); break
    state=guard.check()
-   while state==ThermalState.COOLDOWN:
+   while state in (ThermalState.COOLDOWN, ThermalState.HARD_STOP):
     interruptions+=1; time.sleep(2); state=guard.check()
-   if state==ThermalState.HARD_STOP: break
    enc=tok(pairs[i:i+a.batch_size],padding='longest',truncation=True,max_length=a.max_length,return_tensors='pt');enc={k:v.to('cuda:0') for k,v in enc.items()}
    with torch.inference_mode(): vals.extend(model(**enc).logits[:,0].float().cpu().tolist())
   if len(vals)!=len(pairs): m.save(); break

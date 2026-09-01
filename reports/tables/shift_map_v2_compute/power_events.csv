@@ -1,0 +1,6 @@
+event,battery_percent,power_plugged,gpu_temperature_c,action
+stable_preflight,61,true,51,continue
+stable_preflight,61,true,50,continue
+stable_preflight,61,true,50,continue
+stable_preflight,61,true,50,continue
+power_loss_stop,64,false,57,stop_gpu_work

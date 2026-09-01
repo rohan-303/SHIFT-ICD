@@ -15,6 +15,24 @@ class ThermalState(StrEnum):
     HARD_STOP = "THERMAL_HARD_STOP"
 
 
+def verify_stable_power_window(
+    read_power: Callable[[], bool],
+    *,
+    samples: int = 4,
+    interval_seconds: float = 5.0,
+    sleep_fn: Callable[[float], None] = time.sleep,
+) -> bool:
+    """Require consecutive AC-connected observations before GPU execution."""
+    if samples < 1:
+        raise ValueError("samples must be positive")
+    for index in range(samples):
+        if not read_power():
+            return False
+        if index + 1 < samples:
+            sleep_fn(interval_seconds)
+    return True
+
+
 class ThermalGuard:
     def __init__(
         self,
@@ -38,9 +56,17 @@ class ThermalGuard:
     def check(self) -> ThermalState:
         temperature = float(self.read_temperature())
         self.max_temperature = max(self.max_temperature, temperature)
+        if self.state == ThermalState.HARD_STOP and temperature <= self.resume:
+            if self._cooldown_started is not None:
+                self.cooldown_seconds += time.monotonic() - self._cooldown_started
+            self._cooldown_started = None
+            self.state = ThermalState.OK
+            return self.state
         if temperature >= self.hard_stop:
             self.state = ThermalState.HARD_STOP
             self.hard_stop_triggered = True
+            if self._cooldown_started is None:
+                self._cooldown_started = time.monotonic()
             return self.state
         if self.state == ThermalState.COOLDOWN:
             if temperature <= self.resume:

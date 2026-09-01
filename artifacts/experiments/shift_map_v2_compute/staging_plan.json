@@ -1,0 +1,18 @@
+{
+  "compute_experiment_version": "8.2",
+  "status": "PLANNED_NOT_EXECUTED",
+  "stages": [
+    "STAGE_1_ZERO_SHOT_DEV_RESUME",
+    "STAGE_2_BCE_PROBE",
+    "STAGE_3_LISTWISE_PROBE",
+    "STAGE_4_NEGATIVE_STRATEGY_RUNS",
+    "STAGE_5_LEARNING_RATE_RUNS",
+    "STAGE_6_FINAL_SEED_17",
+    "STAGE_7_FINAL_SEED_42",
+    "STAGE_8_FINAL_SEED_2026"
+  ],
+  "scientific_training_executed": false,
+  "test_access": "FORBIDDEN",
+  "optimizer_updates": 0,
+  "resume_boundary": "100 sources / 10000 pairs"
+}
