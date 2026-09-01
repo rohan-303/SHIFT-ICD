@@ -10,7 +10,7 @@ Step 8.1 established a safe 1,000-pair GPU reference benchmark, reaching 66°C a
 
 ## 2. Stable-power preflight
 
-A four-sample, 15-second preflight passed immediately before the resume attempt: all samples had `power_plugged=True`, battery 61%, and GPU temperature 50–51°C. During the resumed run, AC disconnected again at 64% battery. The runner emitted `POWER_LOSS_STOP` and exited without recomputing completed chunks or continuing on battery.
+A four-sample, 15-second preflight passed immediately before the resume attempt: all samples had `power_plugged=True`, battery 61%, and GPU temperature 50–51°C. During the resumed run, AC disconnected again at 64% battery. The runner emitted `POWER_LOSS_STOP` and exited without recomputing completed chunks or continuing on battery. A second resume attempt under another preflight window also emitted `POWER_LOSS_STOP` before any new chunk was persisted. The repeated disconnect confirms the power environment remains unstable.
 
 ## 3. Resume integrity
 

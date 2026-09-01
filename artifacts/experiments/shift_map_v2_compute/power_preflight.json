@@ -10,5 +10,7 @@
     {"battery_percent": 61, "power_plugged": true, "gpu_temperature_c": 50}
   ],
   "execution_power_loss": {"battery_percent": 64, "power_plugged": false, "gpu_temperature_c": 57},
+  "resume_attempts": 2,
+  "power_loss_events": 2,
   "policy": "do not continue GPU scoring on battery"
 }
