@@ -1,0 +1,32 @@
+{
+  "base_model": "FremyCompany/BioLORD-2023",
+  "base_revision": "167aab527b238a50ca65224e6319215d2ff4fc9f",
+  "benchmark_version": "1.0",
+  "canonical_schema_version": "1.0",
+  "effective_source_batch": 32,
+  "epochs": 3,
+  "experiment_version": "1.3",
+  "gradient_accumulation_steps": 32,
+  "learning_rate": 2e-05,
+  "loss": "L2",
+  "max_sequence_length": 64,
+  "micro_batch_size": 1,
+  "negative_strategy": "N1_RANDOM",
+  "optimizer": "AdamW",
+  "positive_policy": "P2",
+  "precision": "fp32",
+  "scheduler": "none",
+  "seeds": [
+    17,
+    42,
+    2026
+  ],
+  "selection_split": "forward_stratified_dev",
+  "shift_map_evaluator_version": "2.0",
+  "status": "FROZEN_BEFORE_FINAL_TRAINING",
+  "target_corpus_hash": "a394fe6a0055b13e2df4eaeb4ac4b739e7d8d54277adb02f9bdecff67ad80a3a",
+  "temperature": 0.05,
+  "test_used_for_selection": false,
+  "training_manifest_hash": "1c814a8f5093ea5add5d08bb2abd25fa80bee8e073e0f95dd5cd0e7e22c77e21",
+  "weight_decay": 0.01
+}

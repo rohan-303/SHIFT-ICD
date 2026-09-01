@@ -1,0 +1,18 @@
+{
+  "comparison": "post_hoc_diagnostic_only",
+  "status": "UNPAIRED_SUMMARY_ONLY",
+  "reason": "The retained Step 7.2 L1 TEST artifact contains compact metrics but no per-query ledger; paired L1/L2 confidence intervals cannot be computed without reconstructing unavailable data.",
+  "l1_metrics": {
+    "Hit@1": 0.738404,
+    "Hit@10": 0.944712,
+    "Hit@100": 0.99295,
+    "MRR": 0.812901
+  },
+  "l2_canonical_metrics": {
+    "Hit@1": 0.7198515769944341,
+    "Hit@10": 0.9291280148423006,
+    "Hit@100": 0.9903525046382189,
+    "MRR": 0.7952315562660147
+  },
+  "interpretation": "The diagnostic L1 summary is higher than canonical L2 on these reported metrics, but this is not a paired comparison and was not used for selection."
+}

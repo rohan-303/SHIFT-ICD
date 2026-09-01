@@ -1,0 +1,19 @@
+{
+  "negative_strategy": {
+    "N1_RANDOM": {"Hit@100": 0.985905, "CompleteScenarioRetrieval@100": 0.805970, "Hit@10": 0.921365, "MRR": 0.790530},
+    "N2_LEXICAL_HARD": {"Hit@100": 0.985905, "CompleteScenarioRetrieval@100": 0.791045, "Hit@10": 0.932493, "MRR": 0.812207},
+    "N3_DENSE_HARD": {"Hit@100": 0.970326, "CompleteScenarioRetrieval@100": 0.776119, "Hit@10": 0.903561, "MRR": 0.778180},
+    "N5_MIXED_HARD": {"Hit@100": 0.985163, "CompleteScenarioRetrieval@100": 0.798507, "Hit@10": 0.927351, "MRR": 0.806000}
+  },
+  "learning_rate": {
+    "5e-6": {"Hit@100": 0.985163, "CompleteScenarioRetrieval@100": 0.791045, "Hit@10": 0.919139, "MRR": 0.790179},
+    "1e-5": {"Hit@100": 0.985163, "CompleteScenarioRetrieval@100": 0.805970, "Hit@10": 0.921365, "MRR": 0.790530},
+    "2e-5": {"Hit@100": 0.986647, "CompleteScenarioRetrieval@100": 0.820896, "Hit@10": 0.924332, "MRR": 0.798212}
+  },
+  "negative_bridge_required": true,
+  "learning_rate_bridge_required": true,
+  "negative_winner": "N1_RANDOM",
+  "learning_rate_winner": 2e-5,
+  "criterion": ["Hit@100", "CompleteScenarioRetrieval@100", "Hit@10", "MRR"],
+  "test_data_used": false
+}

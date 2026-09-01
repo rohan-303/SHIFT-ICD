@@ -95,3 +95,6 @@ reports/error_analysis/*
 Thumbs.db
 .vscode/
 .idea/
+
+# Step 7.3 large per-query evaluation ledgers remain local
+artifacts/experiments/shift_map_v1_3/test_seed*.json

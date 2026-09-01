@@ -73,7 +73,32 @@ def test_l2_is_stable_count_normalized_set_loss():
     assert loss < 1.0
 
 
-def test_aggregation_uses_valid_target_set_size_not_row_n():
+def test_l2_full_positive_numerator_matches_manual_logmeanexp():
+    q = torch.tensor([[1.0, 0.0]])
+    c = torch.tensor([[1.0, 0.0], [0.5, 0.0], [-1.0, 0.0]])
+    temperature = 1.0
+    logits = torch.tensor([1.0, 0.5, -1.0])
+    expected = -(torch.logsumexp(logits[:2], dim=0) - math.log(2.0) - torch.logsumexp(logits, dim=0))
+    assert torch.allclose(l2_set_positive_infonce(q, c, [[0, 1]], temperature), expected)
+
+
+def test_l2_rejects_unrepresented_or_empty_positive_sets():
+    q = torch.tensor([[1.0, 0.0]])
+    c = torch.tensor([[1.0, 0.0], [0.0, 1.0]])
+    import pytest
+
+    with pytest.raises(ValueError, match="at least one"):
+        l2_set_positive_infonce(q, c, [[]], 0.05)
+
+
+def test_l2_positive_cardinality_is_count_normalized():
+    q = torch.tensor([[1.0, 0.0]])
+    c = torch.tensor([[1.0, 0.0], [1.0, 0.0], [-1.0, 0.0]])
+    one = l2_set_positive_infonce(q, c, [[0]], 1.0)
+    two = l2_set_positive_infonce(q, c, [[0, 1]], 1.0)
+    assert torch.allclose(one, two)
+
+
     from aggregate_shift_map_v1 import add_positive_set_size
 
     rows = [{"n": 1, "valid_target_codes": ["A", "B"]}, {"n": 1, "valid_target_codes": ["C"]}]
@@ -110,7 +135,32 @@ def test_dense_target_corpus_is_direction_scoped():
     assert corpus.descriptions == ("forward",)
 
 
-def test_shift_map_v1_2_evaluator_version_and_selection_are_explicit():
+def test_shift_map_v1_3_provenance_marks_l1_bridges_required():
+    import json
+    from pathlib import Path
+
+    root = Path(__file__).resolve().parents[2]
+    provenance = json.loads((root / "artifacts/experiments/shift_map_v1_3/checkpoint_provenance.json").read_text())
+    composability = json.loads((root / "artifacts/experiments/shift_map_v1_3/configuration_composability.json").read_text())
+    assert provenance["negative_strategy_composable"] is False
+    assert provenance["learning_rate_composable"] is False
+    assert composability["negative_strategy_bridge_required"] is True
+    assert composability["learning_rate_bridge_required"] is True
+    assert composability["historical_negative_strategy_loss"] == ["L1"]
+    assert composability["historical_learning_rate_losses"] == ["L1"]
+
+
+def test_training_manifest_preserves_test_selection_boundary():
+    import json
+    from pathlib import Path
+
+    root = Path(__file__).resolve().parents[2]
+    manifest = json.loads((root / "artifacts/experiments/shift_map_v1_3/training_manifest.json").read_text())
+    assert manifest["evaluator_version"] == "2.0"
+    assert manifest["train_direction"] == "ICD9CM_TO_ICD10CM"
+    assert manifest["test_used_for_selection"] is False
+
+
     import json
     from pathlib import Path
 

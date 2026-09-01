@@ -1,0 +1,5 @@
+{
+  "runtime_capture": "not_persisted_by_historical_train_script",
+  "peak_gpu_memory": "unavailable",
+  "note": "Resource values not inferred."
+}

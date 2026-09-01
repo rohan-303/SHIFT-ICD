@@ -1,0 +1,137 @@
+{
+  "artifact_count": 26,
+  "artifacts": [
+    {
+      "bytes": 553,
+      "path": "alternative_analysis.csv",
+      "sha256": "db4317df4e4ccd53444e3dbd570a4852929a5874cc9fd07963e6c67c2c7a3501"
+    },
+    {
+      "bytes": 141,
+      "path": "backward_transfer.json",
+      "sha256": "861eb937f255278306848d8da69614aa899fb6de3ae18d8216a9f3e8ff59e087"
+    },
+    {
+      "bytes": 1163,
+      "path": "bridge_ablation.json",
+      "sha256": "a47d1c3d0d61a8d215ee50b7c461e65566da02ede2ad7076fce94ec75e78b62f"
+    },
+    {
+      "bytes": 141,
+      "path": "checkpoint_manifest.json",
+      "sha256": "861eb937f255278306848d8da69614aa899fb6de3ae18d8216a9f3e8ff59e087"
+    },
+    {
+      "bytes": 27182,
+      "path": "checkpoint_provenance.json",
+      "sha256": "03759052e9b9c5f4d91a26422213223a7d77b8264be99bda66b5d6aaf4ed7fef"
+    },
+    {
+      "bytes": 141,
+      "path": "complementarity.json",
+      "sha256": "861eb937f255278306848d8da69614aa899fb6de3ae18d8216a9f3e8ff59e087"
+    },
+    {
+      "bytes": 589,
+      "path": "configuration_composability.json",
+      "sha256": "69111cb439cdfbf6ce85d4864608e6ebaa69848e299e450254d5da62585ffaa1"
+    },
+    {
+      "bytes": 479,
+      "path": "corrected_forward_overall.csv",
+      "sha256": "4e2d99e900e2bba752d67b34b9eea507530d47b2e130fc173f968b16d282daf8"
+    },
+    {
+      "bytes": 141,
+      "path": "decision.json",
+      "sha256": "861eb937f255278306848d8da69614aa899fb6de3ae18d8216a9f3e8ff59e087"
+    },
+    {
+      "bytes": 141,
+      "path": "environment.json",
+      "sha256": "861eb937f255278306848d8da69614aa899fb6de3ae18d8216a9f3e8ff59e087"
+    },
+    {
+      "bytes": 481,
+      "path": "family_held_out.csv",
+      "sha256": "359af0b1eb02c0546c0f7c01a32668a40e5c0f9eaa558969a30f59e6e067dbe5"
+    },
+    {
+      "bytes": 999,
+      "path": "final_configuration.json",
+      "sha256": "1639d5fecb587770e70d55444748e492a4b73ca4b07340cd605010b0ea8af25f"
+    },
+    {
+      "bytes": 117,
+      "path": "hubness.json",
+      "sha256": "09e8969bbee8e12b41dc5ec97c3c74300116bf7e63db1ee7bb9f71ae925b0f46"
+    },
+    {
+      "bytes": 733,
+      "path": "l1_l2_analysis.json",
+      "sha256": "44c89b777392adba4dcb751581a8d6fddfc9b2f32f5c76e8dfece492e55de8e4"
+    },
+    {
+      "bytes": 480,
+      "path": "lexical_slices.csv",
+      "sha256": "68c667f8b5fd2a2ec06d4e77f44c57ab352c48870a5d808293919eec7633a61c"
+    },
+    {
+      "bytes": 588,
+      "path": "mapping_kind.csv",
+      "sha256": "a24cb92814e22bffa3e647cb9bf18429ae703f8cb53690bbeb2f890f80003654"
+    },
+    {
+      "bytes": 141,
+      "path": "no_map_diagnostics.json",
+      "sha256": "861eb937f255278306848d8da69614aa899fb6de3ae18d8216a9f3e8ff59e087"
+    },
+    {
+      "bytes": 831,
+      "path": "paired_comparisons.json",
+      "sha256": "5e7ab3151d01ff9845980046603c77d50ddf3606ed817fa9ae9245eae3b6322a"
+    },
+    {
+      "bytes": 1055,
+      "path": "protocol.json",
+      "sha256": "1baf00df723e488e5a46f16dae7dbf4c46a34e2648ce818131735172f11ff515"
+    },
+    {
+      "bytes": 141,
+      "path": "representation_drift.json",
+      "sha256": "861eb937f255278306848d8da69614aa899fb6de3ae18d8216a9f3e8ff59e087"
+    },
+    {
+      "bytes": 152,
+      "path": "runtime.json",
+      "sha256": "67e1608b0e5c73e98b0d8c14f615936f86a05e75a9fbf8a186545ea196d6a53e"
+    },
+    {
+      "bytes": 10680,
+      "path": "seed_dev_metrics.json",
+      "sha256": "e1f6b951b020d56f0f3a2bc2d2367c3a446e732c1c569a41a8fb7b98c9f72489"
+    },
+    {
+      "bytes": 1768,
+      "path": "seed_test_metrics.json",
+      "sha256": "637655f23c35bfc4b5b279fce49e02cb7cedf1af0c45ff5040aa000e823a44ba"
+    },
+    {
+      "bytes": 3403,
+      "path": "test_lock.json",
+      "sha256": "c6e5ae64103907dbee832bf2bc717ae6f15be06efea3d48eeedc4cad39521e99"
+    },
+    {
+      "bytes": 768,
+      "path": "training_manifest.json",
+      "sha256": "1c814a8f5093ea5add5d08bb2abd25fa80bee8e073e0f95dd5cd0e7e22c77e21"
+    },
+    {
+      "bytes": 141,
+      "path": "training_population.json",
+      "sha256": "861eb937f255278306848d8da69614aa899fb6de3ae18d8216a9f3e8ff59e087"
+    }
+  ],
+  "evaluator_version": "2.0",
+  "experiment_version": "1.3"
+}

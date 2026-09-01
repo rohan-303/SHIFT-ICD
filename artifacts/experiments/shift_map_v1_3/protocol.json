@@ -1,0 +1,18 @@
+{
+  "experiment_version": "1.3",
+  "purpose": "corrected_controlled_retraining_after_evaluator_repair",
+  "benchmark_version": "1.0",
+  "canonical_schema_version": "1.0",
+  "shift_map_evaluator_version": "2.0",
+  "base_model": "FremyCompany/BioLORD-2023",
+  "base_revision": "167aab527b238a50ca65224e6319215d2ff4fc9f",
+  "train_direction": "ICD9CM_TO_ICD10CM",
+  "selection_split": "forward_stratified_dev",
+  "test_used_for_selection": false,
+  "test_exposure_disclosure": "docs/experiments/shift_map_v1_3_test_exposure.md",
+  "bridge_stages": {
+    "negative_strategy": {"policy": "P2", "loss": "L2", "learning_rate": 1e-5, "strategies": ["random", "lexical_hard", "dense_hard", "mixed"], "seed": 42, "epochs": 3},
+    "learning_rate": {"policy": "P2", "loss": "L2", "strategy": "random", "learning_rates": [5e-6, 1e-5, 2e-5], "seed": 42, "epochs": 3}
+  },
+  "fixed_training": {"optimizer": "AdamW", "weight_decay": 0.01, "temperature": 0.05, "effective_source_batch_size": 32, "max_sequence_length": 64, "precision": "fp32", "scheduler": "LinearLR"}
+}
