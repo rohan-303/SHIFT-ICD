@@ -1,0 +1,28 @@
+{
+  "rows": [
+    {
+      "split": "train",
+      "ordinary_sources": 9434,
+      "eligible_sources": 9343,
+      "no_valid_candidate_sources": 91,
+      "combination_sources": 468,
+      "no_map_sources": 295
+    },
+    {
+      "split": "dev",
+      "ordinary_sources": 1348,
+      "eligible_sources": 1331,
+      "no_valid_candidate_sources": 17,
+      "combination_sources": 67,
+      "no_map_sources": 42
+    },
+    {
+      "split": "test",
+      "ordinary_sources": 2695,
+      "eligible_sources": 2669,
+      "no_valid_candidate_sources": 26,
+      "combination_sources": 133,
+      "no_map_sources": 85
+    }
+  ]
+}

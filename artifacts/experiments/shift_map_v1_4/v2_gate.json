@@ -1,0 +1,8 @@
+{
+  "gate": "GO-A",
+  "step8_authorized": true,
+  "candidate_generator": "frozen L2 seed17 epoch3",
+  "candidate_k": 100,
+  "basis": "DEV-selected checkpoint; diagnostics are characterization and TEST exposure is disclosed",
+  "caveat": "No clinical claims; L1 post-hoc TEST comparison does not change selection"
+}

@@ -1,0 +1,14 @@
+{
+  "benchmark_version": "1.0",
+  "canonical_schema_version": "1.0",
+  "evaluator_version": "2.0",
+  "experiment_version": "1.4",
+  "models": {
+    "l1_seed42": "artifacts/models/shift_map_v1/final_seed42/epoch_3",
+    "l2_seed17": "artifacts/models/shift_map_v1/v1_3_final_l2_n1_seed17/epoch_3",
+    "zero_shot": "FremyCompany/BioLORD-2023@167aab527b238a50ca65224e6319215d2ff4fc9f"
+  },
+  "purpose": "inference_only_retrieval_freeze",
+  "test_exposure": true,
+  "training_occurred": false
+}

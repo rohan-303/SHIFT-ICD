@@ -1,0 +1,4 @@
+split,ordinary_sources,eligible_sources,no_valid_candidate_sources,combination_sources,no_map_sources
+train,9434,9343,91,468,295
+dev,1348,1331,17,67,42
+test,2695,2669,26,133,85

@@ -1,0 +1,18 @@
+{
+  "experiment_version": "1.4",
+  "evaluator_version": "2.0",
+  "test_exposure": true,
+  "device": "cuda",
+  "models": {
+    "zero_shot": {
+      "model": "FremyCompany/BioLORD-2023",
+      "revision": "167aab527b238a50ca65224e6319215d2ff4fc9f"
+    },
+    "l1_seed42": {
+      "model": "C:\\Users\\rohan\\SHIFT-ICD\\artifacts\\models\\shift_map_v1\\final_seed42\\epoch_3"
+    },
+    "l2_seed17": {
+      "model": "C:\\Users\\rohan\\SHIFT-ICD\\artifacts\\models\\shift_map_v1\\v1_3_final_l2_n1_seed17\\epoch_3"
+    }
+  }
+}

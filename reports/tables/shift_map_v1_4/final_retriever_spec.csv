@@ -1,0 +1,2 @@
+benchmark_version,candidate_generator,candidate_k,checkpoint_redistribution,epoch,evaluator_version,seed,status,test_exposure
+1.0,SHIFT-MAP v1.3 corrected L2,100,restricted_pending_license_review,3,2.0,17,FROZEN,True

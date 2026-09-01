@@ -1,0 +1,462 @@
+{
+  "experiment_version": "1.4B",
+  "training_occurred": false,
+  "evaluator_version": "2.0",
+  "benchmark_version": "1.0",
+  "canonical_schema_version": "1.0",
+  "checkpoint_hash": "7a859ff478d801f98a17fc966cb0ae81ba60362725add2735d91c7e01f4fe1d",
+  "target_corpus_hash": "a394fe6a0055b13e2df4eaeb4ac4b739e7d8d54277adb02f9bdecff67ad80a3a",
+  "candidate_manifest_sha256": "d11f96db7a84bdf931a19c50d3bb900a6dfebc172cfa5b6a45da845f8fa0ab02",
+  "files": [
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\backward_transfer.json",
+      "sha256": "8446cca5ee2427108d283afa418589ca35b9f3cd46d955a379159a072d934b7e",
+      "bytes": 2514
+    },
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\candidate_generation_manifest_summary.json",
+      "sha256": "9ad162420cfa91b2be143830a44a51d89af39c6c267cb030534be63a82b3b400",
+      "bytes": 1705
+    },
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\candidate_k_analysis.json",
+      "sha256": "4231932a52f8d39e18ba7630e6c5b71bf8af4089c01f941bdd1bff1336dd7f0d",
+      "bytes": 653
+    },
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\combination_transfer.json",
+      "sha256": "ef5524da29749a4bb0679ae0f73e2c8e5b1c44c3451f491438d74773da453144",
+      "bytes": 1886
+    },
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\combination_transfer_final.json",
+      "sha256": "65a236c4dc27d6af401afb6f98cafa3a6b0b62363cf423eb6975f46b36117168",
+      "bytes": 3438
+    },
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\config.json",
+      "sha256": "93b7911cbd1bc0c9c47f52a604512de0608c9b6aea3c0f28ba8a135b5e0cfe52",
+      "bytes": 506
+    },
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\family_held_out.json",
+      "sha256": "960e00b8681cca0aa8239219cdddd9414361f197a6636c7186c0462db0f27ee6",
+      "bytes": 1280
+    },
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\final_manifest.json",
+      "sha256": "4bf1798d3a781fd1fb0fa2254aa3e4da6c13c67e296176f551693dff8c542c40",
+      "bytes": 18677
+    },
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\hubness.json",
+      "sha256": "b4eb1fdc839c6fc9c7849ee39365bbf0a53f161cb82e99b1367fae29072accf8",
+      "bytes": 3527
+    },
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\l1_l2_paired.json",
+      "sha256": "2cbf445d7cdb3b148d851e12100d60a2ed6dc5d7b0925cf6788dfff594d0839c",
+      "bytes": 2558
+    },
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\l1_ledger.json",
+      "sha256": "dec053cc54c76fb2302371ae535a4653140d6d5bb6b6cd20752c5c2efdb80822",
+      "bytes": 390
+    },
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\l1_test_seed42.json",
+      "sha256": "71ba0bfce83241a7d6704dac10efe2326f611c65e5fe162564b3d76d8106d6ab",
+      "bytes": 21383665
+    },
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\lexical_low.json",
+      "sha256": "4be48dfdf571434df06409a1e8d5bd2792f80d0cb727472c86701dccd56402d1",
+      "bytes": 1068
+    },
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\manifest.json",
+      "sha256": "25b4f0fb1f1bc8b1b7dc67754d10ba5bce3968b27eef36c9de5052fe46115410",
+      "bytes": 1911
+    },
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\no_map_diagnostics.json",
+      "sha256": "56346b301a0333c4875aed82436f4ea62f339cf7271d08dabb03101d29fe6415",
+      "bytes": 9021
+    },
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\paired_bootstrap_missing.json",
+      "sha256": "88daebbfc0a3d682122ddd4106bc5aba0285bea35f1747be3da9d709feef8493",
+      "bytes": 4000
+    },
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\positive_cardinality.json",
+      "sha256": "a0c8d193383ec7b3471b0bcce6d897c9cbe5effe2b3df4792d90cb4038247b23",
+      "bytes": 5291
+    },
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\representation_drift.json",
+      "sha256": "95ddbc4152897d063d34c8d4f49c97f425ee66dfd1ab32841a63addfae7d0168",
+      "bytes": 2937
+    },
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\retrieval_error_floor.json",
+      "sha256": "a76215feb9245d274cccecd0422d86f0fcd8695c6fca44ba5116a6877c92be80",
+      "bytes": 128
+    },
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\retriever_freeze.json",
+      "sha256": "8f232babb0512f26a43fbb4b8a43b4c3d239126a779cce9f00f242fec293cf70",
+      "bytes": 295
+    },
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\runtime.json",
+      "sha256": "3544d731e213cc1aa2a5ae14f0f7be85cf2d76997c59f26c5573fd1f0cf287c2",
+      "bytes": 5204
+    },
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\scientific_position.json",
+      "sha256": "1974e74fe268be257a6b123066181a622a054535c64c3e78e11161c1ba0e035d",
+      "bytes": 259
+    },
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\score_geometry.json",
+      "sha256": "d8da29aab7d35b45d04dfa240160c80aedceac62066e68a3847f39d9755d7933",
+      "bytes": 1382
+    },
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\source_drift.json",
+      "sha256": "7cb1e9abd7cfdb56f0154519133c0569367de8fe93680b00cd5fae77007b80b0",
+      "bytes": 1892
+    },
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\train_dev_test.json",
+      "sha256": "2f710fe8ec4c0a99626b0bfc232c7573e9f6c18ec0ab04ee0863b7aab1a8da20",
+      "bytes": 2398
+    },
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\v2_gate.json",
+      "sha256": "8e70e3d27639ff6d2eaf3d33da81da256308a0119a4dea5388e71430964f9889",
+      "bytes": 323
+    },
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\v2_training_eligibility.json",
+      "sha256": "2aee86bbadda67dca3f72b477f9c7df6e8cd9dd3b853ab7f311d83a5f0dbdb60",
+      "bytes": 650
+    },
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\ledgers\\l1_seed42_backward_dev.json",
+      "sha256": "7fb7a2fdc220b7b033a28b0450d41be98fa3ea7aee6871e73a70282fb28bf5c5",
+      "bytes": 42557347
+    },
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\ledgers\\l1_seed42_backward_test.json",
+      "sha256": "83a5350b7475b8fe440e38cc48d4b998a08090c8dd27aab486dcc0fe5145b3ab",
+      "bytes": 85139895
+    },
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\ledgers\\l1_seed42_backward_train.json",
+      "sha256": "ff87c0ec03020a8a95c5008300a0ece14f0ec7ada92fb01f44c68a5a37aceee4",
+      "bytes": 298034971
+    },
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\ledgers\\l1_seed42_forward_dev.json",
+      "sha256": "c21284dd271ab13f3334be43197f1de67a6f6f145aee37970e44ebdc6e41f80d",
+      "bytes": 8747205
+    },
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\ledgers\\l1_seed42_forward_test.json",
+      "sha256": "f2838562cf384b5058de8839e74506fadb140321783f3ea352aaeadeac24dbac",
+      "bytes": 17506332
+    },
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\ledgers\\l1_seed42_forward_train.json",
+      "sha256": "5571adc72938f8a37596aebd4e40f1afc66a87f0677d81c61baad8bf9fc994a1",
+      "bytes": 61290288
+    },
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\ledgers\\l2_seed17_backward_dev.json",
+      "sha256": "3f6b07f662cd9ad5b1550a9ed0e4415d76071d3217e51d2e723601db5d9e24cb",
+      "bytes": 42718441
+    },
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\ledgers\\l2_seed17_backward_test.json",
+      "sha256": "681eb7677b528ba9a97942da878603b331649b39abec76e6049d30207d7aab66",
+      "bytes": 85460627
+    },
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\ledgers\\l2_seed17_backward_train.json",
+      "sha256": "bfab78312cb177c9662e24cd39535ff39c3ab7ef4137896d6a603b033322515d",
+      "bytes": 299141069
+    },
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\ledgers\\l2_seed17_forward_dev.json",
+      "sha256": "e8485bf5c4752e294a78afc6e7db265ebf66854ccd55ad20848d9b4727766c83",
+      "bytes": 8761543
+    },
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\ledgers\\l2_seed17_forward_test.json",
+      "sha256": "5a9c62369d34c53cb85d78f61fa27469601a4aad9f4d23349839cd131aed6f47",
+      "bytes": 17535410
+    },
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\ledgers\\l2_seed17_forward_train.json",
+      "sha256": "119a21c44c2c9f565ee16244325ac8b59eb8b6affeaa1b5355c564d269d98dc2",
+      "bytes": 61391517
+    },
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\ledgers\\metadata.json",
+      "sha256": "d810615d17ba5b971fe8a3006f475f21b1c0d78855beb4fd1da799cba335a1e5",
+      "bytes": 541
+    },
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\ledgers\\zero_shot_backward_dev.json",
+      "sha256": "99a9f5f8753c730cc94b27418026741ec54c91a94d41bf46501e66f6a733f806",
+      "bytes": 42706348
+    },
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\ledgers\\zero_shot_backward_test.json",
+      "sha256": "03101e3ff3b859a48359d0d396fc846e98299d2b5062eeaecaeee38df09de340",
+      "bytes": 85435199
+    },
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\ledgers\\zero_shot_backward_train.json",
+      "sha256": "29c615fada573c2a4421f5e6ec749bac4338b84060ff7b534dd64389959a7af2",
+      "bytes": 299055728
+    },
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\ledgers\\zero_shot_forward_dev.json",
+      "sha256": "3074369ba4d691bc83c415f0e9e329b26da56750aa00ce21a61fb177a0ab0d2d",
+      "bytes": 8758505
+    },
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\ledgers\\zero_shot_forward_test.json",
+      "sha256": "d399fa0b02798feca02c5f5286a1e5aeb0efadc74f62dc32087fcf64d53aeeb4",
+      "bytes": 17531294
+    },
+    {
+      "path": "artifacts\\experiments\\shift_map_v1_4\\ledgers\\zero_shot_forward_train.json",
+      "sha256": "c0d8076a14b81b5bbc499332275bda1fd8c69cb8912fb127680d235ff890bcad",
+      "bytes": 61375130
+    },
+    {
+      "path": "reports\\tables\\shift_map_v1_4\\backward_family_held_out_paired.csv",
+      "sha256": "78b049fc8d15efa5efc8f746a33f25d017a01ca470922c3140ef832c2504d250",
+      "bytes": 426
+    },
+    {
+      "path": "reports\\tables\\shift_map_v1_4\\backward_transfer.csv",
+      "sha256": "ea4d2fc04850801e92238916b974ed639103c261a2789a4eafe2a8e02ab6ef1b",
+      "bytes": 1168
+    },
+    {
+      "path": "reports\\tables\\shift_map_v1_4\\backward_transfer_paired.csv",
+      "sha256": "2d81361e3f309d3cd71abf6356c1a7979bec905b61ad72374a435f279d69b4a0",
+      "bytes": 412
+    },
+    {
+      "path": "reports\\tables\\shift_map_v1_4\\candidate_generation_manifest_summary.csv",
+      "sha256": "ce7308e1052cbee15eed09092132a4a9f75582806919205a7b9c1ce13d6e314b",
+      "bytes": 986
+    },
+    {
+      "path": "reports\\tables\\shift_map_v1_4\\candidate_k_tradeoff.csv",
+      "sha256": "f9fb53f7ec437b849e3ec5f7f13479a02fd02203e6e0ca28fcccd6e86c327e4f",
+      "bytes": 149
+    },
+    {
+      "path": "reports\\tables\\shift_map_v1_4\\combination_transfer.csv",
+      "sha256": "b5e61db4684ab8f1d02221e0de4b662160343d1ac2a97e7e967f400824329e58",
+      "bytes": 987
+    },
+    {
+      "path": "reports\\tables\\shift_map_v1_4\\family_held_out.csv",
+      "sha256": "8db1410209e9c3155e12d0be7332e26062001241b42082a87ca215d8b2d9884b",
+      "bytes": 623
+    },
+    {
+      "path": "reports\\tables\\shift_map_v1_4\\family_held_out_paired.csv",
+      "sha256": "3acc92f0c6c7941d28f5ec4a566a127b380f4559290aa925c3b84f1ecdc6bc97",
+      "bytes": 405
+    },
+    {
+      "path": "reports\\tables\\shift_map_v1_4\\final_retriever_spec.csv",
+      "sha256": "ecbc7f283bdab20e9c3e27a5018a21daa88e02fee7f3727bdfacdd5df6cd35f8",
+      "bytes": 219
+    },
+    {
+      "path": "reports\\tables\\shift_map_v1_4\\inference_runtime.csv",
+      "sha256": "1bfa1689efa7ff4daf12f6485bb2334148186efcf1d0f11c85e2583b76a2b5f8",
+      "bytes": 830
+    },
+    {
+      "path": "reports\\tables\\shift_map_v1_4\\l1_vs_l2_paired.csv",
+      "sha256": "d3f2da514af06e1dede37c522c19b9c691773c23cf48ec04e15d40f0e93e0927",
+      "bytes": 926
+    },
+    {
+      "path": "reports\\tables\\shift_map_v1_4\\l1_vs_l2_positive_cardinality.csv",
+      "sha256": "b61f47b474b9185a3c9a51dc740b8940cb03eb17d4e5e4d7a71d33b15808eadd",
+      "bytes": 1816
+    },
+    {
+      "path": "reports\\tables\\shift_map_v1_4\\lexical_low.csv",
+      "sha256": "8ed771c81fd8db7d2f73a5574409cc76eb0d57f30dcb2f409f3a6afe2e95107b",
+      "bytes": 742
+    },
+    {
+      "path": "reports\\tables\\shift_map_v1_4\\lexical_low_paired.csv",
+      "sha256": "7ac4ed2736b2599e284bc1488fd8b34737ef5dd801122feafbf266c689ff0599",
+      "bytes": 481
+    },
+    {
+      "path": "reports\\tables\\shift_map_v1_4\\no_map_diagnostics.csv",
+      "sha256": "7e5f347d0316dddeedac837cabc807d7b96685f237457180af276c554f5cc105",
+      "bytes": 554
+    },
+    {
+      "path": "reports\\tables\\shift_map_v1_4\\representation_drift.csv",
+      "sha256": "46ae0d89fce589594224dfb08225f7f2e00f4386e1335dff818f09c5beae3684",
+      "bytes": 41
+    },
+    {
+      "path": "reports\\tables\\shift_map_v1_4\\retrieval_error_floor.csv",
+      "sha256": "66a1d7be5a4a522f7aabf56d4bdda6ee9f1b97e8e732d91040be648327879816",
+      "bytes": 104
+    },
+    {
+      "path": "reports\\tables\\shift_map_v1_4\\scientific_position.csv",
+      "sha256": "6e8b19ab28a0955874f2f2ca4aff878d3127b0a166f86f353e6d231dc1b12edc",
+      "bytes": 220
+    },
+    {
+      "path": "reports\\tables\\shift_map_v1_4\\score_geometry.csv",
+      "sha256": "88f917b0c397146d5be0ebb8244833e48ee1b4a8edc0b725026444b0c13bf366",
+      "bytes": 813
+    },
+    {
+      "path": "reports\\tables\\shift_map_v1_4\\source_drift.csv",
+      "sha256": "f674e6b21187aab34376a26de354fe850b96616bfafe0a8d639a842063e14240",
+      "bytes": 713
+    },
+    {
+      "path": "reports\\tables\\shift_map_v1_4\\source_vs_target_drift.csv",
+      "sha256": "27e0fef37f8158bd523d31d26acee07a0bba377edd94355e521700515a1086de",
+      "bytes": 896
+    },
+    {
+      "path": "reports\\tables\\shift_map_v1_4\\target_drift_by_training_exposure.csv",
+      "sha256": "ff00eb1ca3a882863b101254a1d910864dd7efbfa51ba8bcc5acf3d71f99491c",
+      "bytes": 708
+    },
+    {
+      "path": "reports\\tables\\shift_map_v1_4\\target_hubness.csv",
+      "sha256": "3850fabc926c1bb2d47f3c5fdd9ab2c0befb20c078c9ce58b611ce2cb3994c0b",
+      "bytes": 285
+    },
+    {
+      "path": "reports\\tables\\shift_map_v1_4\\train_dev_test.csv",
+      "sha256": "5197e03c085fd27b97aeeecb1d88345dcce97d9a314f95346c573642e8134e58",
+      "bytes": 411
+    },
+    {
+      "path": "reports\\tables\\shift_map_v1_4\\v2_gate.csv",
+      "sha256": "cbf1488abc3f3abe44078ee23e70381f06379fa8cfa861ee362b649a5092788a",
+      "bytes": 270
+    },
+    {
+      "path": "reports\\tables\\shift_map_v1_4\\v2_training_eligibility.csv",
+      "sha256": "6c16271a543122070200483c976f93ab4fbbe4fc02061548f84a333345b9715b",
+      "bytes": 181
+    },
+    {
+      "path": "reports\\figures\\shift_map_v1_4\\01_l1_l2_paired.png",
+      "sha256": "11ae840318d00020e8bf50d7da172309e5a2fb11e0e9cbe57bf5cdf5c4d43afc",
+      "bytes": 23141
+    },
+    {
+      "path": "reports\\figures\\shift_map_v1_4\\02_positive_cardinality.png",
+      "sha256": "7e2c6fe010e052e801be1d763c56a3ad806d7099ef5e7aa0062944b2cfc85a6d",
+      "bytes": 19445
+    },
+    {
+      "path": "reports\\figures\\shift_map_v1_4\\03_target_hubness.png",
+      "sha256": "0ad86f1a337d309c48a949ab166b664dba719c8b0bc015a9b5f64bc81531e760",
+      "bytes": 18943
+    },
+    {
+      "path": "reports\\figures\\shift_map_v1_4\\04_gold_margin.png",
+      "sha256": "5bdcc917f41ad73e1211d2833e25fd0999844e1946aafc9fa35d3eacf74e5547",
+      "bytes": 22628
+    },
+    {
+      "path": "reports\\figures\\shift_map_v1_4\\05_family_held_out.png",
+      "sha256": "9f5456a30ef96344f05d2566969ce070973db489a2f895077ecee48fde00e130",
+      "bytes": 18190
+    },
+    {
+      "path": "reports\\figures\\shift_map_v1_4\\06_backward_transfer.png",
+      "sha256": "3f2ef103ebc44d2917c8726f165ee0b7c332dbbbc453ac090e16b06127a7e4e2",
+      "bytes": 19101
+    },
+    {
+      "path": "reports\\figures\\shift_map_v1_4\\07_candidate_k_coverage.png",
+      "sha256": "771e42b05b09e6ceeee65e30a8d80558b5a96cc0438f4b146446a55889ec873f",
+      "bytes": 16054
+    },
+    {
+      "path": "reports\\figures\\shift_map_v1_4\\08_no_map_similarity.png",
+      "sha256": "c24c165c60ba91b8223064484d5c1c0562b2fd88fbe643e98079051f1602ebc5",
+      "bytes": 18858
+    },
+    {
+      "path": "reports\\figures\\shift_map_v1_4\\09_l1_l2_success_regression.png",
+      "sha256": "1e805926d0d8ca66e6ef143662319d31e348d7a79e1e41f06b3416b14ae04bb4",
+      "bytes": 19680
+    },
+    {
+      "path": "reports\\figures\\shift_map_v1_4\\10_representation_drift_status.png",
+      "sha256": "2a68f094f3eb0d18213c819a675de4859fa2a48a750fe7e26d4fa965f81d849f",
+      "bytes": 13632
+    },
+    {
+      "path": "docs\\experiments\\shift_map_retrieval_freeze.md",
+      "sha256": "241e2b393638cd85dbc0568237d7d6ac788d6d1cde7b56a1182c6ed3076b12fd",
+      "bytes": 1015
+    },
+    {
+      "path": "docs\\experiments\\shift_map_v1_1_diagnostic_plan.md",
+      "sha256": "3bd9625072e33cbc2d89f4c5df6b23cb6bb43fe1994aebfbb9f521b17478e001",
+      "bytes": 3326
+    },
+    {
+      "path": "docs\\experiments\\shift_map_v1_3_test_exposure.md",
+      "sha256": "28ee8110eb8bd887a68bda03155cb54fa55cb4139d11e5c836631727654ae091",
+      "bytes": 776
+    },
+    {
+      "path": "docs\\experiments\\shift_map_v1_evaluator_correction.md",
+      "sha256": "dc255518bc49fe8946117ebba83f922c5127395a80eea2dbb654b3f075df6fdc",
+      "bytes": 2297
+    },
+    {
+      "path": "docs\\experiments\\shift_map_v1_protocol.md",
+      "sha256": "04b24d899d40226cd8cc5cc6387f8e8d7393cf8cdbb02a385575d410ac43abd8",
+      "bytes": 6157
+    },
+    {
+      "path": "docs\\experiments\\shift_map_v1_training_boundary.md",
+      "sha256": "c5d90541a32d1e2ab69e8755ab137711c757b23bbe29c994df8ae080678dc644",
+      "bytes": 2685
+    },
+    {
+      "path": "docs\\experiments\\shift_map_v2_preregistration_skeleton.md",
+      "sha256": "b7de8fb663ed2bcf8c5761b691d8c5648ac9cee793ae9d72cf16c5a741106d72",
+      "bytes": 838
+    },
+    {
+      "path": "docs\\interfaces\\shift_map_v2_candidate_schema.md",
+      "sha256": "5c99c1e5a7673d1ca29ce20073f9367c2dcb7977a6b86d653610b3d6bf7f002c",
+      "bytes": 1206
+    }
+  ]
+}

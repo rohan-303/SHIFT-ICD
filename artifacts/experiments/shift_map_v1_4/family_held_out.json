@@ -1,0 +1,44 @@
+{
+  "rows": [
+    {
+      "Hit@1": 0.726775956284153,
+      "Hit@10": 0.9289617486338798,
+      "Hit@100": 0.9817850637522769,
+      "Hit@25": 0.9617486338797814,
+      "Hit@5": 0.8925318761384335,
+      "Hit@50": 0.9744990892531876,
+      "MRR": 0.8021249334115907,
+      "model": "zero_shot",
+      "n_answerable_noncombination": 549,
+      "n_total": 573,
+      "population": "forward_family_held_out"
+    },
+    {
+      "Hit@1": 0.73224043715847,
+      "Hit@10": 0.9435336976320583,
+      "Hit@100": 0.9908925318761385,
+      "Hit@25": 0.9799635701275046,
+      "Hit@5": 0.9162112932604736,
+      "Hit@50": 0.9854280510018215,
+      "MRR": 0.8126616158455245,
+      "model": "l1_seed42",
+      "n_answerable_noncombination": 549,
+      "n_total": 573,
+      "population": "forward_family_held_out"
+    },
+    {
+      "Hit@1": 0.7285974499089253,
+      "Hit@10": 0.9326047358834244,
+      "Hit@100": 0.9872495446265938,
+      "Hit@25": 0.9653916211293261,
+      "Hit@5": 0.907103825136612,
+      "Hit@50": 0.9781420765027322,
+      "MRR": 0.8050875348905309,
+      "model": "l2_seed17",
+      "n_answerable_noncombination": 549,
+      "n_total": 573,
+      "population": "forward_family_held_out"
+    }
+  ],
+  "status": "computed"
+}

@@ -1,0 +1,11 @@
+{
+  "benchmark_version": "1.0",
+  "candidate_generator": "SHIFT-MAP v1.3 corrected L2",
+  "candidate_k": 100,
+  "checkpoint_redistribution": "restricted_pending_license_review",
+  "epoch": 3,
+  "evaluator_version": "2.0",
+  "seed": 17,
+  "status": "FROZEN",
+  "test_exposure": true
+}

@@ -1,0 +1,86 @@
+{
+  "l1_seed42": [
+    {
+      "Hit@1": null,
+      "Hit@10": null,
+      "Hit@100": null,
+      "Hit@25": null,
+      "Hit@5": null,
+      "Hit@50": null,
+      "MRR": null,
+      "kind": "COMBINATION",
+      "model": "l1_seed42",
+      "n_answerable_noncombination": 0,
+      "n_total": 64
+    },
+    {
+      "Hit@1": null,
+      "Hit@10": null,
+      "Hit@100": null,
+      "Hit@25": null,
+      "Hit@5": null,
+      "Hit@50": null,
+      "MRR": null,
+      "kind": "COMBINATION_WITH_ALTERNATIVES",
+      "model": "l1_seed42",
+      "n_answerable_noncombination": 0,
+      "n_total": 69
+    }
+  ],
+  "l2_seed17": [
+    {
+      "Hit@1": null,
+      "Hit@10": null,
+      "Hit@100": null,
+      "Hit@25": null,
+      "Hit@5": null,
+      "Hit@50": null,
+      "MRR": null,
+      "kind": "COMBINATION",
+      "model": "l2_seed17",
+      "n_answerable_noncombination": 0,
+      "n_total": 64
+    },
+    {
+      "Hit@1": null,
+      "Hit@10": null,
+      "Hit@100": null,
+      "Hit@25": null,
+      "Hit@5": null,
+      "Hit@50": null,
+      "MRR": null,
+      "kind": "COMBINATION_WITH_ALTERNATIVES",
+      "model": "l2_seed17",
+      "n_answerable_noncombination": 0,
+      "n_total": 69
+    }
+  ],
+  "zero_shot": [
+    {
+      "Hit@1": null,
+      "Hit@10": null,
+      "Hit@100": null,
+      "Hit@25": null,
+      "Hit@5": null,
+      "Hit@50": null,
+      "MRR": null,
+      "kind": "COMBINATION",
+      "model": "zero_shot",
+      "n_answerable_noncombination": 0,
+      "n_total": 64
+    },
+    {
+      "Hit@1": null,
+      "Hit@10": null,
+      "Hit@100": null,
+      "Hit@25": null,
+      "Hit@5": null,
+      "Hit@50": null,
+      "MRR": null,
+      "kind": "COMBINATION_WITH_ALTERNATIVES",
+      "model": "zero_shot",
+      "n_answerable_noncombination": 0,
+      "n_total": 69
+    }
+  ]
+}

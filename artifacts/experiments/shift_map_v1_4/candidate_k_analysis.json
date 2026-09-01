@@ -1,0 +1,38 @@
+{
+  "k_values": [
+    1,
+    5,
+    10,
+    25,
+    50,
+    100
+  ],
+  "reason": "maximizes ordinary coverage and combination completeness; finite reranking cost remains linear in K",
+  "recommendation": 100,
+  "rows": [
+    {
+      "coverage": 0.7072135785007072,
+      "k": 1
+    },
+    {
+      "coverage": 0.8826025459688827,
+      "k": 5
+    },
+    {
+      "coverage": 0.9257425742574258,
+      "k": 10
+    },
+    {
+      "coverage": 0.9621640735502122,
+      "k": 25
+    },
+    {
+      "coverage": 0.9798444130127298,
+      "k": 50
+    },
+    {
+      "coverage": 0.9908062234794908,
+      "k": 100
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "fields": [
+    "benchmark_id",
+    "best_valid_target_rank",
+    "Hit@1",
+    "Hit@5",
+    "Hit@10",
+    "Hit@25",
+    "Hit@50",
+    "Hit@100",
+    "reciprocal_rank",
+    "top1_target",
+    "top1_score"
+  ],
+  "path": "ledgers/l1_seed42_forward_test.json",
+  "post_hoc": true,
+  "scope": "forward_stratified_test",
+  "status": "recovered",
+  "test_exposed": true
+}
