@@ -17,6 +17,43 @@ MODEL_ID = "ncbi/MedCPT-Cross-Encoder"
 MODEL_REVISION = "71caf65d4927987813984f54c284405a13fcca49"
 
 
+def model_download_request(local_dir: str) -> dict[str, object]:
+    """Immutable Hugging Face snapshot request; never falls back to main."""
+    return {
+        "repo_id": MODEL_ID,
+        "revision": MODEL_REVISION,
+        "local_dir": local_dir,
+        "local_dir_use_symlinks": False,
+    }
+
+
+def download_model(model_path: Path) -> dict[str, object]:
+    """Download and validate only the immutable MedCPT snapshot."""
+    from huggingface_hub import snapshot_download
+    from transformers import AutoModelForSequenceClassification
+
+    model_path.parent.mkdir(parents=True, exist_ok=True)
+    snapshot_download(
+        repo_id=MODEL_ID,
+        revision=MODEL_REVISION,
+        local_dir=str(model_path),
+        local_dir_use_symlinks=False,
+    )
+    model = AutoModelForSequenceClassification.from_pretrained(
+        model_path, revision=MODEL_REVISION, local_files_only=True, trust_remote_code=False
+    )
+    parameters = sum(parameter.numel() for parameter in model.parameters())
+    if parameters != 109_483_009 or model.config.num_labels != 1:
+        raise RuntimeError("MEDCPT_PROVENANCE_VALIDATION_FAILED")
+    files = [{"path": str(item.relative_to(model_path)), "bytes": item.stat().st_size, "sha256": sha256(item)}
+             for item in sorted(model_path.rglob("*")) if item.is_file()]
+    result = {"status": "PASS", "model_id": MODEL_ID, "requested_revision": MODEL_REVISION,
+              "resolved_revision": MODEL_REVISION, "model_path": str(model_path),
+              "parameters": parameters, "files": files}
+    (model_path.parent / "model_provenance.json").write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
+    return result
+
+
 def sha256(path: Path) -> str:
     digest = hashlib.sha256()
     with path.open("rb") as stream:
@@ -97,14 +134,16 @@ def main() -> None:
     pre = subs.add_parser("preflight", help="validate runtime and data; use --cpu-check for local validation")
     pre.add_argument("--cpu-check", action="store_true")
     subs.add_parser("verify-data", help="verify all portable file hashes")
-    subs.add_parser("download-model", help="download the exact Hugging Face revision on external compute")
+    dl = subs.add_parser("download-model", help="download and validate the exact pinned model")
+    dl.add_argument("--model-path", type=Path, default=RUN_ROOT / "model")
     smoke = subs.add_parser("smoke", help="score the deterministic 10-source DEV smoke subset")
     smoke.add_argument("--model-path")
     smoke.add_argument("--output-root", type=Path, default=RUN_ROOT)
     dev = subs.add_parser("zero-shot-dev", help="score all DEV from source 0 in a new external run namespace")
     dev.add_argument("--model-path")
     dev.add_argument("--output-root", type=Path, default=RUN_ROOT)
-    subs.add_parser("training-probe", help="run no-optimizer-step BCE/listwise memory probes")
+    probe = subs.add_parser("training-probe", help="run no-optimizer-step BCE/listwise memory probes")
+    probe.add_argument("--model-path", type=Path)
     for name in ("objective-run", "negative-run", "lr-run", "final-seed"):
         subs.add_parser(name, help="reserved scientific stage; requires prior gates")
     subs.add_parser("test", help="protected TEST stage")
@@ -133,15 +172,12 @@ def main() -> None:
             command += ["--limit-sources", "10"]
         result = subprocess.run(command, cwd=ROOT, text=True)
         raise SystemExit(result.returncode)
-    elif args.command in {"download-model", "training-probe", "objective-run", "negative-run", "lr-run", "final-seed"}:
-        payload = {
-            "status": "EXTERNAL_STAGE_REQUIRED",
-            "command": args.command,
-            "model_id": MODEL_ID,
-            "model_revision": MODEL_REVISION,
-            "artifact_root": str(RUN_ROOT),
-        }
-        print(json.dumps(payload, indent=2))
+    elif args.command == "download-model":
+        print(json.dumps(download_model(args.model_path), indent=2))
+    elif args.command in {"objective-run", "negative-run", "lr-run", "final-seed"}:
+        raise SystemExit("STEP_8_5_NOT_AUTHORIZED")
+    elif args.command == "training-probe":
+        raise SystemExit("TRAINING_PROBE_IMPLEMENTATION_REQUIRED")
 
 
 if __name__ == "__main__":
