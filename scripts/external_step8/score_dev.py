@@ -26,6 +26,40 @@ def groups() -> list[dict[str, object]]:
     return result
 
 
+def evaluate_rankings(groups: list[dict[str, object]], ranked_codes: list[list[str]]) -> dict[str, object]:
+    """Compute compact DEV-only ranking metrics from immutable candidate rows."""
+    if len(groups) != len(ranked_codes):
+        raise ValueError("ranking/source population mismatch")
+    hit_ks = (1, 3, 5, 10, 25, 50, 100)
+    hits = {k: 0 for k in hit_ks}
+    reciprocal_ranks: list[float] = []
+    ndcg = {5: [], 10: []}
+    membership_valid = True
+    for group, ranked in zip(groups, ranked_codes, strict=True):
+        rows = list(group["rows"])
+        candidates = [str(row["target_code"]) for row in rows]
+        membership_valid = membership_valid and len(ranked) == len(candidates) and set(ranked) == set(candidates)
+        gold = {str(row["target_code"]) for row in rows if bool(row["candidate_is_gold"])}
+        positions = [index + 1 for index, code in enumerate(ranked) if code in gold]
+        first = min(positions) if positions else None
+        for k in hit_ks:
+            hits[k] += int(first is not None and first <= k)
+        reciprocal_ranks.append(0.0 if first is None else 1.0 / first)
+        for k in ndcg:
+            gains = [1.0 if code in gold else 0.0 for code in ranked[:k]]
+            dcg = sum(gain / __import__("math").log2(index + 2) for index, gain in enumerate(gains))
+            ideal = sum(1.0 / __import__("math").log2(index + 2) for index in range(min(len(gold), k)))
+            ndcg[k].append(0.0 if ideal == 0.0 else dcg / ideal)
+    count = len(groups)
+    result: dict[str, object] = {"sources": count, "candidate_membership_valid": membership_valid}
+    for k in hit_ks:
+        result[f"hit_at_{k}"] = hits[k] / count if count else 0.0
+    result["mrr"] = sum(reciprocal_ranks) / count if count else 0.0
+    for k in ndcg:
+        result[f"ndcg_at_{k}"] = sum(ndcg[k]) / count if count else 0.0
+    return result
+
+
 def score(model_path: str, output_root: Path, limit_sources: int | None = None, batch_size: int = 32) -> dict[str, object]:
     import torch
     from transformers import AutoModelForSequenceClassification, AutoTokenizer
@@ -41,6 +75,7 @@ def score(model_path: str, output_root: Path, limit_sources: int | None = None, 
     chunks_dir = run_dir / "chunks"
     chunks_dir.mkdir(parents=True, exist_ok=True)
 
+    all_ranked_codes: list[list[str]] = []
     for start in range(0, len(gs), 50):
         selected = gs[start:start + 50]
         pairs = [(r["source_description"], r["target_description"]) for g in selected for r in g["rows"]]
@@ -62,9 +97,11 @@ def score(model_path: str, output_root: Path, limit_sources: int | None = None, 
                 zip(source_rows, logits, strict=True),
                 key=lambda item: (-item[1], int(item[0]["retriever_rank"])),
             )
+            codes = [r["target_code"] for r, _ in ranked]
+            all_ranked_codes.append(codes)
             chunk_rows.append({
                 "benchmark_id": group["benchmark_id"],
-                "ranked_codes": [r["target_code"] for r, _ in ranked],
+                "ranked_codes": codes,
                 "scores": [float(v) for _, v in ranked],
             })
         payload = "".join(json.dumps(row, separators=(",", ":")) + "\n" for row in chunk_rows).encode()
@@ -85,14 +122,10 @@ def score(model_path: str, output_root: Path, limit_sources: int | None = None, 
             "sha256": digest,
         })
         manifest.write_text(json.dumps(current, indent=2) + "\n", encoding="utf-8")
-    return {
-        "status": "COMPLETE",
-        "sources": len(gs),
-        "pairs": len(gs) * 100,
-        "run_dir": str(run_dir),
-        "model_revision": MODEL_REVISION,
-        "precision": "FP32",
-    }
+    metrics = evaluate_rankings(gs, all_ranked_codes)
+    metrics.update({"status": "COMPLETE", "pairs": len(gs) * 100, "model_revision": MODEL_REVISION, "precision": "FP32"})
+    (run_dir / "metrics.json").write_text(json.dumps(metrics, indent=2) + "\n", encoding="utf-8")
+    return {**metrics, "run_dir": str(run_dir)}
 
 
 def main() -> None:
