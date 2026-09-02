@@ -26,4 +26,4 @@ The LF Git object with SHA-256 `7c7a7bdcd9d0065e5d5a6623d07c6e97f129dd17bdfc51bf
 
 ## Resulting Git commit
 
-Recorded after local validation and commit.
+`2b6dd1a96f6f98556fa0a7f93ee8ba9e4bbf24ec` — `fix: reconcile external benchmark manifest hash`
