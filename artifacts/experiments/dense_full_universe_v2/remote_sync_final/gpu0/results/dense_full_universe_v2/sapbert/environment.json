@@ -1,0 +1,10 @@
+{
+  "benchmark_manifest_sha256": "7c7a7bdcd9d0065e5d5a6623d07c6e97f129dd17bdfc51bf5660b96d03947381",
+  "cuda": "12.6",
+  "cuda_available": true,
+  "git_commit": "59d408e26f78adad7dcbe12529be316e9d0fd6ab",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.35",
+  "python": "3.12.12 | packaged by conda-forge | (main, Oct 22 2025, 23:25:55) [GCC 14.3.0]",
+  "torch": "2.7.1+cu126"
+}

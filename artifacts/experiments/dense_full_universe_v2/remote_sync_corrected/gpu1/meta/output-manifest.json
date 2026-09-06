@@ -1,0 +1,171 @@
+{
+  "files": [
+    {
+      "path": "results/dense_full_universe_v2/medcpt/config.json",
+      "sha256": "506fda507bfdd8c1a89a748f0647f2f85f4ab3f0cc5ccc081082ba130eafd33b",
+      "size": 1378
+    },
+    {
+      "path": "results/dense_full_universe_v2/medcpt/dev_metrics.json",
+      "sha256": "1cf8ec359036e1bda2b54dadd927d2fcb7d5505bdfe5cb909bb494739149cfd5",
+      "size": 2952639
+    },
+    {
+      "path": "results/dense_full_universe_v2/medcpt/dev_rows.jsonl",
+      "sha256": "601297f87f027d1eb1214cb30430fd7cbc12e938a1e8654a95320953727db265",
+      "size": 5406284
+    },
+    {
+      "path": "results/dense_full_universe_v2/medcpt/embeddings/medcpt_icd10cm_to_icd9cm_targets.json",
+      "sha256": "e1553ba0f1456341c299b9acaeb082ac01ec145f9da8b8fe07ce6c5076376cef",
+      "size": 185876
+    },
+    {
+      "path": "results/dense_full_universe_v2/medcpt/embeddings/medcpt_icd10cm_to_icd9cm_targets.npy",
+      "sha256": "29955d3a4917a8101764a52c981c74c5c29be59cdff515a449281ec9d56e288e",
+      "size": 44749952
+    },
+    {
+      "path": "results/dense_full_universe_v2/medcpt/embeddings/medcpt_icd9cm_to_icd10cm_targets.json",
+      "sha256": "a8133435a1c31a395ba5bde82dd65e99fc1b93933a2913a65da22b0ef4a75e4f",
+      "size": 1036826
+    },
+    {
+      "path": "results/dense_full_universe_v2/medcpt/embeddings/medcpt_icd9cm_to_icd10cm_targets.npy",
+      "sha256": "cbd3c859d9850701535d8aa2f2f2269f8b7158a7a5c4d3a19c5a9858726f4287",
+      "size": 220274816
+    },
+    {
+      "path": "results/dense_full_universe_v2/medcpt/environment.json",
+      "sha256": "ee885d460d54499d72f15ff9bdf1697f0b698d3e40a2d06f02964db64cb0631d",
+      "size": 425
+    },
+    {
+      "path": "results/dense_full_universe_v2/medcpt/models.json",
+      "sha256": "4eb05b5811eec596e4462ef3bc07d9c1aee853b7e33ef46b8174e6a247faca47",
+      "size": 1120
+    },
+    {
+      "path": "results/dense_full_universe_v2/qwen3_embedding_0.6b/config.json",
+      "sha256": "506fda507bfdd8c1a89a748f0647f2f85f4ab3f0cc5ccc081082ba130eafd33b",
+      "size": 1378
+    },
+    {
+      "path": "results/dense_full_universe_v2/qwen3_embedding_0.6b/dev_metrics.json",
+      "sha256": "f999141dae9a492e212b1a25f9779aef858a14870c188e94b22829c893a33d52",
+      "size": 2955274
+    },
+    {
+      "path": "results/dense_full_universe_v2/qwen3_embedding_0.6b/dev_rows.jsonl",
+      "sha256": "e30339647197ad962c33328b0c8862e3de8a5aa97dba8e6954edd88bb530f943",
+      "size": 5396793
+    },
+    {
+      "path": "results/dense_full_universe_v2/qwen3_embedding_0.6b/embeddings/qwen3_embedding_0.6b_icd10cm_to_icd9cm_targets.json",
+      "sha256": "196a195a1731f33c5703c2a55da693625ec0377815ea5fdc35b8600823d75363",
+      "size": 185861
+    },
+    {
+      "path": "results/dense_full_universe_v2/qwen3_embedding_0.6b/embeddings/qwen3_embedding_0.6b_icd10cm_to_icd9cm_targets.npy",
+      "sha256": "c054739c3a62c1365604c0f9df88483c25eed4eafeb72766610922a7c6abc5ab",
+      "size": 59666560
+    },
+    {
+      "path": "results/dense_full_universe_v2/qwen3_embedding_0.6b/embeddings/qwen3_embedding_0.6b_icd9cm_to_icd10cm_targets.json",
+      "sha256": "59c1ab487eeac7e1f783276b4e33b05f73bf7592a5c2f019fd43273811c39eec",
+      "size": 1036811
+    },
+    {
+      "path": "results/dense_full_universe_v2/qwen3_embedding_0.6b/embeddings/qwen3_embedding_0.6b_icd9cm_to_icd10cm_targets.npy",
+      "sha256": "433ce4364d138096fb115acbeb9f1fe0c6ac8c59b522d7a63dd130d1ee53cd4d",
+      "size": 293699712
+    },
+    {
+      "path": "results/dense_full_universe_v2/qwen3_embedding_0.6b/environment.json",
+      "sha256": "ee885d460d54499d72f15ff9bdf1697f0b698d3e40a2d06f02964db64cb0631d",
+      "size": 425
+    },
+    {
+      "path": "results/dense_full_universe_v2/qwen3_embedding_0.6b/models.json",
+      "sha256": "4eb05b5811eec596e4462ef3bc07d9c1aee853b7e33ef46b8174e6a247faca47",
+      "size": 1120
+    },
+    {
+      "path": "results/dev_complete_gpu1.json",
+      "sha256": "652c584428a7b2d9fcae508e66eb2cd8ae3db7bd5b005bae9f32958fec28ff55",
+      "size": 151
+    },
+    {
+      "path": "logs/console.log",
+      "sha256": "1ecbb2a35adc47fe8ad0a6247d3e165835bce7bca78b27e51aa1a0dea2f668b8",
+      "size": 48886
+    },
+    {
+      "path": "logs/medcpt.done",
+      "sha256": "634bdec531488d31419d9546e3bd895cec35be7311f89a723696f1129aff4a6c",
+      "size": 21
+    },
+    {
+      "path": "logs/medcpt.log",
+      "sha256": "0ace21f70a07114b44a83e2f5c3fb70f1fe8588642c241e5046becdf05fe6209",
+      "size": 1419
+    },
+    {
+      "path": "logs/medcpt.start",
+      "sha256": "b3b5acd9037e28a291aa79edbfa2c63160d91cb80a6c2a4414c0d80d451bce7a",
+      "size": 21
+    },
+    {
+      "path": "logs/qwen3_embedding_0.6b.done",
+      "sha256": "e57cd4d08fd743657544d89c68beba0daa6966672f7fcfb6b728b7b454e25bf8",
+      "size": 21
+    },
+    {
+      "path": "logs/qwen3_embedding_0.6b.log",
+      "sha256": "364e13bb119265779c69ddab5b588e22924174085fd4a3c24cb594b3f188276e",
+      "size": 47467
+    },
+    {
+      "path": "logs/qwen3_embedding_0.6b.start",
+      "sha256": "634bdec531488d31419d9546e3bd895cec35be7311f89a723696f1129aff4a6c",
+      "size": 21
+    },
+    {
+      "path": "state/command_sha256",
+      "sha256": "63193911cf8d433e77e79e2e288c200805fab2319f55f409f7d5abaa93677e98",
+      "size": 65
+    },
+    {
+      "path": "state/exit_code",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "size": 2
+    },
+    {
+      "path": "state/finished_utc",
+      "sha256": "e57cd4d08fd743657544d89c68beba0daa6966672f7fcfb6b728b7b454e25bf8",
+      "size": 21
+    },
+    {
+      "path": "state/job.lf.sh",
+      "sha256": "e5050b0c2e3eddfed511548507a7a3aec78b01cbeb531696ccf31c9b261ff73f",
+      "size": 1274
+    },
+    {
+      "path": "state/run.lock",
+      "sha256": "161069badc0cc23058b13d7c068e45205f4333aa15fd78db9d68f5c9f1ae8983",
+      "size": 9
+    },
+    {
+      "path": "state/started_utc",
+      "sha256": "cf771f633238b019b807fd7f425ff69399d398e640e13fd1fb8cf3e92eede9ca",
+      "size": 21
+    },
+    {
+      "path": "meta/execution.json",
+      "sha256": "3f26740baf51a714ab53e77092dcf9a5d508e88c0d257c6781db0318903e0285",
+      "size": 997
+    }
+  ],
+  "schema": "rohan-remote-output-manifest-v1",
+  "task_id": "shift-icd-dense-gpu1-final_20260906T061131Z_2ca1171d"
+}

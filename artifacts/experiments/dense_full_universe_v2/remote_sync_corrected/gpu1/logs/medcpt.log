@@ -1,0 +1,29 @@
+/home/gra_rohan/Rohan/tasks/shift-icd-dense-stage_20260906T052644Z_116205f7/work/.venv/lib/python3.12/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+{
+  "MedCPT": {
+    "n": 1457,
+    "P_ORDINARY_ANSWERABLE_n": 1348,
+    "P_COMPLEX_n": 67,
+    "Hit@1": 0.49629080118694363,
+    "ChoiceListRecall@1": 0.048507462686567165,
+    "CompleteScenarioRetrieval@1": 0,
+    "Hit@5": 0.6943620178041543,
+    "ChoiceListRecall@5": 0.16977611940298507,
+    "CompleteScenarioRetrieval@5": 0,
+    "Hit@10": 0.7685459940652819,
+    "ChoiceListRecall@10": 0.27425373134328357,
+    "CompleteScenarioRetrieval@10": 0,
+    "Hit@25": 0.836053412462908,
+    "ChoiceListRecall@25": 0.47699004975124376,
+    "CompleteScenarioRetrieval@25": 0.14925373134328357,
+    "Hit@50": 0.870919881305638,
+    "ChoiceListRecall@50": 0.6156716417910447,
+    "CompleteScenarioRetrieval@50": 0.3582089552238806,
+    "Hit@100": 0.9013353115727003,
+    "ChoiceListRecall@100": 0.6902985074626866,
+    "CompleteScenarioRetrieval@100": 0.43283582089552236,
+    "MRR": 0.5863064067246733
+  }
+}

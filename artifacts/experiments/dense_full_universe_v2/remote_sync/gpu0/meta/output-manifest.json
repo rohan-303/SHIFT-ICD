@@ -1,0 +1,161 @@
+{
+  "files": [
+    {
+      "path": "results/dense_full_universe_v2/biolord_2023/config.json",
+      "sha256": "506fda507bfdd8c1a89a748f0647f2f85f4ab3f0cc5ccc081082ba130eafd33b",
+      "size": 1378
+    },
+    {
+      "path": "results/dense_full_universe_v2/biolord_2023/dev_metrics.json",
+      "sha256": "b8f758f6cf664d4c5492301dfe16a683fb02b9cd37c7148d7f7fc656d43db5bb",
+      "size": 2954655
+    },
+    {
+      "path": "results/dense_full_universe_v2/biolord_2023/embeddings/biolord_2023_icd10cm_to_icd9cm_targets.json",
+      "sha256": "3b57103013f090b41e75aaea5f6a201634eabe0241888ba4881ee5af36e62e54",
+      "size": 185470
+    },
+    {
+      "path": "results/dense_full_universe_v2/biolord_2023/embeddings/biolord_2023_icd10cm_to_icd9cm_targets.npy",
+      "sha256": "d9b36ed5164ddc35a36f9935f7a0ed3663d138b4512700874a73889f304c10d3",
+      "size": 44749952
+    },
+    {
+      "path": "results/dense_full_universe_v2/biolord_2023/embeddings/biolord_2023_icd9cm_to_icd10cm_targets.json",
+      "sha256": "cd40dec4edf947f3d549251c814a615187229a77affdb5b2ad727711f57ca91b",
+      "size": 1036423
+    },
+    {
+      "path": "results/dense_full_universe_v2/biolord_2023/embeddings/biolord_2023_icd9cm_to_icd10cm_targets.npy",
+      "sha256": "c467b7e1f2672696aa2cd0b7daaa6ffe2aa9c33b627cef086d7ba78d4d7938d4",
+      "size": 220274816
+    },
+    {
+      "path": "results/dense_full_universe_v2/biolord_2023/environment.json",
+      "sha256": "ee885d460d54499d72f15ff9bdf1697f0b698d3e40a2d06f02964db64cb0631d",
+      "size": 425
+    },
+    {
+      "path": "results/dense_full_universe_v2/biolord_2023/models.json",
+      "sha256": "4eb05b5811eec596e4462ef3bc07d9c1aee853b7e33ef46b8174e6a247faca47",
+      "size": 1120
+    },
+    {
+      "path": "results/dense_full_universe_v2/sapbert/config.json",
+      "sha256": "506fda507bfdd8c1a89a748f0647f2f85f4ab3f0cc5ccc081082ba130eafd33b",
+      "size": 1378
+    },
+    {
+      "path": "results/dense_full_universe_v2/sapbert/dev_metrics.json",
+      "sha256": "287c4575a7959163c5b2655dbaeafc57089fc7feafaeef6a7895615f0f06ecb1",
+      "size": 2948302
+    },
+    {
+      "path": "results/dense_full_universe_v2/sapbert/embeddings/sapbert_icd10cm_to_icd9cm_targets.json",
+      "sha256": "e743bc5d0704a7f26b80a0d691106d135588ead39137920432821c38f6976d55",
+      "size": 185476
+    },
+    {
+      "path": "results/dense_full_universe_v2/sapbert/embeddings/sapbert_icd10cm_to_icd9cm_targets.npy",
+      "sha256": "0e4b65ad614e7092260e5db777151722e31eb6b00eb668d7393b1a16017e3a82",
+      "size": 44749952
+    },
+    {
+      "path": "results/dense_full_universe_v2/sapbert/embeddings/sapbert_icd9cm_to_icd10cm_targets.json",
+      "sha256": "ec8280deec532273389e2f33fbd748f9c033a6073f9d88b9f82c8fa990d6894e",
+      "size": 1036429
+    },
+    {
+      "path": "results/dense_full_universe_v2/sapbert/embeddings/sapbert_icd9cm_to_icd10cm_targets.npy",
+      "sha256": "0ac502df8acdaf0ff7c7c5f20ad68f8f4848fbe6e85e948f4b176349fceb5d9e",
+      "size": 220274816
+    },
+    {
+      "path": "results/dense_full_universe_v2/sapbert/environment.json",
+      "sha256": "ee885d460d54499d72f15ff9bdf1697f0b698d3e40a2d06f02964db64cb0631d",
+      "size": 425
+    },
+    {
+      "path": "results/dense_full_universe_v2/sapbert/models.json",
+      "sha256": "4eb05b5811eec596e4462ef3bc07d9c1aee853b7e33ef46b8174e6a247faca47",
+      "size": 1120
+    },
+    {
+      "path": "results/dev_complete_gpu0.json",
+      "sha256": "724b0fa38a970193e38412bfe88429732cc18c47ca603c4cc05e5779cfa3cbd9",
+      "size": 151
+    },
+    {
+      "path": "logs/biolord_2023.done",
+      "sha256": "5bb80cc5c0c610d851777aa6b4fc1d02ef51d657d0808d68e404959f6905fa4c",
+      "size": 21
+    },
+    {
+      "path": "logs/biolord_2023.log",
+      "sha256": "fe4ec4f798c33df04b24766877dafc992e3857870e4605f1a0d87dc543e49fba",
+      "size": 14670
+    },
+    {
+      "path": "logs/biolord_2023.start",
+      "sha256": "ffedc23b5b96495bec51fe2247df4ba93936ee5a347010651ba98d75dd7064c6",
+      "size": 21
+    },
+    {
+      "path": "logs/console.log",
+      "sha256": "d3f246772f300b1ec8460a7708b242942220b26f2b7ff3e986ed98559b56d529",
+      "size": 16103
+    },
+    {
+      "path": "logs/sapbert.done",
+      "sha256": "ffedc23b5b96495bec51fe2247df4ba93936ee5a347010651ba98d75dd7064c6",
+      "size": 21
+    },
+    {
+      "path": "logs/sapbert.log",
+      "sha256": "74aa863c355c5222d26df0ee97f51ac4aacc787ca3fbe8b7cf397f96872174e6",
+      "size": 1433
+    },
+    {
+      "path": "logs/sapbert.start",
+      "sha256": "3b36cbc4fc3abd48a044aa2b9b09b99e4fc3aa9316a2586974d04259e9b82990",
+      "size": 21
+    },
+    {
+      "path": "state/command_sha256",
+      "sha256": "63193911cf8d433e77e79e2e288c200805fab2319f55f409f7d5abaa93677e98",
+      "size": 65
+    },
+    {
+      "path": "state/exit_code",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "size": 2
+    },
+    {
+      "path": "state/finished_utc",
+      "sha256": "5bb80cc5c0c610d851777aa6b4fc1d02ef51d657d0808d68e404959f6905fa4c",
+      "size": 21
+    },
+    {
+      "path": "state/job.lf.sh",
+      "sha256": "e5050b0c2e3eddfed511548507a7a3aec78b01cbeb531696ccf31c9b261ff73f",
+      "size": 1274
+    },
+    {
+      "path": "state/run.lock",
+      "sha256": "161069badc0cc23058b13d7c068e45205f4333aa15fd78db9d68f5c9f1ae8983",
+      "size": 9
+    },
+    {
+      "path": "state/started_utc",
+      "sha256": "5a707d4735792aaadb764ba775c4c3d67e03b8109679cf0dc789ff350806d62c",
+      "size": 21
+    },
+    {
+      "path": "meta/execution.json",
+      "sha256": "9614f93b605c85915c299e203140ef34077aea501ddb73c19816264b63fe0173",
+      "size": 997
+    }
+  ],
+  "schema": "rohan-remote-output-manifest-v1",
+  "task_id": "shift-icd-dense-stage_20260906T054227Z_0d26dc85"
+}

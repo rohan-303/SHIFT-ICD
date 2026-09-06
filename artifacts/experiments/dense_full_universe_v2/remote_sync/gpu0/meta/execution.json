@@ -1,0 +1,47 @@
+{
+  "cpu_admission": {
+    "load_one_minute": 0.2431640625,
+    "load_threshold": 44.8,
+    "logical_cpus": 64
+  },
+  "cpu_thread_limit": 64,
+  "device_mode": "gpu",
+  "gpu_admission_samples": [
+    {
+      "gpus": [
+        {
+          "active_compute_process": false,
+          "index": 0,
+          "memory_total_mib": 24564,
+          "memory_used_mib": 15,
+          "name": "NVIDIA GeForce RTX 4090",
+          "utilization_percent": 0
+        }
+      ],
+      "sample_number": 1
+    },
+    {
+      "gpus": [
+        {
+          "active_compute_process": false,
+          "index": 0,
+          "memory_total_mib": 24564,
+          "memory_used_mib": 15,
+          "name": "NVIDIA GeForce RTX 4090",
+          "utilization_percent": 0
+        }
+      ],
+      "sample_number": 2
+    }
+  ],
+  "logical_gpu_indices": [
+    0
+  ],
+  "physical_gpu_indices": [
+    0
+  ],
+  "process_priority": "nice+10",
+  "required_vram_mib_per_gpu": 8192,
+  "runner_pid": 4001452,
+  "safety_margin_mib": 2048
+}

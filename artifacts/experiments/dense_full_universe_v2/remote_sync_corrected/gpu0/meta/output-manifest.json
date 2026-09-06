@@ -1,0 +1,171 @@
+{
+  "files": [
+    {
+      "path": "results/dense_full_universe_v2/biolord_2023/config.json",
+      "sha256": "506fda507bfdd8c1a89a748f0647f2f85f4ab3f0cc5ccc081082ba130eafd33b",
+      "size": 1378
+    },
+    {
+      "path": "results/dense_full_universe_v2/biolord_2023/dev_metrics.json",
+      "sha256": "26f3f9780945a46b1e7de54f384d43e8db3c98dd30089bfba57d49a8cac3ebd6",
+      "size": 2959089
+    },
+    {
+      "path": "results/dense_full_universe_v2/biolord_2023/dev_rows.jsonl",
+      "sha256": "a317cbfaf06a3542666e3a1df1bb2b9dcba8acd131400cdcf0f11e9bcaf4329b",
+      "size": 5399083
+    },
+    {
+      "path": "results/dense_full_universe_v2/biolord_2023/embeddings/biolord_2023_icd10cm_to_icd9cm_targets.json",
+      "sha256": "878682b36e667f91b13019179e03a493904aa34d8834b4614b47a48e55e50b21",
+      "size": 185874
+    },
+    {
+      "path": "results/dense_full_universe_v2/biolord_2023/embeddings/biolord_2023_icd10cm_to_icd9cm_targets.npy",
+      "sha256": "d9b36ed5164ddc35a36f9935f7a0ed3663d138b4512700874a73889f304c10d3",
+      "size": 44749952
+    },
+    {
+      "path": "results/dense_full_universe_v2/biolord_2023/embeddings/biolord_2023_icd9cm_to_icd10cm_targets.json",
+      "sha256": "60d076ee5a8e386e36cf689015e1fdb7908360caa1595eff0f687dcaa254e95f",
+      "size": 1036824
+    },
+    {
+      "path": "results/dense_full_universe_v2/biolord_2023/embeddings/biolord_2023_icd9cm_to_icd10cm_targets.npy",
+      "sha256": "c467b7e1f2672696aa2cd0b7daaa6ffe2aa9c33b627cef086d7ba78d4d7938d4",
+      "size": 220274816
+    },
+    {
+      "path": "results/dense_full_universe_v2/biolord_2023/environment.json",
+      "sha256": "ee885d460d54499d72f15ff9bdf1697f0b698d3e40a2d06f02964db64cb0631d",
+      "size": 425
+    },
+    {
+      "path": "results/dense_full_universe_v2/biolord_2023/models.json",
+      "sha256": "4eb05b5811eec596e4462ef3bc07d9c1aee853b7e33ef46b8174e6a247faca47",
+      "size": 1120
+    },
+    {
+      "path": "results/dense_full_universe_v2/sapbert/config.json",
+      "sha256": "506fda507bfdd8c1a89a748f0647f2f85f4ab3f0cc5ccc081082ba130eafd33b",
+      "size": 1378
+    },
+    {
+      "path": "results/dense_full_universe_v2/sapbert/dev_metrics.json",
+      "sha256": "ec1e112aac5ac1570b4d8ea61974932f6398dd0a7e8f49550c16eafce74c2760",
+      "size": 2952676
+    },
+    {
+      "path": "results/dense_full_universe_v2/sapbert/dev_rows.jsonl",
+      "sha256": "2b6999f4c1bc1a51282ebb49cbe2cbcf231d28f729fb4aa237f9b90571d10b5a",
+      "size": 5398542
+    },
+    {
+      "path": "results/dense_full_universe_v2/sapbert/embeddings/sapbert_icd10cm_to_icd9cm_targets.json",
+      "sha256": "4410d02974cae60efe4073e71daafcb88d668ee7f8bb3874cae981b2d900a467",
+      "size": 185880
+    },
+    {
+      "path": "results/dense_full_universe_v2/sapbert/embeddings/sapbert_icd10cm_to_icd9cm_targets.npy",
+      "sha256": "0e4b65ad614e7092260e5db777151722e31eb6b00eb668d7393b1a16017e3a82",
+      "size": 44749952
+    },
+    {
+      "path": "results/dense_full_universe_v2/sapbert/embeddings/sapbert_icd9cm_to_icd10cm_targets.json",
+      "sha256": "547189b5ad88a985eeb6356d6094fac984fdf0e18f4de754a9a95e51173d6bed",
+      "size": 1036830
+    },
+    {
+      "path": "results/dense_full_universe_v2/sapbert/embeddings/sapbert_icd9cm_to_icd10cm_targets.npy",
+      "sha256": "0ac502df8acdaf0ff7c7c5f20ad68f8f4848fbe6e85e948f4b176349fceb5d9e",
+      "size": 220274816
+    },
+    {
+      "path": "results/dense_full_universe_v2/sapbert/environment.json",
+      "sha256": "ee885d460d54499d72f15ff9bdf1697f0b698d3e40a2d06f02964db64cb0631d",
+      "size": 425
+    },
+    {
+      "path": "results/dense_full_universe_v2/sapbert/models.json",
+      "sha256": "4eb05b5811eec596e4462ef3bc07d9c1aee853b7e33ef46b8174e6a247faca47",
+      "size": 1120
+    },
+    {
+      "path": "results/dev_complete_gpu0.json",
+      "sha256": "724b0fa38a970193e38412bfe88429732cc18c47ca603c4cc05e5779cfa3cbd9",
+      "size": 151
+    },
+    {
+      "path": "logs/biolord_2023.done",
+      "sha256": "a85e156b8bb84cacc4891639591ace4527c58de5a3f3ecbc38a4044c51066b60",
+      "size": 21
+    },
+    {
+      "path": "logs/biolord_2023.log",
+      "sha256": "bb67e9a2e05d27cef2f1b5ad723355b27b951ca49497d3ab7a119fdf474cc375",
+      "size": 14590
+    },
+    {
+      "path": "logs/biolord_2023.start",
+      "sha256": "6b4afc05345a58cb08b1017f97635bde70516cb1a63d058995909e22a102eff1",
+      "size": 21
+    },
+    {
+      "path": "logs/console.log",
+      "sha256": "67c7dfb7d32ce12fa8ccdc745baa67c63ef29762793da817f4f54c2f7f61d4d1",
+      "size": 16023
+    },
+    {
+      "path": "logs/sapbert.done",
+      "sha256": "6b4afc05345a58cb08b1017f97635bde70516cb1a63d058995909e22a102eff1",
+      "size": 21
+    },
+    {
+      "path": "logs/sapbert.log",
+      "sha256": "74aa863c355c5222d26df0ee97f51ac4aacc787ca3fbe8b7cf397f96872174e6",
+      "size": 1433
+    },
+    {
+      "path": "logs/sapbert.start",
+      "sha256": "9b0a67e83346e6aa5b5892b7a511c6db47719e2e07d853a55bc1498f47818131",
+      "size": 21
+    },
+    {
+      "path": "state/command_sha256",
+      "sha256": "63193911cf8d433e77e79e2e288c200805fab2319f55f409f7d5abaa93677e98",
+      "size": 65
+    },
+    {
+      "path": "state/exit_code",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "size": 2
+    },
+    {
+      "path": "state/finished_utc",
+      "sha256": "a85e156b8bb84cacc4891639591ace4527c58de5a3f3ecbc38a4044c51066b60",
+      "size": 21
+    },
+    {
+      "path": "state/job.lf.sh",
+      "sha256": "e5050b0c2e3eddfed511548507a7a3aec78b01cbeb531696ccf31c9b261ff73f",
+      "size": 1274
+    },
+    {
+      "path": "state/run.lock",
+      "sha256": "161069badc0cc23058b13d7c068e45205f4333aa15fd78db9d68f5c9f1ae8983",
+      "size": 9
+    },
+    {
+      "path": "state/started_utc",
+      "sha256": "5bb9c09fa307493d379bd33f42512f18338b7dbb354862d27c29d848a5e530dd",
+      "size": 21
+    },
+    {
+      "path": "meta/execution.json",
+      "sha256": "e12836a279d83f36da41bd63bfb8978138167f6fb3a661dcb32a61d30632cd4e",
+      "size": 993
+    }
+  ],
+  "schema": "rohan-remote-output-manifest-v1",
+  "task_id": "shift-icd-dense-stage_20260906T061131Z_2ca1171d"
+}

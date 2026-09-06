@@ -1,0 +1,99 @@
+{
+  "evaluator": "retrieval_evaluator_v3",
+  "git_commit": "db3898f0f2fb7e66f1ff1e07c99d67c7ba17b4bf",
+  "inference_semantics": {
+    "max_sequence_length": 64,
+    "normalization": "L2",
+    "pooling": "historical_model_native_then_l2_normalize",
+    "similarity": "normalized_dot_product_exact",
+    "top_k": 100,
+    "trust_remote_code": false
+  },
+  "models": [
+    {
+      "embedding_dim": 768,
+      "kind": "transformers_cls",
+      "max_sequence_length_lineage": 64,
+      "model_id": "cambridgeltl/SapBERT-from-PubMedBERT-fulltext",
+      "name": "SapBERT",
+      "normalization": "L2",
+      "pooling": "CLS token",
+      "precision_lineage": "float32 embeddings; inference autocast disabled",
+      "revision": "090663c3ae57bf35ffe4d0d468a2a88d03051a4d",
+      "similarity": "exact normalized dot product",
+      "tokenizer_revision": "same immutable model revision; verify remotely",
+      "verification_status": "pending_remote_checkpoint_verification"
+    },
+    {
+      "embedding_dim": 768,
+      "kind": "sentence_transformer",
+      "max_sequence_length_lineage": 64,
+      "model_id": "FremyCompany/BioLORD-2023",
+      "name": "BioLORD-2023",
+      "normalization": "L2",
+      "pooling": "SentenceTransformer native pooling; verify remotely",
+      "precision_lineage": "float32 embeddings; inference autocast disabled",
+      "revision": "167aab527b238a50ca65224e6319215d2ff4fc9f",
+      "similarity": "exact normalized dot product",
+      "tokenizer_revision": "same immutable model revision; verify remotely",
+      "verification_status": "pending_remote_checkpoint_verification"
+    },
+    {
+      "embedding_dim": 768,
+      "kind": "transformers_cls",
+      "max_sequence_length_lineage": 64,
+      "model_id": "ncbi/MedCPT-Query-Encoder",
+      "name": "MedCPT",
+      "normalization": "L2",
+      "pooling": "CLS token",
+      "precision_lineage": "float32 embeddings; inference autocast disabled",
+      "revision": "d83a36cc6b8e3a5c5e9d9d6ba156808c1643dcbc",
+      "similarity": "exact normalized dot product",
+      "tokenizer_revision": "same immutable model revision; verify remotely",
+      "verification_status": "pending_remote_checkpoint_verification"
+    },
+    {
+      "embedding_dim": 1024,
+      "kind": "qwen_sentence_transformer",
+      "max_sequence_length_lineage": 64,
+      "model_id": "Qwen/Qwen3-Embedding-0.6B",
+      "name": "Qwen3-Embedding-0.6B",
+      "normalization": "L2",
+      "pooling": "SentenceTransformer native pooling; verify remotely",
+      "precision_lineage": "float32 embeddings; inference autocast disabled",
+      "qwen_query_instruction": "Retrieve the ICD diagnosis concept that is semantically equivalent or the closest valid cross-version mapping to the source diagnosis description.",
+      "revision": "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3",
+      "similarity": "exact normalized dot product",
+      "tokenizer_revision": "same immutable model revision; verify remotely",
+      "verification_status": "pending_remote_checkpoint_verification"
+    }
+  ],
+  "prior_test_exposure_disclosure": "Historical dense results are LEGACY_GEM_OBSERVED_TARGET_UNIVERSE and invalid for corrected claims.",
+  "rrf": {
+    "constant": 60,
+    "enabled": true,
+    "formula": "sum over BM25 and dense of 1/(60+rank)",
+    "neural_initialization_eligible": false,
+    "role": "comparison baseline only"
+  },
+  "schema": "dense-full-universe-v2-test-lock",
+  "selected_neural_initialization": "BioLORD-2023",
+  "selection_rule": [
+    "Hit@10",
+    "MRR",
+    "Hit@100",
+    "CompleteScenarioRetrieval@100",
+    "lower_mean_query_latency_ms"
+  ],
+  "selection_scope": "FORWARD_STRATIFIED_DEV/P_ORDINARY_ANSWERABLE",
+  "terminology_hashes": {
+    "backward_code": "204be6e29572332f3141a18347a28e95f2b258e5bacec8cf98046974adbc2eb5",
+    "backward_code_description": "bcdaf3d3029165d86cdca0461528476ebbddb76a8696c3baf75b6cd3585ce6cf",
+    "backward_corpus": "dcfe26da33d422a2395081fffaaf83e29d2f557d33458ade392d83b14e171b3b",
+    "forward_code": "8ca0d0cf0213581645fe64d9c1e599552a2fb207eb740f32ca09ffeaaf9f8e26",
+    "forward_code_description": "aa5b6b07afd6f699b8d36b98804dfc09fe87cae5ebc5940b394cf92d7919d6e3",
+    "forward_corpus": "32f572abeb2ff4cb003145216fa83bfd9984fab96579205f432993aa9c550464"
+  },
+  "terminology_version": "terminology_universe_v2",
+  "test_used_for_selection": false
+}
