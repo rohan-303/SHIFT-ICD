@@ -86,7 +86,7 @@ class SentenceTransformerEncoder(DenseEncoder):
     def __init__(self, spec: ModelSpec, device: str, qwen: bool = False) -> None:
         self.spec = spec
         self.qwen = qwen
-        self.model = SentenceTransformer(spec.model_id, revision=spec.revision, device=device, trust_remote_code=True)
+        self.model = SentenceTransformer(spec.model_id, revision=spec.revision, device=device, trust_remote_code=False)
         self.model.eval()
         self.tokenizer = self.model.tokenizer
 
