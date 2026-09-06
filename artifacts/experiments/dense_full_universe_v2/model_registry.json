@@ -1,6 +1,6 @@
 {
   "schema_version": "dense_full_universe_v2",
-  "status": "PROVENANCE_RECOVERED_REQUIRES_REMOTE_CHECKPOINT_VERIFICATION",
+  "status": "REMOTE_CHECKPOINTS_VERIFIED_FULL_UNIVERSE_RUN_COMPLETE",
   "source_lineage": [
     "artifacts/experiments/dense_v1/config.json",
     "artifacts/experiments/dense_v1_1/model_provenance.json",
@@ -22,7 +22,7 @@
       "similarity": "exact normalized dot product",
       "precision_lineage": "float32 embeddings; inference autocast disabled",
       "tokenizer_revision": "same immutable model revision; verify remotely",
-      "verification_status": "pending_remote_checkpoint_verification"
+      "verification_status": "remote_checkpoint_verified"
     },
     {
       "name": "BioLORD-2023",
@@ -36,7 +36,7 @@
       "similarity": "exact normalized dot product",
       "precision_lineage": "float32 embeddings; inference autocast disabled",
       "tokenizer_revision": "same immutable model revision; verify remotely",
-      "verification_status": "pending_remote_checkpoint_verification"
+      "verification_status": "remote_checkpoint_verified"
     },
     {
       "name": "MedCPT",
@@ -50,7 +50,7 @@
       "similarity": "exact normalized dot product",
       "precision_lineage": "float32 embeddings; inference autocast disabled",
       "tokenizer_revision": "same immutable model revision; verify remotely",
-      "verification_status": "pending_remote_checkpoint_verification"
+      "verification_status": "remote_checkpoint_verified"
     },
     {
       "name": "Qwen3-Embedding-0.6B",
@@ -65,7 +65,7 @@
       "precision_lineage": "float32 embeddings; inference autocast disabled",
       "tokenizer_revision": "same immutable model revision; verify remotely",
       "qwen_query_instruction": "Retrieve the ICD diagnosis concept that is semantically equivalent or the closest valid cross-version mapping to the source diagnosis description.",
-      "verification_status": "pending_remote_checkpoint_verification"
+      "verification_status": "remote_checkpoint_verified"
     }
   ],
   "rrf": {

@@ -1,0 +1,156 @@
+{
+  "files": [
+    {
+      "path": "results/test_results/TEST_DENSE_COMPLETE",
+      "sha256": "857fc11e5bb709c584676baeb61e453251c7b1007092955a91188f5a29c158f6",
+      "size": 20
+    },
+    {
+      "path": "results/test_results/all_metrics.json",
+      "sha256": "b698b5f4a58bdabaec9b4b52ec572f903925a02d35448d7cd5debe586cc05ac2",
+      "size": 2210850
+    },
+    {
+      "path": "results/test_results/biolord_2023/backward_family_held_out_rows.jsonl",
+      "sha256": "9709c7e1c213dae26a8c374a76cd56782b99d245e6eafde09af3ab4b6a724644",
+      "size": 52072534
+    },
+    {
+      "path": "results/test_results/biolord_2023/backward_stratified_test_rows.jsonl",
+      "sha256": "2fc2b6027b7cf5c5a3ec608db2c5db6938804b893d9075dddf65aaab3b3a6d1b",
+      "size": 52129824
+    },
+    {
+      "path": "results/test_results/biolord_2023/forward_family_held_out_rows.jsonl",
+      "sha256": "75c014367b631b1e1b8bdc0ddf967645192ee8ac0fd716216b1e2435c4518048",
+      "size": 10778627
+    },
+    {
+      "path": "results/test_results/biolord_2023/forward_stratified_test_rows.jsonl",
+      "sha256": "b9ef63d9b1e17d6a91a16c6253cd900adfb479611797e2d7a395aadeda2047d4",
+      "size": 10807069
+    },
+    {
+      "path": "results/test_results/biolord_2023/metrics.json",
+      "sha256": "6ccccf6aa784a2aae03173191b7e98fb5629b55032cfb27d5cd81efb41ca6967",
+      "size": 483497
+    },
+    {
+      "path": "results/test_results/medcpt/backward_family_held_out_rows.jsonl",
+      "sha256": "214f25324a7223c6f7baff806a70f39aa4ca88f3afd5dc9d40683ed20986b17e",
+      "size": 51809213
+    },
+    {
+      "path": "results/test_results/medcpt/backward_stratified_test_rows.jsonl",
+      "sha256": "603c1990cf987b8c1318e6f2a2e294aae821cddf80fccc60f877c89b047a9114",
+      "size": 51869031
+    },
+    {
+      "path": "results/test_results/medcpt/forward_family_held_out_rows.jsonl",
+      "sha256": "29c22c4b32c97df16f682c0b30d8bcf928e524c3f52d4948f8d0b30e216d9ef1",
+      "size": 10781472
+    },
+    {
+      "path": "results/test_results/medcpt/forward_stratified_test_rows.jsonl",
+      "sha256": "5f64f6291a9615d248b1ad50d2e780151d44d7fca7c276736009e7b779c48974",
+      "size": 10817741
+    },
+    {
+      "path": "results/test_results/medcpt/metrics.json",
+      "sha256": "ae8bbde2b2d19ec455f3c3aa5f4f2b748c915a3a2804f46adf9723452f2f434d",
+      "size": 481062
+    },
+    {
+      "path": "results/test_results/qwen3_embedding_0.6b/backward_family_held_out_rows.jsonl",
+      "sha256": "53fc812de3a3977b4d93890ba8f0b2c8379479f956ad81ed46e60ede998d1244",
+      "size": 51814287
+    },
+    {
+      "path": "results/test_results/qwen3_embedding_0.6b/backward_stratified_test_rows.jsonl",
+      "sha256": "6564ca17d3bda29da6e963d3e74f82e18750d83c2f20231cd5a3c95ce07261d9",
+      "size": 51875170
+    },
+    {
+      "path": "results/test_results/qwen3_embedding_0.6b/forward_family_held_out_rows.jsonl",
+      "sha256": "bc3d93dd89fad841290c57dfb29d25dda252c89278434f607eefa4be85a4af27",
+      "size": 10777636
+    },
+    {
+      "path": "results/test_results/qwen3_embedding_0.6b/forward_stratified_test_rows.jsonl",
+      "sha256": "348c55e1b5b59466730d7e1e7e3526da09de7c32b5d607a1b44501ad8cd13e17",
+      "size": 10800495
+    },
+    {
+      "path": "results/test_results/qwen3_embedding_0.6b/metrics.json",
+      "sha256": "1abb5bc34f886c73f91729e6e3f3c766f9a1e6c6dab431366744d0f43d5d2441",
+      "size": 488065
+    },
+    {
+      "path": "results/test_results/sapbert/backward_family_held_out_rows.jsonl",
+      "sha256": "a6c7558d89a4f27ecc86db702883b5e017e88b057f96c513920d5df326d585d6",
+      "size": 52399356
+    },
+    {
+      "path": "results/test_results/sapbert/backward_stratified_test_rows.jsonl",
+      "sha256": "0b0cfa4ebefd738d79744e11ca10504f31f2203933f6f1f883c46fa76a901f4b",
+      "size": 52469762
+    },
+    {
+      "path": "results/test_results/sapbert/forward_family_held_out_rows.jsonl",
+      "sha256": "1149261fa847de945686d4029c8f6573f3ad688e47570a1ac93bcd54ece65c7c",
+      "size": 10775058
+    },
+    {
+      "path": "results/test_results/sapbert/forward_stratified_test_rows.jsonl",
+      "sha256": "a6b9456a30a38ac26c77dbda337e1e6c7d937d81696e067aa5c0780e95162e96",
+      "size": 10794404
+    },
+    {
+      "path": "results/test_results/sapbert/metrics.json",
+      "sha256": "c0881720805d94aa6ea7883e9b85e9528f5fcf8d3928491682c5857ad9b96384",
+      "size": 481094
+    },
+    {
+      "path": "logs/console.log",
+      "sha256": "02852861b12963f6c165172d011b01072c0f11b514e242c5130c6e303946d18f",
+      "size": 589120
+    },
+    {
+      "path": "state/command_sha256",
+      "sha256": "3049e517f3136924f33996a9519996bd8f923a721754a7571a0f680ba2a21e4d",
+      "size": 65
+    },
+    {
+      "path": "state/exit_code",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "size": 2
+    },
+    {
+      "path": "state/finished_utc",
+      "sha256": "231d232687d04c4fad6461f730167500b15b73c3d9545ae487614d5c7e0a9eb6",
+      "size": 21
+    },
+    {
+      "path": "state/job.lf.sh",
+      "sha256": "d97c4e9e7263da100cf09614fdcccd38cecb8bfb1742eb81e8894cf20d756515",
+      "size": 711
+    },
+    {
+      "path": "state/run.lock",
+      "sha256": "161069badc0cc23058b13d7c068e45205f4333aa15fd78db9d68f5c9f1ae8983",
+      "size": 9
+    },
+    {
+      "path": "state/started_utc",
+      "sha256": "e349074f65999953714cd13751e2ccfd5513847ceda1acf7ae2cc018ec84e00c",
+      "size": 21
+    },
+    {
+      "path": "meta/execution.json",
+      "sha256": "3f4b065bf2e277f954dd470af49f9bc4c78ad855d1e6cf05f964dd3eaee68e76",
+      "size": 996
+    }
+  ],
+  "schema": "rohan-remote-output-manifest-v1",
+  "task_id": "shift-icd-test-final4_20260906T081046Z_a4b15a0"
+}
