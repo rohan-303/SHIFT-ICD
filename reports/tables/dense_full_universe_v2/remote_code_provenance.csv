@@ -1,0 +1,2 @@
+run_group,remote_head_recorded,checkout_type,environment_git_commit,source_archive_sha256,source_archive_local_path,remote_git_status,status
+corrected_dense_DEV,db3898f0f2fb7e66f1ff1e07c99d67c7ba17b4bf,RP2_RECONSTRUCTABLE_PACKAGED_SNAPSHOT,59d408e26f78adad7dcbe12529be316e9d0fd6ab,1e384a8bc814e518c4a5a6e76f3c61a1c979e2977449085ee986563968e1b062,C:\Users\rohan\SHIFT-ICD-provenance\step_7_5b\source.tar.gz,input task git_status_short=[]; scientific work directory has no .git,CLOSED_RP2

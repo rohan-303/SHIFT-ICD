@@ -1,0 +1,91 @@
+{
+  "blockers": [
+    {
+      "blocker_id": "B01_STRUCTURAL_PRESENTATION",
+      "closure_evidence": {
+        "closure_matrix": "reports/tables/dense_full_universe_v2/reproducibility_blocker_closure.csv"
+      },
+      "description": "Required structural presentation tables were not all materialized in reports/tables/dense_full_universe_v2.",
+      "existing_evidence_can_resolve": true,
+      "recomputation_required": false,
+      "reproducibility_impact": "A reviewer cannot consume all required population/split structural metrics from canonical CSV tables.",
+      "scientific_impact": "No change to stored rankings or scientific results; reporting completeness is affected.",
+      "smallest_corrective_action": "Regenerate structural summaries deterministically from stored Top-100 rankings using retrieval_evaluator_v3.",
+      "status": "CLOSED"
+    },
+    {
+      "blocker_id": "B02_RUNTIME_EVIDENCE",
+      "closure_evidence": {
+        "closure_matrix": "reports/tables/dense_full_universe_v2/reproducibility_blocker_closure.csv"
+      },
+      "description": "Per-model original runtime fields were not consistently materialized into a canonical runtime table.",
+      "existing_evidence_can_resolve": true,
+      "recomputation_required": false,
+      "reproducibility_impact": "Original versus post-hoc performance/resource evidence is not clearly separated for every model.",
+      "scientific_impact": "No effect on retrieval metrics or model selection.",
+      "smallest_corrective_action": "Extract original timings from manifests/logs; label unavailable original fields NOT_RECORDED and avoid fabricating values.",
+      "status": "CLOSED"
+    },
+    {
+      "blocker_id": "B03_TEST_LOCK_METADATA",
+      "closure_evidence": {
+        "closure_matrix": "reports/tables/dense_full_universe_v2/reproducibility_blocker_closure.csv"
+      },
+      "description": "test_lock.json contains stale pending_remote_checkpoint_verification strings despite successful checkpoint smoke evidence.",
+      "existing_evidence_can_resolve": true,
+      "recomputation_required": false,
+      "reproducibility_impact": "The lock does not accurately describe the recorded verification state.",
+      "scientific_impact": "Potentially material provenance ambiguity for locked TEST evidence.",
+      "smallest_corrective_action": "Verify chronology and checkpoint evidence; update metadata only if the existing lock bytes/semantics are otherwise unchanged, preserving hashes and an audit record.",
+      "status": "CLOSED"
+    },
+    {
+      "blocker_id": "B04_REMOTE_CODE_PROVENANCE",
+      "closure_evidence": {
+        "closure_matrix": "reports/tables/dense_full_universe_v2/reproducibility_blocker_closure.csv"
+      },
+      "description": "Remote scientific execution used a packaged source snapshot rather than an independently verified exact tracked checkout at the final local commit.",
+      "existing_evidence_can_resolve": true,
+      "recomputation_required": false,
+      "reproducibility_impact": "Remote Git HEAD/branch/working-tree provenance is not yet proven for the execution workspace.",
+      "scientific_impact": "The result-to-code identity may be unresolved unless the package manifest and remote source can reconstruct the exact source state.",
+      "smallest_corrective_action": "Inspect remote task package manifests, source hashes, OWNER metadata, and execution metadata; classify RP1, RP2, or RP3 without relabeling evidence.",
+      "status": "CLOSED"
+    },
+    {
+      "blocker_id": "B05_CACHE_RETENTION_PROVENANCE",
+      "closure_evidence": {
+        "closure_matrix": "reports/tables/dense_full_universe_v2/reproducibility_blocker_closure.csv"
+      },
+      "description": "Selected BioLORD corrected embedding-cache path and content hash were not represented in a dedicated selected-cache manifest.",
+      "existing_evidence_can_resolve": true,
+      "recomputation_required": false,
+      "reproducibility_impact": "The retained cache cannot yet be safely selected by corpus/model/config identity rather than filename.",
+      "scientific_impact": "No change to completed metrics; reuse in Step 7.5C would be unsafe without fail-closed identity evidence.",
+      "smallest_corrective_action": "Inspect remote cache manifests and create selected_biolord_cache_manifest.json with exact paths, hashes, shape, dtype, corpus, target-order, model, and config identity.",
+      "status": "CLOSED"
+    },
+    {
+      "blocker_id": "B06_FREEZE_MANIFEST",
+      "closure_evidence": {
+        "closure_matrix": "reports/tables/dense_full_universe_v2/reproducibility_blocker_closure.csv"
+      },
+      "description": "No final closure freeze_manifest.json links all terminology, code, model, DEV, selection, lock, TEST, structural, runtime, cache, bootstrap, and export hashes.",
+      "existing_evidence_can_resolve": true,
+      "recomputation_required": false,
+      "reproducibility_impact": "Release-level artifact graph is incomplete.",
+      "scientific_impact": "No change to results; final release gate cannot be independently checked as one manifest.",
+      "smallest_corrective_action": "Generate a hash-linked freeze manifest only after the preceding evidence checks pass.",
+      "status": "CLOSED"
+    }
+  ],
+  "final_closed_count": 6,
+  "final_open_count": 0,
+  "final_status": "DENSE_FULL_UNIVERSE_FROZEN",
+  "initial_closed_count": 0,
+  "initial_open_count": 6,
+  "inventory_created_before_changes": true,
+  "milestone": "STEP 7.5B-R",
+  "schema_version": "step_7_5b_r_blocker_inventory_v1",
+  "source_report": "reports/tables/dense_full_universe_v2/STEP_7_5B_FULL_REPORT.md"
+}

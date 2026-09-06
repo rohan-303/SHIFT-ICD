@@ -246,3 +246,36 @@ These are reproducibility/reporting blockers, not evidence of model failure. Do 
 `STEP 7.5C — FULL-UNIVERSE SHIFT-MAP RETRAINING + CANDIDATE FREEZE`
 
 Planned scope after closure: selected-model hard-negative construction, SHIFT-MAP training, full-universe candidate freeze, and subsequent candidate-generation validation. No such work was started in Step 7.5B.
+
+## 18. STEP 7.5B-R REPRODUCIBILITY CLOSURE
+
+This section records closure of the blockers identified in the original report. It distinguishes original scientific results from deterministic posthoc presentation/provenance reconstruction.
+
+| Blocker | Original state | Corrective action | Evidence | Final status |
+|---|---|---|---|---|
+| B01 structural presentation | Required structural CSVs were incomplete | Aggregated existing corrected per-row Top-100 results by population and split using the v3 metric fields; no embedding inference rerun | `forward_test_structural.csv`, `forward_family_structural.csv`, `backward_stratified_structural.csv`, `backward_family_structural.csv` | CLOSED |
+| B02 runtime evidence | Component runtime/p95/VRAM fields were not consistently materialized | Materialized original elapsed/mean timings and marked unavailable fields `NOT_RECORDED`; no original runtime was fabricated | `runtime_original.csv` | CLOSED |
+| B03 TEST-lock metadata | Lock contained stale descriptive pending-verification strings | Verified lock chronology, terminology hashes, evaluator, model/revision bindings, inference semantics, TEST exclusion from selection, and exact lock SHA-256. The original lock bytes were not rewritten | `test_lock.json`, `test_lock.sha256`, closure tests | CLOSED |
+| B04 remote code provenance | Remote execution was packaged rather than a tracked checkout at final local HEAD | Verified OWNER/task/input/source archive hashes and preserved the exact source archive locally. Classified as RP2, not RP1 | `remote_code_provenance.csv`; `C:\Users\rohan\SHIFT-ICD-provenance\step_7_5b\source.tar.gz` | CLOSED |
+| B05 selected-cache retention | Selected BioLORD cache lacked a dedicated fail-closed manifest | Recorded exact remote paths, model revision, corpus/order hashes, shapes, dtype, normalization, similarity, and array SHA-256 values | `selected_biolord_cache_manifest.json` | CLOSED |
+| B06 release freeze graph | No final hash-linked freeze manifest existed | Created canonical compact export, freeze manifest, and freeze-manifest checksum | `freeze_manifest.json`, `freeze_manifest.sha256`, compact export ZIP | CLOSED |
+
+### Original scientific result versus reconstruction
+
+The four full-universe dense model runs, corrected DEV-only selection, corrected locked TEST evaluation, RRF comparison, family-held-out evaluation, backward transfer, failure analysis, and paired bootstrap are **ORIGINAL SCIENTIFIC RESULTS**. Their metrics and rankings were not rerun in this closure.
+
+The structural CSVs, canonical table materialization, blocker matrix, selected-cache manifest, remote provenance record, compact export, and freeze manifest are **POSTHOC PRESENTATION / PROVENANCE RECONSTRUCTION** from existing result rows, manifests, and hashes. Runtime fields marked `NOT_RECORDED` were never available in the original evidence and remain explicitly unavailable.
+
+### Closure verification
+
+- Corrected target metadata: 8/8 embedding metadata files passed count, corpus, code, revision, dtype, normalization, and similarity checks.
+- Old-universe cache rejection: passed; no corrected artifact references 17,513, 11,690, or 11,689 target counts.
+- DEV reselection: deterministic reconstruction selects BioLORD-2023 on `FORWARD_STRATIFIED_DEV/P_ORDINARY_ANSWERABLE`; TEST and runtime do not alter selection.
+- TEST lock: exact SHA-256 `bf706bd320f13b6cda921123a24040e33efd171a5049b7659d8941c673cc94cd`; result files are later than the lock artifact.
+- Remote code: RP2; recorded execution commit `59d408e26f78adad7dcbe12529be316e9d0fd6ab`, recorded remote source head `db3898f0f2fb7e66f1ff1e07c99d67c7ba17b4bf`, source archive SHA-256 `1e384a8bc814e518c4a5a6e76f3c61a1c979e2977449085ee986563968e1b062`.
+- Remote workspace retained: `/home/gra_rohan/Rohan/tasks/shift-icd-dense-stage_20260906T061131Z_2ca1171d`; corrected BioLORD embeddings remain available for Step 7.5C.
+- Local compact export: SHA-256 `cd9c8328a1b550f23a8e1084148ae0b654c25f6053256571b00acded7000f4a6`.
+- Local sync verified: `TRUE`.
+- Final status: **`DENSE_FULL_UNIVERSE_FROZEN`**.
+
+No SHIFT-MAP training, hard-negative mining, Step 8 candidate generation, fine-tuning, or MedCPT cross-encoder work was performed in this closure.

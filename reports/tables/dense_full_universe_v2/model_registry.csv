@@ -1,5 +1,5 @@
-name,model_id,revision,dimension,max_length,similarity
-SapBERT,cambridgeltl/SapBERT-from-PubMedBERT-fulltext,090663c3ae57bf35ffe4d0d468a2a88d03051a4d,768,,exact normalized dot product
-BioLORD-2023,FremyCompany/BioLORD-2023,167aab527b238a50ca65224e6319215d2ff4fc9f,768,,exact normalized dot product
-MedCPT,ncbi/MedCPT-Query-Encoder,d83a36cc6b8e3a5c5e9d9d6ba156808c1643dcbc,768,,exact normalized dot product
-Qwen3-Embedding-0.6B,Qwen/Qwen3-Embedding-0.6B,97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3,1024,,exact normalized dot product
+name,model_id,revision,verification_status,embedding_dim,kind,pooling,normalization,similarity,max_sequence_length_lineage
+SapBERT,cambridgeltl/SapBERT-from-PubMedBERT-fulltext,090663c3ae57bf35ffe4d0d468a2a88d03051a4d,remote_checkpoint_verified,768,transformers_cls,CLS token,L2,exact normalized dot product,64
+BioLORD-2023,FremyCompany/BioLORD-2023,167aab527b238a50ca65224e6319215d2ff4fc9f,remote_checkpoint_verified,768,sentence_transformer,SentenceTransformer native pooling; verify remotely,L2,exact normalized dot product,64
+MedCPT,ncbi/MedCPT-Query-Encoder,d83a36cc6b8e3a5c5e9d9d6ba156808c1643dcbc,remote_checkpoint_verified,768,transformers_cls,CLS token,L2,exact normalized dot product,64
+Qwen3-Embedding-0.6B,Qwen/Qwen3-Embedding-0.6B,97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3,remote_checkpoint_verified,1024,qwen_sentence_transformer,SentenceTransformer native pooling; verify remotely,L2,exact normalized dot product,64

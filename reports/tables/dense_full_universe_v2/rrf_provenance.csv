@@ -1,0 +1,2 @@
+split,formula,constant,bm25_input,dense_input,selection_role,legacy_input_rejected
+FORWARD_STRATIFIED_DEV,sum(1/(60+rank)) over BM25 and dense,60,corrected BM25 full-universe ranking,corrected full-universe model ranking,comparison baseline only,True

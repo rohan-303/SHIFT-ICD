@@ -1,0 +1,49 @@
+{
+  "dtype": "float32",
+  "embeddings": [
+    {
+      "array_sha256": "d9b36ed5164ddc35a36f9935f7a0ed3663d138b4512700874a73889f304c10d3",
+      "corpus_hash": "dcfe26da33d422a2395081fffaaf83e29d2f557d33458ade392d83b14e171b3b",
+      "direction": "ICD10CM_TO_ICD9CM",
+      "matrix_path": "biolord_2023_icd10cm_to_icd9cm_targets.npy",
+      "metadata_path": "biolord_2023_icd10cm_to_icd9cm_targets.json",
+      "shape": [
+        14567,
+        768
+      ],
+      "target_count": 14567,
+      "target_order_hash": "204be6e29572332f3141a18347a28e95f2b258e5bacec8cf98046974adbc2eb5"
+    },
+    {
+      "array_sha256": "c467b7e1f2672696aa2cd0b7daaa6ffe2aa9c33b627cef086d7ba78d4d7938d4",
+      "corpus_hash": "32f572abeb2ff4cb003145216fa83bfd9984fab96579205f432993aa9c550464",
+      "direction": "ICD9CM_TO_ICD10CM",
+      "matrix_path": "biolord_2023_icd9cm_to_icd10cm_targets.npy",
+      "metadata_path": "biolord_2023_icd9cm_to_icd10cm_targets.json",
+      "shape": [
+        71704,
+        768
+      ],
+      "target_count": 71704,
+      "target_order_hash": "8ca0d0cf0213581645fe64d9c1e599552a2fb207eb740f32ca09ffeaaf9f8e26"
+    }
+  ],
+  "fail_closed_requirements": [
+    "model_id",
+    "revision",
+    "corpus_hash",
+    "target_order_hash",
+    "encoding_config",
+    "array_sha256"
+  ],
+  "manifest_sha256": "461e685f28a8c371a193adafc3f11126ba35c323fb1d7dd048484649cc8971d3",
+  "max_sequence_length": 64,
+  "model_id": "FremyCompany/BioLORD-2023",
+  "normalization": "L2",
+  "pooling": "SentenceTransformer native pooling",
+  "remote_root": "/home/gra_rohan/Rohan/tasks/shift-icd-dense-stage_20260906T061131Z_2ca1171d/results/dense_full_universe_v2/biolord_2023/embeddings",
+  "remote_task": "shift-icd-dense-stage_20260906T061131Z_2ca1171d",
+  "revision": "167aab527b238a50ca65224e6319215d2ff4fc9f",
+  "schema_version": "selected_biolord_cache_manifest_v1",
+  "similarity": "normalized_dot_product_exact"
+}

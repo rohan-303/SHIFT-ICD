@@ -1,0 +1,33 @@
+{
+  "benchmark_manifest_hash": "7c7a7bdcd9d0065e5d5a6623d07c6e97f129dd17bdfc51bf5660b96d03947381",
+  "biolord_cache_manifest_hash": "cb1c38f1fadbf0cf2b684d220fe0ca99d0003e121b563852bb4dbca799bf32ac",
+  "bootstrap_hash": "cec51b3e153db13a4d4c870b3711a1ba3fdcdeebc77c426a8c6d72da74b05e8d",
+  "dev_results_hash": "c96ad1ed34084afed49d6efffe9eb76f1545cb1a6d19b615d648196c1926ce03",
+  "evaluator_version": "retrieval_evaluator_v3",
+  "export_package_hash": "cd9c8328a1b550f23a8e1084148ae0b654c25f6053256571b00acded7000f4a6",
+  "git_code_provenance": {
+    "classification": "RP2",
+    "execution_environment_commit": "59d408e26f78adad7dcbe12529be316e9d0fd6ab",
+    "recorded_remote_head": "db3898f0f2fb7e66f1ff1e07c99d67c7ba17b4bf",
+    "source_archive_sha256": "1e384a8bc814e518c4a5a6e76f3c61a1c979e2977449085ee986563968e1b062"
+  },
+  "local_sync_verified": true,
+  "model_registry_hash": "fa085d6e021b07ecef3e767ce977c041eeecc387ad35d7e99e0195232b3a033f",
+  "neural_selection_hash": "fb40a698faf2e62bebdee33e5fa83616fb547d92a99592adfddb26bb3bfc024f",
+  "remote_workspace": "/home/gra_rohan/Rohan/tasks/shift-icd-dense-stage_20260906T061131Z_2ca1171d",
+  "remote_workspace_retained_for_step_7_5c": true,
+  "runtime_evidence_hash": "f192769ddfc7d478f741225df2ec155d1e0826552283a0604b77640ecd0ebeca",
+  "schema_version": "step_7_5b_r_freeze_manifest_v1",
+  "status": "DENSE_FULL_UNIVERSE_FROZEN",
+  "step_7_5c_authorized": true,
+  "structural_results_hash": "9d3466f753fe7915a11b90c46a11d8e8aa9059d10ec3301effcb6b23214eb4c7",
+  "terminology_hashes": {
+    "backward_code": "204be6e29572332f3141a18347a28e95f2b258e5bacec8cf98046974adbc2eb5",
+    "backward_corpus": "dcfe26da33d422a2395081fffaaf83e29d2f557d33458ade392d83b14e171b3b",
+    "forward_code": "8ca0d0cf0213581645fe64d9c1e599552a2fb207eb740f32ca09ffeaaf9f8e26",
+    "forward_corpus": "32f572abeb2ff4cb003145216fa83bfd9984fab96579205f432993aa9c550464"
+  },
+  "terminology_version": "terminology_universe_v2",
+  "test_lock_hash": "bf706bd320f13b6cda921123a24040e33efd171a5049b7659d8941c673cc94cd",
+  "test_results_hash": "b698b5f4a58bdabaec9b4b52ec572f903925a02d35448d7cd5debe586cc05ac2"
+}
