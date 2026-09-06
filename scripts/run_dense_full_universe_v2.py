@@ -27,6 +27,7 @@ ROOT = Path(__file__).resolve().parents[1]
 BENCHMARK = ROOT / "data/benchmarks/cms_track_a/v1.0"
 OUT = Path(os.environ.get("DENSE_OUTPUT", str(ROOT / "artifacts/experiments/dense_full_universe_v2")))
 EMBED = OUT / "embeddings"
+TERM = ROOT / "artifacts/terminology_universe_v2"
 K_VALUES = (1, 5, 10, 25, 50, 100)
 SPECS = (
     ModelSpec("SapBERT", "cambridgeltl/SapBERT-from-PubMedBERT-fulltext", "090663c3ae57bf35ffe4d0d468a2a88d03051a4d", "transformers_cls", "Apache-2.0", 768),
@@ -95,7 +96,10 @@ def encode_targets(encoder: Any, spec: ModelSpec, corpora: dict[str, dict[str, s
         path.parent.mkdir(parents=True, exist_ok=True)
         np.save(path, matrix)
         corpus_hash = hashlib.sha256("\n".join(f"{code}\t{docs[code]}" for code in codes).encode()).hexdigest()
-        dump_json(path.with_suffix(".json"), {"model_id": spec.model_id, "revision": spec.revision, "license": spec.license, "direction": direction, "terminology_version": "CMS FY2018", "corpus_hash": corpus_hash, "embedding_dim": int(matrix.shape[1]), "dtype": str(matrix.dtype), "normalized": True, "row_order_sha256": hashlib.sha256("\n".join(codes).encode()).hexdigest(), "codes": codes, "array_sha256": sha256(path), "token_length": {"max": max(result.token_lengths, default=0), "p95": float(np.percentile(result.token_lengths, 95)) if result.token_lengths else 0.0, "p99": float(np.percentile(result.token_lengths, 99)) if result.token_lengths else 0.0, "truncation_count": result.truncation_count}})
+        manifest = json.loads((TERM / ("icd10cm_manifest.json" if direction == FORWARD else "icd9cm_manifest.json")).read_text(encoding="utf-8"))
+        if len(codes) != manifest["count"] or corpus_hash != manifest["code_description_hash"]:
+            raise RuntimeError(f"authoritative terminology manifest mismatch for {direction}")
+        dump_json(path.with_suffix(".json"), {"model_id": spec.model_id, "revision": spec.revision, "license": spec.license, "direction": direction, "terminology_version": "terminology_universe_v2", "terminology_release": manifest["version"], "code_hash": manifest["code_hash"], "code_description_hash": manifest["code_description_hash"], "retrieval_corpus_hash": manifest["corpus_sha256"], "corpus_hash": corpus_hash, "target_count": len(codes), "embedding_dim": int(matrix.shape[1]), "dtype": str(matrix.dtype), "normalized": True, "similarity": "normalized_dot_product_exact", "row_order_sha256": hashlib.sha256("\n".join(codes).encode()).hexdigest(), "codes": codes, "array_sha256": sha256(path), "token_length": {"max": max(result.token_lengths, default=0), "p95": float(np.percentile(result.token_lengths, 95)) if result.token_lengths else 0.0, "p99": float(np.percentile(result.token_lengths, 99)) if result.token_lengths else 0.0, "truncation_count": result.truncation_count}})
         matrices[direction] = matrix
         metadata[direction] = {"codes": codes, "path": str(path), "cache_sha256": sha256(path), "encode_seconds": result.elapsed_seconds, "token_lengths": result.token_lengths, "truncation_count": result.truncation_count}
     return matrices, metadata
@@ -148,6 +152,17 @@ def summarize(rows: list[dict[str, Any]]) -> dict[str, Any]:
     return result
 
 
+def summarize_populations(rows: list[dict[str, Any]]) -> dict[str, Any]:
+    populations = {
+        "P_ORDINARY_ANSWERABLE": ["P_ORDINARY_ANSWERABLE"],
+        "P_COMBINATION": ["P_COMBINATION"],
+        "P_COMBINATION_WITH_ALTERNATIVES": ["P_COMBINATION_WITH_ALTERNATIVES"],
+        "P_COMPLEX": ["P_COMBINATION", "P_COMBINATION_WITH_ALTERNATIVES", "P_COMPLEX"],
+        "P_NO_MAP": ["P_NO_MAP"],
+    }
+    return {name: summarize([row for row in rows if row["population"] in members]) for name, members in populations.items()}
+
+
 def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     EMBED.mkdir(parents=True, exist_ok=True)
@@ -175,7 +190,9 @@ def main() -> None:
         code_lists = {direction: sorted(docs) for direction, docs in corpora.items()}
         dev_examples = population(rows, FORWARD, "stratified_dev")
         dev_rows, query_meta = evaluate_rows(dev_examples, encoder, matrices, code_lists, max_length, batch_size)
-        dev_metrics[spec.name] = {"summary": summarize(dev_rows), "max_length": max_length, "token_audit": {"max": max(raw_lengths, default=0), "p95": float(np.percentile(raw_lengths, 95)) if raw_lengths else 0.0, "p99": float(np.percentile(raw_lengths, 99)) if raw_lengths else 0.0, "truncation_count": sum(length > max_length for length in raw_lengths)}, "cache": cache_meta, "query": query_meta, "elapsed_seconds": time.perf_counter() - started}
+        rows_path = OUT / "dev_rows.jsonl"
+        rows_path.write_text("".join(json.dumps(row, sort_keys=True) + "\n" for row in dev_rows), encoding="utf-8")
+        dev_metrics[spec.name] = {"summary": summarize(dev_rows), "summary_by_population": summarize_populations(dev_rows), "max_length": max_length, "token_audit": {"max": max(raw_lengths, default=0), "p95": float(np.percentile(raw_lengths, 95)) if raw_lengths else 0.0, "p99": float(np.percentile(raw_lengths, 99)) if raw_lengths else 0.0, "truncation_count": sum(length > max_length for length in raw_lengths)}, "cache": cache_meta, "query": query_meta, "mean_query_latency_ms": 1000.0 * query_meta["query_seconds"] / len(dev_examples), "p95_query_latency_ms": None, "elapsed_seconds": time.perf_counter() - started}
         encoder.close()
         dump_json(OUT / "dev_metrics.json", dev_metrics)
     print(json.dumps({name: value["summary"] for name, value in dev_metrics.items()}, indent=2))
