@@ -6,7 +6,6 @@ import json
 import os
 import platform
 import statistics
-import subprocess
 import sys
 import time
 from pathlib import Path
@@ -155,7 +154,10 @@ def main() -> None:
     rows = load_examples()
     corpora = build_corpora(pd.DataFrame())
     dump_json(OUT / "config.json", {"experiment": "dense_full_universe_v2", "benchmark_version": "1.0", "models": [spec.__dict__ for spec in SPECS], "top_k": 100, "seed": 20260830, "batch_size": {"transformers": 64, "sentence_transformer": 32}, "selection_criterion": ["noncombination_answerable_Hit@100", "CompleteScenarioRetrieval@100", "Hit@10", "MRR"]})
-    dump_json(OUT / "environment.json", {"python": sys.version, "platform": platform.platform(), "torch": torch.__version__, "cuda": torch.version.cuda, "cuda_available": torch.cuda.is_available(), "gpu": torch.cuda.get_device_name(0) if torch.cuda.is_available() else None, "git_commit": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip(), "benchmark_manifest_sha256": sha256(BENCHMARK / "manifest.json")})
+    git_commit = os.environ.get("DENSE_GIT_COMMIT")
+    if not git_commit:
+        raise RuntimeError("DENSE_GIT_COMMIT is required because packaged runs have no .git metadata")
+    dump_json(OUT / "environment.json", {"python": sys.version, "platform": platform.platform(), "torch": torch.__version__, "cuda": torch.version.cuda, "cuda_available": torch.cuda.is_available(), "gpu": torch.cuda.get_device_name(0) if torch.cuda.is_available() else None, "git_commit": git_commit, "benchmark_manifest_sha256": sha256(BENCHMARK / "manifest.json")})
     dump_json(OUT / "models.json", {"models": [spec.__dict__ for spec in SPECS], "provenance_document": "docs/models/dense_retrieval_v1.md"})
     dev_metrics: dict[str, Any] = {}
     requested = os.environ.get("DENSE_MODEL")
