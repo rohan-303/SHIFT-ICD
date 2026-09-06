@@ -53,3 +53,25 @@ def test_structural_metrics_require_all_components_and_are_monotone(track_mappin
 def test_metric_values_exclude_no_map_and_keep_source_level_alternatives() -> None:
     assert metric_values({"A", "B"}, ["x", "B"], no_map=False, k_values=(1, 2)) == {"Hit@1": 0.0, "Hit@2": 1.0, "MRR": 0.5}
     assert metric_values(set(), ["x"], no_map=True, k_values=(1, 2)) == {"Hit@1": None, "Hit@2": None, "MRR": None}
+
+
+def test_corrected_dense_corpora_use_full_authoritative_universes() -> None:
+    import pandas as pd
+
+    from scripts.run_dense_full_universe_v2 import BACKWARD, FORWARD, build_corpora
+
+    corpora = build_corpora(pd.DataFrame())
+    assert len(corpora[FORWARD]) == 71_704
+    assert len(corpora[BACKWARD]) == 14_567
+
+
+def test_exact_dense_rank_returns_deterministic_top_100() -> None:
+    import numpy as np
+
+    from scripts.run_dense_full_universe_v2 import dense_rank
+
+    matrix = np.eye(120, dtype=np.float32)
+    ranked, scores = dense_rank(matrix[0], matrix, [f"C{i:03d}" for i in range(120)])
+    assert len(ranked) == 100
+    assert ranked[0] == "C000"
+    assert scores[0] == 1.0

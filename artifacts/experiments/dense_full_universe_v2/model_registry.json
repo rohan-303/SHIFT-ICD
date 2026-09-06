@@ -1,0 +1,76 @@
+{
+  "schema_version": "dense_full_universe_v2",
+  "status": "PROVENANCE_RECOVERED_REQUIRES_REMOTE_CHECKPOINT_VERIFICATION",
+  "source_lineage": [
+    "artifacts/experiments/dense_v1/config.json",
+    "artifacts/experiments/dense_v1_1/model_provenance.json",
+    "docs/experiments/dense_retrieval_v1_protocol.md",
+    "src/shift_icd/dense/models.py",
+    "src/shift_icd/dense/retrieval.py",
+    "src/shift_icd/dense/text.py"
+  ],
+  "models": [
+    {
+      "name": "SapBERT",
+      "model_id": "cambridgeltl/SapBERT-from-PubMedBERT-fulltext",
+      "revision": "090663c3ae57bf35ffe4d0d468a2a88d03051a4d",
+      "kind": "transformers_cls",
+      "embedding_dim": 768,
+      "max_sequence_length_lineage": 64,
+      "pooling": "CLS token",
+      "normalization": "L2",
+      "similarity": "exact normalized dot product",
+      "precision_lineage": "float32 embeddings; inference autocast disabled",
+      "tokenizer_revision": "same immutable model revision; verify remotely",
+      "verification_status": "pending_remote_checkpoint_verification"
+    },
+    {
+      "name": "BioLORD-2023",
+      "model_id": "FremyCompany/BioLORD-2023",
+      "revision": "167aab527b238a50ca65224e6319215d2ff4fc9f",
+      "kind": "sentence_transformer",
+      "embedding_dim": 768,
+      "max_sequence_length_lineage": 64,
+      "pooling": "SentenceTransformer native pooling; verify remotely",
+      "normalization": "L2",
+      "similarity": "exact normalized dot product",
+      "precision_lineage": "float32 embeddings; inference autocast disabled",
+      "tokenizer_revision": "same immutable model revision; verify remotely",
+      "verification_status": "pending_remote_checkpoint_verification"
+    },
+    {
+      "name": "MedCPT",
+      "model_id": "ncbi/MedCPT-Query-Encoder",
+      "revision": "d83a36cc6b8e3a5c5e9d9d6ba156808c1643dcbc",
+      "kind": "transformers_cls",
+      "embedding_dim": 768,
+      "max_sequence_length_lineage": 64,
+      "pooling": "CLS token",
+      "normalization": "L2",
+      "similarity": "exact normalized dot product",
+      "precision_lineage": "float32 embeddings; inference autocast disabled",
+      "tokenizer_revision": "same immutable model revision; verify remotely",
+      "verification_status": "pending_remote_checkpoint_verification"
+    },
+    {
+      "name": "Qwen3-Embedding-0.6B",
+      "model_id": "Qwen/Qwen3-Embedding-0.6B",
+      "revision": "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3",
+      "kind": "qwen_sentence_transformer",
+      "embedding_dim": 1024,
+      "max_sequence_length_lineage": 64,
+      "pooling": "SentenceTransformer native pooling; verify remotely",
+      "normalization": "L2",
+      "similarity": "exact normalized dot product",
+      "precision_lineage": "float32 embeddings; inference autocast disabled",
+      "tokenizer_revision": "same immutable model revision; verify remotely",
+      "qwen_query_instruction": "Retrieve the ICD diagnosis concept that is semantically equivalent or the closest valid cross-version mapping to the source diagnosis description.",
+      "verification_status": "pending_remote_checkpoint_verification"
+    }
+  ],
+  "rrf": {
+    "kind": "hybrid_comparison_baseline",
+    "rrf_k": 60,
+    "neural_initialization_eligible": false
+  }
+}
