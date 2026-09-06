@@ -1,0 +1,9 @@
+{
+  "bm25_parameters": {
+    "b": 0.75,
+    "k1": 2.0
+  },
+  "evaluator_version": "retrieval_evaluator_v3",
+  "peak_cpu_rss": "NOT_RECORDED",
+  "status": "PARTIAL_RUNTIME_NOT_RECORDABLE_FROM_COMPLETED_ROW_ARTIFACTS"
+}

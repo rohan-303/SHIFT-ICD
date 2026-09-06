@@ -1,0 +1,178 @@
+{
+  "backward_family_held_out_test": {
+    "P_COMBINATION": {
+      "ChoiceListRecall@1": 0.19852464332036315,
+      "ChoiceListRecall@10": 0.3451686121919585,
+      "ChoiceListRecall@100": 0.6478599221789884,
+      "ChoiceListRecall@25": 0.4052367055771725,
+      "ChoiceListRecall@5": 0.2920719844357977,
+      "ChoiceListRecall@50": 0.4587386511024643,
+      "CompleteScenarioRetrieval@1": 0.0,
+      "CompleteScenarioRetrieval@10": 0.11575875486381323,
+      "CompleteScenarioRetrieval@100": 0.4270428015564202,
+      "CompleteScenarioRetrieval@25": 0.1877431906614786,
+      "CompleteScenarioRetrieval@5": 0.07003891050583658,
+      "CompleteScenarioRetrieval@50": 0.26848249027237353
+    },
+    "P_COMBINATION_WITH_ALTERNATIVES": {
+      "ChoiceListRecall@1": 0.0,
+      "ChoiceListRecall@10": 0.25,
+      "ChoiceListRecall@100": 0.75,
+      "ChoiceListRecall@25": 0.625,
+      "ChoiceListRecall@5": 0.25,
+      "ChoiceListRecall@50": 0.75,
+      "CompleteScenarioRetrieval@1": 0.0,
+      "CompleteScenarioRetrieval@10": 0.0,
+      "CompleteScenarioRetrieval@100": 0.5,
+      "CompleteScenarioRetrieval@25": 0.5,
+      "CompleteScenarioRetrieval@5": 0.0,
+      "CompleteScenarioRetrieval@50": 0.5
+    },
+    "P_COMPLEX": {
+      "ChoiceListRecall@1": 0.19775516795865633,
+      "ChoiceListRecall@10": 0.34479974160206717,
+      "ChoiceListRecall@100": 0.6482558139534884,
+      "ChoiceListRecall@25": 0.40608850129198965,
+      "ChoiceListRecall@5": 0.2919089147286822,
+      "ChoiceListRecall@50": 0.45986757105943155,
+      "CompleteScenarioRetrieval@1": 0.0,
+      "CompleteScenarioRetrieval@10": 0.11531007751937984,
+      "CompleteScenarioRetrieval@100": 0.4273255813953488,
+      "CompleteScenarioRetrieval@25": 0.18895348837209303,
+      "CompleteScenarioRetrieval@5": 0.06976744186046512,
+      "CompleteScenarioRetrieval@50": 0.2693798449612403
+    }
+  },
+  "backward_stratified_test": {
+    "P_COMBINATION": {
+      "ChoiceListRecall@1": 0.21331689272503082,
+      "ChoiceListRecall@10": 0.4261200164406083,
+      "ChoiceListRecall@100": 0.6815659679408138,
+      "ChoiceListRecall@25": 0.5011302918207974,
+      "ChoiceListRecall@5": 0.36683107274969173,
+      "ChoiceListRecall@50": 0.5714138923140156,
+      "CompleteScenarioRetrieval@1": 0.0,
+      "CompleteScenarioRetrieval@10": 0.22688039457459927,
+      "CompleteScenarioRetrieval@100": 0.5413070283600493,
+      "CompleteScenarioRetrieval@25": 0.32675709001233044,
+      "CompleteScenarioRetrieval@5": 0.13933415536374846,
+      "CompleteScenarioRetrieval@50": 0.41676942046855736
+    },
+    "P_COMBINATION_WITH_ALTERNATIVES": {
+      "ChoiceListRecall@1": 0.375,
+      "ChoiceListRecall@10": 0.6842105263157895,
+      "ChoiceListRecall@100": 0.9868421052631579,
+      "ChoiceListRecall@25": 0.7763157894736842,
+      "ChoiceListRecall@5": 0.5263157894736842,
+      "ChoiceListRecall@50": 0.9407894736842105,
+      "CompleteScenarioRetrieval@1": 0.0,
+      "CompleteScenarioRetrieval@10": 0.3684210526315789,
+      "CompleteScenarioRetrieval@100": 0.9736842105263158,
+      "CompleteScenarioRetrieval@25": 0.5263157894736842,
+      "CompleteScenarioRetrieval@5": 0.05263157894736842,
+      "CompleteScenarioRetrieval@50": 0.868421052631579
+    },
+    "P_COMPLEX": {
+      "ChoiceListRecall@1": 0.22055359246171968,
+      "ChoiceListRecall@10": 0.43767177071063995,
+      "ChoiceListRecall@100": 0.6952296819787986,
+      "ChoiceListRecall@25": 0.5134471927758146,
+      "ChoiceListRecall@5": 0.3739693757361602,
+      "ChoiceListRecall@50": 0.587946603847664,
+      "CompleteScenarioRetrieval@1": 0.0,
+      "CompleteScenarioRetrieval@10": 0.2332155477031802,
+      "CompleteScenarioRetrieval@100": 0.5606595995288575,
+      "CompleteScenarioRetrieval@25": 0.33568904593639576,
+      "CompleteScenarioRetrieval@5": 0.1354534746760895,
+      "CompleteScenarioRetrieval@50": 0.4369846878680801
+    }
+  },
+  "forward_family_held_out_test": {
+    "P_COMBINATION": {
+      "ChoiceListRecall@1": 0.0763888888888889,
+      "ChoiceListRecall@10": 0.2916666666666667,
+      "ChoiceListRecall@100": 0.6666666666666666,
+      "ChoiceListRecall@25": 0.4652777777777778,
+      "ChoiceListRecall@5": 0.1736111111111111,
+      "ChoiceListRecall@50": 0.5277777777777778,
+      "CompleteScenarioRetrieval@1": 0.0,
+      "CompleteScenarioRetrieval@10": 0.0,
+      "CompleteScenarioRetrieval@100": 0.4305555555555556,
+      "CompleteScenarioRetrieval@25": 0.1111111111111111,
+      "CompleteScenarioRetrieval@5": 0.0,
+      "CompleteScenarioRetrieval@50": 0.19444444444444445
+    },
+    "P_COMBINATION_WITH_ALTERNATIVES": {
+      "ChoiceListRecall@1": 0.005813953488372093,
+      "ChoiceListRecall@10": 0.25,
+      "ChoiceListRecall@100": 0.5930232558139535,
+      "ChoiceListRecall@25": 0.36627906976744184,
+      "ChoiceListRecall@5": 0.16279069767441862,
+      "ChoiceListRecall@50": 0.47093023255813954,
+      "CompleteScenarioRetrieval@1": 0.0,
+      "CompleteScenarioRetrieval@10": 0.0,
+      "CompleteScenarioRetrieval@100": 0.27906976744186046,
+      "CompleteScenarioRetrieval@25": 0.09302325581395349,
+      "CompleteScenarioRetrieval@5": 0.0,
+      "CompleteScenarioRetrieval@50": 0.11627906976744186
+    },
+    "P_COMPLEX": {
+      "ChoiceListRecall@1": 0.0379746835443038,
+      "ChoiceListRecall@10": 0.2689873417721519,
+      "ChoiceListRecall@100": 0.6265822784810127,
+      "ChoiceListRecall@25": 0.41139240506329117,
+      "ChoiceListRecall@5": 0.16772151898734178,
+      "ChoiceListRecall@50": 0.49683544303797467,
+      "CompleteScenarioRetrieval@1": 0.0,
+      "CompleteScenarioRetrieval@10": 0.0,
+      "CompleteScenarioRetrieval@100": 0.34810126582278483,
+      "CompleteScenarioRetrieval@25": 0.10126582278481013,
+      "CompleteScenarioRetrieval@5": 0.0,
+      "CompleteScenarioRetrieval@50": 0.1518987341772152
+    }
+  },
+  "forward_stratified_test": {
+    "P_COMBINATION": {
+      "ChoiceListRecall@1": 0.0390625,
+      "ChoiceListRecall@10": 0.2578125,
+      "ChoiceListRecall@100": 0.65625,
+      "ChoiceListRecall@25": 0.46875,
+      "ChoiceListRecall@5": 0.1484375,
+      "ChoiceListRecall@50": 0.5546875,
+      "CompleteScenarioRetrieval@1": 0.0,
+      "CompleteScenarioRetrieval@10": 0.015625,
+      "CompleteScenarioRetrieval@100": 0.46875,
+      "CompleteScenarioRetrieval@25": 0.15625,
+      "CompleteScenarioRetrieval@5": 0.0,
+      "CompleteScenarioRetrieval@50": 0.296875
+    },
+    "P_COMBINATION_WITH_ALTERNATIVES": {
+      "ChoiceListRecall@1": 0.0,
+      "ChoiceListRecall@10": 0.22946859903381642,
+      "ChoiceListRecall@100": 0.5739130434782609,
+      "ChoiceListRecall@25": 0.37657004830917873,
+      "ChoiceListRecall@5": 0.13285024154589373,
+      "ChoiceListRecall@50": 0.4821256038647343,
+      "CompleteScenarioRetrieval@1": 0.0,
+      "CompleteScenarioRetrieval@10": 0.014492753623188406,
+      "CompleteScenarioRetrieval@100": 0.21739130434782608,
+      "CompleteScenarioRetrieval@25": 0.08695652173913043,
+      "CompleteScenarioRetrieval@5": 0.0,
+      "CompleteScenarioRetrieval@50": 0.14492753623188406
+    },
+    "P_COMPLEX": {
+      "ChoiceListRecall@1": 0.018796992481203006,
+      "ChoiceListRecall@10": 0.24310776942355888,
+      "ChoiceListRecall@100": 0.6135338345864662,
+      "ChoiceListRecall@25": 0.42092731829573937,
+      "ChoiceListRecall@5": 0.14035087719298245,
+      "ChoiceListRecall@50": 0.5170426065162907,
+      "CompleteScenarioRetrieval@1": 0.0,
+      "CompleteScenarioRetrieval@10": 0.015037593984962405,
+      "CompleteScenarioRetrieval@100": 0.3383458646616541,
+      "CompleteScenarioRetrieval@25": 0.12030075187969924,
+      "CompleteScenarioRetrieval@5": 0.0,
+      "CompleteScenarioRetrieval@50": 0.21804511278195488
+    }
+  }
+}

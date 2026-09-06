@@ -1,0 +1,55 @@
+{
+  "datasets": {
+    "backward_family_held_out_test": {
+      "no_map_excluded_from_ordinary": true,
+      "ordinary_denominator": 13169,
+      "population_counts": {
+        "P_ALL": 14332,
+        "P_COMBINATION": 1028,
+        "P_COMBINATION_WITH_ALTERNATIVES": 4,
+        "P_COMPLEX": 1032,
+        "P_NO_MAP": 131,
+        "P_ORDINARY_ANSWERABLE": 13169
+      }
+    },
+    "backward_stratified_test": {
+      "no_map_excluded_from_ordinary": true,
+      "ordinary_denominator": 13346,
+      "population_counts": {
+        "P_ALL": 14341,
+        "P_COMBINATION": 811,
+        "P_COMBINATION_WITH_ALTERNATIVES": 38,
+        "P_COMPLEX": 849,
+        "P_NO_MAP": 146,
+        "P_ORDINARY_ANSWERABLE": 13346
+      }
+    },
+    "forward_family_held_out_test": {
+      "no_map_excluded_from_ordinary": true,
+      "ordinary_denominator": 2750,
+      "population_counts": {
+        "P_ALL": 2908,
+        "P_COMBINATION": 72,
+        "P_COMBINATION_WITH_ALTERNATIVES": 86,
+        "P_COMPLEX": 158,
+        "P_NO_MAP": 0,
+        "P_ORDINARY_ANSWERABLE": 2750
+      }
+    },
+    "forward_stratified_test": {
+      "no_map_excluded_from_ordinary": true,
+      "ordinary_denominator": 2695,
+      "population_counts": {
+        "P_ALL": 2913,
+        "P_COMBINATION": 64,
+        "P_COMBINATION_WITH_ALTERNATIVES": 69,
+        "P_COMPLEX": 133,
+        "P_NO_MAP": 85,
+        "P_ORDINARY_ANSWERABLE": 2695
+      }
+    }
+  },
+  "evaluator_version": "retrieval_evaluator_v3",
+  "historical_test_exposure_disclosed": true,
+  "metric_contract": "retrieval_metric_population_contract_v2"
+}

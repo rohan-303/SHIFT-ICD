@@ -1,0 +1,38 @@
+{
+  "P_COMBINATION": {
+    "Hit@1": null,
+    "Hit@10": null,
+    "Hit@100": null,
+    "Hit@25": null,
+    "Hit@5": null,
+    "Hit@50": null,
+    "MRR": null
+  },
+  "P_COMBINATION_WITH_ALTERNATIVES": {
+    "Hit@1": null,
+    "Hit@10": null,
+    "Hit@100": null,
+    "Hit@25": null,
+    "Hit@5": null,
+    "Hit@50": null,
+    "MRR": null
+  },
+  "P_COMPLEX": {
+    "Hit@1": null,
+    "Hit@10": null,
+    "Hit@100": null,
+    "Hit@25": null,
+    "Hit@5": null,
+    "Hit@50": null,
+    "MRR": null
+  },
+  "P_ORDINARY_ANSWERABLE": {
+    "Hit@1": 0.27633747939457515,
+    "Hit@10": 0.4859133822868275,
+    "Hit@100": 0.6718867076277536,
+    "Hit@25": 0.5797242619511465,
+    "Hit@5": 0.4317398471452121,
+    "Hit@50": 0.6348718717218642,
+    "MRR": 0.3477007678506234
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "backward_family_held_out_test": {
+    "P_ALL": 14332,
+    "P_COMBINATION": 1028,
+    "P_COMBINATION_WITH_ALTERNATIVES": 4,
+    "P_COMPLEX": 1032,
+    "P_NO_MAP": 131,
+    "P_ORDINARY_ANSWERABLE": 13169
+  },
+  "backward_stratified_test": {
+    "P_ALL": 14341,
+    "P_COMBINATION": 811,
+    "P_COMBINATION_WITH_ALTERNATIVES": 38,
+    "P_COMPLEX": 849,
+    "P_NO_MAP": 146,
+    "P_ORDINARY_ANSWERABLE": 13346
+  },
+  "forward_family_held_out_test": {
+    "P_ALL": 2908,
+    "P_COMBINATION": 72,
+    "P_COMBINATION_WITH_ALTERNATIVES": 86,
+    "P_COMPLEX": 158,
+    "P_NO_MAP": 0,
+    "P_ORDINARY_ANSWERABLE": 2750
+  },
+  "forward_stratified_test": {
+    "P_ALL": 2913,
+    "P_COMBINATION": 64,
+    "P_COMBINATION_WITH_ALTERNATIVES": 69,
+    "P_COMPLEX": 133,
+    "P_NO_MAP": 85,
+    "P_ORDINARY_ANSWERABLE": 2695
+  }
+}

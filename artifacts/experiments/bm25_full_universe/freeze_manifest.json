@@ -1,0 +1,11 @@
+{
+  "bm25_parameters": {
+    "b": 0.75,
+    "k1": 2.0
+  },
+  "evaluator_version": "retrieval_evaluator_v3",
+  "historical_test_exposure_disclosed": true,
+  "schema": "bm25-full-universe-freeze-v2",
+  "terminology_version": "terminology_universe_v2",
+  "test_lock_sha256": "c4f625bd175580075a667e8b4716e236c53eda26b28e23b718caf171f0844aae"
+}
