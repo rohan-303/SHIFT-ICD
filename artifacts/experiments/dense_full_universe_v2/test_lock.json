@@ -1,6 +1,6 @@
 {
   "evaluator": "retrieval_evaluator_v3",
-  "git_commit": "db3898f0f2fb7e66f1ff1e07c99d67c7ba17b4bf",
+  "git_commit": "d5216c617c23d93fcad77142b2fcc556d2459c66",
   "inference_semantics": {
     "max_sequence_length": 64,
     "normalization": "L2",
