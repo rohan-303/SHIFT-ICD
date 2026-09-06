@@ -1,0 +1,11 @@
+{
+  "frozen_parameters": {
+    "b": 0.75,
+    "k1": 2.0
+  },
+  "historical_test_exposure_disclosed": true,
+  "schema": "bm25-v2-test-lock",
+  "selection_scope": "forward_stratified_dev_only",
+  "selection_sha256": "66458259a272aeab36cfdccdbeb836eb796ea676fcb4616909dacbbb23f618ba",
+  "test_used_for_selection": false
+}

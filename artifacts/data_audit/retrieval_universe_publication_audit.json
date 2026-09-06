@@ -26,16 +26,15 @@
         "01012",
         "01013"
       ],
-      "gem_minus_full_sample": [
-        "v5889"
-      ],
+      "gem_minus_full_sample": [],
       "historical_matches_full": false,
       "historical_matches_gem": true,
       "historical_size": 11690,
       "n_full": 14567,
       "n_full_minus_gem": 2878,
-      "n_gem_minus_full": 1,
-      "n_gem_target": 11690,
+      "n_gem_minus_full": 0,
+      "n_gem_target": 11689,
+      "n_gem_target_raw": 11690,
       "n_intersection": 11689
     },
     "ICD9CM_TO_ICD10CM": {
@@ -71,6 +70,7 @@
       "n_full_minus_gem": 54191,
       "n_gem_minus_full": 0,
       "n_gem_target": 17513,
+      "n_gem_target_raw": 17513,
       "n_intersection": 17513
     }
   },

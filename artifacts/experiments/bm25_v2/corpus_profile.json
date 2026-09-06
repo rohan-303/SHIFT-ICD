@@ -1,0 +1,12 @@
+{
+  "ICD10CM_TO_ICD9CM": {
+    "candidate_universe_status": "AUTHORITATIVE_FULL_TERMINOLOGY_V2",
+    "concept_count": 14567,
+    "source": "artifacts\\terminology_universe_v2\\icd9cm_diagnosis.jsonl"
+  },
+  "ICD9CM_TO_ICD10CM": {
+    "candidate_universe_status": "AUTHORITATIVE_FULL_TERMINOLOGY_V2",
+    "concept_count": 71704,
+    "source": "artifacts\\terminology_universe_v2\\icd10cm_diagnosis.jsonl"
+  }
+}

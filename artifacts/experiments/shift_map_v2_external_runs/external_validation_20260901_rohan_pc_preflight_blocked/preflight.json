@@ -1,0 +1,17 @@
+{
+  "run_id": "external_validation_20260901_rohan_pc_preflight_blocked",
+  "status": "FAIL",
+  "stage": "external_gpu_preflight",
+  "data_verification": "PASS",
+  "cuda_available": true,
+  "gpu_name": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "gpu_vram_mib": 6144,
+  "minimum_operational_vram_mib": 8192,
+  "reason": "GPU_VRAM_BELOW_OPERATIONAL_MINIMUM_8GB",
+  "required_action": "Move the transferred repository to an actual external CUDA GPU with at least 8 GB VRAM; 12 GB preferred.",
+  "model_loaded": false,
+  "dev_scoring_started": false,
+  "training_probe_started": false,
+  "test_scored": false,
+  "optimizer_step_count": 0
+}

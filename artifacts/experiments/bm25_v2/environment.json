@@ -1,0 +1,10 @@
+{
+  "benchmark_manifest_sha256": "7c7a7bdcd9d0065e5d5a6623d07c6e97f129dd17bdfc51bf5660b96d03947381",
+  "bm25_version": "internal-robertson-v1",
+  "git_commit": "638ac76725fc1007959603e016ab68469fad1a79",
+  "normalization_version": "nfkc-lower-punct-boundary-v1",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.15 (main, Jul 23 2026, 14:42:43) [MSC v.1944 64 bit (AMD64)]",
+  "seed": 20260829,
+  "tokenizer_version": "regex-alnum-v1"
+}

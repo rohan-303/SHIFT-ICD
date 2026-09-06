@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "candidate_manifest": "d11f96db7a84bdf931a19c50d3bb900a6dfebc172cfa5b6a45da845f8fa0ab02",
+  "train_candidates": "f632854cd22ff9875390d9ff7280b4033b571c0c41ac54561730bf6f77536a35",
+  "dev_candidates": "ea7d94aa7f8e2d73d9d07dfff6d21a1b8e9a4a3db7837dd5dfa9f76feb92eafa",
+  "test_candidates": "adcdcc2348165723c29f76687e5f487c2e5275dac5ff2389352ff4570d8f961b",
+  "benchmark_manifest": "5464b14e2857affd3bff3801e6497d4342449976a006325f6189271bfcabfd47",
+  "all_required_train_dev_test_description_files": "PRESENT_AND_HASH_VERIFIED",
+  "test_scored": false
+}

@@ -49,7 +49,7 @@ The independent builder is `scripts/audit_retrieval_universe.py`; its machine-re
 | Direction | Full authoritative set | GEM-observed targets | Intersection | Full−GEM | GEM−Full | Historical size | Historical equals GEM? |
 |---|---:|---:|---:|---:|---:|---:|---|
 | ICD-9 → ICD-10 | 71,704 | 17,513 | 17,513 | 54,191 | 0 | 17,513 | YES |
-| ICD-10 → ICD-9 | 14,567 | 11,690 | 11,689 | 2,878 | 1 | 11,690 | YES |
+| ICD-10 → ICD-9 | 14,567 | 11,689 canonical / 11,690 raw | 11,689 | 2,878 | 0 canonical | 11,690 | YES (raw) |
 
 Deterministic full-set hashes:
 
@@ -63,12 +63,12 @@ Deterministic samples from full-minus-GEM:
 - ICD-10: `A0101`, `A0102`, `A0103`, `A0104`, `A0105`, `A0109`, `A0225`, `A063`, `A0681`, `A0682`
 - ICD-9: `0053`, `0081`, `0083`, `00842`, `00846`, `00847`, `0091`, `0092`, `0093`, `01000`
 
-GEM-minus-full sample: `v5889` in the ICD-9 target direction.
+- GEM-minus-full sample after canonical normalization: none. Raw GEM spelling evidence includes `v5889`, which normalizes to the authoritative `V5889`.
 
 ### Meaning of historical corpus sizes
 
 - Historical `17,513`: `GEM_OBSERVED_TARGET_ONLY`, because it equals the GEM-observed ICD-10 target set and excludes 54,191 authoritative diagnosis concepts.
-- Historical `11,690`: `GEM_OBSERVED_TARGET_ONLY`, because it equals the GEM-observed ICD-9 target count and excludes 2,878 authoritative diagnosis concepts, with `v5889` not represented in the description source.
+- Historical `11,690`: `GEM_OBSERVED_TARGET_ONLY`, because it equals the raw GEM-observed ICD-9 target count and excludes 2,878 authoritative diagnosis concepts. Canonical normalization collapses one raw spelling duplicate to 11,689 unique identities.
 
 ### Static dependency audit
 
@@ -76,15 +76,16 @@ GEM-minus-full sample: `v5889` in the ICD-9 target direction.
 
 ### v5889 identity audit
 
-`v5889` is retained as a canonical GEM target code despite missing ICD-9 description metadata. Code identity remains canonical code identity; the display description is null rather than causing row deletion or inferred padding/case correction. This is a metadata anomaly, but it does not cure the membership leakage.
+`v5889` is present in the authoritative diagnosis titles as `V58.89` and is parsed canonically as `V5889`. The prior GEM-minus-full result was a case/dot normalization false positive; no description was fabricated.
 
 ### GEM-inaccessible rebuild
 
-Independent description-only rebuild: **EXECUTED**. Counts and hashes differ from the frozen GEM-derived corpora, demonstrating that the frozen corpora cannot be described as complete authoritative universes. A regression test has not yet been added; this remains an implementation gate.
+Independent description-only rebuild: **EXECUTED and regression-tested**. Counts and hashes differ from the frozen GEM-derived corpora, demonstrating that the frozen corpora cannot be described as complete authoritative universes. Gold coverage is recorded in `artifacts/data_audit/gold_coverage_full_terminology_v2.json`.
 
 ### Gold coverage
 
-- Full authoritative-universe ordinary-gold coverage: **NOT COMPUTED** in this audit.
+- Full authoritative-universe ordinary-gold coverage: **100% forward (4,370/4,370)** and **100% backward (14,308/14,308)**.
+- Combination component coverage: **100% forward (477/477)** and **100% backward (1,825/1,825)**; no missing components.
 - Frozen GEM-derived candidate coverage: prior evidence exists but is not publication-safe for a complete-universe claim.
 
 ## 4. Manifest reconciliation

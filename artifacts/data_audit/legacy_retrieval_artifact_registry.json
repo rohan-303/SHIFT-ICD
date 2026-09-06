@@ -1,0 +1,20 @@
+{
+  "schema": "legacy-retrieval-artifact-registry-v1",
+  "candidate_universe_status": "LEGACY_GEM_OBSERVED_TARGET_UNIVERSE",
+  "preserve_original_bytes_and_hashes": true,
+  "affected_experiment_roots": [
+    "artifacts/experiments/bm25_v1",
+    "artifacts/experiments/dense_v1",
+    "artifacts/experiments/dense_v1_1",
+    "artifacts/experiments/shift_map_v1",
+    "artifacts/experiments/shift_map_v1_1_diagnostics",
+    "artifacts/experiments/shift_map_v1_2",
+    "artifacts/experiments/shift_map_v1_3",
+    "artifacts/experiments/shift_map_v1_4",
+    "artifacts/experiments/shift_map_v2",
+    "artifacts/experiments/shift_map_v2_compute",
+    "artifacts/experiments/shift_map_v2_external"
+  ],
+  "labeling_policy": "registry labels historical artifacts without mutating their original metrics or hashes",
+  "replacement_namespace": "artifacts/experiments/bm25_v2"
+}

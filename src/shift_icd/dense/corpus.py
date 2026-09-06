@@ -7,6 +7,7 @@ from dataclasses import dataclass
 import pandas as pd  # type: ignore[import-untyped]
 
 from shift_icd.dense.text import clean_dense_text
+from shift_icd.terminology import TerminologyCorpus
 
 FORWARD = "ICD9CM_TO_ICD10CM"
 BACKWARD = "ICD10CM_TO_ICD9CM"
@@ -28,7 +29,7 @@ class TargetCorpus:
 
 
 def build_target_corpus(rows: pd.DataFrame, direction: str) -> TargetCorpus:
-    """Build the deterministic target terminology for one mapping direction."""
+    """Legacy GEM-observed builder; not valid for publication target membership."""
     if direction not in DIRECTIONS:
         raise ValueError(f"unsupported mapping direction: {direction}")
     required = {"direction", "target_code", "target_label", "target_short_description", "row_id"}
@@ -66,4 +67,25 @@ def build_target_corpus(rows: pd.DataFrame, direction: str) -> TargetCorpus:
         codes=codes,
         descriptions=ordered_descriptions,
         corpus_hash=hashlib.sha256(payload.encode("utf-8")).hexdigest(),
+    )
+
+
+def build_target_corpus_from_terminology(corpus: TerminologyCorpus, direction: str) -> TargetCorpus:
+    """Build target membership exclusively from an authoritative terminology corpus."""
+    expected = "ICD-10-CM" if direction == FORWARD else "ICD-9-CM" if direction == BACKWARD else None
+    if expected is None:
+        raise ValueError(f"unsupported mapping direction: {direction}")
+    if corpus.terminology != expected:
+        raise ValueError(f"terminology {corpus.terminology!r} is incompatible with {direction}")
+    codes = tuple(record.canonical_code for record in corpus.records)
+    descriptions = tuple(clean_dense_text(record.long_description or record.short_description or "") for record in corpus.records)
+    if not codes:
+        raise ValueError(f"empty target corpus for {direction}")
+    payload = "\n".join(f"{code}\t{description}" for code, description in zip(codes, descriptions, strict=True))
+    return TargetCorpus(
+        direction,
+        f"{corpus.terminology} {corpus.version}",
+        codes,
+        descriptions,
+        hashlib.sha256(payload.encode("utf-8")).hexdigest(),
     )
