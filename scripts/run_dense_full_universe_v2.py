@@ -26,7 +26,7 @@ from shift_icd.terminology import TerminologyRecord
 
 ROOT = Path(__file__).resolve().parents[1]
 BENCHMARK = ROOT / "data/benchmarks/cms_track_a/v1.0"
-OUT = ROOT / "artifacts/experiments/dense_full_universe_v2"
+OUT = Path(os.environ.get("DENSE_OUTPUT", str(ROOT / "artifacts/experiments/dense_full_universe_v2")))
 EMBED = OUT / "embeddings"
 K_VALUES = (1, 5, 10, 25, 50, 100)
 SPECS = (
