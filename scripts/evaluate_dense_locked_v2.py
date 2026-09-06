@@ -20,8 +20,11 @@ from shift_icd.dense.models import load_encoder
 
 ROOT = Path(__file__).resolve().parents[1]
 TEST_OUT = Path(os.environ.get("DENSE_TEST_OUTPUT", str(ROOT / "artifacts/experiments/dense_full_universe_v2/test")))
-TARGET_ROOT = Path(os.environ.get("DENSE_TARGET_ROOT", ""))
+TARGET_ROOT = Path(os.environ.get("DENSE_TARGET_ROOT", str(ROOT / "results")))
+LOCK_FILE = ROOT / "artifacts/experiments/dense_full_universe_v2/test_lock.sha256"
 LOCK_HASH = os.environ.get("DENSE_TEST_LOCK_HASH", "")
+if not LOCK_HASH and LOCK_FILE.exists():
+    LOCK_HASH = LOCK_FILE.read_text(encoding="utf-8").split()[0]
 
 
 def write_json(path: Path, value: Any) -> None:
