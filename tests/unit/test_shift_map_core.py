@@ -2,6 +2,7 @@ import math
 
 import torch
 
+from shift_icd.retrieval.bm25 import BM25Index
 from shift_icd.shift_map.losses import l1_masked_single_infonce, l2_set_positive_infonce
 from shift_icd.shift_map.mining import audit_negative_collisions, mine_random_negatives
 from shift_icd.shift_map.training import (
@@ -25,6 +26,13 @@ def ex(kind="SINGLE_EXACT", targets=None, split="train", direction="ICD9CM_TO_IC
         valid_target_codes=tuple(targets or ("T1",)),
         lexical_difficulty="LEXICAL_LOW",
     )
+
+
+def test_bm25_ties_are_sorted_by_code_deterministically():
+    index = BM25Index.from_documents({"T2": "alpha", "T1": "alpha", "T3": "beta"}, k1=2.0, b=0.75)
+    ranked = index.rank("alpha", limit=3)
+    assert [code for code, _score in ranked] == ["T1", "T2", "T3"]
+    assert ranked[0][1] == ranked[1][1]
 
 
 def test_policies_exclude_complex_and_no_map():
