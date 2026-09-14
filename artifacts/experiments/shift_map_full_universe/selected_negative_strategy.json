@@ -1,0 +1,19 @@
+{
+  "schema_version": "shift_map_full_universe_selected_negative_strategy_v1",
+  "status": "FROZEN",
+  "selected_strategy": "lexical_hard",
+  "selected_epoch": 2,
+  "runner_up": "mixed",
+  "decisive_criterion": "CompleteScenarioRetrieval@100",
+  "selected_metrics": {"Hit@100": 0.9792284866468842, "CompleteScenarioRetrieval@100": 0.5223880597014925, "Hit@10": 0.905786350148368, "MRR": 0.7738648850418924, "Hit@1": 0.6988130563798219, "training_loss": 9.138098780137975, "ChoiceListRecall@100": 0.7506218905472638},
+  "runner_up_metrics": {"Hit@100": 0.9792284866468842, "CompleteScenarioRetrieval@100": 0.4925373134328358, "Hit@10": 0.9020771513353115, "MRR": 0.7749117638058923, "Hit@1": 0.6980712166172107, "training_loss": 38.86041928334216, "ChoiceListRecall@100": 0.7369402985074627},
+  "selected_loss": "L1",
+  "selected_loss_sha256": "b1efd2fedd0819c95004881904c53148023436200fe51f72336eb373e44942d7",
+  "selected_positive_policy": "P1",
+  "negative_mining_manifest_sha256": "68e820c170b9f8f3be9e87f679d239f6495db7c5bce898cc95b71d0208c289cf",
+  "negative_sets_sha256": "2f75fb8e954d4f85e35316fd67b598282931852108de0a7c62b6160fa3e2a7ce",
+  "base_model": "FremyCompany/BioLORD-2023",
+  "base_revision": "167aab527b238a50ca65224e6319215d2ff4fc9f",
+  "target_universe_count": 71704,
+  "test_data_used": false
+}

@@ -1,0 +1,14 @@
+run_id,stage,learning_rate,epoch,runtime_seconds,checkpoint_hash
+dev_positive_P0,positive_policy,1e-05,3,274.243961119093,a597545db5cf93c1541da909a9874da7ae64b7306a667f8c8d3c268463aac396
+dev_positive_P1,positive_policy,1e-05,3,690.3780148513615,3224a29fe557e2908f3acca858f07770459c1cdf24c973d23b8dd73ac16e2f84
+dev_positive_P2,positive_policy,1e-05,3,872.8535803696141,2c3b962fa13fed7c2fbac3e98f2e4f886a6c5c9ba3ac02394dfee40208850641
+dev_loss_L1,loss,1e-05,3,578.8469203747809,3224a29fe557e2908f3acca858f07770459c1cdf24c973d23b8dd73ac16e2f84
+dev_loss_L2,loss,1e-05,3,573.8837433969602,e36f4ba6988f2342d2fd7af93b313e67c63f70790b2714af4383e91efac48cd1
+dev_strategy_random,negative_strategy,1e-05,3,561.8409618046135,NOT_RECORDED
+dev_strategy_lexical_hard,negative_strategy,1e-05,3,534.5582769522443,NOT_RECORDED
+dev_strategy_dense_hard,negative_strategy,1e-05,3,532.455986302346,NOT_RECORDED
+dev_strategy_same_family_hard,negative_strategy,1e-05,3,533.3872734038159,NOT_RECORDED
+dev_strategy_mixed,negative_strategy,1e-05,3,534.8456889521331,NOT_RECORDED
+dev_lr_5e6,learning_rate,5e-06,3,531.5352411549538,NOT_RECORDED
+dev_lr_1e5,learning_rate,1e-05,3,526.6678363773972,NOT_RECORDED
+dev_lr_2e5,learning_rate,2e-05,3,507.6639589359984,NOT_RECORDED

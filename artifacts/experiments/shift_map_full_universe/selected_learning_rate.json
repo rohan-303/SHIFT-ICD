@@ -1,0 +1,19 @@
+{
+  "schema_version": "shift_map_full_universe_selected_learning_rate_v1",
+  "status": "FROZEN",
+  "grid": [0.000005, 0.00001, 0.00002],
+  "selected_learning_rate": 0.00001,
+  "selected_epoch": 2,
+  "runner_up": 0.00002,
+  "decisive_criterion": "CompleteScenarioRetrieval@100",
+  "selected_metrics": {"Hit@100": 0.9792284866468842, "CompleteScenarioRetrieval@100": 0.5223880597014925, "Hit@10": 0.905786350148368, "MRR": 0.7738648850418924, "Hit@1": 0.6988130563798219, "ChoiceListRecall@100": 0.7506218905472638, "training_loss": 9.138098780137975},
+  "runner_up_metrics": {"Hit@100": 0.9792284866468842, "CompleteScenarioRetrieval@100": 0.4925373134328358, "Hit@10": 0.9020771513353115, "MRR": 0.7725048048264294, "Hit@1": 0.6965875370919882, "ChoiceListRecall@100": 0.7406716417910447, "training_loss": 12.299161181047163},
+  "selected_positive_policy": "P1",
+  "selected_loss": "L1",
+  "selected_negative_strategy": "lexical_hard",
+  "selected_negative_strategy_sha256": "c044afb61f623b57b21905dfa054d1f0f4e7c5393ccd7915b3ae49a9cf1c8228",
+  "negative_mining_manifest_sha256": "68e820c170b9f8f3be9e87f679d239f6495db7c5bce898cc95b71d0208c289cf",
+  "base_model": "FremyCompany/BioLORD-2023",
+  "base_revision": "167aab527b238a50ca65224e6319215d2ff4fc9f",
+  "test_data_used": false
+}

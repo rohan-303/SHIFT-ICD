@@ -1,0 +1,8 @@
+{
+  "schema_version": "shift_map_full_universe_lr_search_space_v1",
+  "status": "FROZEN_BEFORE_LR_ABLATION",
+  "values": [0.000005, 0.00001, 0.00002],
+  "evidence": ["artifacts/experiments/shift_map_v1/protocol.json", "docs/experiments/shift_map_full_universe_training_protocol.md"],
+  "selection_rule": "FORWARD_STRATIFIED_DEV_P_ORDINARY_ANSWERABLE_LEXICOGRAPHIC",
+  "test_data_used": false
+}

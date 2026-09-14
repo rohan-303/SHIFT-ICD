@@ -1,0 +1,14 @@
+{
+  "schema_version": "shift_map_full_universe_selection_reconstruction_v1",
+  "status": "PASS",
+  "population": "FORWARD_STRATIFIED_DEV_P_ORDINARY_ANSWERABLE",
+  "key": ["Hit@100", "CompleteScenarioRetrieval@100", "Hit@10", "MRR", "Hit@1", "latency_final_tiebreak_only"],
+  "epoch_rule": "E2_BEST_DEV_CHECKPOINT_WITHIN_MAX_EPOCH_BUDGET",
+  "max_epochs": 3,
+  "reconstructed_selection": {"positive_policy": "P1", "positive_policy_epoch": 3, "loss": "L1", "loss_epoch": 3, "negative_strategy": "lexical_hard", "negative_strategy_epoch": 2, "learning_rate": 0.00001, "learning_rate_epoch": 2},
+  "independent_reconstruction": true,
+  "test_data_used": false,
+  "corrected_test_invocation_count": 0,
+  "legacy_universe_references": 0,
+  "warm_start_violations": 0
+}

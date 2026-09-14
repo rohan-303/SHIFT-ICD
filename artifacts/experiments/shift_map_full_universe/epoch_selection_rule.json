@@ -1,0 +1,17 @@
+{
+  "schema_version": "shift_map_full_universe_epoch_selection_rule_v1",
+  "historical_evidence": [
+    "scripts/train_shift_map_v1.py iterates epochs 1..max_epochs and emits epoch_N_dev.json for every epoch",
+    "artifacts/experiments/shift_map_v1/positive_policy_ablation.json, negative_strategy_ablation.json, and learning_rate_ablation.json record each epoch file as a separate comparison row",
+    "artifacts/experiments/shift_map_v1/protocol.json freezes max_epochs=3 and DEV-only selection"
+  ],
+  "recovered_rule": "E2_BEST_DEV_CHECKPOINT_WITHIN_MAX_EPOCH_BUDGET",
+  "maximum_epochs": 3,
+  "metric": "FORWARD_STRATIFIED_DEV_P_ORDINARY_ANSWERABLE_LEXICOGRAPHIC_SELECTION_KEY",
+  "selection_key": ["Hit@100", "CompleteScenarioRetrieval@100", "Hit@10", "MRR", "Hit@1", "negative_inference_latency"],
+  "direction": "maximize_all_metrics_then_minimize_latency",
+  "tie_breaking": "lower epoch number after identical selection key",
+  "frozen_at_utc": "2026-09-07T21:09:08Z",
+  "test_data_used": false,
+  "status": "FROZEN"
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "shift_map_full_universe_selected_loss_v1",
+  "status": "FROZEN",
+  "selected_loss": "L1",
+  "selected_epoch": 3,
+  "runner_up": "L2",
+  "decisive_criterion": "MRR",
+  "selected_metrics": {"Hit@100": 0.9740356083086054, "CompleteScenarioRetrieval@100": 0.43283582089552236, "Hit@10": 0.8813056379821959, "MRR": 0.7340214374348967, "Hit@1": 0.6491097922848664, "training_loss": 0.03567382260879438, "ChoiceListRecall@100": 0.707089552238806},
+  "runner_up_metrics": {"Hit@100": 0.9740356083086054, "CompleteScenarioRetrieval@100": 0.43283582089552236, "Hit@10": 0.8813056379821959, "MRR": 0.7339838170708667, "Hit@1": 0.6491097922848664, "training_loss": 0.03572384617637424, "ChoiceListRecall@100": 0.707089552238806},
+  "selected_positive_policy": "P1",
+  "selected_positive_policy_sha256": "72de6b8f005ee5ac40491f60849c9b51f5f5e1114c480af69a0d5004bec45ced",
+  "negative_mining_manifest_sha256": "68e820c170b9f8f3be9e87f679d239f6495db7c5bce898cc95b71d0208c289cf",
+  "negative_sets_sha256": "2f75fb8e954d4f85e35316fd67b598282931852108de0a7c62b6160fa3e2a7ce",
+  "base_model": "FremyCompany/BioLORD-2023",
+  "base_revision": "167aab527b238a50ca65224e6319215d2ff4fc9f",
+  "test_data_used": false
+}
