@@ -1,0 +1,3 @@
+system,dataset,n,unique_top1_targets,top10_query_concentration,top1_entropy,top1_gini
+zero_shot_biolord,forward_stratified_test,2913,2566,0.020254033642293168,7.787284322600887,0.11006817879588877
+final_seed_17,forward_stratified_test,2913,2546,0.021283899759697907,7.774227846001357,0.11625473370315748

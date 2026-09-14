@@ -1,0 +1,211 @@
+{
+  "entries": [
+    {
+      "bytes": 2119,
+      "path": "artifacts/experiments/shift_map_full_universe/config_freeze.json",
+      "sha256": "2815310ce7f47ca368d973f8c36aec7261d7af7e9355b62cd8ff134676361ee9"
+    },
+    {
+      "bytes": 1456,
+      "path": "artifacts/experiments/shift_map_full_universe/negative_mining_manifest.json",
+      "sha256": "68e820c170b9f8f3be9e87f679d239f6495db7c5bce898cc95b71d0208c289cf"
+    },
+    {
+      "bytes": 6535962,
+      "path": "artifacts/experiments/shift_map_full_universe/negative_sets.jsonl",
+      "sha256": "2f75fb8e954d4f85e35316fd67b598282931852108de0a7c62b6160fa3e2a7ce"
+    },
+    {
+      "bytes": 5631,
+      "path": "artifacts/experiments/shift_map_full_universe/final_seed_manifest.json",
+      "sha256": "9236f11181751df9922bf6d847bfa61b0588b8a025e53f6917361abc45b3ee42"
+    },
+    {
+      "bytes": 1560,
+      "path": "artifacts/experiments/shift_map_full_universe/test_lock.json",
+      "sha256": "5f97b347a811fd648e3d99a15b93e1c1ae583ca48c6d74868535c213e0081deb"
+    },
+    {
+      "bytes": 4799,
+      "path": "artifacts/experiments/shift_map_full_universe/candidate_freeze_manifest.json",
+      "sha256": "2ea718cb2b0f429dec5605bb66add6e5011c7229c5128bbfff54fff1d3ccd696"
+    },
+    {
+      "bytes": 8761,
+      "path": "artifacts/experiments/shift_map_full_universe/freeze_manifest.json",
+      "sha256": "4b7c0badedaea9b605bd54dc4dda8a238b5a86f933ed9496c9e3b5f37aa4940b"
+    },
+    {
+      "bytes": 4945,
+      "path": "reports/SHIFT_MAP_FULL_UNIVERSE_RETRAINING.md",
+      "sha256": "7e540250a29adba9af4162c8bda7767bb0466a1a74d0e54028d78f890f06b273"
+    },
+    {
+      "bytes": 868,
+      "path": "docs/interfaces/step8_corrected_candidate_contract.md",
+      "sha256": "20ebe99b2fbf2a82773a3cd1e5778cdcb68c92b9c830ad689f4afd06e36a07e9"
+    },
+    {
+      "bytes": 19944,
+      "path": "reports/tables/shift_map_full_universe/ablation_master.csv",
+      "sha256": "e9a21c52299d2155aeffa135f901c40f61bb766d1009e166cd58310fddedef78"
+    },
+    {
+      "bytes": 2078,
+      "path": "reports/tables/shift_map_full_universe/backward_family_ordinary.csv",
+      "sha256": "f735fa24cdf188410345301e0d16de8868e5d26bdf52efcbd2791c9e4755edfd"
+    },
+    {
+      "bytes": 2862,
+      "path": "reports/tables/shift_map_full_universe/backward_family_structural.csv",
+      "sha256": "e1f7e89d094e933bd301c42fa2ba660a01827b3c04874532a79966f619a87075"
+    },
+    {
+      "bytes": 2085,
+      "path": "reports/tables/shift_map_full_universe/backward_stratified_ordinary.csv",
+      "sha256": "9387547f24de704fca9efe44d16debb1cb49232ad675f7a2bf03ec66226f37d4"
+    },
+    {
+      "bytes": 3351,
+      "path": "reports/tables/shift_map_full_universe/backward_stratified_structural.csv",
+      "sha256": "57b02336df90d2331a9d39bcb75c2afe2a3f47b9c5aafc7095713fd1fa26b64b"
+    },
+    {
+      "bytes": 753,
+      "path": "reports/tables/shift_map_full_universe/biolord_vs_shiftmap_bootstrap.csv",
+      "sha256": "059af681c7bfe937d9d1d3b523aa12cb6d3d436fafe4a2cfcfa6460bd5249889"
+    },
+    {
+      "bytes": 692,
+      "path": "reports/tables/shift_map_full_universe/bm25_vs_shiftmap.csv",
+      "sha256": "a901bd1892c97cb9c6d7ffe264fe58ea0b378b9cd4b6c05944124a96f5e01b2b"
+    },
+    {
+      "bytes": 919,
+      "path": "reports/tables/shift_map_full_universe/candidate_coverage.csv",
+      "sha256": "84d36bb9f4c40150097769078b55bc92449ecc7fee676bee05739879b0aa2eb8"
+    },
+    {
+      "bytes": 524,
+      "path": "reports/tables/shift_map_full_universe/candidate_file_manifest.csv",
+      "sha256": "56795055858e6874023e1742d0d5db711942c29a46fb47bd89a5deddad78b732"
+    },
+    {
+      "bytes": 1702,
+      "path": "reports/tables/shift_map_full_universe/candidate_k_audit.csv",
+      "sha256": "df48087c8cbfb97acf261baeb2ae8e66674f2117aa0899f06e65a81900145eb6"
+    },
+    {
+      "bytes": 716,
+      "path": "reports/tables/shift_map_full_universe/config_selection_summary.csv",
+      "sha256": "47067850de31bfb244ad60c02bfb647623f9a12b6175cc405fdc4e80fb3884f7"
+    },
+    {
+      "bytes": 1112,
+      "path": "reports/tables/shift_map_full_universe/final_checkpoint_manifest.csv",
+      "sha256": "048868f144130b399fe6188276788d01daf56a8396ed99a96f7768be4876af74"
+    },
+    {
+      "bytes": 4998,
+      "path": "reports/tables/shift_map_full_universe/final_seed_dev.csv",
+      "sha256": "9d2ed864ab4dafafb1b8b00eb50171ed6b756c6360435acff5656a69b8a7e76d"
+    },
+    {
+      "bytes": 1107,
+      "path": "reports/tables/shift_map_full_universe/final_seed_dev_mean_std.csv",
+      "sha256": "2b81664ecaa6e141543a15be0bae52c72f81d03e4660b3af00c563a8d1e85bcc"
+    },
+    {
+      "bytes": 5210,
+      "path": "reports/tables/shift_map_full_universe/final_seed_test.csv",
+      "sha256": "839e2b892a9c808abef5e3b825d4a1f1e685ac282e45e8115fc53212aacab098"
+    },
+    {
+      "bytes": 385,
+      "path": "reports/tables/shift_map_full_universe/final_seed_test_mean_std.csv",
+      "sha256": "77813a05d8865ea92f76717640cf2cd2f0f926da764ff1919c4604923bc1f4f5"
+    },
+    {
+      "bytes": 2002,
+      "path": "reports/tables/shift_map_full_universe/forward_family_ordinary.csv",
+      "sha256": "90bd906991c45db9de1604cc3a2c593c100fb1a974df8dabed060f25be56dcaa"
+    },
+    {
+      "bytes": 3560,
+      "path": "reports/tables/shift_map_full_universe/forward_family_structural.csv",
+      "sha256": "17784e763c82fa9270fa2bae265a04abc6b399da26724ab137cfd82aa8e0b2e5"
+    },
+    {
+      "bytes": 3213,
+      "path": "reports/tables/shift_map_full_universe/forward_test_structural.csv",
+      "sha256": "89c5cbb6af12f06b54fd03892428447ebfc6916788ff48c906ac397ef1cbc37d"
+    },
+    {
+      "bytes": 307,
+      "path": "reports/tables/shift_map_full_universe/hubness.csv",
+      "sha256": "6c61e65443fccc428924155d8a6870c4e33a03d46c650d2c9759269a75388684"
+    },
+    {
+      "bytes": 2707,
+      "path": "reports/tables/shift_map_full_universe/learning_rate_dev.csv",
+      "sha256": "ca05afd22a5c6c63eba31fd27251e0f671e4381559bf43e2e2526667d0fed374"
+    },
+    {
+      "bytes": 474,
+      "path": "reports/tables/shift_map_full_universe/lexical_difficulty.csv",
+      "sha256": "96a1e90c326f13d8d6e46c8bc171c1348aa99a38898a56d75ec636951b55e78f"
+    },
+    {
+      "bytes": 1994,
+      "path": "reports/tables/shift_map_full_universe/loss_ablation_dev.csv",
+      "sha256": "2603cdca84a74310e11b924643b9f3c992e1d48f0caf09d0fdaee7ae6f471ecc"
+    },
+    {
+      "bytes": 931,
+      "path": "reports/tables/shift_map_full_universe/negative_mining_summary.csv",
+      "sha256": "33ae48f10308dae684383a3600c02c9b71d54bd05d9a5503749a486a75849bc2"
+    },
+    {
+      "bytes": 4586,
+      "path": "reports/tables/shift_map_full_universe/negative_strategy_dev.csv",
+      "sha256": "b9c4fa1cbf4c048120a9bf27919584727a7205982432a1db0c91cc75bc029487"
+    },
+    {
+      "bytes": 346,
+      "path": "reports/tables/shift_map_full_universe/no_map_diagnostics.csv",
+      "sha256": "fcd117afdecf1488058a765a50ff5949384b64c6fe9b013a5c2ad2f865b9b0fd"
+    },
+    {
+      "bytes": 3026,
+      "path": "reports/tables/shift_map_full_universe/positive_policy_dev.csv",
+      "sha256": "e3e9bb96f46523c61989ad2ce8aa6f9f1317cefb17d3d1156eb6123bbc7baec0"
+    },
+    {
+      "bytes": 747,
+      "path": "reports/tables/shift_map_full_universe/representation_drift.csv",
+      "sha256": "9328b9fb446364fae1da152b47a6039011bbc3160804bfe02c7164f7261c0195"
+    },
+    {
+      "bytes": 1258,
+      "path": "reports/tables/shift_map_full_universe/training_runtime_ablation.csv",
+      "sha256": "070d4c16030256260667090f46e4f78a55ec79d506b7e3245e1f4e69041bec85"
+    },
+    {
+      "bytes": 4092689,
+      "path": "artifacts/candidates/shift_map_full_universe_v2/forward_dev_k100.jsonl.gz",
+      "sha256": "c7240c1f38dd87f54d63c97999cba71d91f6d0887d89bc2d4094f9ba38ad6a6f"
+    },
+    {
+      "bytes": 8059815,
+      "path": "artifacts/candidates/shift_map_full_universe_v2/forward_test_k100.jsonl.gz",
+      "sha256": "6ef38443a201b1d630148b30717d845b0785b1a4ed433eeab4b03d893b6bf1ce"
+    },
+    {
+      "bytes": 27870058,
+      "path": "artifacts/candidates/shift_map_full_universe_v2/forward_train_k100.jsonl.gz",
+      "sha256": "d90dcb937748f1c0b173416d6b8f23f1c97ca8e8caf8934efdf8120993c1cb10"
+    }
+  ],
+  "schema_version": "shift_map_full_universe_sync_package_v1",
+  "status": "LOCAL_SYNC_VERIFIED"
+}

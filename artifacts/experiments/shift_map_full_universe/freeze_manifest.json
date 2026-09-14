@@ -1,0 +1,182 @@
+{
+  "candidate_freeze_manifest_sha256": "2ea718cb2b0f429dec5605bb66add6e5011c7229c5128bbfff54fff1d3ccd696",
+  "canonical_seed": 17,
+  "config_freeze_sha256": "2815310ce7f47ca368d973f8c36aec7261d7af7e9355b62cd8ff134676361ee9",
+  "files": {
+    "artifacts/experiments/shift_map_full_universe/sync_package_manifest.json": {
+      "bytes": 8518,
+      "sha256": "4b5f23b88650e480830a48b711521333ec81dc32a1d6a5163ebdae4f12efda8d"
+    },
+    "artifacts\\experiments\\shift_map_full_universe\\candidate_freeze_manifest.json": {
+      "bytes": 4799,
+      "sha256": "2ea718cb2b0f429dec5605bb66add6e5011c7229c5128bbfff54fff1d3ccd696"
+    },
+    "artifacts\\experiments\\shift_map_full_universe\\config_freeze.json": {
+      "bytes": 2119,
+      "sha256": "2815310ce7f47ca368d973f8c36aec7261d7af7e9355b62cd8ff134676361ee9"
+    },
+    "artifacts\\experiments\\shift_map_full_universe\\final_seed_manifest.json": {
+      "bytes": 5631,
+      "sha256": "9236f11181751df9922bf6d847bfa61b0588b8a025e53f6917361abc45b3ee42"
+    },
+    "artifacts\\experiments\\shift_map_full_universe\\negative_mining_manifest.json": {
+      "bytes": 1456,
+      "sha256": "68e820c170b9f8f3be9e87f679d239f6495db7c5bce898cc95b71d0208c289cf"
+    },
+    "artifacts\\experiments\\shift_map_full_universe\\negative_sets.jsonl": {
+      "bytes": 6535962,
+      "sha256": "2f75fb8e954d4f85e35316fd67b598282931852108de0a7c62b6160fa3e2a7ce"
+    },
+    "artifacts\\experiments\\shift_map_full_universe\\r5_diagnostics\\representation_drift_summary.json": {
+      "bytes": 1584,
+      "sha256": "ec195ef0ceef0218129670cc025b4b270eff7cc5a0ad42c1ad683ee4a433b55d"
+    },
+    "artifacts\\experiments\\shift_map_full_universe\\r5_evaluations_hashes.sha256": {
+      "bytes": 3470,
+      "sha256": "e1cd60cb47b596eb78d30c9c26072ea02456dc3bc9a8a83547055cb54e490012"
+    },
+    "artifacts\\experiments\\shift_map_full_universe\\test_lock.json": {
+      "bytes": 1560,
+      "sha256": "5f97b347a811fd648e3d99a15b93e1c1ae583ca48c6d74868535c213e0081deb"
+    },
+    "docs\\interfaces\\step8_corrected_candidate_contract.md": {
+      "bytes": 868,
+      "sha256": "20ebe99b2fbf2a82773a3cd1e5778cdcb68c92b9c830ad689f4afd06e36a07e9"
+    },
+    "reports\\SHIFT_MAP_FULL_UNIVERSE_RETRAINING.md": {
+      "bytes": 4945,
+      "sha256": "7e540250a29adba9af4162c8bda7767bb0466a1a74d0e54028d78f890f06b273"
+    },
+    "reports\\tables\\shift_map_full_universe\\ablation_master.csv": {
+      "bytes": 19944,
+      "sha256": "e9a21c52299d2155aeffa135f901c40f61bb766d1009e166cd58310fddedef78"
+    },
+    "reports\\tables\\shift_map_full_universe\\backward_family_ordinary.csv": {
+      "bytes": 2078,
+      "sha256": "f735fa24cdf188410345301e0d16de8868e5d26bdf52efcbd2791c9e4755edfd"
+    },
+    "reports\\tables\\shift_map_full_universe\\backward_family_structural.csv": {
+      "bytes": 2862,
+      "sha256": "e1f7e89d094e933bd301c42fa2ba660a01827b3c04874532a79966f619a87075"
+    },
+    "reports\\tables\\shift_map_full_universe\\backward_stratified_ordinary.csv": {
+      "bytes": 2085,
+      "sha256": "9387547f24de704fca9efe44d16debb1cb49232ad675f7a2bf03ec66226f37d4"
+    },
+    "reports\\tables\\shift_map_full_universe\\backward_stratified_structural.csv": {
+      "bytes": 3351,
+      "sha256": "57b02336df90d2331a9d39bcb75c2afe2a3f47b9c5aafc7095713fd1fa26b64b"
+    },
+    "reports\\tables\\shift_map_full_universe\\biolord_vs_shiftmap_bootstrap.csv": {
+      "bytes": 753,
+      "sha256": "059af681c7bfe937d9d1d3b523aa12cb6d3d436fafe4a2cfcfa6460bd5249889"
+    },
+    "reports\\tables\\shift_map_full_universe\\bm25_vs_shiftmap.csv": {
+      "bytes": 692,
+      "sha256": "a901bd1892c97cb9c6d7ffe264fe58ea0b378b9cd4b6c05944124a96f5e01b2b"
+    },
+    "reports\\tables\\shift_map_full_universe\\candidate_coverage.csv": {
+      "bytes": 919,
+      "sha256": "84d36bb9f4c40150097769078b55bc92449ecc7fee676bee05739879b0aa2eb8"
+    },
+    "reports\\tables\\shift_map_full_universe\\candidate_file_manifest.csv": {
+      "bytes": 524,
+      "sha256": "56795055858e6874023e1742d0d5db711942c29a46fb47bd89a5deddad78b732"
+    },
+    "reports\\tables\\shift_map_full_universe\\candidate_k_audit.csv": {
+      "bytes": 1702,
+      "sha256": "df48087c8cbfb97acf261baeb2ae8e66674f2117aa0899f06e65a81900145eb6"
+    },
+    "reports\\tables\\shift_map_full_universe\\config_selection_summary.csv": {
+      "bytes": 716,
+      "sha256": "47067850de31bfb244ad60c02bfb647623f9a12b6175cc405fdc4e80fb3884f7"
+    },
+    "reports\\tables\\shift_map_full_universe\\final_checkpoint_manifest.csv": {
+      "bytes": 1112,
+      "sha256": "048868f144130b399fe6188276788d01daf56a8396ed99a96f7768be4876af74"
+    },
+    "reports\\tables\\shift_map_full_universe\\final_seed_dev.csv": {
+      "bytes": 4998,
+      "sha256": "9d2ed864ab4dafafb1b8b00eb50171ed6b756c6360435acff5656a69b8a7e76d"
+    },
+    "reports\\tables\\shift_map_full_universe\\final_seed_dev_mean_std.csv": {
+      "bytes": 1107,
+      "sha256": "2b81664ecaa6e141543a15be0bae52c72f81d03e4660b3af00c563a8d1e85bcc"
+    },
+    "reports\\tables\\shift_map_full_universe\\final_seed_test.csv": {
+      "bytes": 5210,
+      "sha256": "839e2b892a9c808abef5e3b825d4a1f1e685ac282e45e8115fc53212aacab098"
+    },
+    "reports\\tables\\shift_map_full_universe\\final_seed_test_mean_std.csv": {
+      "bytes": 385,
+      "sha256": "77813a05d8865ea92f76717640cf2cd2f0f926da764ff1919c4604923bc1f4f5"
+    },
+    "reports\\tables\\shift_map_full_universe\\forward_family_ordinary.csv": {
+      "bytes": 2002,
+      "sha256": "90bd906991c45db9de1604cc3a2c593c100fb1a974df8dabed060f25be56dcaa"
+    },
+    "reports\\tables\\shift_map_full_universe\\forward_family_structural.csv": {
+      "bytes": 3560,
+      "sha256": "17784e763c82fa9270fa2bae265a04abc6b399da26724ab137cfd82aa8e0b2e5"
+    },
+    "reports\\tables\\shift_map_full_universe\\forward_test_structural.csv": {
+      "bytes": 3213,
+      "sha256": "89c5cbb6af12f06b54fd03892428447ebfc6916788ff48c906ac397ef1cbc37d"
+    },
+    "reports\\tables\\shift_map_full_universe\\hubness.csv": {
+      "bytes": 307,
+      "sha256": "6c61e65443fccc428924155d8a6870c4e33a03d46c650d2c9759269a75388684"
+    },
+    "reports\\tables\\shift_map_full_universe\\learning_rate_dev.csv": {
+      "bytes": 2707,
+      "sha256": "ca05afd22a5c6c63eba31fd27251e0f671e4381559bf43e2e2526667d0fed374"
+    },
+    "reports\\tables\\shift_map_full_universe\\lexical_difficulty.csv": {
+      "bytes": 474,
+      "sha256": "96a1e90c326f13d8d6e46c8bc171c1348aa99a38898a56d75ec636951b55e78f"
+    },
+    "reports\\tables\\shift_map_full_universe\\loss_ablation_dev.csv": {
+      "bytes": 1994,
+      "sha256": "2603cdca84a74310e11b924643b9f3c992e1d48f0caf09d0fdaee7ae6f471ecc"
+    },
+    "reports\\tables\\shift_map_full_universe\\negative_mining_summary.csv": {
+      "bytes": 931,
+      "sha256": "33ae48f10308dae684383a3600c02c9b71d54bd05d9a5503749a486a75849bc2"
+    },
+    "reports\\tables\\shift_map_full_universe\\negative_strategy_dev.csv": {
+      "bytes": 4586,
+      "sha256": "b9c4fa1cbf4c048120a9bf27919584727a7205982432a1db0c91cc75bc029487"
+    },
+    "reports\\tables\\shift_map_full_universe\\no_map_diagnostics.csv": {
+      "bytes": 346,
+      "sha256": "fcd117afdecf1488058a765a50ff5949384b64c6fe9b013a5c2ad2f865b9b0fd"
+    },
+    "reports\\tables\\shift_map_full_universe\\positive_policy_dev.csv": {
+      "bytes": 3026,
+      "sha256": "e3e9bb96f46523c61989ad2ce8aa6f9f1317cefb17d3d1156eb6123bbc7baec0"
+    },
+    "reports\\tables\\shift_map_full_universe\\representation_drift.csv": {
+      "bytes": 747,
+      "sha256": "9328b9fb446364fae1da152b47a6039011bbc3160804bfe02c7164f7261c0195"
+    },
+    "reports\\tables\\shift_map_full_universe\\training_runtime_ablation.csv": {
+      "bytes": 1258,
+      "sha256": "070d4c16030256260667090f46e4f78a55ec79d506b7e3245e1f4e69041bec85"
+    }
+  },
+  "final_seed_manifest_sha256": "9236f11181751df9922bf6d847bfa61b0588b8a025e53f6917361abc45b3ee42",
+  "forward_target_count": 71704,
+  "local_sync_verified": true,
+  "negative_mining_manifest_sha256": "68e820c170b9f8f3be9e87f679d239f6495db7c5bce898cc95b71d0208c289cf",
+  "remote_workspace_retained_for_step8": true,
+  "schema_version": "shift_map_full_universe_freeze_manifest_v1",
+  "seed17_checkpoint_sha256": "9e9739e45ad041a4027cdfd611fb83e398debb50658ede710482660e16efe302",
+  "seed2026_checkpoint_sha256": "3ff4204045e6b0633534b2f7f4b6cfe87324a46ad07377e96257a8490f75951c",
+  "seed42_checkpoint_sha256": "eb9b0806c2a04cddbe122d7b094af2e59e730ed7ef59f555e881e0fcddadcbe4",
+  "status": "SHIFT_MAP_FULL_UNIVERSE_FROZEN",
+  "step8_contract_sha256": "20ebe99b2fbf2a82773a3cd1e5778cdcb68c92b9c830ad689f4afd06e36a07e9",
+  "step8_executed": false,
+  "sync_package_manifest_sha256": "4b5f23b88650e480830a48b711521333ec81dc32a1d6a5163ebdae4f12efda8d",
+  "target_universe": "terminology_universe_v2",
+  "test_lock_sha256": "5f97b347a811fd648e3d99a15b93e1c1ae583ca48c6d74868535c213e0081deb"
+}
