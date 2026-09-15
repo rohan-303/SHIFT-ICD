@@ -1,0 +1,31 @@
+{
+  "schema": "step8_run_manifest_v1",
+  "model_id": "ncbi/MedCPT-Cross-Encoder",
+  "model_revision": "71caf65d4927987813984f54c284405a13fcca49",
+  "tokenizer_revision": "71caf65d4927987813984f54c284405a13fcca49",
+  "candidate_hashes": {
+    "train": "d90dcb937748f1c0b173416d6b8f23f1c97ca8e8caf8934efdf8120993c1cb10",
+    "dev": "c7240c1f38dd87f54d63c97999cba71d91f6d0887d89bc2d4094f9ba38ad6a6f",
+    "test": "6ef38443a201b1d630148b30717d845b0785b1a4ed433eeab4b03d893b6bf1ce"
+  },
+  "candidate_contract_hash": "20ebe99b2fbf2a82773a3cd1e5778cdcb68c92b9c830ad689f4afd06e36a07e9",
+  "training_population_hash": "4037afd3d6831cd69f8cde786b01ab18601bb6b33a8db11ba2a36d2706289885",
+  "objective": "R1_PREFLIGHT_READY",
+  "negative_list_strategy": "MIXED_RANK_WITHIN_FROZEN_TOP100",
+  "learning_rate": 1e-05,
+  "batch_size": 32,
+  "effective_batch_size": 32,
+  "max_length": 96,
+  "epochs": 1,
+  "seed": 17,
+  "git_head": "4d8ba3e58ea20344f9bb58376915934caa77d653",
+  "environment": {
+    "python": "3.11.15 (main, Jul 23 2026, 14:42:43) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0"
+  },
+  "checkpoint_hash": null,
+  "dev_evaluator_version": "retrieval_evaluator_v3",
+  "test_access_allowed": false,
+  "test_scoring_count": 0,
+  "test_training_count": 0
+}

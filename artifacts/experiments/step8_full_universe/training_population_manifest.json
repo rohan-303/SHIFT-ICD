@@ -1,0 +1,18 @@
+{
+  "eligible_mapping_kinds": [
+    "SINGLE_EXACT",
+    "SINGLE_APPROXIMATE",
+    "ALTERNATIVE"
+  ],
+  "excluded_mapping_kinds": [
+    "NO_MAP",
+    "COMBINATION",
+    "COMBINATION_WITH_ALTERNATIVES"
+  ],
+  "gold_missing_policy": "EXCLUDE",
+  "list_size": 8,
+  "negative_policy": "MIXED_RANK within frozen Top-100; 3 ranks 1-10, 2 ranks 11-25, 2 ranks 26-100, deterministic seed; adjust for positives",
+  "schema": "step8_training_population_v1",
+  "source_balanced": true,
+  "status": "FROZEN_FOR_R1"
+}

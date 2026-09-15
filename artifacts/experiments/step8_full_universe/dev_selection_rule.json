@@ -1,0 +1,13 @@
+{
+  "order": [
+    "Hit@1:desc",
+    "MRR:desc",
+    "Hit@10:desc",
+    "NDCG@10:desc",
+    "CompleteScenarioRetrieval@10:desc"
+  ],
+  "schema": "step8_dev_selection_rule_v1",
+  "selection_population": "corrected_forward_stratified_DEV",
+  "status": "FROZEN_FOR_R1",
+  "test_metrics_participate": false
+}

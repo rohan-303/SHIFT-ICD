@@ -1,0 +1,91 @@
+{
+  "model_revision": "71caf65d4927987813984f54c284405a13fcca49",
+  "precision": "FP32",
+  "max_length": 96,
+  "deterministic": {
+    "sources": 100,
+    "pairs": 10000,
+    "score_max_abs_diff": 0.0,
+    "ranking_disagreement_count": 0,
+    "top1_disagreement_count": 0
+  },
+  "throughput": [
+    {
+      "batch_size": 1,
+      "pairs": 10000,
+      "pairs_per_second": 455.6798040438562,
+      "mean_batch_latency_seconds": 0.00219452341562137,
+      "peak_allocated_bytes": 449896960,
+      "peak_reserved_bytes": 603979776,
+      "status": "PASS"
+    },
+    {
+      "batch_size": 2,
+      "pairs": 10000,
+      "pairs_per_second": 728.4989296261311,
+      "mean_batch_latency_seconds": 0.002745371226593852,
+      "peak_allocated_bytes": 452751872,
+      "peak_reserved_bytes": 603979776,
+      "status": "PASS"
+    },
+    {
+      "batch_size": 4,
+      "pairs": 10000,
+      "pairs_per_second": 1259.1983343008326,
+      "mean_batch_latency_seconds": 0.0031766242783516645,
+      "peak_allocated_bytes": 454535168,
+      "peak_reserved_bytes": 603979776,
+      "status": "PASS"
+    },
+    {
+      "batch_size": 8,
+      "pairs": 10000,
+      "pairs_per_second": 2236.9678692917782,
+      "mean_batch_latency_seconds": 0.0035762695163488387,
+      "peak_allocated_bytes": 465827328,
+      "peak_reserved_bytes": 606076928,
+      "status": "PASS"
+    },
+    {
+      "batch_size": 16,
+      "pairs": 10000,
+      "pairs_per_second": 3397.7400121989904,
+      "mean_batch_latency_seconds": 0.004709012444317341,
+      "peak_allocated_bytes": 475469312,
+      "peak_reserved_bytes": 606076928,
+      "status": "PASS"
+    },
+    {
+      "batch_size": 32,
+      "pairs": 10000,
+      "pairs_per_second": 4254.954658901498,
+      "mean_batch_latency_seconds": 0.007508630373369391,
+      "peak_allocated_bytes": 505015808,
+      "peak_reserved_bytes": 606076928,
+      "status": "PASS"
+    },
+    {
+      "batch_size": 64,
+      "pairs": 10000,
+      "pairs_per_second": 4685.527417210588,
+      "mean_batch_latency_seconds": 0.01359383092754206,
+      "peak_allocated_bytes": 558635008,
+      "peak_reserved_bytes": 954204160,
+      "status": "PASS"
+    }
+  ],
+  "training": {
+    "status": "SMOKE_ONLY_NOT_SCIENTIFIC_RESULT",
+    "sources": 128,
+    "list_size": 8,
+    "bce_finite": true,
+    "listwise_finite": true,
+    "parameter_update": true,
+    "checkpoint": "/home/gra_rohan/Rohan/tasks/step8_full_universe_20260914T202500Z_6f3a9c2d/results/final4/smoke_checkpoint.pt",
+    "checkpoint_reload": true,
+    "resume_counters": {
+      "epoch": 1,
+      "steps": 1
+    }
+  }
+}

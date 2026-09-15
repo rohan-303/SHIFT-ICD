@@ -1,0 +1,182 @@
+{
+  "status": "PASS",
+  "model_id": "ncbi/MedCPT-Cross-Encoder",
+  "revision": "71caf65d4927987813984f54c284405a13fcca49",
+  "config_sha256": "1f375c7e8081f043c99fdb9c80059c44ed757cce7b05d333b7f3c81b1b713a42",
+  "tokenizer_revision": "71caf65d4927987813984f54c284405a13fcca49",
+  "tokenizer_class": "BertTokenizerFast",
+  "tokenizer_vocab_size": 30522,
+  "model_class": "BertForSequenceClassification",
+  "architecture": [
+    "BertForSequenceClassification"
+  ],
+  "num_labels": 1,
+  "parameter_count": 109483009,
+  "max_position_embeddings": 512,
+  "special_tokens": {
+    "bos_token": null,
+    "eos_token": null,
+    "sep_token": "[SEP]",
+    "cls_token": "[CLS]",
+    "pad_token": "[PAD]",
+    "unk_token": "[UNK]"
+  },
+  "torch": "2.7.1+cu126",
+  "files": [
+    {
+      "path": ".cache/huggingface/.gitignore",
+      "bytes": 1,
+      "sha256": "684888c0ebb17f374298b65ee2807526c066094c701bcc7ebbe1c1095f494fc1"
+    },
+    {
+      "path": ".cache/huggingface/download/.gitattributes.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".cache/huggingface/download/.gitattributes.metadata",
+      "bytes": 100,
+      "sha256": "0bafecc4a690a25ea43ef40d549a3689bfde40cc7d40bc96a1e98596cb5cef49"
+    },
+    {
+      "path": ".cache/huggingface/download/LICENSE.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".cache/huggingface/download/LICENSE.metadata",
+      "bytes": 101,
+      "sha256": "14ae8dd1cc9582001e057a80c048d9e9eac3dfba61ca32e5b3e967f5edf1e6a4"
+    },
+    {
+      "path": ".cache/huggingface/download/README.md.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".cache/huggingface/download/README.md.metadata",
+      "bytes": 100,
+      "sha256": "0563f4ecda3b5291da7bdea2113fc4a8ae5b11536fc35358e66d4d5fe957b7c7"
+    },
+    {
+      "path": ".cache/huggingface/download/added_tokens.json.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".cache/huggingface/download/added_tokens.json.metadata",
+      "bytes": 101,
+      "sha256": "8b140f7afa84252724a59f65e36df9c41ffd5ce08e1bc6b96647bb9ec6a125b4"
+    },
+    {
+      "path": ".cache/huggingface/download/config.json.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".cache/huggingface/download/config.json.metadata",
+      "bytes": 101,
+      "sha256": "9feea302e8e5845e01869923520bbe2908105bb1bfb8c56a1e1b75da2764df21"
+    },
+    {
+      "path": ".cache/huggingface/download/pytorch_model.bin.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".cache/huggingface/download/pytorch_model.bin.metadata",
+      "bytes": 125,
+      "sha256": "660177ee014cb4ff10e43103ce24bf0180dfcd4b276cc7ff31fe9e422f4307ad"
+    },
+    {
+      "path": ".cache/huggingface/download/special_tokens_map.json.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".cache/huggingface/download/special_tokens_map.json.metadata",
+      "bytes": 101,
+      "sha256": "ff2813e25da1e634b060199c21d48b5fa45efba3ae5e2dd46c72751657807917"
+    },
+    {
+      "path": ".cache/huggingface/download/tokenizer.json.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".cache/huggingface/download/tokenizer.json.metadata",
+      "bytes": 101,
+      "sha256": "4a5d7f0828f48fb2db8b26e138cd9c5b91895d763187e96bdee7ab56f662fb59"
+    },
+    {
+      "path": ".cache/huggingface/download/tokenizer_config.json.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".cache/huggingface/download/tokenizer_config.json.metadata",
+      "bytes": 101,
+      "sha256": "414845bb6887d100481b1d235d9568a860a5a053e07bb646d470d90c861db67c"
+    },
+    {
+      "path": ".cache/huggingface/download/vocab.txt.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".cache/huggingface/download/vocab.txt.metadata",
+      "bytes": 101,
+      "sha256": "a1a615e5ae9cec8b350f9be5c241fb14304b0c70b24d80aba7e03a4a4b4c3fb0"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 1519,
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4236,
+      "sha256": "8ab1ceed3beea346789e0b9cd7e04d6373dcf8b738fb63b996c7d97bb25df2ec"
+    },
+    {
+      "path": "added_tokens.json",
+      "bytes": 74,
+      "sha256": "691a5ce0135045c12b8410af8d472ff8de864094df40ac9af418d6c644c7588d"
+    },
+    {
+      "path": "config.json",
+      "bytes": 741,
+      "sha256": "1f375c7e8081f043c99fdb9c80059c44ed757cce7b05d333b7f3c81b1b713a42"
+    },
+    {
+      "path": "pytorch_model.bin",
+      "bytes": 437998062,
+      "sha256": "61d5ccd48869e03500544525fc231641d7daa9ba267b202c82724750038dc1e0"
+    },
+    {
+      "path": "special_tokens_map.json",
+      "bytes": 228,
+      "sha256": "cb63d0cbbf45160dc9cd786a257759593b798ae0c72957011016dbc3972df4e4"
+    },
+    {
+      "path": "tokenizer.json",
+      "bytes": 706277,
+      "sha256": "6e046044df8a2fcedb10607075dca187cae61d806c0d80a96c5b81017edc90c9"
+    },
+    {
+      "path": "tokenizer_config.json",
+      "bytes": 1556,
+      "sha256": "25e63abb25f637aa24981117b13394370693dd7bc140903d95008599b3abc1a9"
+    },
+    {
+      "path": "vocab.txt",
+      "bytes": 226150,
+      "sha256": "79489a52be45e6fa033521e8ce8e4f62aedc0a742ee2aa6fc04667e5b0b1454d"
+    }
+  ]
+}

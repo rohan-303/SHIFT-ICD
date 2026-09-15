@@ -1,0 +1,29 @@
+{
+  "candidate_k": 100,
+  "candidate_root": "artifacts/candidates/shift_map_full_universe_v2",
+  "forbidden_input_fields": [
+    "source_code",
+    "target_code",
+    "candidate_rank",
+    "retriever_score",
+    "candidate_is_gold",
+    "mapping_kind",
+    "split",
+    "GEM flags",
+    "scenario metadata",
+    "family metadata"
+  ],
+  "input_fields": [
+    "source_description",
+    "target_description"
+  ],
+  "max_length": 96,
+  "membership": "reorder only",
+  "model_id": "ncbi/MedCPT-Cross-Encoder",
+  "model_revision": "71caf65d4927987813984f54c284405a13fcca49",
+  "padding": "longest per batch",
+  "precision": "FP32",
+  "schema": "step8_runner_contract_v1",
+  "test_access_allowed_by_default": false,
+  "truncation": "right"
+}

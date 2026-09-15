@@ -1,0 +1,12 @@
+{
+  "corrected_runner": "scripts/step8_full_universe/runner.py",
+  "historical_runner": "scripts/external_step8/run_step8.py",
+  "label": "LEGACY_GEM_OBSERVED_TARGET_UNIVERSE",
+  "rejected_candidate_roots": [
+    "artifacts/candidates/shift_map_v2",
+    "artifacts/experiments/dense_full_universe_v2",
+    "artifacts/embeddings/dense_v1"
+  ],
+  "schema": "step8_legacy_quarantine_v1",
+  "status": "QUARANTINED"
+}

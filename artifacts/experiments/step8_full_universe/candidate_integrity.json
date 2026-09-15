@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "files": [
+    {
+      "split": "train",
+      "path": "artifacts\\candidates\\shift_map_full_universe_v2\\forward_train_k100.jsonl.gz",
+      "sha256": "d90dcb937748f1c0b173416d6b8f23f1c97ca8e8caf8934efdf8120993c1cb10",
+      "expected_sha256": "d90dcb937748f1c0b173416d6b8f23f1c97ca8e8caf8934efdf8120993c1cb10",
+      "sha_match": true,
+      "source_count": 10197,
+      "expected_source_count": 10197,
+      "row_count": 1019700,
+      "expected_row_count": 1019700,
+      "exact_100_per_source": true,
+      "duplicate_candidate_count": 0,
+      "invalid_target_count": 0,
+      "missing_source_count": 0,
+      "wrong_rank_count": 0,
+      "split_mismatch_count": 0,
+      "deterministic_order": true
+    },
+    {
+      "split": "dev",
+      "path": "artifacts\\candidates\\shift_map_full_universe_v2\\forward_dev_k100.jsonl.gz",
+      "sha256": "c7240c1f38dd87f54d63c97999cba71d91f6d0887d89bc2d4094f9ba38ad6a6f",
+      "expected_sha256": "c7240c1f38dd87f54d63c97999cba71d91f6d0887d89bc2d4094f9ba38ad6a6f",
+      "sha_match": true,
+      "source_count": 1457,
+      "expected_source_count": 1457,
+      "row_count": 145700,
+      "expected_row_count": 145700,
+      "exact_100_per_source": true,
+      "duplicate_candidate_count": 0,
+      "invalid_target_count": 0,
+      "missing_source_count": 0,
+      "wrong_rank_count": 0,
+      "split_mismatch_count": 0,
+      "deterministic_order": true
+    },
+    {
+      "split": "test",
+      "path": "artifacts\\candidates\\shift_map_full_universe_v2\\forward_test_k100.jsonl.gz",
+      "sha256": "6ef38443a201b1d630148b30717d845b0785b1a4ed433eeab4b03d893b6bf1ce",
+      "expected_sha256": "6ef38443a201b1d630148b30717d845b0785b1a4ed433eeab4b03d893b6bf1ce",
+      "sha_match": true,
+      "source_count": 2913,
+      "expected_source_count": 2913,
+      "row_count": 291300,
+      "expected_row_count": 291300,
+      "exact_100_per_source": true,
+      "duplicate_candidate_count": 0,
+      "invalid_target_count": 0,
+      "missing_source_count": 0,
+      "wrong_rank_count": 0,
+      "split_mismatch_count": 0,
+      "deterministic_order": true
+    }
+  ],
+  "description_join": {
+    "missing_source": 0,
+    "missing_target": 0
+  }
+}
