@@ -219,7 +219,7 @@ def run_config(stage: str, objective: str, strategy: str, lr: float, output: Pat
     rows: list[dict[str, Any]] = []
     best_state: bytes | None = None
     best_row: dict[str, Any] | None = None
-    run_id = f"{objective.lower()}_{strategy.lower()}_{lr:g}".replace(".", "p")
+    run_id = f"{stage.lower()}_{objective.lower()}_{strategy.lower()}_{lr:g}".replace(".", "p")
     for epoch in range(1, EPOCHS + 1):
         started = time.perf_counter()
         lists = [make_list(g, strategy, SEED, epoch) for g in train]
