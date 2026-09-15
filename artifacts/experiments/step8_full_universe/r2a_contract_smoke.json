@@ -1,0 +1,29 @@
+{
+  "phase": "CONTRACT_SMOKE_ONLY",
+  "scientific_execution": false,
+  "source_count": 2,
+  "list_lengths": [
+    48,
+    50
+  ],
+  "positive_counts": [
+    47,
+    49
+  ],
+  "test_scoring_count": 0,
+  "test_training_count": 0,
+  "BCE": {
+    "finite_loss": true,
+    "finite_gradients": true,
+    "parameter_update": true,
+    "checkpoint_reload": true,
+    "loss": 0.7164609432220459
+  },
+  "SET_POSITIVE_LISTWISE": {
+    "finite_loss": true,
+    "finite_gradients": true,
+    "parameter_update": true,
+    "checkpoint_reload": true,
+    "loss": 0.022031188011169434
+  }
+}

@@ -14,6 +14,7 @@ MODEL_ID = "ncbi/MedCPT-Cross-Encoder"
 MODEL_REVISION = "71caf65d4927987813984f54c284405a13fcca49"
 MAX_LENGTH = 96
 LIST_SIZE = 8
+MINIMUM_LIST_SIZE = 8
 ORDINARY_KINDS = {"SINGLE_EXACT", "SINGLE_APPROXIMATE", "ALTERNATIVE"}
 EXCLUDED_KINDS = {"NO_MAP", "COMBINATION", "COMBINATION_WITH_ALTERNATIVES"}
 OBJECTIVES = ("BCE", "SET_POSITIVE_LISTWISE")
@@ -112,6 +113,74 @@ def construct_training_list(rows: Sequence[dict[str, Any]], *, seed: int) -> lis
     rng.shuffle(negatives)
     selected = positives + negatives[: LIST_SIZE - len(positives)]
     return sorted(selected, key=lambda r: int(r["candidate_rank"]))
+
+
+def construct_training_list_v2(rows: Sequence[dict[str, Any]], *, seed: int) -> list[dict[str, Any]]:
+    """Construct a positive-preserving, source-balanced variable-length list.
+
+    Eight is the minimum list width.  Alternative-heavy sources may therefore
+    be longer, while every in-candidate positive remains supervised.
+    """
+    import random
+
+    positives = [row for row in rows if row.get("candidate_is_gold")]
+    negatives = [row for row in rows if not row.get("candidate_is_gold")]
+    if not positives:
+        raise ValueError("gold-present source required")
+    if not negatives:
+        raise ValueError("SOURCE_HAS_NO_VALID_NEGATIVE_IN_FROZEN_CANDIDATE_SET")
+    negative_count = max(1, MINIMUM_LIST_SIZE - len(positives))
+    rng = random.Random(seed)
+    shuffled = list(negatives)
+    rng.shuffle(shuffled)
+    selected = positives + shuffled[:negative_count]
+    if len(selected) < MINIMUM_LIST_SIZE:
+        raise ValueError("insufficient candidates for minimum training-list size")
+    return sorted(selected, key=lambda row: int(row["candidate_rank"]))
+
+
+def source_balanced_bce_loss(source_terms: Sequence[tuple[Any, Any]]) -> Any:
+    """Average candidate BCE within each source, then average sources."""
+    import torch.nn.functional as functional
+
+    if not source_terms:
+        raise ValueError("source batch cannot be empty")
+    losses = []
+    for logits, labels in source_terms:
+        losses.append(functional.binary_cross_entropy_with_logits(logits, labels, reduction="mean"))
+    return sum(losses) / len(losses)
+
+
+def source_balanced_listwise_loss(source_logits: Sequence[Any], positive_indices: Sequence[Sequence[int]]) -> Any:
+    """Average one all-positive set-listwise loss per source."""
+    import torch
+
+    if not source_logits or len(source_logits) != len(positive_indices):
+        raise ValueError("source listwise batch cannot be empty or mismatched")
+    losses = []
+    for logits, positives in zip(source_logits, positive_indices, strict=True):
+        indices = torch.as_tensor(list(positives), dtype=torch.long, device=logits.device)
+        if indices.numel() == 0 or int(indices.max()) >= logits.numel():
+            raise ValueError("every source must have valid positive indices")
+        losses.append(torch.logsumexp(logits, dim=0) - torch.logsumexp(logits[indices], dim=0))
+    return torch.stack(losses).mean()
+
+
+def collate_variable_source_lists(
+    source_lists: Sequence[Sequence[dict[str, Any]]], *, source_description: str | None = None
+) -> tuple[list[tuple[str, str]], list[tuple[int, int]]]:
+    """Flatten variable lists while retaining source offsets and no padding."""
+    pairs: list[tuple[str, str]] = []
+    offsets: list[tuple[int, int]] = []
+    start = 0
+    for rows in source_lists:
+        description = source_description or str(rows[0].get("source_description", ""))
+        for row in rows:
+            pairs.append((description, str(row["target_description"])))
+        end = start + len(rows)
+        offsets.append((start, end))
+        start = end
+    return pairs, offsets
 
 
 def load_authoritative_descriptions(root: Path, direction: str) -> tuple[dict[str, str], dict[str, set[str]]]:

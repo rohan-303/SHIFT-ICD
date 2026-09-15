@@ -1,0 +1,8 @@
+{
+  "status": "SUPERSEDED_BY_TRAINING_LIST_CONTRACT_AMENDMENT",
+  "superseded_artifact": "r2_search_protocol.json",
+  "superseded_sha256": "999119c1c9ea810dc05eb234a346f79e0f642433087faf93497c9b10812bc719",
+  "replacement_artifact": "r2_search_protocol_v2.json",
+  "replacement_reason": "multi-positive representation impossibility",
+  "supersession_timing": "before any scientific R2 DEV metric"
+}

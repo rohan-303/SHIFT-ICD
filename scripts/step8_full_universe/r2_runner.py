@@ -16,6 +16,7 @@ from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
 from scripts.step8_full_universe.runner import benchmark_rows, load_candidate_groups
 from shift_icd.benchmark.schemas import BenchmarkExample
+from shift_icd.reranking.step8 import source_balanced_bce_loss, source_balanced_listwise_loss
 
 ROOT = Path(__file__).resolve().parents[2]
 CANDIDATE_ROOT = ROOT / "artifacts/candidates/shift_map_full_universe_v2"
@@ -91,9 +92,10 @@ def make_list(group: list[dict[str, Any]], strategy: str, seed: int, epoch: int)
         rng.shuffle(negatives)
     else:
         raise ValueError(f"unknown strategy: {strategy}")
-    if len(positives) > LIST_SIZE:
-        raise ValueError("positive count exceeds frozen list size")
-    return sorted(positives + negatives[: LIST_SIZE - len(positives)], key=lambda r: int(r["candidate_rank"]))
+    if not negatives:
+        raise ValueError("SOURCE_HAS_NO_VALID_NEGATIVE_IN_FROZEN_CANDIDATE_SET")
+    negative_count = max(1, LIST_SIZE - len(positives))
+    return sorted(positives + negatives[:negative_count], key=lambda r: int(r["candidate_rank"]))
 
 
 def encode(tokenizer: Any, pairs: list[tuple[str, str]], device: torch.device) -> dict[str, torch.Tensor]:
@@ -176,16 +178,22 @@ def train_epoch(model: Any, tokenizer: Any, lists: list[list[dict[str, Any]]], b
     for start in range(0, len(lists), MICRO_SOURCE_BATCH):
         batch = lists[start:start + MICRO_SOURCE_BATCH]
         pairs = [(str(benchmark[str(g[0]["source_id"])]["source_label"]), str(r["target_description"])) for g in batch for r in g]
-        logits = model(**encode(tokenizer, pairs, device)).logits[:, 0].float().reshape(len(batch), LIST_SIZE)
-        labels = torch.tensor([[1.0 if r["_gold"] else 0.0 for r in g] for g in batch], device=device)
+        logits = model(**encode(tokenizer, pairs, device)).logits[:, 0].float()
+        offsets = []
+        cursor = 0
+        for group in batch:
+            offsets.append((cursor, cursor + len(group)))
+            cursor += len(group)
         if objective == "BCE":
-            loss = torch.nn.functional.binary_cross_entropy_with_logits(logits, labels)
-        elif objective == "SET_POSITIVE_LISTWISE":
             terms = []
-            for row, group in zip(logits, batch, strict=True):
-                pos = torch.tensor([i for i, r in enumerate(group) if r["_gold"]], device=device)
-                terms.append(torch.logsumexp(row, 0) - torch.logsumexp(row[pos], 0))
-            loss = torch.stack(terms).mean()
+            for group, (left, right) in zip(batch, offsets, strict=True):
+                labels = torch.tensor([1.0 if r["_gold"] else 0.0 for r in group], device=device)
+                terms.append((logits[left:right], labels))
+            loss = source_balanced_bce_loss(terms)
+        elif objective == "SET_POSITIVE_LISTWISE":
+            source_logits = [logits[left:right] for left, right in offsets]
+            positives = [[i for i, r in enumerate(group) if r["_gold"]] for group in batch]
+            loss = source_balanced_listwise_loss(source_logits, positives)
         else:
             raise ValueError(objective)
         (loss / steps).backward()
