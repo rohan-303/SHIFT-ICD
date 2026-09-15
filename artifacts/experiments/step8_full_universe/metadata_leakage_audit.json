@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "checkpoint": "/home/gra_rohan/Rohan/tasks/step8_r2b_20260915T000000Z_4c8d2e1f/work/results_v2/selected_checkpoints/learning_rate_set_positive_listwise_random_within_candidate_3e-05.pt",
+  "model_revision": "71caf65d4927987813984f54c284405a13fcca49",
+  "variants": [
+    {
+      "candidate_rank": 99
+    },
+    {
+      "retriever_score": -999.0
+    },
+    {
+      "candidate_is_gold": false
+    },
+    {
+      "source_code": "LEAK_TEST_SOURCE"
+    },
+    {
+      "target_code": "LEAK_TEST_TARGET"
+    },
+    {
+      "positive_count": 49
+    },
+    {
+      "list_length": 50
+    }
+  ],
+  "tokenized_input_identical": true,
+  "logits_identical": true,
+  "test_scoring_count": 0,
+  "test_training_count": 0
+}

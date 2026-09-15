@@ -1,0 +1,18 @@
+{
+  "selected_objective": "SET_POSITIVE_LISTWISE",
+  "objective_runner_up": "BCE",
+  "selected_strategy": "RANDOM_WITHIN_CANDIDATE",
+  "strategy_runner_up": "TOP_RANK_HARD",
+  "selected_learning_rate": 3e-05,
+  "learning_rate_runner_up": 1e-05,
+  "selection_rule": [
+    "Hit@1",
+    "MRR",
+    "Hit@10",
+    "NDCG@10",
+    "P_COMPLEX_CompleteScenarioRetrieval@10"
+  ],
+  "epoch_rule": "E2_BEST_DEV_CHECKPOINT_WITHIN_MAX_EPOCH_BUDGET",
+  "test_scoring_count": 0,
+  "test_training_count": 0
+}

@@ -1,0 +1,19 @@
+{
+  "selected_objective": "SET_POSITIVE_LISTWISE",
+  "selected_strategy": "RANDOM_WITHIN_CANDIDATE",
+  "selected_learning_rate": "3e-05",
+  "selected_epochs": {
+    "objective": 3,
+    "strategy": 3,
+    "learning_rate": 3
+  },
+  "hard_coded_winners": false,
+  "selection_fields": [
+    "Hit@1",
+    "MRR",
+    "Hit@10",
+    "NDCG@10",
+    "P_COMPLEX_CompleteScenarioRetrieval@10"
+  ],
+  "tie_break": "earliest_epoch"
+}
