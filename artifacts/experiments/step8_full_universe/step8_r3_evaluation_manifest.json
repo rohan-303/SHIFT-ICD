@@ -1,0 +1,44 @@
+{
+  "schema": "step8_r3_evaluation_manifest_v1",
+  "status": "STEP8_MEDCPT_EVALUATION_FROZEN_NEGATIVE",
+  "step": "STEP 8-R3",
+  "date_anchor": "2026-09-15",
+  "repository_head": "9053901bd4d1d87d72e9ec1c6113a9911c22d52c",
+  "remote_task": "step8_r3_20260915T203248Z_a2333bc9",
+  "test_lock_sha256": "3ebbad472841743aeb023e3eebab59bcbf9e5c34aa692c91437f7fb0bb3aa543",
+  "final_seed_manifest_sha256": "db9ba5b65647594e7fdf7eaec3afbc2676b55e6e041c3ea4fe3891709437292a",
+  "final_seed_dev_sha256": "54337b03914e1984b0b1516ba74c666e0b20bacf4108edde0b996e49f342710a",
+  "test_scores_sha256": "4ad6d2eea31a6b96b6b18c40579d731ed5595bc4cf5de37a43d98b02b8f85ba3",
+  "test_comparison_sha256": "b96415168aa6f7600b4cdcd3382effa20281dda46060e5937b0886da1edc1c5b",
+  "corrected_test_sources": 2913,
+  "ordinary_test_sources": 2695,
+  "test_invocation_count": 1,
+  "test_training_count": 0,
+  "candidate_mutation_count": 0,
+  "seeds": [17, 42, 2026],
+  "canonical_seed": 17,
+  "metrics": {
+    "SHIFT_MAP": {"Hit@1": 0.7031539888682746, "MRR": 0.7762869398478105, "NDCG@10": 0.775580258086701, "Hit@100": 0.9781076066790353},
+    "MEDCPT_SEED_17": {"Hit@1": 0.663821892393321, "MRR": 0.7461218825312215, "NDCG@10": 0.74792074057934, "Hit@100": 0.9781076066790353},
+    "MEDCPT_SEED_42": {"Hit@1": 0.6653061224489796, "MRR": 0.7479714078553412, "NDCG@10": 0.7497326352236996, "Hit@100": 0.9781076066790353},
+    "MEDCPT_SEED_2026": {"Hit@1": 0.6653061224489796, "MRR": 0.7477585040307407, "NDCG@10": 0.7492544216912214, "Hit@100": 0.9781076066790353}
+  },
+  "result": "MedCPT underperforms frozen SHIFT-MAP on all three primary ranking metrics for all seeds; preserve as a negative confirmatory result.",
+  "failure_categories": {
+    "A_top1_regressions": "All seeds have more baseline-correct-to-model-incorrect transitions than recoveries.",
+    "B_top1_recoveries": "Recoveries do not offset top-1 regressions for any seed.",
+    "C_ordering_perturbation": "Every source ordering changes; pairwise concordance is approximately 0.325.",
+    "D_structural_invariance": "Hit@100 and Top-100 candidate membership remain invariant.",
+    "E_primary_metric_failure": "All 95% bootstrap CIs for Hit@1, MRR, and NDCG@10 deltas are strictly below zero."
+  },
+  "quality_gates": {
+    "three_independent_checkpoints": true,
+    "checkpoint_hashes_distinct": true,
+    "test_lock_preceded_scoring": true,
+    "test_training_count_zero": true,
+    "candidate_mutation_count_zero": true,
+    "hierarchy_aware_reranking_started": false,
+    "step9_training_started": false
+  },
+  "next_stage": "Do not promote MedCPT as a replacement for SHIFT-MAP; stop R3 and require a separately preregistered hierarchy-aware reranker design before Step 9."
+}
