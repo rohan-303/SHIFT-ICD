@@ -22,7 +22,7 @@ ROOT = Path(__file__).resolve().parents[2]
 CANDIDATE_ROOT = ROOT / "artifacts/candidates/shift_map_full_universe_v2"
 MODEL_REVISION = "71caf65d4927987813984f54c284405a13fcca49"
 MAX_LENGTH = 96
-LIST_SIZE = 8
+MINIMUM_LIST_SIZE = 8
 SEED = 17
 EPOCHS = 3
 BATCH_SIZE = 32
@@ -94,7 +94,7 @@ def make_list(group: list[dict[str, Any]], strategy: str, seed: int, epoch: int)
         raise ValueError(f"unknown strategy: {strategy}")
     if not negatives:
         raise ValueError("SOURCE_HAS_NO_VALID_NEGATIVE_IN_FROZEN_CANDIDATE_SET")
-    negative_count = max(1, LIST_SIZE - len(positives))
+    negative_count = max(1, MINIMUM_LIST_SIZE - len(positives))
     return sorted(positives + negatives[:negative_count], key=lambda r: int(r["candidate_rank"]))
 
 
@@ -205,7 +205,13 @@ def train_epoch(model: Any, tokenizer: Any, lists: list[list[dict[str, Any]]], b
     return sum(losses) / len(losses)
 
 
-def run_config(objective: str, strategy: str, lr: float, output: Path, train: list[list[dict[str, Any]]], dev: list[list[dict[str, Any]]], benchmark: dict[str, dict[str, Any]], model_path: Path) -> list[dict[str, Any]]:
+def list_stats(lists: list[list[dict[str, Any]]]) -> dict[str, Any]:
+    lengths = sorted(len(group) for group in lists)
+    p95 = lengths[min(len(lengths) - 1, math.ceil(0.95 * len(lengths)) - 1)]
+    return {"list_min_length": lengths[0], "list_median_length": lengths[len(lengths) // 2], "list_p95_length": p95, "list_max_length": lengths[-1], "expanded_source_count": sum(length > MINIMUM_LIST_SIZE for length in lengths), "dropped_positive_count": 0, "positive_negative_collision_count": 0}
+
+
+def run_config(stage: str, objective: str, strategy: str, lr: float, output: Path, train: list[list[dict[str, Any]]], dev: list[list[dict[str, Any]]], benchmark: dict[str, dict[str, Any]], model_path: Path) -> list[dict[str, Any]]:
     tokenizer = AutoTokenizer.from_pretrained(model_path, revision=MODEL_REVISION, local_files_only=True)
     model = AutoModelForSequenceClassification.from_pretrained(model_path, revision=MODEL_REVISION, local_files_only=True, trust_remote_code=False).float().to("cuda:0")
     device = next(model.parameters()).device
@@ -217,10 +223,11 @@ def run_config(objective: str, strategy: str, lr: float, output: Path, train: li
     for epoch in range(1, EPOCHS + 1):
         started = time.perf_counter()
         lists = [make_list(g, strategy, SEED, epoch) for g in train]
+        stats = list_stats(lists)
         loss = train_epoch(model, tokenizer, lists, benchmark, objective, optimizer, device)
         ranked = score_groups(model, tokenizer, dev, benchmark, device)
         metric = metrics(dev, ranked, benchmark)
-        row = {"run_id": run_id, "stage": "R2", "objective": objective, "list_strategy": strategy, "learning_rate": lr, "seed": SEED, "epoch": epoch, "model_revision": MODEL_REVISION, "candidate_train_hash": "d90dcb937748f1c0b173416d6b8f23f1c97ca8e8caf8934efdf8120993c1cb10", "candidate_dev_hash": "c7240c1f38dd87f54d63c97999cba71d91f6d0887d89bc2d4094f9ba38ad6a6f", "training_source_count": len(train), "training_list_count": len(lists), "positive_candidate_count": sum(sum(r["_gold"] for r in g) for g in lists), "negative_candidate_count": sum(sum(not r["_gold"] for r in g) for g in lists), "training_loss": loss, "runtime": time.perf_counter() - started, "valid": True, **metric}
+        row = {"run_id": run_id, "stage": stage, "objective": objective, "list_strategy": strategy, "learning_rate": lr, "seed": SEED, "epoch": epoch, "model_revision": MODEL_REVISION, "contract_v2_sha": "17c3455e2ca2414f32fc11bfbbfb186dbc710b420d8b940042e5a5b390612d46", "protocol_v2_sha": "5f1a9d34249acf15b451ac8434eccb57e41ff4702027359fcbf036bd156d600d", "candidate_train_hash": "d90dcb937748f1c0b173416d6b8f23f1c97ca8e8caf8934efdf8120993c1cb10", "candidate_dev_hash": "c7240c1f38dd87f54d63c97999cba71d91f6d0887d89bc2d4094f9ba38ad6a6f", "training_source_count": len(train), "training_list_count": len(lists), "positive_candidate_count": sum(sum(r["_gold"] for r in g) for g in lists), "negative_candidate_count": sum(sum(not r["_gold"] for r in g) for g in lists), "training_loss": loss, "runtime": time.perf_counter() - started, "valid": True, **stats, **metric}
         rows.append(row)
         if best_row is None or (selection_key(row), -epoch) > (selection_key(best_row), -int(best_row["epoch"])):
             torch.save(model.state_dict(), "_r2_state.pt")
@@ -262,15 +269,15 @@ def main() -> None:
     dev = prepare_groups(CANDIDATE_ROOT / "forward_dev_k100.jsonl.gz", benchmark)
     all_rows: list[dict[str, Any]] = []
     for objective in OBJECTIVES:
-        all_rows.extend(run_config(objective, "MIXED_RANK", 1e-5, args.output, train, dev, benchmark, args.model_path))
+        all_rows.extend(run_config("OBJECTIVE", objective, "MIXED_RANK", 1e-5, args.output, train, dev, benchmark, args.model_path))
     objective_winners = [select_best([r for r in all_rows if r["objective"] == o]) for o in OBJECTIVES]
     selected_objective = select_best(objective_winners)["objective"]
     for strategy in STRATEGIES:
-        all_rows.extend(run_config(selected_objective, strategy, 1e-5, args.output, train, dev, benchmark, args.model_path))
+        all_rows.extend(run_config("STRATEGY", selected_objective, strategy, 1e-5, args.output, train, dev, benchmark, args.model_path))
     strategy_winners = [select_best([r for r in all_rows if r["objective"] == selected_objective and r["list_strategy"] == s]) for s in STRATEGIES]
     selected_strategy = select_best(strategy_winners)["list_strategy"]
     for lr in LEARNING_RATES:
-        all_rows.extend(run_config(selected_objective, selected_strategy, lr, args.output, train, dev, benchmark, args.model_path))
+        all_rows.extend(run_config("LEARNING_RATE", selected_objective, selected_strategy, lr, args.output, train, dev, benchmark, args.model_path))
     lr_winners = [select_best([r for r in all_rows if r["objective"] == selected_objective and r["list_strategy"] == selected_strategy and float(r["learning_rate"]) == lr]) for lr in LEARNING_RATES]
     selected_lr = select_best(lr_winners)["learning_rate"]
     write_csv(args.output / "ablation_master.csv", all_rows)
