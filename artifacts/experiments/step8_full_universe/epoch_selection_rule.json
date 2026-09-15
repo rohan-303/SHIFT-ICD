@@ -1,0 +1,16 @@
+{
+  "schema": "step8_epoch_selection_rule_v1",
+  "status": "FROZEN_BEFORE_R2_OUTCOMES",
+  "rule": "E2_BEST_DEV_CHECKPOINT_WITHIN_MAX_EPOCH_BUDGET",
+  "maximum_epochs": 3,
+  "selection_metric_key": [
+    "Hit@1:desc",
+    "MRR:desc",
+    "Hit@10:desc",
+    "NDCG@10:desc",
+    "CompleteScenarioRetrieval@10:desc"
+  ],
+  "tie_break": "earliest_epoch",
+  "historical_evidence": "The prior corrected SHIFT-MAP configuration freeze explicitly used E2_BEST_DEV_CHECKPOINT_WITHIN_MAX_EPOCH_BUDGET. R1 independently froze the maximum epoch search space to 3. This rule was written before corrected R2 outcomes and is not selected from observed R2 metrics.",
+  "test_metrics_participate": false
+}
