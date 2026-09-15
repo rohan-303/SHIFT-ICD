@@ -42,13 +42,14 @@ def main() -> None:
         random.seed(seed)
         torch.manual_seed(seed)
         r2.SEED = seed
+        seed_output = args.output / f"seed_{seed}"
         all_rows.extend(
             r2.run_config(
                 "FINAL_SEED",
                 OBJECTIVE,
                 STRATEGY,
                 LEARNING_RATE,
-                args.output,
+                seed_output,
                 train,
                 dev,
                 benchmark,
