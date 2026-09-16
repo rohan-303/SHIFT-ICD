@@ -1,0 +1,21 @@
+{
+  "invalid_conditions": [
+    "candidate mutation",
+    "Hit@100 membership violation",
+    "structural@100 membership violation",
+    "gold leakage",
+    "GEM leakage",
+    "TEST leakage",
+    "wrong scaler",
+    "wrong candidate hash",
+    "wrong feature contract"
+  ],
+  "outcomes": {
+    "HIERARCHY_DEGRADES_RERANKING": "valid run; no frozen primary metric improves and at least one is lower",
+    "HIERARCHY_IMPROVES_RERANKING": "valid run; all five frozen primary metrics improve over B0",
+    "HIERARCHY_MIXED_RESULT": "valid run; at least one frozen primary metric improves and at least one does not",
+    "INVALID_HIERARCHY_EXPERIMENT": "any scientific-integrity invariant failure; excluded from selection"
+  },
+  "schema": "step9_interpretation_contract_v2",
+  "status": "FROZEN_BEFORE_R2_DEV"
+}

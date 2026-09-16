@@ -1,0 +1,49 @@
+{
+  "candidate_hashes": {
+    "dev": "c7240c1f38dd87f54d63c97999cba71d91f6d0887d89bc2d4094f9ba38ad6a6f",
+    "test": "6ef38443a201b1d630148b30717d845b0785b1a4ed433eeab4b03d893b6bf1ce",
+    "train": "d90dcb937748f1c0b173416d6b8f23f1c97ca8e8caf8934efdf8120993c1cb10"
+  },
+  "dev_selection_rule_sha": "c1e9ba21b385d6126f1df981839d23b55b2837c736161a4e009a76f9e461acf8",
+  "development_seed": 17,
+  "epochs": 3,
+  "feature_cache_sha": "a73adbc94b36053fbcd9f73478731d37f294575f082f4a70c1c37f0e335a6718",
+  "feature_contract_sha": "f3e306a071bb5126a5b833f8f6f4ab4428a00749cadbbcdc2acd248ea0c4df06",
+  "feature_variants": [
+    "H0_NO_NEW_HIERARCHY_FEATURES",
+    "H1_BASIC_ONTOLOGY_STRUCTURE",
+    "H3_CANDIDATE_SET_STRUCTURAL_CONTEXT",
+    "H1_PLUS_H3"
+  ],
+  "h0_resolution_sha": "d8cbff63afaec36e953371c9e31efaac4393cfc1940b97a157cc848ed4d7b306",
+  "hierarchy_manifest_sha": "4a9e99149da5af5f77063a794f4cd8eb55e19c267831b92f9ed53e06e3b37a47",
+  "interpretation_contract_v2_sha": "b18536b4c989cf6b04f3665915fc912e484cc9b7d07886561cdd6fbf55a426d9",
+  "learning_rates": [
+    0.0001,
+    0.0003
+  ],
+  "model_family": "SHALLOW_MLP_8_TO_32_TO_1_RELU",
+  "objective": "SET_POSITIVE_LISTWISE",
+  "schema": "step9_r2_run_manifest_v1",
+  "search_protocol_sha": "c0b70178458863a76ff94ed3ef5bd8e7744de4e574e3d2e8aec46d9f352e19c2",
+  "search_space_sha": "bb28e8415a7da78e2c96e98c4ee2526ac45f0eefdaa8b8669b6ce23b2ff96c10",
+  "source_batch_size": 4,
+  "starting_head": "cb6513df997af6538f04273cdc4b97710ea90bce",
+  "status": "FROZEN_BEFORE_R2_DEV",
+  "test_lockout": {
+    "feature_extraction_count": 0,
+    "lock_created": false,
+    "scoring_count": 0,
+    "training_count": 0
+  },
+  "train_scaler_sha": "e5eb4b27b7debd1172e0db272018bb6a0049b08aa98679a9dedc7117185e4a24",
+  "trainable_variants": [
+    "H1_BASIC_ONTOLOGY_STRUCTURE",
+    "H3_CANDIDATE_SET_STRUCTURAL_CONTEXT",
+    "H1_PLUS_H3"
+  ],
+  "weight_decays": [
+    0.0001,
+    0.001
+  ]
+}

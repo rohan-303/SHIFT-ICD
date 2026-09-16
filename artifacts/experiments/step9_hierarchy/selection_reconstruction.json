@@ -1,0 +1,12 @@
+{
+  "hard_coded_winner": false,
+  "reproduced": true,
+  "schema": "step9_selection_reconstruction_v1",
+  "selected_configuration_id": "h3_candidate_set_structural_context_lr_0p0003_wd_0p0001",
+  "selected_epoch": 3,
+  "selected_feature_variant": "H3_CANDIDATE_SET_STRUCTURAL_CONTEXT",
+  "selected_learning_rate": 0.0003,
+  "selected_weight_decay": 0.0001,
+  "source": "reports/tables/step9_hierarchy/ablation_master.csv",
+  "valid_representative_rows": 12
+}

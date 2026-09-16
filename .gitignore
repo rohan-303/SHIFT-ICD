@@ -111,3 +111,6 @@ artifacts/experiments/shift_map_v2_compute/token_cache/
 artifacts/experiments/shift_map_full_universe/final_runs/
 artifacts/experiments/shift_map_full_universe/r5_evaluations/**/*_rows.jsonl
 artifacts/experiments/shift_map_full_universe/r5_diagnostics/*.npz
+
+# Step 9 R2 local checkpoints remain local; compact manifests/tables are tracked.
+artifacts/experiments/step9_hierarchy/r2_runs/

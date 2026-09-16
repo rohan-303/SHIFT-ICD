@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import pytest
 
+from scripts.step9_hierarchy.r2_runner import h0_semantics, select_configuration, variant_mask
 from shift_icd.hierarchy.features import (
     FEATURE_NAMES,
     apply_train_scaler,
@@ -97,6 +98,28 @@ def test_checkpoint_collision_is_rejected(tmp_path) -> None:
     path.write_bytes(b"existing")
     with pytest.raises(FileExistsError, match="STEP9_CHECKPOINT_COLLISION"):
         reserve_checkpoint(path)
+
+
+def test_r2_h0_is_frozen_b0_baseline() -> None:
+    resolution = h0_semantics()
+    assert resolution["classification"] == "H0_BASELINE_ONLY"
+    assert resolution["trained"] is False
+    assert resolution["relationship_to_b0"] == "identical_ordering"
+
+
+def test_r2_variant_masks_are_frozen() -> None:
+    assert variant_mask("H0_NO_NEW_HIERARCHY_FEATURES") == (0,) * 8
+    assert variant_mask("H1_BASIC_ONTOLOGY_STRUCTURE") == (1, 1, 1, 1, 0, 0, 0, 0)
+    assert variant_mask("H3_CANDIDATE_SET_STRUCTURAL_CONTEXT") == (0, 0, 0, 0, 1, 1, 1, 1)
+    assert variant_mask("H1_PLUS_H3") == (1,) * 8
+
+
+def test_r2_selector_is_deterministic() -> None:
+    rows = [
+        {"valid": True, "Hit@1": 0.5, "MRR": 0.7, "P_COMPLEX_CompleteScenarioRetrieval@10": 0.2, "P_COMPLEX_ChoiceListRecall@10": 0.3, "NDCG@10": 0.4, "configuration_id": "b", "epoch": 1},
+        {"valid": True, "Hit@1": 0.5, "MRR": 0.7, "P_COMPLEX_CompleteScenarioRetrieval@10": 0.2, "P_COMPLEX_ChoiceListRecall@10": 0.3, "NDCG@10": 0.4, "configuration_id": "a", "epoch": 2},
+    ]
+    assert select_configuration(rows)["configuration_id"] == "a"
 
 
 def test_contract_v2_preserves_variable_positive_lists() -> None:

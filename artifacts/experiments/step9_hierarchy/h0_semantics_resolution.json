@@ -1,0 +1,16 @@
+{
+  "classification": "H0_BASELINE_ONLY",
+  "exact_executable_behavior": "Use frozen corrected SHIFT-MAP Top-100 candidate order without hierarchy-MLP training or feature extraction.",
+  "input_dimensionality": 0,
+  "rationale": "H0 means no new hierarchy features; training a zeroed hierarchy MLP would add a hierarchy reranker and is therefore not a no-new-feature control.",
+  "relationship_to_b0": "identical_ordering",
+  "schema": "step9_h0_semantics_resolution_v1",
+  "supporting_artifacts": [
+    "artifacts/experiments/step9_hierarchy/feature_contract.json",
+    "artifacts/experiments/step9_hierarchy/search_space.json",
+    "artifacts/experiments/step9_hierarchy/r2_search_protocol.json",
+    "scripts/step9_hierarchy/runner.py"
+  ],
+  "tie_breaking": "frozen candidate_rank ascending",
+  "trained": false
+}
