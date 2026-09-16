@@ -1,0 +1,5 @@
+check,count,scope,status
+feature_extraction,,32 TRAIN sources,PASS
+feature_determinism,,,PASS
+full_dev_scientific_evaluation,0,,NOT_RUN
+test_scoring,0,,FORBIDDEN

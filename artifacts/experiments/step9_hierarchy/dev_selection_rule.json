@@ -1,0 +1,23 @@
+{
+  "schema": "step9_dev_selection_rule_v1",
+  "status": "NEW_R1_PREREGISTERED_RULE",
+  "historical_rule_found": false,
+  "selection_population": "ordinary answerable DEV plus structural P_COMPLEX diagnostics",
+  "ordered_criteria": [
+    "ordinary Hit@1 descending",
+    "ordinary MRR descending",
+    "P_COMPLEX CompleteScenarioRetrieval@10 descending",
+    "P_COMPLEX ChoiceListRecall@10 descending",
+    "ordinary NDCG@10 descending",
+    "configuration_id ascending",
+    "epoch ascending"
+  ],
+  "test_usage": false,
+  "tie_policy": "first lexicographic winner after deterministic configuration and epoch ordering",
+  "interpretation": {
+    "HIERARCHY_IMPROVES_RERANKING": "H beats B0 on all three ordinary primary metrics and both structural primary metrics, with unchanged candidate membership and invariant Hit@100/structural@100.",
+    "HIERARCHY_MIXED_RESULT": "H improves at least one preregistered primary family while not satisfying the all-primary improvement rule and without candidate/integrity failure.",
+    "HIERARCHY_DEGRADES_RERANKING": "H is below B0 on any ordinary primary metric without compensating all-primary structural improvement, or any integrity/candidate invariant fails.",
+    "uncertainty": "Source-level paired bootstrap intervals will be reported in R2; no outcome threshold is selected from TEST."
+  }
+}

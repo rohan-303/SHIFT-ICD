@@ -1,0 +1,12 @@
+{
+  "schema": "step9_hierarchy_r1_research_question_v1",
+  "status": "FROZEN_BEFORE_STEP9_DEV",
+  "question": "Can ontology-derived hierarchical information improve ranking within the already-corrected SHIFT-MAP Top-100 candidate set, particularly for structurally ambiguous mappings, without relying on mapping-label leakage or changing retrieval membership?",
+  "population": "Frozen corrected SHIFT-MAP Top-100 candidates for Track A ICD-9-CM to ICD-10-CM",
+  "intervention": "Ontology-only structural features with a small source-balanced hierarchy-aware reranker",
+  "comparator": "B0 frozen SHIFT-MAP ordering; B1 frozen Step 8 MedCPT seed-17 ordering",
+  "primary_outcomes": ["ordinary Hit@1", "ordinary MRR", "ordinary NDCG@10", "P_COMPLEX CompleteScenarioRetrieval@10", "P_COMPLEX ChoiceListRecall@10"],
+  "candidate_membership": "immutable; reranking only",
+  "test_policy": "No Step 9 TEST scoring before a future configuration freeze and Step 9 TEST lock",
+  "prior_test_exposure": "Aggregate corrected SHIFT-MAP and MedCPT Step 8 TEST results predate this design; no individual TEST failures were inspected for feature invention."
+}

@@ -1,0 +1,11 @@
+element,classification,evidence,decision
+RQ2 hierarchy-aware reranking,PREEXISTING_COMMITTED,docs/research_spec.md and committed roadmap references hierarchy-aware stage,retained as motivation
+v3 reranker stage,PREEXISTING_COMMITTED,committed roadmap/research specification,retained as stage provenance
+parent/ancestor/sibling/depth/branch/graph signals,PREEXISTING_COMMITTED,committed research specification names structural signal families,retained only as broad families
+hierarchy siblings and parent-child confusions,PREEXISTING_DOCUMENTED,docs/benchmark_spec.md structural difficulty discussion,used as general motivation only
+concrete prefix metadata parser,HISTORICAL_UNIMPLEMENTED,no committed implementation or equations found,new R1 implementation
+H0/H1/H3 exact feature equations,NEW_R1_PROPOSAL,no historical equations found,frozen in feature_contract.json
+shallow MLP scoring head,NEW_R1_PROPOSAL,no historical model family found,frozen in search_space.json
+SET_POSITIVE_LISTWISE for Step 9,NEW_R1_PROPOSAL,no historical Step 9 objective found,adopted from Contract-v2 principle
+lexicographic DEV selection rule,NEW_R1_PROPOSAL,no historical Step 9 selection rule found,frozen before R2
+TEST fail-closed runner,NEW_R1_PROPOSAL,no historical Step 9 runner found,required by R1 safeguards

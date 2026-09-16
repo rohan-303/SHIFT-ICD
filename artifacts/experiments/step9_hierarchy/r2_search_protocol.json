@@ -1,0 +1,21 @@
+{
+  "schema": "step9_r2_search_protocol_v1",
+  "status": "FROZEN_FOR_NEXT_MILESTONE_ONLY",
+  "feature_variants": ["H0_NO_NEW_HIERARCHY_FEATURES", "H1_BASIC_ONTOLOGY_STRUCTURE", "H3_CANDIDATE_SET_STRUCTURAL_CONTEXT", "H1_PLUS_H3"],
+  "model_family": "SHALLOW_MLP_8_TO_32_TO_1_RELU",
+  "objective": "SET_POSITIVE_LISTWISE",
+  "learning_rates": [0.0001, 0.0003],
+  "weight_decays": [0.0001, 0.001],
+  "development_seed": 17,
+  "epochs": 3,
+  "source_batch_size": 4,
+  "normalization": "TRAIN-only feature means/scales; constant scales fixed to 1",
+  "candidate_hashes": {"train":"d90dcb937748f1c0b173416d6b8f23f1c97ca8e8caf8934efdf8120993c1cb10", "dev":"c7240c1f38dd87f54d63c97999cba71d91f6d0887d89bc2d4094f9ba38ad6a6f", "test":"6ef38443a201b1d630148b30717d845b0785b1a4ed433eeab4b03d893b6bf1ce"},
+  "train_population": "ordinary answerable TRAIN with candidate-contained valid positives; all positives retained; NO_MAP/COMBINATION excluded",
+  "epoch_rule": "E2_BEST_DEV_CHECKPOINT_LEXICOGRAPHIC_PRIMARY_CRITERIA",
+  "dev_rule": "artifacts/experiments/step9_hierarchy/dev_selection_rule.json",
+  "baseline_b0": "frozen SHIFT-MAP candidate order",
+  "baseline_b1": "frozen Step 8 MedCPT seed17 candidate order",
+  "test_lockout": "STEP9_TEST_ACCESS_ALLOWED=false until future Step 9 configuration freeze and TEST lock",
+  "full_dev_count_r1": 0
+}

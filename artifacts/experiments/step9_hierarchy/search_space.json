@@ -1,0 +1,18 @@
+{
+  "schema": "step9_search_space_v1",
+  "status": "FROZEN_R1_BEFORE_FULL_DEV",
+  "feature_variants": ["H0_NO_NEW_HIERARCHY_FEATURES", "H1_BASIC_ONTOLOGY_STRUCTURE", "H3_CANDIDATE_SET_STRUCTURAL_CONTEXT", "H1_PLUS_H3"],
+  "model_variants": ["SHALLOW_MLP_8_TO_32_TO_1_RELU"],
+  "objective_options": ["SET_POSITIVE_LISTWISE"],
+  "learning_rate_grid": [0.0001, 0.0003],
+  "weight_decay_grid": [0.0001, 0.001],
+  "source_batch_size": 4,
+  "gradient_clip": 1.0,
+  "epochs": 3,
+  "development_seed": 17,
+  "epoch_selection_rule": "E2_BEST_DEV_CHECKPOINT_LEXICOGRAPHIC_PRIMARY_CRITERIA",
+  "candidate_k": 100,
+  "candidate_membership_policy": "frozen SHIFT-MAP Top-100; reorder only",
+  "full_dev_scientific_evaluation_count_r1": 0,
+  "post_freeze_expansion": "forbidden"
+}

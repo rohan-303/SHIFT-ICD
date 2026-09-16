@@ -1,0 +1,11 @@
+{
+  "schema": "step9_prior_test_exposure_v1",
+  "status": "DISCLOSED",
+  "corrected_shift_map_test_evaluated": true,
+  "medcpt_step8_test_evaluated": true,
+  "step9_architecture_frozen_after_aggregate_results": true,
+  "step9_design_inspected_individual_test_failures": false,
+  "step9_test_scoring_allowed_now": false,
+  "future_requirement": "A valid Step 9 configuration freeze and Step 9 TEST lock must precede any Step 9 TEST scoring.",
+  "source_of_prior_hashes": "artifacts/experiments/step8_full_universe/step8_r3_evaluation_manifest.json"
+}

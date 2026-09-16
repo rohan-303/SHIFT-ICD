@@ -1,0 +1,50 @@
+{
+  "candidate_target_universe_coverage_count": 71704,
+  "candidate_target_universe_expected": 71704,
+  "gem_dependency": "NONE",
+  "integrity_table": "reports\\tables\\step9_hierarchy\\hierarchy_integrity.csv",
+  "integrity_table_sha256": "c2492380eaa186e6ab9d97bfcb85080d199dc46f0a581ee508b31617244f97c4",
+  "schema": "step9_hierarchy_metadata_manifest_v1",
+  "source": {
+    "audit": {
+      "ancestor_chain_error_count": 0,
+      "cycle_count": 0,
+      "depth_consistency_error_count": 0,
+      "integrity_pass": true,
+      "invalid_parent_count": 0,
+      "node_count": 17702,
+      "root_count": 12,
+      "target_universe_coverage_count": 17702
+    },
+    "benchmark_source_code_count": 14567,
+    "benchmark_source_coverage_count": 14567,
+    "benchmark_source_missing_count": 0,
+    "node_count": 17702,
+    "ontology": "ICD-9-CM",
+    "provenance": "CMS diagnosis titles; prefix structure only; no GEM",
+    "terminology_code_count": 14567,
+    "version": "Version 32"
+  },
+  "source_archive_sha256": "45a7d05ddcadf124af88375b64cdf068bb1e3f999ce7fdacb91f65f4e6d55f08",
+  "status": "R1_PREFLIGHT_METADATA_COMPLETE",
+  "target": {
+    "audit": {
+      "ancestor_chain_error_count": 0,
+      "cycle_count": 0,
+      "depth_consistency_error_count": 0,
+      "integrity_pass": true,
+      "invalid_parent_count": 0,
+      "node_count": 98855,
+      "root_count": 25,
+      "target_universe_coverage_count": 98855
+    },
+    "node_count": 98855,
+    "official_order_code_count": 94127,
+    "official_order_missing_count": 0,
+    "ontology": "ICD-10-CM",
+    "provenance": "CMS code descriptions plus official tabular-order membership audit; prefix structure only; no GEM",
+    "terminology_code_count": 71704,
+    "version": "FY 2018"
+  },
+  "target_archive_sha256": "d4954a3fa02e0bfbecb10b20864198dfa50862ded93f2d9d7313e9fe07ef0dfc"
+}

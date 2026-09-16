@@ -1,0 +1,19 @@
+{
+  "schema": "step9_feature_contract_v1",
+  "status": "FROZEN_R1",
+  "principle": "Features derive only from authoritative ICD terminology structure, official descriptions/provenance, and frozen candidate-set structure; no GEM membership or labels.",
+  "raw_code_policy": "STRUCTURE_RESOLUTION_ONLY",
+  "semantic_encoder": null,
+  "features": [
+    {"name":"source_depth_norm","definition":"source depth divided by maximum source-ontology depth","provenance":"prefix hierarchy over authoritative ICD-9-CM code universe","normalization":"TRAIN-only scaler after deterministic extraction","missing":"0 with audit flag; missing is a preflight blocker for production universe","learned":"no","level":"source","ontology_dependent":true,"inference_available":true,"leakage_risk":"low"},
+    {"name":"target_depth_norm","definition":"target depth divided by maximum target-ontology depth","provenance":"prefix hierarchy over official ICD-10-CM code universe","normalization":"TRAIN-only scaler","missing":"0 with audit flag; production missingness is blocked","learned":"no","level":"candidate","ontology_dependent":true,"inference_available":true,"leakage_risk":"low"},
+    {"name":"target_sibling_count_log1p","definition":"log(1 + count of ontology nodes sharing target parent)","provenance":"target parent links","normalization":"TRAIN-only scaler","missing":"0 only when parent is root/unknown; unknown parent is audited","learned":"no","level":"candidate","ontology_dependent":true,"inference_available":true,"leakage_risk":"low"},
+    {"name":"target_ancestor_count_norm","definition":"target ancestor-chain length divided by target maximum depth","provenance":"target ancestor chain","normalization":"TRAIN-only scaler","missing":"0 with audit flag","learned":"no","level":"candidate","ontology_dependent":true,"inference_available":true,"leakage_risk":"low"},
+    {"name":"candidate_same_parent_fraction","definition":"fraction of frozen candidates sharing target parent","provenance":"frozen candidate identities plus target parent links","normalization":"TRAIN-only scaler","missing":"0 for empty/unknown parent; empty candidate groups are blocked","learned":"no","level":"candidate_set","ontology_dependent":true,"inference_available":true,"leakage_risk":"low"},
+    {"name":"candidate_same_family_fraction","definition":"fraction of frozen candidates sharing target three-character family","provenance":"target family derived from code structure","normalization":"TRAIN-only scaler","missing":"0 for unknown family","learned":"no","level":"candidate_set","ontology_dependent":true,"inference_available":true,"leakage_risk":"low"},
+    {"name":"candidate_shared_ancestor_fraction","definition":"fraction of frozen candidates sharing at least one target ancestor with target","provenance":"target ancestor chains","normalization":"TRAIN-only scaler","missing":"0 for no shared ancestor","learned":"no","level":"candidate_set","ontology_dependent":true,"inference_available":true,"leakage_risk":"low"},
+    {"name":"candidate_same_root_fraction","definition":"fraction of frozen candidates in target root branch","provenance":"target root links","normalization":"TRAIN-only scaler","missing":"0 for unknown root","learned":"no","level":"candidate_set","ontology_dependent":true,"inference_available":true,"leakage_risk":"low"}
+  ],
+  "excluded_families": {"H2_ancestor_semantic_compatibility":"excluded in R1 because no frozen ancestor encoder/cache was already committed; may be a separately preregistered future variant", "raw_code_lexical_tokens":"forbidden", "GEM_mapping_features":"forbidden", "mapping_metadata":"forbidden"},
+  "leakage_tests_required": ["candidate_is_gold", "mapping_kind", "split", "TEST_outcome", "GEM_membership", "approximate_flag", "scenario_labels"]
+}

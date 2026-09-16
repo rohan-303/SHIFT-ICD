@@ -1,0 +1,9 @@
+family,feature,leakage_inputs,learned,source
+H1,source_depth_norm,none,False,CMS ontology structure and frozen candidate set
+H1,target_depth_norm,none,False,CMS ontology structure and frozen candidate set
+H1,target_sibling_count_log1p,none,False,CMS ontology structure and frozen candidate set
+H1,target_ancestor_count_norm,none,False,CMS ontology structure and frozen candidate set
+H3,candidate_same_parent_fraction,none,False,CMS ontology structure and frozen candidate set
+H3,candidate_same_family_fraction,none,False,CMS ontology structure and frozen candidate set
+H3,candidate_shared_ancestor_fraction,none,False,CMS ontology structure and frozen candidate set
+H3,candidate_same_root_fraction,none,False,CMS ontology structure and frozen candidate set

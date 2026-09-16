@@ -1,0 +1,24 @@
+{
+  "dev_feature_extraction_count": 0,
+  "feature_names": [
+    "source_depth_norm",
+    "target_depth_norm",
+    "target_sibling_count_log1p",
+    "target_ancestor_count_norm",
+    "candidate_same_parent_fraction",
+    "candidate_same_family_fraction",
+    "candidate_shared_ancestor_fraction",
+    "candidate_same_root_fraction"
+  ],
+  "first_hash": "6bde6b091a8525b7a73b5ab0c0ee9b944d1d70e8c0d8b3144553e4a8134ccd43",
+  "identical": true,
+  "missingness_mask_hash": "a4eb54ba9c45022b9dbdd43e0236f8c5118b0203cb8a4798efca1a9ce916d550",
+  "normalization_role": "TRAIN_ONLY",
+  "sample_candidate_row_count": 3200,
+  "sample_source_count": 32,
+  "schema": "step9_feature_cache_manifest_v1",
+  "second_hash": "6bde6b091a8525b7a73b5ab0c0ee9b944d1d70e8c0d8b3144553e4a8134ccd43",
+  "status": "R1_PREFLIGHT",
+  "test_feature_extraction_count": 0,
+  "train_scaler_sha256": "e5eb4b27b7debd1172e0db272018bb6a0049b08aa98679a9dedc7117185e4a24"
+}
