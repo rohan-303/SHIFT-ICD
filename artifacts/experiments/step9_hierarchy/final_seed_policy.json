@@ -1,0 +1,46 @@
+{
+  "schema": "step9_final_seed_policy_v1",
+  "policy_provenance_classification": "S1_EXISTING_PROJECT_WIDE_CONVENTION",
+  "source_evidence": [
+    {
+      "path": "artifacts/experiments/step8_full_universe/final_seed_run_protocol.json",
+      "sha256": "ff1a60caef9c6d600a90a47918ab07a5e0ee14338e0e5ed11c2ca4388db3d158",
+      "commit": "fe927241e1a5ed79b63fb5b12bea05ff3a3558a9",
+      "evidence": "Step 8 final-seed protocol frozen before final-seed training; final_seeds [17, 42, 2026], canonical seed 17."
+    },
+    {
+      "path": "artifacts/experiments/step8_full_universe/config_freeze.json",
+      "sha256": "b82c0cba4b672726f0c3911fac00d5abe36263b0c20a36e0d261f3c14f5b4064",
+      "commit": "35437f0a81a3938f4a620e3ac7afc2d0ed59e35c",
+      "evidence": "Committed Step 8 configuration freeze records the same final seed set and canonical seed."
+    },
+    {
+      "path": "artifacts/experiments/shift_map_full_universe/config_freeze.json",
+      "sha256": "2815310ce7f47ca368d973f8c36aec7261d7af7e9355b62cd8ff134676361ee9",
+      "commit": "4d8ba3e58ea20344f9bb58376915934caa77d653",
+      "evidence": "Corrected SHIFT-MAP final-seed configuration records canonical seed 17."
+    },
+    {
+      "path": "artifacts/experiments/shift_map_full_universe/test_lock.json",
+      "sha256": "5f97b347a811fd648e3d99a15b93e1c1ae583ca48c6d74868535c213e0081deb",
+      "commit": "5dbce66129e28ab7e8c9d3922f810624c8bf7098",
+      "evidence": "Corrected SHIFT-MAP TEST lock records seeds [17, 42, 2026]."
+    }
+  ],
+  "final_seeds": [17, 42, 2026],
+  "canonical_seed": 17,
+  "selection_timing": "FROZEN_BEFORE_STEP9_TEST_AND_BEFORE_FINAL_STEP9_SEED_TRAINING",
+  "selection_basis": "continuity with an established outcome-independent project reproducibility convention; not selected from Step 9 DEV performance",
+  "statements": [
+    "NO STEP 9 TEST RESULT WAS AVAILABLE WHEN THIS POLICY WAS FROZEN",
+    "SEEDS WERE NOT CHOSEN USING STEP 9 DEV PERFORMANCE"
+  ],
+  "step9_configuration_freeze_sha256": "4eb057b3f7badfc7c56062f4d921999449ccdb0e3481c8d4cff7e66a76398659",
+  "step9_search_protocol_sha256": "c0b70178458863a76ff94ed3ef5bd8e7744de4e574e3d2e8aec46d9f352e19c2",
+  "git_provenance": {
+    "starting_r2_head": "35437f0a81a3938f4a620e3ac7afc2d0ed59e35c",
+    "starting_r2_commit_message": "analysis: freeze hierarchy-aware reranker configuration",
+    "policy_frozen_before_step9_test": true,
+    "policy_frozen_before_final_step9_seed_training": true
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "schema": "step9_b1_baseline_provenance_v1",
+  "status": "CORRECTED_PROVENANCE_ONLY",
+  "original_reported_b1": {
+    "source": "artifacts/experiments/dense_full_universe_v2/remote_sync_final/gpu1/results/dense_full_universe_v2/medcpt/dev_metrics.json",
+    "artifact_sha256": "1cf8ec359036e1bda2b54dadd927d2fcb7d5505bdfe5cb909bb494739149cfd5",
+    "checkpoint_sha256": "NOT_APPLICABLE_ZERO_SHOT_QUERY_ENCODER",
+    "source_count": 1457,
+    "row_count": 1457,
+    "population_definition": {
+      "ordinary_answerable": 1348,
+      "p_complex": 67,
+      "total": 1457
+    },
+    "candidate_source": "dense_full_universe_v2 MedCPT zero-shot output; not the frozen corrected SHIFT-MAP Top-100 candidate artifact",
+    "candidate_hash": "NOT_PRESENT_IN_ARTIFACT",
+    "scoring_timestamp": "NOT_RECORDED_IN_ARTIFACT",
+    "evaluator": "dense_full_universe_v2 artifact evaluator; exact version not recorded in artifact",
+    "reported_metrics": {
+      "Hit@1": 0.49629080118694363,
+      "MRR": 0.5863064067246733,
+      "Hit@10": 0.7685459940652819,
+      "Hit@100": 0.9013353115727003
+    },
+    "all_rows_contain_100_ranked_codes": true
+  },
+  "proven_cause": {
+    "classification": "B1D_WRONG_CANDIDATE_SET",
+    "explanation": "The artifact contains 100 ranked outputs per source, but its candidate membership is not the frozen corrected SHIFT-MAP Top-100 membership. Across all 1,457 DEV sources, exact candidate-set membership match count is 0; the first audited source has 42/100 overlapping codes.",
+    "model_provenance_issue": "The artifact is zero-shot MedCPT Query Encoder output, not the frozen Step 8 final-seed MedCPT Cross-Encoder reranking artifact.",
+    "r2_b1_candidate_hash": "NOT_VERIFIED_AND_NOT_PRESENT"
+  },
+  "authoritative_corrected_b1": {
+    "artifact_path": "artifacts/remote/step8_r3_20260915T203248Z_a2333bc9/final_seed_run/final_seed_dev.csv",
+    "artifact_sha256": "54337b03914e1984b0b1516ba74c666e0b20bacf4108edde0b996e49f342710a",
+    "execution_manifest_path": "artifacts/remote/step8_r3_20260915T203248Z_a2333bc9/final_seed_run/final_seed_execution_manifest.json",
+    "execution_manifest_sha256": "db9ba5b65647594e7fdf7eaec3afbc2676b55e6e041c3ea4fe3891709437292a",
+    "step8_checkpoint_sha256_seed17": "1614dfb9377048e2b77b46fd2b82433f842ca063420fe0ad72f2c3c818ece66b",
+    "source_count": 1457,
+    "csv_row_count": 9,
+    "scored_sources_per_seed": 1457,
+    "candidate_row_count": 145700,
+    "candidates_per_source": 100,
+    "candidate_source": "artifacts/candidates/shift_map_full_universe_v2/forward_dev_k100.jsonl.gz",
+    "candidate_hash": "c7240c1f38dd87f54d63c97999cba71d91f6d0887d89bc2d4094f9ba38ad6a6f",
+    "population_definition": "1,348 ordinary answerable plus 67 P_COMPLEX sources; total 1,457",
+    "evaluator": "retrieval_evaluator_v3",
+    "metrics_seed17_epoch3": {
+      "Hit@1": 0.6520771513353115,
+      "MRR": 0.7382641103582038,
+      "Hit@10": 0.8887240356083086,
+      "Hit@100": 0.9777448071216617,
+      "NDCG@10": 0.7437695115918623
+    },
+    "candidate_invariance": {
+      "candidate_mutation_count": 0,
+      "exact_membership_match_sources": 1457,
+      "ranked_rows_with_100_candidates": 1457,
+      "hit_at_100": 0.9777448071216617,
+      "structural_choice_list_recall_at_100": 0.9638157894736842,
+      "structural_complete_scenario_retrieval_at_100": 0.9473684210526315,
+      "status": "PASS"
+    }
+  },
+  "r2_configuration_selection_affected": false,
+  "correction_scope": "Update descriptive B1 provenance only; do not alter the R2 H3 configuration, metrics, classification, or selection.",
+  "step9_test_access": {
+    "feature_extraction_count": 0,
+    "scoring_count": 0,
+    "training_count": 0,
+    "test_lock_created": false
+  }
+}

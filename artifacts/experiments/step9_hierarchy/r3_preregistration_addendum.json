@@ -1,0 +1,72 @@
+{
+  "schema": "step9_r3_preregistration_addendum_v1",
+  "status": "READY_BEFORE_STEP9_R3_EXECUTION",
+  "final_seed_policy_sha256": "f2da29bec862a821820c0974cee467fac37fb9db961c809d1739e56c5154c2e3",
+  "final_seeds": [17, 42, 2026],
+  "canonical_seed": 17,
+  "hierarchy_configuration_sha256": "4eb057b3f7badfc7c56062f4d921999449ccdb0e3481c8d4cff7e66a76398659",
+  "selected_hierarchy_configuration": {
+    "feature_variant": "H3_CANDIDATE_SET_STRUCTURAL_CONTEXT",
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "selected_epoch": 3,
+    "development_seed": 17,
+    "checkpoint_sha256_seed17_dev": "acbf14dc9c6a45347004e95894bb9df5b1682d371708f3ff09f6b5ab3fb608df"
+  },
+  "future_final_seed_initialization_rule": "Train exactly the frozen selected H3 configuration independently at seeds 17, 42, and 2026 using TRAIN only, select epoch 3 as frozen by R2 protocol, reload and hash each checkpoint, and do not select seeds or checkpoints from Step 9 TEST outcomes.",
+  "future_test_lock_requirement": "After all three final-seed checkpoints are trained, reloaded, and hashed, create and hash a Step 9 TEST lock before any Step 9 TEST feature extraction or scoring.",
+  "primary_comparison": {
+    "model": "selected hierarchy-aware H3 reranker",
+    "baseline": "B0 canonical frozen corrected SHIFT-MAP ordering",
+    "secondary_baseline": "B1 canonical Step 8 MedCPT seed17, descriptive only",
+    "metrics": [
+      "Ordinary Hit@1",
+      "Ordinary MRR",
+      "P_COMPLEX CompleteScenarioRetrieval@10",
+      "P_COMPLEX ChoiceListRecall@10",
+      "Ordinary NDCG@10"
+    ]
+  },
+  "b0_dev_comparison": {
+    "Hit@1": 0.6965875370919882,
+    "MRR": 0.7723505329731806,
+    "NDCG@10": 0.7738662523327008,
+    "Hit@100": 0.9777448071216617
+  },
+  "b1_descriptive_comparison": {
+    "status": "CORRECTED_PROVENANCE",
+    "issue_classification": "B1D_WRONG_CANDIDATE_SET",
+    "authoritative_seed17_Hit@1": 0.6520771513353115,
+    "authoritative_seed17_MRR": 0.7382641103582038,
+    "authoritative_seed17_Hit@10": 0.8887240356083086,
+    "authoritative_seed17_Hit@100": 0.9777448071216617,
+    "r2_configuration_selection_affected": false
+  },
+  "paired_bootstrap_plan": {
+    "comparison": "canonical hierarchy seed17 versus B0 on identical TEST source population",
+    "repetitions": 10000,
+    "seed": 20260915,
+    "unit": "source",
+    "method": "paired source-level bootstrap with replacement; compute per-repetition metric differences and percentile 95% confidence intervals",
+    "metrics": [
+      "Hit@1",
+      "MRR",
+      "P_COMPLEX CompleteScenarioRetrieval@10",
+      "P_COMPLEX ChoiceListRecall@10",
+      "NDCG@10"
+    ],
+    "executed_now": false
+  },
+  "prior_test_exposure_disclosure": "Corrected retrieval, final SHIFT-MAP, and final MedCPT Step 8 were previously evaluated on TEST; this addendum does not access Step 9 TEST.",
+  "step9_test_access_counts": {
+    "feature_extraction": 0,
+    "scoring": 0,
+    "training": 0,
+    "test_lock_created": false
+  },
+  "git_provenance": {
+    "r2_freeze_commit": "35437f0a81a3938f4a620e3ac7afc2d0ed59e35c",
+    "r2_freeze_message": "analysis: freeze hierarchy-aware reranker configuration",
+    "r2_search_protocol_sha256": "c0b70178458863a76ff94ed3ef5bd8e7744de4e574e3d2e8aec46d9f352e19c2"
+  }
+}

@@ -125,3 +125,29 @@ Independent reconstruction reproduced `h3_candidate_set_structural_context_lr_0p
 R1/R2 preregistered only development seed 17; no final publication seeds were specified. Status: `BLOCKED_STEP9_FINAL_SEED_POLICY_UNSPECIFIED`. No final seeds were trained.
 
 Next milestone: `STEP 9-R3 — FINAL HIERARCHY SEEDS + TEST LOCK + CONFIRMATORY STRUCTURAL RERANKING EVALUATION`, gated on resolving the final-seed policy.
+
+## 15. POST-FREEZE PROVENANCE CORRECTION — R2C
+
+This administrative/provenance correction did not rerun hierarchy training, rerun the R2 DEV grid, alter the selected H3 configuration, reopen Step 8 tuning, or access Step 9 TEST.
+
+### Final-seed policy
+
+A pre-existing project-wide outcome-independent convention was found and frozen as `S1_EXISTING_PROJECT_WIDE_CONVENTION`: final seeds `[17, 42, 2026]`, canonical seed `17`. Evidence includes the Step 8 final-seed protocol (`artifacts/experiments/step8_full_universe/final_seed_run_protocol.json`, SHA `ff1a60caef9c6d600a90a47918ab07a5e0ee14338e0e5ed11c2ca4388db3d158`, commit `fe927241e1a5ed79b63fb5b12bea05ff3a3558a9`), the Step 8 configuration freeze (SHA `b82c0cba4b672726f0c3911fac00d5abe36263b0c20a36e0d261f3c14f5b4064`), and the corrected SHIFT-MAP seed artifacts.
+
+The frozen policy is recorded at `artifacts/experiments/step9_hierarchy/final_seed_policy.json`, SHA `f2da29bec862a821820c0974cee467fac37fb9db961c809d1739e56c5154c2e3`. It was frozen before Step 9 TEST and before final Step 9 seed training. **NO STEP 9 TEST RESULT WAS AVAILABLE WHEN THIS POLICY WAS FROZEN.** **SEEDS WERE NOT CHOSEN USING STEP 9 DEV PERFORMANCE.**
+
+### B1 provenance correction
+
+The original B1 value (`Hit@100 = 0.901335312`) came from `artifacts/experiments/dense_full_universe_v2/remote_sync_final/gpu1/results/dense_full_universe_v2/medcpt/dev_metrics.json`, SHA `1cf8ec359036e1bda2b54dadd927d2fcb7d5505bdfe5cb909bb494739149cfd5`. It contained 1,457 source rows with 100 ranked codes per row, but no frozen candidate hash, checkpoint SHA, or scoring timestamp. Direct comparison against `artifacts/candidates/shift_map_full_universe_v2/forward_dev_k100.jsonl.gz` found zero exact candidate-membership matches across all 1,457 sources; the first audited source overlapped by only 42/100 codes. The artifact was zero-shot MedCPT Query Encoder output, not the final Step 8 MedCPT Cross-Encoder reranking artifact.
+
+The issue is classified exactly as `B1D_WRONG_CANDIDATE_SET`. The authoritative corrected Step 8 final-seed DEV artifact is `artifacts/remote/step8_r3_20260915T203248Z_a2333bc9/final_seed_run/final_seed_dev.csv`, SHA `54337b03914e1984b0b1516ba74c666e0b20bacf4108edde0b996e49f342710a`, with canonical seed-17 checkpoint SHA `1614dfb9377048e2b77b46fd2b82433f842ca063420fe0ad72f2c3c818ece66b` and execution-manifest SHA `db9ba5b65647594e7fdf7eaec3afbc2676b55e6e041c3ea4fe3891709437292a`. It uses the frozen DEV candidate SHA `c7240c1f38dd87f54d63c97999cba71d91f6d0887d89bc2d4094f9ba38ad6a6f`, 1,457 sources, 145,700 rows, and 100 candidates per source.
+
+Corrected canonical B1 seed-17 epoch-3 metrics are Hit@1 `0.652077151`, MRR `0.738264110`, Hit@10 `0.888724036`, and Hit@100 `0.977744807`. Candidate mutation count is `0`; exact membership matches are 1,457/1,457; structural @100 remains invariant. This correction is descriptive only and **does not affect R2 hierarchy selection**. Full machine-readable details are in `artifacts/experiments/step9_hierarchy/b1_baseline_provenance.json`, SHA `02131885cd61f172fc82e27dbf3227c4ba412d6d93042a6324b2910b264e3085`.
+
+### R3 preregistration boundary
+
+The primary future TEST comparison is the selected hierarchy-aware H3 model versus B0 canonical frozen corrected SHIFT-MAP ordering. B1 MedCPT seed 17 is secondary/descriptive only. The primary metric family is ordinary Hit@1, ordinary MRR, P_COMPLEX CompleteScenarioRetrieval@10, P_COMPLEX ChoiceListRecall@10, and ordinary NDCG@10.
+
+The future paired bootstrap plan is frozen at 10,000 source-level paired-with-replacement repetitions, seed `20260915`, percentile 95% confidence intervals, on the identical TEST population. It is not executed now. The R3 addendum is `artifacts/experiments/step9_hierarchy/r3_preregistration_addendum.json`, SHA `997fac62612b1482e68a1bd354754a32011ca94f74ac3b6382ce8dbcf3b0e519`.
+
+Step 9 counts during R2C remain: new hierarchy DEV training `0`; Step 9 TEST feature extraction `0`; Step 9 TEST scoring `0`; Step 9 TEST training `0`. No Step 9 TEST lock was created.
