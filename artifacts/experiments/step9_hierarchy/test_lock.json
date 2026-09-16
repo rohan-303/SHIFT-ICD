@@ -1,0 +1,44 @@
+{
+  "bootstrap_ci_method": "percentile 95% CI over paired source-level bootstrap deltas",
+  "bootstrap_repetitions": 10000,
+  "bootstrap_seed": 20260915,
+  "candidate_k": 100,
+  "candidate_mutation_count_before_access": 0,
+  "candidate_test_sha256": "6ef38443a201b1d630148b30717d845b0785b1a4ed433eeab4b03d893b6bf1ce",
+  "canonical_seed": 17,
+  "checkpoint_sha256_per_seed": {
+    "17": "4fb7f6e9d15f1661e80a0dafb71d8e3cf64ab3f941b9527ed9e8357335127de7",
+    "2026": "e4b43b604c1bd14f06ae9c63e205dc86119665fd1afee98755e6ee6964e696da",
+    "42": "bb6d6cf14255ded8c12d1c451176e30b03415fc50242190951ecc626af54ac9e"
+  },
+  "config_freeze_sha256": "4eb057b3f7badfc7c56062f4d921999449ccdb0e3481c8d4cff7e66a76398659",
+  "feature_contract_sha256": "f3e306a071bb5126a5b833f8f6f4ab4428a00749cadbbcdc2acd248ea0c4df06",
+  "final_seed_manifest_sha256": "343a03d32ce39f77de4aa326869fcf01d31662997417c11c4e97da84f82bb4e8",
+  "final_seed_policy_sha256": "f2da29bec862a821820c0974cee467fac37fb9db961c809d1739e56c5154c2e3",
+  "hierarchy_manifest_sha256": "4a9e99149da5af5f77063a794f4cd8eb55e19c267831b92f9ed53e06e3b37a47",
+  "lock_timestamp_utc": "2026-09-16T17:40:37.384382Z",
+  "primary_baseline": "B0 canonical frozen corrected SHIFT-MAP ordering",
+  "primary_test_metric_family": [
+    "Ordinary Hit@1",
+    "Ordinary MRR",
+    "P_COMPLEX CompleteScenarioRetrieval@10",
+    "P_COMPLEX ChoiceListRecall@10",
+    "Ordinary NDCG@10"
+  ],
+  "prior_test_exposure_disclosure": "Corrected retrieval, final SHIFT-MAP, and final MedCPT Step 8 were previously evaluated on TEST; this lock concerns Step 9 only.",
+  "r3_addendum_sha256": "997fac62612b1482e68a1bd354754a32011ca94f74ac3b6382ce8dbcf3b0e519",
+  "schema": "step9_test_lock_v1",
+  "secondary_baseline_provenance_sha256": "02131885cd61f172fc82e27dbf3227c4ba412d6d93042a6324b2910b264e3085",
+  "selected_epoch_per_seed": {
+    "17": 3,
+    "2026": 3,
+    "42": 3
+  },
+  "source_head": "7c22b0d88f4d89b2226f123b6d81e79da845813e",
+  "statement": "NO STEP 9 TEST HIERARCHY FEATURES OR SCORES WERE ACCESSED BEFORE THIS LOCK",
+  "status": "TEST_LOCKED_BEFORE_STEP9_HIERARCHY_ACCESS",
+  "test_feature_extraction_count_before_lock": 0,
+  "test_scoring_count_before_lock": 0,
+  "test_training_count_before_lock": 0,
+  "train_scaler_sha256": "e5eb4b27b7debd1172e0db272018bb6a0049b08aa98679a9dedc7117185e4a24"
+}

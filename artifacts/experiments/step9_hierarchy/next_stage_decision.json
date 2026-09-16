@@ -1,0 +1,24 @@
+{
+  "schema": "step9_next_stage_decision_v1",
+  "status": "FINAL_HIERARCHY_EVALUATION_FROZEN",
+  "final_classification": "HIERARCHY_DEGRADES_RERANKING",
+  "validity": "VALID_CONFIRMATORY_NEGATIVE_RESULT",
+  "basis": {
+    "primary_comparison": "canonical hierarchy seed17 versus B0 canonical corrected SHIFT-MAP",
+    "all_primary_bootstrap_intervals_strictly_below_zero": true,
+    "candidate_mutation_count": 0,
+    "hit100_invariant": true,
+    "structural100_invariant": true
+  },
+  "interpretation": "The frozen hierarchy-only H3 reranker degrades replacement ranking on the locked TEST population. This does not establish that hierarchy cannot help as an auxiliary signal combined with semantic retrieval.",
+  "next_research_question": "Can ontology-derived structural context improve a separately preregistered semantic reranker when used as an auxiliary signal, without changing the frozen replacement-ranking result?",
+  "next_stage_requirements": [
+    "separate preregistration",
+    "new feature/model contract",
+    "DEV-only design and selection",
+    "frozen B0 comparison",
+    "no reuse of Step 9 TEST outcomes for tuning"
+  ],
+  "executed_next_stage": false,
+  "step9_r3_complete": true
+}

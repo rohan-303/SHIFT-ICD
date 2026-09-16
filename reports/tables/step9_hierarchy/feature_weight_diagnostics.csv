@@ -1,0 +1,5 @@
+feature,first_layer_abs_max,first_layer_abs_mean
+candidate_same_parent_fraction,2.1104068756103516,1.2670819759368896
+candidate_same_family_fraction,0.8164793848991394,0.22934459149837494
+candidate_shared_ancestor_fraction,0.4071239233016968,0.16680780053138733
+candidate_same_root_fraction,0.566959023475647,0.2136126011610031

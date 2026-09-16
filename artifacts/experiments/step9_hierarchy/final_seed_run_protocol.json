@@ -1,0 +1,62 @@
+{
+  "schema": "step9_final_seed_run_protocol_v1",
+  "status": "FROZEN_BEFORE_FINAL_SEED_TRAINING",
+  "config_freeze_sha256": "4eb057b3f7badfc7c56062f4d921999449ccdb0e3481c8d4cff7e66a76398659",
+  "final_seed_policy_sha256": "f2da29bec862a821820c0974cee467fac37fb9db961c809d1739e56c5154c2e3",
+  "r3_addendum_sha256": "997fac62612b1482e68a1bd354754a32011ca94f74ac3b6382ce8dbcf3b0e519",
+  "feature_contract_sha256": "f3e306a071bb5126a5b833f8f6f4ab4428a00749cadbbcdc2acd248ea0c4df06",
+  "hierarchy_manifest_path": "artifacts/experiments/step9_hierarchy/hierarchy_metadata_manifest.json",
+  "hierarchy_manifest_sha256": "4a9e99149da5af5f77063a794f4cd8eb55e19c267831b92f9ed53e06e3b37a47",
+  "train_scaler_provenance_path": "artifacts/experiments/step9_hierarchy/feature_cache_manifest.json",
+  "train_scaler_sha256": "e5eb4b27b7debd1172e0db272018bb6a0049b08aa98679a9dedc7117185e4a24",
+  "search_space_sha256": "bb28e8415a7da78e2c96e98c4ee2526ac45f0eefdaa8b8669b6ce23b2ff96c10",
+  "search_protocol_sha256": "c0b70178458863a76ff94ed3ef5bd8e7744de4e574e3d2e8aec46d9f352e19c2",
+  "candidate_hashes": {
+    "train": "d90dcb937748f1c0b173416d6b8f23f1c97ca8e8caf8934efdf8120993c1cb10",
+    "dev": "c7240c1f38dd87f54d63c97999cba71d91f6d0887d89bc2d4094f9ba38ad6a6f",
+    "test": "6ef38443a201b1d630148b30717d845b0785b1a4ed433eeab4b03d893b6bf1ce"
+  },
+  "candidate_k": 100,
+  "selected_configuration": {
+    "feature_variant": "H3_CANDIDATE_SET_STRUCTURAL_CONTEXT",
+    "active_feature_mask": "00001111",
+    "model_family": "SHALLOW_MLP_8_TO_32_TO_1_RELU",
+    "objective": "SET_POSITIVE_LISTWISE",
+    "source_batch_size": 4,
+    "epochs": 3,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "gradient_clipping": 1.0,
+    "normalization": "TRAIN_ONLY",
+    "epoch_selection_rule": "E2_BEST_DEV_CHECKPOINT_LEXICOGRAPHIC_PRIMARY_CRITERIA",
+    "dev_selection_rule_sha256": "c1e9ba21b385d6126f1df981839d23b55b2837c736161a4e009a76f9e461acf8"
+  },
+  "final_seeds": [17, 42, 2026],
+  "canonical_seed": 17,
+  "primary_test_metric_family": [
+    "Ordinary Hit@1",
+    "Ordinary MRR",
+    "P_COMPLEX CompleteScenarioRetrieval@10",
+    "P_COMPLEX ChoiceListRecall@10",
+    "Ordinary NDCG@10"
+  ],
+  "bootstrap_plan": {
+    "repetitions": 10000,
+    "seed": 20260915,
+    "unit": "source",
+    "method": "paired source-level bootstrap with replacement; percentile 95% confidence intervals",
+    "executed_before_test": false
+  },
+  "prior_test_exposure_disclosure": "Corrected retrieval, final SHIFT-MAP, and final MedCPT Step 8 were previously evaluated on TEST; Step 9 TEST remains closed until the separate lock artifact.",
+  "git_provenance": {
+    "source_head": "7c22b0d88f4d89b2226f123b6d81e79da845813e",
+    "source_commit_message": "analysis: preregister Step 9 final seeds and audit MedCPT baseline",
+    "worktree_clean_before_training": true
+  },
+  "scientific_boundary": {
+    "new_hierarchy_dev_training_before_protocol": 0,
+    "test_feature_extraction_before_lock": 0,
+    "test_scoring_before_lock": 0,
+    "test_training_before_lock": 0
+  }
+}

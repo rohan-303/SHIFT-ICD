@@ -1,0 +1,118 @@
+{
+  "artifacts": {
+    "bootstrap_table": {
+      "bytes": 507,
+      "path": "reports/tables/step9_hierarchy/b0_vs_hierarchy_bootstrap.csv",
+      "sha256": "644fcbf6359cf33daebd091c9a137c5c2c63823648f6e4da8009476acaad436a"
+    },
+    "canonical_dev_scored": {
+      "bytes": 3093181,
+      "path": "artifacts/experiments/step9_hierarchy/canonical_dev_scored.jsonl.gz",
+      "sha256": "5777b0d872f8dc4cf1c6dad2f3820bb82917b2cd66cafd057dbb8e61c815d051"
+    },
+    "canonical_test_scored": {
+      "bytes": 6156477,
+      "path": "artifacts/experiments/step9_hierarchy/canonical_test_scored.jsonl.gz",
+      "sha256": "e748890deb3d76e7c51e80dadb429477413674f720bd3fa2b522cb8fba9fb3c2"
+    },
+    "canonical_train_scored": {
+      "bytes": 19454517,
+      "path": "artifacts/experiments/step9_hierarchy/canonical_train_scored.jsonl.gz",
+      "sha256": "6cb6a162fda65676b11a0b4063433fafca31da11a24cca601c11a03446a19e56"
+    },
+    "config_freeze": {
+      "bytes": 2569,
+      "path": "artifacts/experiments/step9_hierarchy/config_freeze.json",
+      "sha256": "4eb057b3f7badfc7c56062f4d921999449ccdb0e3481c8d4cff7e66a76398659"
+    },
+    "feature_contract": {
+      "bytes": 3786,
+      "path": "artifacts/experiments/step9_hierarchy/feature_contract.json",
+      "sha256": "f3e306a071bb5126a5b833f8f6f4ab4428a00749cadbbcdc2acd248ea0c4df06"
+    },
+    "final_report": {
+      "bytes": 7681,
+      "path": "reports/STEP_9_FINAL_HIERARCHY_EVALUATION.md",
+      "sha256": "f3d52b4c28ff75f7034f951e7ef2f0eabe23e3522d1f61bb8e41878079dd8aa0"
+    },
+    "final_run_protocol": {
+      "bytes": 3047,
+      "path": "artifacts/experiments/step9_hierarchy/final_seed_run_protocol.json",
+      "sha256": "5f2f862d40508ecd29ba32224d01e66d0397d386de28133f0c5d1ab85fe963d0"
+    },
+    "final_seed_manifest": {
+      "bytes": 9957,
+      "path": "artifacts/experiments/step9_hierarchy/final_seed_manifest.json",
+      "sha256": "343a03d32ce39f77de4aa326869fcf01d31662997417c11c4e97da84f82bb4e8"
+    },
+    "final_seed_policy": {
+      "bytes": 2462,
+      "path": "artifacts/experiments/step9_hierarchy/final_seed_policy.json",
+      "sha256": "f2da29bec862a821820c0974cee467fac37fb9db961c809d1739e56c5154c2e3"
+    },
+    "hierarchy_manifest": {
+      "bytes": 1893,
+      "path": "artifacts/experiments/step9_hierarchy/hierarchy_metadata_manifest.json",
+      "sha256": "4a9e99149da5af5f77063a794f4cd8eb55e19c267831b92f9ed53e06e3b37a47"
+    },
+    "next_stage_decision": {
+      "bytes": 1207,
+      "path": "artifacts/experiments/step9_hierarchy/next_stage_decision.json",
+      "sha256": "9e82a93d0a77afb041e1e97ff581e95391812ef952315bdc38317a34e0df9048"
+    },
+    "primary_test_result": {
+      "bytes": 18446,
+      "path": "artifacts/experiments/step9_hierarchy/r3_test_results.json",
+      "sha256": "dee6445b22f6cee14f940f1eaefb7eceb93152654ad44a0be9eb0d2ed807100d"
+    },
+    "r3_addendum": {
+      "bytes": 3268,
+      "path": "artifacts/experiments/step9_hierarchy/r3_preregistration_addendum.json",
+      "sha256": "997fac62612b1482e68a1bd354754a32011ca94f74ac3b6382ce8dbcf3b0e519"
+    },
+    "search_protocol": {
+      "bytes": 1343,
+      "path": "artifacts/experiments/step9_hierarchy/r2_search_protocol.json",
+      "sha256": "c0b70178458863a76ff94ed3ef5bd8e7744de4e574e3d2e8aec46d9f352e19c2"
+    },
+    "seed17_checkpoint": {
+      "bytes": 3593,
+      "path": "artifacts/experiments/step9_hierarchy/final_seed_runs/seed_17/epoch_3/model.pt",
+      "sha256": "4fb7f6e9d15f1661e80a0dafb71d8e3cf64ab3f941b9527ed9e8357335127de7"
+    },
+    "seed2026_checkpoint": {
+      "bytes": 3593,
+      "path": "artifacts/experiments/step9_hierarchy/final_seed_runs/seed_2026/epoch_3/model.pt",
+      "sha256": "e4b43b604c1bd14f06ae9c63e205dc86119665fd1afee98755e6ee6964e696da"
+    },
+    "seed42_checkpoint": {
+      "bytes": 3593,
+      "path": "artifacts/experiments/step9_hierarchy/final_seed_runs/seed_42/epoch_3/model.pt",
+      "sha256": "bb6d6cf14255ded8c12d1c451176e30b03415fc50242190951ecc626af54ac9e"
+    },
+    "test_feature_cache": {
+      "bytes": 31428900,
+      "path": "artifacts/experiments/step9_hierarchy/test_h3_feature_cache.json",
+      "sha256": "fa52a289159b8cca7ecd6e1ca43fa5ad95ab7d09c21c00c5a100a2314723c45c"
+    },
+    "test_lock": {
+      "bytes": 2378,
+      "path": "artifacts/experiments/step9_hierarchy/test_lock.json",
+      "sha256": "bde5cc2251be9644c691ef4e18df1569e6e46ffe783172557bfc387759a131ec"
+    },
+    "train_scaler_reference": {
+      "bytes": 957,
+      "path": "artifacts/experiments/step9_hierarchy/feature_cache_manifest.json",
+      "sha256": "a73adbc94b36053fbcd9f73478731d37f294575f082f4a70c1c37f0e335a6718"
+    }
+  },
+  "candidate_mutation_count": 0,
+  "canonical_seed": 17,
+  "final_classification": "HIERARCHY_DEGRADES_RERANKING",
+  "remote_status": "REMOTE_WORKSPACE_NOT_USED",
+  "schema": "step9_hierarchy_freeze_manifest_v1",
+  "status": "STEP9_HIERARCHY_EVALUATION_FROZEN",
+  "step9_final_local_sync_verified": true,
+  "test_lock_chronology": "PASS",
+  "test_training_count": 0
+}
