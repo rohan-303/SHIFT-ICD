@@ -1,0 +1,55 @@
+{
+  "schema": "step9_r3a_evaluation_correction_manifest_v1",
+  "status": "CORRECTION_REQUIRED_AND_CLOSED",
+  "original_r3_freeze_manifest_sha256": "80286284a49f2a05c5c611382422445882aac0ffde23ac8c85d93c503f09fd59",
+  "structural_population_audit_sha256": "0b787d264172d1be6d6fd79cc7e8d1577b5a37d3f50a383e65d347921c4c5dda",
+  "original_artifacts_preserved": true,
+  "original_artifacts": {
+    "r3_test_results_sha256": "dee6445b22f6cee14f940f1eaefb7eceb93152654ad44a0be9eb0d2ed807100d",
+    "r3_structural_table": "reports/tables/step9_hierarchy/test_structural.csv",
+    "r3_structural_table_sha256": "7de023662df597cd2b442c957e36f7116ebd3555db5be1ee18893930d455310e",
+    "r3_structural_bootstrap": "reports/tables/step9_hierarchy/b0_vs_hierarchy_bootstrap.csv",
+    "r3_structural_bootstrap_sha256": "644fcbf6359cf33daebd091c9a137c5c2c63823648f6e4da8009476acaad436a"
+  },
+  "corrected_artifacts": {
+    "canonical_structural_populations": "reports/tables/step9_hierarchy/r3a_canonical_structural_populations.csv",
+    "canonical_structural_populations_sha256": "daca6641a4f766cddb0a63eeb6488892995f18d73d52a274f42cab09472ed660",
+    "canonical_structural_metrics": "reports/tables/step9_hierarchy/r3a_structural_metrics_corrected.csv",
+    "canonical_structural_metrics_sha256": "71029415bba0d019d282c2289f67c7d9ad7adc96c10197c401d91a000c4a4936",
+    "structural_bootstrap": "reports/tables/step9_hierarchy/r3a_b0_vs_hierarchy_structural_bootstrap.csv",
+    "structural_bootstrap_sha256": "6aeca501877abb5e466421fddded27250b23f8b8f0fba9567db37f6e6c9ba302",
+    "ordinary_metrics": "reports/tables/step9_hierarchy/r3a_ordinary_metrics_corrected.csv",
+    "ordinary_metrics_sha256": "2d207d409a7cef1c53de69250a747e2f0ae935f9b7687b6eae4ebbe94a72ca07",
+    "ordinary_bootstrap": "reports/tables/step9_hierarchy/r3a_primary_ordinary_bootstrap.csv",
+    "ordinary_bootstrap_sha256": "99bf8e50df4dca373e050fd0825f2dc03dc02635dd5e642233fbd23da5dfb816"
+  },
+  "unchanged_result_fields": [
+    "ordinary Hit@1",
+    "ordinary Hit@5",
+    "ordinary Hit@10",
+    "ordinary Hit@25",
+    "ordinary Hit@50",
+    "ordinary Hit@100",
+    "ordinary NDCG@10",
+    "candidate membership",
+    "hierarchy checkpoints",
+    "TEST lock chronology"
+  ],
+  "corrected_result_fields": [
+    "P_COMPLEX population and structural metrics",
+    "ordinary MRR under authoritative missing-gold-zero policy",
+    "paired structural bootstrap population and intervals",
+    "ordinary primary bootstrap MRR"
+  ],
+  "corrected_interpretation_classification": "HIERARCHY_DEGRADES_RERANKING",
+  "original_classification_changed": false,
+  "bootstrap_provenance": {
+    "repetitions": 10000,
+    "seed": 20260915,
+    "ci_method": "percentile_95",
+    "population": "canonical forward TEST P_COMPLEX source set, n=133"
+  },
+  "no_model_retraining_or_selection": true,
+  "test_tuning_count": 0,
+  "statement": "NO MODEL RETRAINING OR MODEL SELECTION OCCURRED."
+}

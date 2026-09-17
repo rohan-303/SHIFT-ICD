@@ -1,0 +1,124 @@
+{
+  "authoritative_evaluator": "src/shift_icd/evaluation/metric_contract.py + src/shift_icd/evaluation/retrieval.py",
+  "benchmark_path": "C:\\Users\\rohan\\SHIFT-ICD\\data\\benchmarks\\cms_track_a\\v1.0\\forward\\all.jsonl",
+  "candidate_path": "C:\\Users\\rohan\\SHIFT-ICD\\artifacts\\candidates\\shift_map_full_universe_v2\\forward_test_k100.jsonl.gz",
+  "candidate_sha256": "6ef38443a201b1d630148b30717d845b0785b1a4ed433eeab4b03d893b6bf1ce",
+  "canonical_B0_at100": {
+    "ChoiceListRecall": 0.7323308270676692,
+    "CompleteScenarioRetrieval": 0.48872180451127817
+  },
+  "canonical_definition": "P_COMBINATION union P_COMBINATION_WITH_ALTERNATIVES; MULTI_SCENARIO absent from forward TEST",
+  "conditioned_on_complete_scenario_presence": false,
+  "conditioned_on_gold_presence": false,
+  "corrected_bootstrap": [
+    {
+      "ci95_high": -0.1117794486215539,
+      "ci95_low": -0.19398809523809524,
+      "delta": -0.15275689223057645,
+      "metric": "Choice@10",
+      "population_n": 133,
+      "repetitions": 10000,
+      "seed": 20260915
+    },
+    {
+      "ci95_high": -0.07518796992481203,
+      "ci95_low": -0.19548872180451127,
+      "delta": -0.13533834586466165,
+      "metric": "CSR@10",
+      "population_n": 133,
+      "repetitions": 10000,
+      "seed": 20260915
+    }
+  ],
+  "no_model_retraining": true,
+  "no_model_selection": true,
+  "ordinary_corrected_bootstrap": [
+    {
+      "ci95_high": -0.4096474953617811,
+      "ci95_low": -0.44935064935064933,
+      "delta": -0.4296846011131725,
+      "metric": "Hit@1",
+      "population_n": 2695,
+      "repetitions": 10000,
+      "seed": 20260915
+    },
+    {
+      "ci95_high": -0.42760995214073727,
+      "ci95_low": -0.46326632781443483,
+      "delta": -0.44518796688388745,
+      "metric": "MRR",
+      "population_n": 2695,
+      "repetitions": 10000,
+      "seed": 20260915
+    },
+    {
+      "ci95_high": -0.43630562397870476,
+      "ci95_low": -0.4714677321147003,
+      "delta": -0.4536791428281705,
+      "metric": "NDCG@10",
+      "population_n": 2695,
+      "repetitions": 10000,
+      "seed": 20260915
+    }
+  ],
+  "ordinary_corrected_hierarchy_metrics": {
+    "Hit@1": 0.27346938775510204,
+    "Hit@10": 0.437847866419295,
+    "Hit@100": 0.9781076066790353,
+    "Hit@25": 0.6014842300556587,
+    "Hit@5": 0.3398886827458256,
+    "Hit@50": 0.7840445269016698,
+    "MRR": 0.33088221659441225,
+    "NDCG@10": 0.32190111525852866
+  },
+  "ordinary_population_metrics": {
+    "Hit@1": 0.7031539888682746,
+    "Hit@10": 0.9031539888682746,
+    "Hit@100": 0.9781076066790353,
+    "Hit@25": 0.9476808905380334,
+    "Hit@5": 0.8630797773654917,
+    "Hit@50": 0.9662337662337662,
+    "MRR": 0.7760701834782997,
+    "NDCG@10": 0.7755802580866993
+  },
+  "populations": {
+    "P_COMBINATION": {
+      "count": 64,
+      "source_set_sha256": "adbca1853323680f8b414c2e072d7de4992b1bea012f4572d21548f5c4f9b6d8"
+    },
+    "P_COMBINATION_WITH_ALTERNATIVES": {
+      "count": 69,
+      "source_set_sha256": "7c6b40ef55b6a4074508383ad371f297f6bc37d51d361c66ac4b94ec407c3a18"
+    },
+    "P_COMPLEX": {
+      "count": 133,
+      "source_set_sha256": "4e024b560aae6cfb10c6eba28f5cc902d61c3f6e2ecd55b0cdb2f8fff1d8df14"
+    },
+    "P_ORDINARY_ANSWERABLE": {
+      "count": 2695,
+      "source_set_sha256": "641ecc41dd6f0e128947455fe7c72d8f6ae1ca86f559a17fdfadedf5e65706c0"
+    },
+    "R3_HIGH_MAPPING_COMPLEXITY": {
+      "count": 78,
+      "source_set_sha256": "7f62fbe2c02492cc2b4999fb16a1fba2669025202b3282951d5329de142cfd49"
+    }
+  },
+  "r3_B0_at100": {
+    "ChoiceListRecall": 0.9217948717948719,
+    "CompleteScenarioRetrieval": 0.8717948717948718
+  },
+  "r3_original_population": {
+    "canonical_only": 107,
+    "count": 78,
+    "intersection_with_canonical": 26,
+    "predicate": "HIGH_MAPPING_COMPLEXITY in difficulty_slices",
+    "r3_only": 52,
+    "source_set_sha256": "7f62fbe2c02492cc2b4999fb16a1fba2669025202b3282951d5329de142cfd49"
+  },
+  "root_cause_classification": [
+    "SP4_MAPPING_SUBTYPE_FILTER",
+    "SP5_EVALUATOR_IMPLEMENTATION_DRIFT"
+  ],
+  "schema": "step9_r3a_structural_population_audit_v1",
+  "status": "CORRECTION_REQUIRED"
+}

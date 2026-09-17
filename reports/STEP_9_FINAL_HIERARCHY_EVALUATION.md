@@ -139,3 +139,52 @@ The experiment is valid: all candidate and structural invariants passed, all pri
 - Canonical scored artifacts: `artifacts/experiments/step9_hierarchy/canonical_{train,dev,test}_scored.jsonl.gz`
 
 **Final status:** `STEP9_HIERARCHY_EVALUATION_FROZEN`
+
+## POST-FREEZE STRUCTURAL POPULATION AUDIT
+
+R3A audited the frozen evaluation without retraining, model selection, TEST tuning, checkpoint changes, candidate changes, or new model inference.
+
+### Detected mismatch and root cause
+
+The authoritative forward TEST evaluator defines `P_COMPLEX` as the union of `P_COMBINATION` and `P_COMBINATION_WITH_ALTERNATIVES` (with `MULTI_SCENARIO` included by contract but absent in this split). The canonical population is 133 sources: 64 combinations plus 69 combinations-with-alternatives.
+
+The original R3 structural evaluator instead selected sources containing the `HIGH_MAPPING_COMPLEXITY` difficulty slice. That produced 78 sources: 52 alternatives, 22 combination-with-alternatives, and 4 combinations. The original R3 set intersects the canonical P_COMPLEX set in 26 sources, leaving 107 canonical-only and 52 R3-only sources.
+
+The issue is classified as `SP4_MAPPING_SUBTYPE_FILTER` and `SP5_EVALUATOR_IMPLEMENTATION_DRIFT`. It was not conditioning on gold presence or complete-scenario retrievability.
+
+### Superseded and authoritative metrics
+
+The original R3 `n=78` structural table and structural bootstrap are preserved and superseded for canonical P_COMPLEX claims. The corrected canonical B0 @100 coverage is:
+
+- ChoiceListRecall@100: `0.7323308271`
+- CompleteScenarioRetrieval@100: `0.4887218045`
+
+These reproduce the frozen retrieval-stage coverage. Reorder-only hierarchy scoring preserves both values at @100 for seed 17; candidate mutation count remains zero.
+
+Corrected canonical P_COMPLEX @10 results:
+
+| System | ChoiceListRecall@10 | CompleteScenarioRetrieval@10 |
+|---|---:|---:|
+| B0 | 0.459148 | 0.157895 |
+| Hierarchy seed 17 | 0.306391 | 0.022556 |
+
+Corrected paired bootstrap over the canonical `n=133` population, using the unchanged 10,000 repetitions and seed `20260915`:
+
+- ChoiceListRecall@10 delta: `-0.152757`, 95% CI `[-0.193988, -0.111779]`
+- CompleteScenarioRetrieval@10 delta: `-0.135338`, 95% CI `[-0.195489, -0.075188]`
+
+### Ordinary metric correction
+
+The authoritative ordinary evaluator assigns MRR `0.0` when no gold target is retrieved. R3’s local helper used `1/101` for that case. Hit@K and NDCG were unchanged; ordinary MRR is corrected from B0 `0.776287` to `0.776070` and from hierarchy seed 17 `0.330882` to `0.330882` (the hierarchy value happened not to change at displayed precision). Corrected ordinary bootstrap MRR delta is `-0.445188`, 95% CI `[-0.463266, -0.427610]`.
+
+### Classification and provenance
+
+After reapplying interpretation-contract-v2 to the corrected primary metrics, the classification remains `HIERARCHY_DEGRADES_RERANKING`. The original classification did not change. The original R3 freeze manifest and outputs remain immutable; correction evidence is chained through:
+
+- `artifacts/experiments/step9_hierarchy/structural_population_audit.json`
+- `artifacts/experiments/step9_hierarchy/r3_evaluation_correction_manifest.json`
+- `reports/tables/step9_hierarchy/r3a_*`
+
+No model retraining or model selection occurred during R3A.
+
+**R3A status:** `STEP9_R3_STRUCTURAL_AUDIT_CLOSED`

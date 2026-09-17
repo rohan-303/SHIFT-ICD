@@ -1,0 +1,3 @@
+P_COMPLEX_definition,conditioning_on_complete_scenario_presence,conditioning_on_gold_presence,implementation
+COMBINATION union COMBINATION_WITH_ALTERNATIVES union MULTI_SCENARIO,False,False,src/shift_icd/evaluation/metric_contract.py
+HIGH_MAPPING_COMPLEXITY difficulty slice,False,False,scripts/step9_hierarchy/r2_runner.py
