@@ -1,0 +1,6 @@
+direction_replicated,inner_delta,metric,official_delta
+True,0.0007062146892655718,Hit@1,0.0
+False,0.000620320150010456,MRR,-7.155194624675065e-05
+True,0.0,P_COMPLEX_CompleteScenarioRetrieval@10,0.0
+True,0.0,P_COMPLEX_ChoiceListRecall@10,0.0
+False,9.32352606290987e-05,NDCG@10,-0.0002173419056954451

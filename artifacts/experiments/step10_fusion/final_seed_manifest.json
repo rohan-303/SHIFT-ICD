@@ -1,0 +1,50 @@
+{
+  "config_freeze_sha256": "f1686da002e748a3018c9fb0d77e6439e38c85444daf1f37ddaa113c6c47cb43",
+  "final_scaler_sha256": "7556bce74060e501476276fd128fa1b6bfa9f5fd673b3294ed52d5c9822f7ae7",
+  "official_dev_scoring_count": 0,
+  "schema": "step10_final_seed_manifest_v1",
+  "seeds": [
+    {
+      "candidate_mutation_count": 0,
+      "checkpoint_path": "C:\\Users\\rohan\\SHIFT-ICD\\artifacts\\experiments\\step10_fusion\\final_checkpoints\\seed_17_epoch_2.pt",
+      "checkpoint_sha256": "312f11536156935f91b798cb8074072bc65ef3742f9f4ea8ea3429ae7c28c84a",
+      "epoch1_loss": 4.404801042022177,
+      "epoch2_loss": 4.388888401968669,
+      "epochs_completed": 2,
+      "finite_gradients": true,
+      "initialization_sha": "4812895b491cee7b78e0861519b8c33205ae1c0008b861d1018b8c5068640109",
+      "max_abs_fusion_delta": 0.06378632038831711,
+      "max_abs_residual": 0.31893160939216614,
+      "seed": 17
+    },
+    {
+      "candidate_mutation_count": 0,
+      "checkpoint_path": "C:\\Users\\rohan\\SHIFT-ICD\\artifacts\\experiments\\step10_fusion\\final_checkpoints\\seed_42_epoch_2.pt",
+      "checkpoint_sha256": "c81ab94f05df0a768de358ac943588bf74f1b8417ad26cdcece084319bc52958",
+      "epoch1_loss": 4.397351355701169,
+      "epoch2_loss": 4.383581478290492,
+      "epochs_completed": 2,
+      "finite_gradients": true,
+      "initialization_sha": "7a22d07db2fbebb5e3a8ccf31fb1b974e162273aab543f1eb160412299f07266",
+      "max_abs_fusion_delta": 0.1008358970284462,
+      "max_abs_residual": 0.5041794776916504,
+      "seed": 42
+    },
+    {
+      "candidate_mutation_count": 0,
+      "checkpoint_path": "C:\\Users\\rohan\\SHIFT-ICD\\artifacts\\experiments\\step10_fusion\\final_checkpoints\\seed_2026_epoch_2.pt",
+      "checkpoint_sha256": "b20139e054cf8a044be547297055b29ba1b2b2b7d96e68576a689fdcc1471385",
+      "epoch1_loss": 4.394364947678721,
+      "epoch2_loss": 4.379252587222723,
+      "epochs_completed": 2,
+      "finite_gradients": true,
+      "initialization_sha": "dc5e69496f67dda4a3fdce4edd248e3c9d857fe762551c297a8f79ea041ba1f3",
+      "max_abs_fusion_delta": 0.11192814260721207,
+      "max_abs_residual": 0.5596407055854797,
+      "seed": 2026
+    }
+  ],
+  "semantic_anchor_candidate_sha256": "d90dcb937748f1c0b173416d6b8f23f1c97ca8e8caf8934efdf8120993c1cb10",
+  "status": "FROZEN_BEFORE_OFFICIAL_DEV_ACCESS",
+  "test_access_count": 0
+}

@@ -1,0 +1,28 @@
+{
+  "schema": "step10_r2_selection_provenance_correction_v1",
+  "original_wording": "Decisive criterion: MRR after Hit@1 tied; structural metrics tied; NDCG@10 selected the lower-weight-decay configuration.",
+  "full_precision_selected_vector": {
+    "configuration_id": "fusion_lambda_0p20_lr_3e-04_wd_1e-04",
+    "epoch": 2,
+    "Hit@1": 0.690677966101695,
+    "MRR": 0.7677976091295469,
+    "P_COMPLEX_CompleteScenarioRetrieval@10": 0.16901408450704225,
+    "P_COMPLEX_ChoiceListRecall@10": 0.43485915492957744,
+    "NDCG@10": 0.7694728098087795
+  },
+  "full_precision_runner_up_vector": {
+    "configuration_id": "fusion_lambda_0p20_lr_3e-04_wd_1e-03",
+    "epoch": 2,
+    "Hit@1": 0.690677966101695,
+    "MRR": 0.7677849981529529,
+    "P_COMPLEX_CompleteScenarioRetrieval@10": 0.16901408450704225,
+    "P_COMPLEX_ChoiceListRecall@10": 0.43485915492957744,
+    "NDCG@10": 0.7694500345304471
+  },
+  "actual_first_differing_criterion": "MRR",
+  "actual_mrr_difference": 0.000012610976594015,
+  "selection_order_reached_ndcg": false,
+  "selected_configuration_unchanged": true,
+  "scientific_selection_affected": false,
+  "post_freeze_note": true
+}

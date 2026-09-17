@@ -1,0 +1,240 @@
+{
+  "b0_metric_vector": {
+    "Hit@1": 0.6965875370919882,
+    "Hit@10": 0.9050445103857567,
+    "Hit@100": 0.9777448071216617,
+    "Hit@25": 0.9421364985163204,
+    "Hit@5": 0.8620178041543026,
+    "Hit@50": 0.9651335311572701,
+    "MRR": 0.7721301845288397,
+    "NDCG@10": 0.7738662523327016,
+    "P_COMPLEX_ChoiceListRecall@1": 0.17226368159203978,
+    "P_COMPLEX_ChoiceListRecall@10": 0.47201492537313433,
+    "P_COMPLEX_ChoiceListRecall@100": 0.7406716417910447,
+    "P_COMPLEX_ChoiceListRecall@25": 0.6175373134328358,
+    "P_COMPLEX_ChoiceListRecall@5": 0.36380597014925375,
+    "P_COMPLEX_ChoiceListRecall@50": 0.6847014925373134,
+    "P_COMPLEX_CompleteScenarioRetrieval@1": 0.0,
+    "P_COMPLEX_CompleteScenarioRetrieval@10": 0.13432835820895522,
+    "P_COMPLEX_CompleteScenarioRetrieval@100": 0.4925373134328358,
+    "P_COMPLEX_CompleteScenarioRetrieval@25": 0.29850746268656714,
+    "P_COMPLEX_CompleteScenarioRetrieval@5": 0.07462686567164178,
+    "P_COMPLEX_CompleteScenarioRetrieval@50": 0.3880597014925373
+  },
+  "bootstrap": [
+    {
+      "ci_high": 0.0,
+      "ci_low": 0.0,
+      "delta": 0.0,
+      "metric": "Hit@1",
+      "repetitions": 10000,
+      "seed": 20260917,
+      "unit_count": 1348
+    },
+    {
+      "ci_high": 0.00030140559010829874,
+      "ci_low": -0.00044385687421424105,
+      "delta": -7.15519462465391e-05,
+      "metric": "MRR",
+      "repetitions": 10000,
+      "seed": 20260917,
+      "unit_count": 1348
+    },
+    {
+      "ci_high": 0.0,
+      "ci_low": 0.0,
+      "delta": 0.0,
+      "metric": "P_COMPLEX_CompleteScenarioRetrieval@10",
+      "repetitions": 10000,
+      "seed": 20260917,
+      "unit_count": 67
+    },
+    {
+      "ci_high": 0.0,
+      "ci_low": 0.0,
+      "delta": 0.0,
+      "metric": "P_COMPLEX_ChoiceListRecall@10",
+      "repetitions": 10000,
+      "seed": 20260917,
+      "unit_count": 67
+    },
+    {
+      "ci_high": 0.00014420124552008966,
+      "ci_low": -0.000760831924327034,
+      "delta": -0.00021734190569563082,
+      "metric": "NDCG@10",
+      "repetitions": 10000,
+      "seed": 20260917,
+      "unit_count": 1348
+    }
+  ],
+  "candidate_invariance": true,
+  "final_scaler_sha256": "7556bce74060e501476276fd128fa1b6bfa9f5fd673b3294ed52d5c9822f7ae7",
+  "final_seed_manifest_sha256": "ce7ef492bdb77af502b7879b2b98811475a0991935221279ffacc66bee585d45",
+  "inner_vs_official": [
+    {
+      "direction_replicated": true,
+      "inner_delta": 0.0007062146892655718,
+      "metric": "Hit@1",
+      "official_delta": 0.0
+    },
+    {
+      "direction_replicated": false,
+      "inner_delta": 0.000620320150010456,
+      "metric": "MRR",
+      "official_delta": -7.155194624675065e-05
+    },
+    {
+      "direction_replicated": true,
+      "inner_delta": 0.0,
+      "metric": "P_COMPLEX_CompleteScenarioRetrieval@10",
+      "official_delta": 0.0
+    },
+    {
+      "direction_replicated": true,
+      "inner_delta": 0.0,
+      "metric": "P_COMPLEX_ChoiceListRecall@10",
+      "official_delta": 0.0
+    },
+    {
+      "direction_replicated": false,
+      "inner_delta": 9.32352606290987e-05,
+      "metric": "NDCG@10",
+      "official_delta": -0.0002173419056954451
+    }
+  ],
+  "official_dev_access": {
+    "dev_candidate_sha256": "c7240c1f38dd87f54d63c97999cba71d91f6d0887d89bc2d4094f9ba38ad6a6f",
+    "dev_source_count": 1457,
+    "feature_cache_sha256": "4e0de46c8877bca03e7698d1da6be018d776c746c507a9a2811efabfcbda0bec",
+    "feature_complete_timestamp": "2026-09-17T15:15:41.125457Z",
+    "first_feature_timestamp": "2026-09-17T15:15:26.336011Z",
+    "first_score_timestamp": "2026-09-17T15:15:41.330626Z",
+    "lock_before_feature": true,
+    "lock_before_score": true,
+    "lock_timestamp": "2026-09-17T15:15:26.327002Z",
+    "score_complete_timestamp": "2026-09-17T15:15:42.529997Z",
+    "test_feature_extraction_count": 0,
+    "test_scoring_count": 0,
+    "test_training_count": 0
+  },
+  "official_dev_lock_sha256": "1d3851b73830ea398e3cdc9d34c930a55e5fc88a25c0e5eae9280d11e3cbcf9d",
+  "replication_classification": "OFFICIAL_DEV_FAILS_TO_REPLICATE",
+  "schema": "step10_official_dev_confirmation_manifest_v1",
+  "seed17_metric_vector": {
+    "Hit@1": 0.6965875370919882,
+    "Hit@10": 0.9043026706231454,
+    "Hit@100": 0.9777448071216617,
+    "Hit@100_invariant": true,
+    "Hit@25": 0.9421364985163204,
+    "Hit@5": 0.862759643916914,
+    "Hit@50": 0.9643916913946587,
+    "MRR": 0.772058632582593,
+    "NDCG@10": 0.7736489104270061,
+    "P_COMPLEX_ChoiceListRecall@1": 0.17226368159203978,
+    "P_COMPLEX_ChoiceListRecall@10": 0.47201492537313433,
+    "P_COMPLEX_ChoiceListRecall@100": 0.7406716417910447,
+    "P_COMPLEX_ChoiceListRecall@25": 0.6175373134328358,
+    "P_COMPLEX_ChoiceListRecall@5": 0.36380597014925375,
+    "P_COMPLEX_ChoiceListRecall@50": 0.6847014925373134,
+    "P_COMPLEX_CompleteScenarioRetrieval@1": 0.0,
+    "P_COMPLEX_CompleteScenarioRetrieval@10": 0.13432835820895522,
+    "P_COMPLEX_CompleteScenarioRetrieval@100": 0.4925373134328358,
+    "P_COMPLEX_CompleteScenarioRetrieval@25": 0.29850746268656714,
+    "P_COMPLEX_CompleteScenarioRetrieval@5": 0.07462686567164178,
+    "P_COMPLEX_CompleteScenarioRetrieval@50": 0.3880597014925373,
+    "candidate_mutation_count": 0,
+    "max_abs_fusion_delta": 0.06378632187843324,
+    "max_abs_residual": 0.31893160939216614,
+    "seed": 17,
+    "structural_at_100_invariant": true
+  },
+  "seed2026_metric_vector": {
+    "Hit@1": 0.6973293768545994,
+    "Hit@10": 0.9043026706231454,
+    "Hit@100": 0.9777448071216617,
+    "Hit@100_invariant": true,
+    "Hit@25": 0.9421364985163204,
+    "Hit@5": 0.862759643916914,
+    "Hit@50": 0.9643916913946587,
+    "MRR": 0.7724474292237183,
+    "NDCG@10": 0.7741401128916926,
+    "P_COMPLEX_ChoiceListRecall@1": 0.17226368159203978,
+    "P_COMPLEX_ChoiceListRecall@10": 0.47201492537313433,
+    "P_COMPLEX_ChoiceListRecall@100": 0.7406716417910447,
+    "P_COMPLEX_ChoiceListRecall@25": 0.6175373134328358,
+    "P_COMPLEX_ChoiceListRecall@5": 0.36380597014925375,
+    "P_COMPLEX_ChoiceListRecall@50": 0.6847014925373134,
+    "P_COMPLEX_CompleteScenarioRetrieval@1": 0.0,
+    "P_COMPLEX_CompleteScenarioRetrieval@10": 0.13432835820895522,
+    "P_COMPLEX_CompleteScenarioRetrieval@100": 0.4925373134328358,
+    "P_COMPLEX_CompleteScenarioRetrieval@25": 0.29850746268656714,
+    "P_COMPLEX_CompleteScenarioRetrieval@5": 0.07462686567164178,
+    "P_COMPLEX_CompleteScenarioRetrieval@50": 0.3880597014925373,
+    "candidate_mutation_count": 0,
+    "max_abs_fusion_delta": 0.10941823720932008,
+    "max_abs_residual": 0.5470911860466003,
+    "seed": 2026,
+    "structural_at_100_invariant": true
+  },
+  "seed42_metric_vector": {
+    "Hit@1": 0.6973293768545994,
+    "Hit@10": 0.9043026706231454,
+    "Hit@100": 0.9777448071216617,
+    "Hit@100_invariant": true,
+    "Hit@25": 0.9421364985163204,
+    "Hit@5": 0.862759643916914,
+    "Hit@50": 0.9643916913946587,
+    "MRR": 0.7725553407272459,
+    "NDCG@10": 0.7741337650529903,
+    "P_COMPLEX_ChoiceListRecall@1": 0.17226368159203978,
+    "P_COMPLEX_ChoiceListRecall@10": 0.47201492537313433,
+    "P_COMPLEX_ChoiceListRecall@100": 0.7406716417910447,
+    "P_COMPLEX_ChoiceListRecall@25": 0.6175373134328358,
+    "P_COMPLEX_ChoiceListRecall@5": 0.36380597014925375,
+    "P_COMPLEX_ChoiceListRecall@50": 0.6847014925373134,
+    "P_COMPLEX_CompleteScenarioRetrieval@1": 0.0,
+    "P_COMPLEX_CompleteScenarioRetrieval@10": 0.13432835820895522,
+    "P_COMPLEX_CompleteScenarioRetrieval@100": 0.4925373134328358,
+    "P_COMPLEX_CompleteScenarioRetrieval@25": 0.29850746268656714,
+    "P_COMPLEX_CompleteScenarioRetrieval@5": 0.07462686567164178,
+    "P_COMPLEX_CompleteScenarioRetrieval@50": 0.3880597014925373,
+    "candidate_mutation_count": 0,
+    "max_abs_fusion_delta": 0.09999970793724061,
+    "max_abs_residual": 0.499998539686203,
+    "seed": 42,
+    "structural_at_100_invariant": true
+  },
+  "seed_mean_std": [
+    {
+      "mean": 0.697082096933729,
+      "metric": "Hit@1",
+      "std": 0.00034970661779747407
+    },
+    {
+      "mean": 0.7723538008445191,
+      "metric": "MRR",
+      "std": 0.00021331424438252866
+    },
+    {
+      "mean": 0.13432835820895522,
+      "metric": "P_COMPLEX_CompleteScenarioRetrieval@10",
+      "std": 0.0
+    },
+    {
+      "mean": 0.47201492537313433,
+      "metric": "P_COMPLEX_ChoiceListRecall@10",
+      "std": 0.0
+    },
+    {
+      "mean": 0.773974262790563,
+      "metric": "NDCG@10",
+      "std": 0.00023007345800574132
+    }
+  ],
+  "test_access_counts": {
+    "features": 0,
+    "scoring": 0,
+    "training": 0
+  }
+}

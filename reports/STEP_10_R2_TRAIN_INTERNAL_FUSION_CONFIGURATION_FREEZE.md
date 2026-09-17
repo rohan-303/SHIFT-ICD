@@ -145,8 +145,4 @@ Configuration freeze:
 - Reconstruction artifact: `artifacts/experiments/step10_fusion/selection_reconstruction.json`
 - Local sync: `STEP10_CONFIG_LOCAL_SYNC_VERIFIED = TRUE`
 
-The next authorized milestone, conditional on the trainable configuration winning, is:
-
-`STEP 10-R3 — FINAL FUSION SEEDS + ONE-SHOT OFFICIAL DEV CONFIRMATION`
-
-R2 did not train final seeds, score official DEV, or access TEST.
+R2's original report wording stated that NDCG@10 selected the lower-weight-decay configuration. The full-precision representative table shows that the first differing criterion was MRR: `0.7677976091295469` versus `0.7677849981529529`. NDCG@10 was not reached by the lexicographic selector. The selected configuration is unchanged and the scientific selection is unaffected. This correction is recorded in `artifacts/experiments/step10_fusion/r2_selection_provenance_correction.json`.

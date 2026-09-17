@@ -1,0 +1,2 @@
+dev_candidate_sha256,dev_source_count,feature_cache_sha256,feature_complete_timestamp,first_feature_timestamp,first_score_timestamp,lock_before_feature,lock_before_score,lock_timestamp,score_complete_timestamp,test_feature_extraction_count,test_scoring_count,test_training_count
+c7240c1f38dd87f54d63c97999cba71d91f6d0887d89bc2d4094f9ba38ad6a6f,1457,4e0de46c8877bca03e7698d1da6be018d776c746c507a9a2811efabfcbda0bec,2026-09-17T15:15:41.125457Z,2026-09-17T15:15:26.336011Z,2026-09-17T15:15:41.330626Z,True,True,2026-09-17T15:15:26.327002Z,2026-09-17T15:15:42.529997Z,0,0,0

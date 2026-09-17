@@ -1,0 +1,32 @@
+{
+  "b0_definition": "frozen SHIFT-MAP retriever_score ordering",
+  "bootstrap_plan": {
+    "ci": "percentile_95",
+    "repetitions": 10000,
+    "seed": 20260917
+  },
+  "canonical_seed": 17,
+  "config_freeze_sha256": "f1686da002e748a3018c9fb0d77e6439e38c85444daf1f37ddaa113c6c47cb43",
+  "dev_candidate_sha256": "c7240c1f38dd87f54d63c97999cba71d91f6d0887d89bc2d4094f9ba38ad6a6f",
+  "feature_order": [
+    "candidate_same_parent_fraction",
+    "candidate_same_family_fraction",
+    "candidate_shared_ancestor_fraction",
+    "candidate_same_root_fraction"
+  ],
+  "final_scaler_sha256": "7556bce74060e501476276fd128fa1b6bfa9f5fd673b3294ed52d5c9822f7ae7",
+  "final_seed_manifest_sha256": "ce7ef492bdb77af502b7879b2b98811475a0991935221279ffacc66bee585d45",
+  "lock_timestamp": "2026-09-17T15:15:26.327002Z",
+  "primary_metrics": [
+    "Hit@1",
+    "MRR",
+    "P_COMPLEX_CompleteScenarioRetrieval@10",
+    "P_COMPLEX_ChoiceListRecall@10",
+    "NDCG@10"
+  ],
+  "promotion_gate": "Hit@1 strict improvement; MRR, P_COMPLEX CSR@10, P_COMPLEX ChoiceListRecall@10, NDCG@10 non-decrease; integrity required",
+  "schema": "step10_official_dev_confirmation_lock_v1",
+  "statement": "NO STEP 10 FINAL FUSION MODEL HAS BEEN SCORED ON OFFICIAL DEV BEFORE THIS LOCK",
+  "status": "LOCKED_BEFORE_OFFICIAL_DEV_ACCESS",
+  "test_access_count": 0
+}
