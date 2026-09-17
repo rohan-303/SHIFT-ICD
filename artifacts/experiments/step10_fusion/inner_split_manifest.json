@@ -1,0 +1,74 @@
+{
+  "algorithm": "source-level stratified shuffle within mapping_kind x candidate_contained_positive_count_bin",
+  "candidate_source_population_count": 10197,
+  "fusion_train_distribution": {
+    "ALTERNATIVE": {
+      "0": 17,
+      "1": 56,
+      "2+": 1540
+    },
+    "COMBINATION": {
+      "0": 1,
+      "1": 88,
+      "2+": 101
+    },
+    "COMBINATION_WITH_ALTERNATIVES": {
+      "0": 1,
+      "1": 36,
+      "2+": 170
+    },
+    "NO_MAP": {
+      "0": 251
+    },
+    "SINGLE_APPROXIMATE": {
+      "0": 159,
+      "1": 4151
+    },
+    "SINGLE_EXACT": {
+      "0": 2,
+      "1": 2093
+    }
+  },
+  "fusion_train_source_count": 8666,
+  "fusion_train_source_sha256": "150a57de2e9101ee9bb5c1699bbb7b3a7f9b1fc1d0863018a8766808c151f24c",
+  "fusion_val_distribution": {
+    "ALTERNATIVE": {
+      "0": 3,
+      "1": 10,
+      "2+": 272
+    },
+    "COMBINATION": {
+      "0": 1,
+      "1": 16,
+      "2+": 18
+    },
+    "COMBINATION_WITH_ALTERNATIVES": {
+      "1": 6,
+      "2+": 30
+    },
+    "NO_MAP": {
+      "0": 44
+    },
+    "SINGLE_APPROXIMATE": {
+      "0": 28,
+      "1": 733
+    },
+    "SINGLE_EXACT": {
+      "0": 1,
+      "1": 369
+    }
+  },
+  "fusion_val_source_count": 1531,
+  "fusion_val_source_sha256": "225df0f8343bc5358e1980688018916df4c75675595a77f37ca65ceea17bbcb9",
+  "overlap_count": 0,
+  "schema": "step10_fusion_inner_split_manifest_v1",
+  "seed": 20260917,
+  "status": "FROZEN_BEFORE_STEP10_SCIENTIFIC_SEARCH",
+  "stratification_variables": [
+    "mapping_kind",
+    "candidate_contained_positive_count_bin"
+  ],
+  "train_fraction_target": 0.85,
+  "validation_fraction_target": 0.15,
+  "zero_overlap_proof": []
+}

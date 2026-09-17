@@ -1,0 +1,17 @@
+{
+  "artifacts": {
+    "dev_selection_rule.json": "42c58bfd176734d8071e224491444bb78f39c2f9273640ef3d284952fb8994c3",
+    "final_seed_policy.json": "7e1cfd46587e83fac0ea5a174ae3e415b1b703264ea7d571dc67f3d98e694d65",
+    "fusion_model_contract.json": "cdd8b3179cbd36c9631b562d26a5a5e3973a48ae2506a850b18ec6d607d41486",
+    "inner_split_manifest.json": "570a3394467c9085d640aacdb780323cee49a23a798ca9f01c40cc7935625c34",
+    "inner_train_scaler_manifest.json": "ef7d83130e6e295587c8559263fa6c90a099026d78bdda2f04feba9b0f7231e5",
+    "interpretation_contract.json": "45d3bd626ff101e3bddd2814078f8d10b1f22fe4647874120ec56b7af283cdc0",
+    "prior_test_exposure.json": "6142a1c9c9b6027118eb824eb2fa98da16d3c3b9cc4587d2320c5d34be54199b",
+    "r2_search_protocol.json": "21c5465e7e73b04853b73d4462562be1165cbe0f30e24d653c6be62871a2a2e4",
+    "research_question.json": "7fe8b767d796d2925a90253b624a0c3afe8f751b0ec2ccee24774d10cf8f2ea5",
+    "search_space.json": "3c14f4a93c45e5364193c2b98d922044ba8ebefb4ae7bb4137df42c43e337b52",
+    "semantic_anchor_contract.json": "0f2aaea9cc7b9777acff1f4f011f224b006a70ac650954a658117242460a4805",
+    "smoke/step10_smoke_lambda_0.10_lr_3e-4_wd_1e-4_seed_17_epoch_1.pt": "3a1cd7a874be133acfa08317174d3c95365dd2514ed20dc265f0f66a8a8b2c1a"
+  },
+  "schema": "step10_r1_artifact_hash_manifest_v1"
+}

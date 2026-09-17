@@ -1,0 +1,2 @@
+batch_size,checkpoint_path,checkpoint_reload_pass,checkpoint_sha256,finite_gradients,finite_losses,full_fusion_val_scoring_count,parameter_update,residual_bound_pass,residual_max,residual_min,status,supervised_source_count
+32,C:\Users\rohan\SHIFT-ICD\artifacts\experiments\step10_fusion\smoke\step10_smoke_lambda_0.10_lr_3e-4_wd_1e-4_seed_17_epoch_1.pt,True,3a1cd7a874be133acfa08317174d3c95365dd2514ed20dc265f0f66a8a8b2c1a,True,True,0,True,True,0.2699180543422699,0.17136093974113464,PASS,64

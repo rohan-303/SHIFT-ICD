@@ -1,0 +1,10 @@
+{
+  "canonical_seed": 17,
+  "classification": "S1_EXISTING_PROJECT_WIDE_CONVENTION",
+  "provenance": "Step 8 and corrected SHIFT-MAP committed seed convention",
+  "seeds": [
+    17,
+    42,
+    2026
+  ]
+}

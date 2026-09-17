@@ -1,0 +1,5 @@
+active_step10,name,position,source
+True,candidate_same_parent_fraction,1,Step 9 feature_contract.json
+True,candidate_same_family_fraction,2,Step 9 feature_contract.json
+True,candidate_shared_ancestor_fraction,3,Step 9 feature_contract.json
+True,candidate_same_root_fraction,4,Step 9 feature_contract.json

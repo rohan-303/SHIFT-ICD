@@ -1,0 +1,4 @@
+{
+  "primary_question": "Can a bounded hierarchy-derived residual improve or preserve ranking quality when added to the frozen SHIFT-MAP semantic score, without replacing semantic ranking or altering Top-100 candidate membership?",
+  "status": "FROZEN_R1"
+}

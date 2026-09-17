@@ -1,0 +1,16 @@
+{
+  "criteria": [
+    "Hit@1",
+    "MRR",
+    "P_COMPLEX_CompleteScenarioRetrieval@10",
+    "P_COMPLEX_ChoiceListRecall@10",
+    "NDCG@10",
+    "smaller_lambda",
+    "lower_complexity_or_configuration_id",
+    "earlier_epoch"
+  ],
+  "direction": "maximize_primary_metrics_then_tie_break",
+  "epoch_rule": "E2_BEST_INNER_VAL_CHECKPOINT_WITHIN_3_EPOCHS",
+  "official_dev_scoring_count": 0,
+  "schema": "step10_inner_selection_rule_v1"
+}

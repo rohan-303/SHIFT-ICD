@@ -1,0 +1,8 @@
+{
+  "full_top100": true,
+  "inner_split_seed": 20260917,
+  "no_step10_scientific_search_executed": true,
+  "official_dev_access_allowed": false,
+  "schema": "step10_r1_nested_fusion_protocol_v1",
+  "test_access_allowed": false
+}

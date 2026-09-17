@@ -1,0 +1,20 @@
+{
+  "architecture": "4 -> 16 -> 1",
+  "epochs": 3,
+  "equation": "s_fused = z_sem + lambda * r_h",
+  "gradient_clipping": 1.0,
+  "hidden": "ReLU",
+  "input_features": [
+    "candidate_same_parent_fraction",
+    "candidate_same_family_fraction",
+    "candidate_shared_ancestor_fraction",
+    "candidate_same_root_fraction"
+  ],
+  "objective": "FULL_TOP100_SET_POSITIVE_LISTWISE",
+  "output": "tanh",
+  "residual_bound": [
+    -1,
+    1
+  ],
+  "source_batch_size": 32
+}

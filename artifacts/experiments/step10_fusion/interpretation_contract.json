@@ -1,0 +1,12 @@
+{
+  "official_dev_scoring_count": 0,
+  "outcomes": [
+    "FUSION_IMPROVES_RANKING",
+    "FUSION_MIXED_RESULT",
+    "FUSION_DEGRADES_RANKING",
+    "SEMANTIC_BASELINE_RETAINS_PROMOTION",
+    "INVALID_FUSION_EXPERIMENT"
+  ],
+  "primary_comparison": "fusion vs B0",
+  "test_scoring_count": 0
+}

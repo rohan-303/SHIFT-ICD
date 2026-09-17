@@ -1,0 +1,10 @@
+{
+  "PRIOR_BENCHMARK_TEST_EXPOSURE_EXISTS": true,
+  "hierarchy_only_test_observed": true,
+  "medcpt_test_observed": true,
+  "official_dev_reserved": true,
+  "shift_map_test_observed": true,
+  "step10_inner_selection_uses_train_internal_split": true,
+  "step10_test_prohibited": true,
+  "step9_structural_correction_performed": true
+}

@@ -1,0 +1,4 @@
+classification,concept,evidence,status
+PREEXISTING_DOCUMENTED,alpha score-fusion DEV ablation,docs/experiments/shift_map_v2_protocol.md:56,NOT_COMPUTED
+PREEXISTING_COMMITTED,hierarchy-aware reranker / v3,artifacts/experiments/step9_hierarchy/*; commit cb6513d,COMPLETED_STEP9
+NEW_STEP10_PROPOSAL,exact bounded H3 residual z_sem + lambda*tanh residual,Step 10-R1 design,PREREGISTERED_ONLY
