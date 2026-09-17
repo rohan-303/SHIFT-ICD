@@ -1,0 +1,14 @@
+path,present,kind,file_count,notes
+src,YES,directory,41,Publication content retained; generated large paths filtered where audited.
+scripts,YES,directory,106,Publication content retained; generated large paths filtered where audited.
+tests,YES,directory,30,Publication content retained; generated large paths filtered where audited.
+configs,YES,directory,3,Publication content retained; generated large paths filtered where audited.
+docs,YES,directory,38,Publication content retained; generated large paths filtered where audited.
+reports,YES,directory,312,Publication content retained; generated large paths filtered where audited.
+artifacts,YES,directory,663,Publication content retained; generated large paths filtered where audited.
+README.md,YES,file,1,Publication content retained.
+pyproject.toml,YES,file,1,Publication content retained.
+requirements.txt,NO,missing,0,Not present in source repository; not fabricated.
+environment.yml,NO,missing,0,Not present in source repository; not fabricated.
+uv.lock,NO,missing,0,Not present in source repository; not fabricated.
+LICENSE,YES,file,1,Publication content retained.
