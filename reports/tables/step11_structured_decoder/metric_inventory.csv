@@ -1,0 +1,9 @@
+metric,population
+exact_canonical_structure,END_TO_END
+complete_scenario_recovery,END_TO_END
+mapping_form_macro_f1,END_TO_END
+NO_MAP_f1,END_TO_END
+flat_set_f1,END_TO_END
+cardinality_exact_accuracy,END_TO_END
+valid_structure_rate,END_TO_END
+all_end_to_end_metrics,CANDIDATE_CONDITIONED_SEPARATE

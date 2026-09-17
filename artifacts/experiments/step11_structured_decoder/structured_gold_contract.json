@@ -1,0 +1,27 @@
+{
+  "approximation_is_attribute": true,
+  "combination_targets": "scenario -> choice_lists -> alternatives",
+  "mapping_forms": [
+    "NO_MAP",
+    "SINGLE_EXACT",
+    "SINGLE_APPROXIMATE",
+    "ALTERNATIVE",
+    "COMBINATION",
+    "COMBINATION_WITH_ALTERNATIVES"
+  ],
+  "no_map": "empty target structure; no synthetic target",
+  "non_combination_targets": "flat_alternatives",
+  "round_trip": {
+    "exact_round_trip_passes": 86271,
+    "failures": [],
+    "sources_audited": 86271,
+    "split_counts": {
+      "dev": 8627,
+      "test": 17254,
+      "train": 60390
+    },
+    "unrepresentable_gold_count": 0
+  },
+  "schema": "step11_structured_gold_contract_v1",
+  "source": "docs/interfaces/step11_structured_gold_contract.md"
+}

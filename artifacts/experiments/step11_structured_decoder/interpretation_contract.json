@@ -1,0 +1,10 @@
+{
+  "outcomes": [
+    "STRUCTURED_DECODER_IMPROVES_OVER_SIMPLE_BASELINES",
+    "STRUCTURED_DECODER_MIXED",
+    "STRUCTURED_DECODER_FAILS_TO_IMPROVE",
+    "INVALID_STRUCTURED_EXPERIMENT"
+  ],
+  "results": "NOT_COMPUTED_IN_R1",
+  "schema": "step11_interpretation_contract_v1"
+}

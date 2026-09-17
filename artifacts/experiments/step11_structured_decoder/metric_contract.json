@@ -1,0 +1,13 @@
+{
+  "candidate_conditioned": "reported separately over fully representable sources; never alone",
+  "end_to_end": [
+    "exact_canonical_structure",
+    "complete_scenario_recovery",
+    "mapping_form_macro_f1",
+    "NO_MAP_f1",
+    "flat_set_f1",
+    "cardinality_exact_accuracy",
+    "valid_structure_rate"
+  ],
+  "schema": "step11_metric_contract_v1"
+}

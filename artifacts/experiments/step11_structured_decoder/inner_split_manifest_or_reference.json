@@ -1,0 +1,109 @@
+{
+  "algorithm": "reused exact Step 10 source-level stratified shuffle",
+  "expected_fusion_train_source_sha256": "150a57de2e9101ee9bb5c1699bbb7b3a7f9b1fc1d0863018a8766808c151f24c",
+  "expected_fusion_val_source_sha256": "225df0f8343bc5358e1980688018916df4c75675595a77f37ca65ceea17bbcb9",
+  "fusion_train_distribution": {
+    "alternative_size": {
+      "0": 251,
+      "1": 6595,
+      "10": 3,
+      "106": 1,
+      "12": 7,
+      "129": 1,
+      "13": 3,
+      "14": 1,
+      "145": 1,
+      "15": 3,
+      "159": 1,
+      "16": 7,
+      "17": 1,
+      "18": 1,
+      "19": 1,
+      "2": 990,
+      "20": 5,
+      "24": 2,
+      "25": 1,
+      "27": 2,
+      "3": 331,
+      "31": 1,
+      "4": 272,
+      "5": 51,
+      "528": 1,
+      "533": 1,
+      "6": 60,
+      "60": 1,
+      "66": 1,
+      "7": 21,
+      "8": 30,
+      "9": 19
+    },
+    "mapping_form": {
+      "ALTERNATIVE": 1613,
+      "COMBINATION": 190,
+      "COMBINATION_WITH_ALTERNATIVES": 207,
+      "NO_MAP": 251,
+      "SINGLE_APPROXIMATE": 4310,
+      "SINGLE_EXACT": 2095
+    },
+    "required_slot_count": {
+      "0": 8269,
+      "2": 395,
+      "3": 2
+    },
+    "scenario_count": {
+      "0": 8269,
+      "1": 367,
+      "2": 18,
+      "3": 5,
+      "4": 7
+    }
+  },
+  "fusion_train_source_count": 8666,
+  "fusion_train_source_sha256": "150a57de2e9101ee9bb5c1699bbb7b3a7f9b1fc1d0863018a8766808c151f24c",
+  "fusion_val_distribution": {
+    "alternative_size": {
+      "0": 44,
+      "1": 1166,
+      "12": 4,
+      "132": 1,
+      "2": 176,
+      "22": 1,
+      "23": 1,
+      "24": 1,
+      "3": 60,
+      "4": 47,
+      "5": 6,
+      "6": 7,
+      "7": 7,
+      "8": 5,
+      "9": 5
+    },
+    "mapping_form": {
+      "ALTERNATIVE": 285,
+      "COMBINATION": 35,
+      "COMBINATION_WITH_ALTERNATIVES": 36,
+      "NO_MAP": 44,
+      "SINGLE_APPROXIMATE": 761,
+      "SINGLE_EXACT": 370
+    },
+    "required_slot_count": {
+      "0": 1460,
+      "2": 71
+    },
+    "scenario_count": {
+      "0": 1460,
+      "1": 62,
+      "2": 2,
+      "3": 2,
+      "4": 3,
+      "6": 2
+    }
+  },
+  "fusion_val_source_count": 1531,
+  "fusion_val_source_sha256": "225df0f8343bc5358e1980688018916df4c75675595a77f37ca65ceea17bbcb9",
+  "hashes_match": true,
+  "overlap_count": 0,
+  "schema": "step11_inner_split_reference_v1",
+  "seed": 20260917,
+  "source": "artifacts/experiments/step10_fusion/inner_split_manifest.json"
+}

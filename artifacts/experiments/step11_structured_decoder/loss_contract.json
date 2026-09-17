@@ -1,0 +1,15 @@
+{
+  "combination": "sum within source, mean across sources",
+  "components": {
+    "L_card": "source-level cardinality cross entropy",
+    "L_form": "source-level cross entropy",
+    "L_set": "source-level candidate membership BCE"
+  },
+  "imbalance": "TRAIN-derived inverse-frequency form weights are optional controlled variant; no DEV fitting",
+  "schema": "step11_loss_contract_v1",
+  "weights": {
+    "L_card": 1.0,
+    "L_form": 1.0,
+    "L_set": 1.0
+  }
+}

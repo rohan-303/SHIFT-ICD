@@ -1,0 +1,9 @@
+allowed_in_inputs,allowed_in_targets_or_eval,metadata
+0,1,mapping_kind
+0,1,GEM_flags
+0,1,scenario_id
+0,1,choice_list_id
+0,1,candidate_is_gold
+0,1,NO_MAP_label
+0,1,split
+0,1,TEST_outcome

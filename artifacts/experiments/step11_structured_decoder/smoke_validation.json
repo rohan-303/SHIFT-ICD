@@ -1,0 +1,39 @@
+{
+  "checkpoint": "artifacts/experiments/step11_structured_decoder/smoke/step11_smoke_only_config_smoke_seed_17_epoch_1.pt",
+  "forward_shapes": {
+    "cardinality_logits": [
+      8,
+      4
+    ],
+    "form_logits": [
+      8,
+      6
+    ],
+    "membership_logits": [
+      8,
+      100
+    ]
+  },
+  "full_inner_validation_scientific_evaluation_count": 0,
+  "fusion_val_smoke_sources": 4,
+  "loss_finite": true,
+  "official_dev_scientific_evaluation_count": 0,
+  "reload_pass": true,
+  "status": "STEP11_SMOKE_ONLY",
+  "test_scoring_count": 0,
+  "train_subset_sources": 8,
+  "val_output_shapes": {
+    "cardinality_logits": [
+      4,
+      4
+    ],
+    "form_logits": [
+      4,
+      6
+    ],
+    "membership_logits": [
+      4,
+      100
+    ]
+  }
+}

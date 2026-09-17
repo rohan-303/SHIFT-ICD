@@ -1,0 +1,6 @@
+{
+  "question": "Can a compact candidate-set structured decoder predict canonical GEM mapping form and assemble a valid target structure from frozen SHIFT-MAP Top-100 evidence?",
+  "schema": "step11_r1_research_question_v1",
+  "scientific_evaluation_count": 0,
+  "status": "FROZEN_BEFORE_SCIENTIFIC_EVALUATION"
+}

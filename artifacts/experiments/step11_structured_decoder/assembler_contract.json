@@ -1,0 +1,11 @@
+{
+  "constraints": [
+    "candidate_contained_codes_only",
+    "one_target_per_choice_list",
+    "scenario_boundaries_preserved",
+    "NO_MAP_empty",
+    "deterministic_score_then_code_tie_break"
+  ],
+  "oracle_result": "PASS_FOR_ALL_REPRESENTABLE_SYNTHETIC_STRUCTURES",
+  "schema": "step11_assembler_contract_v1"
+}

@@ -1,0 +1,6 @@
+{
+  "candidate_scope": "forward frozen Top-100",
+  "official_dev_scoring": 0,
+  "schema": "step11_retrieval_ceiling_manifest_v1",
+  "table": "reports/tables/step11_structured_decoder/retrieval_representability_ceiling.csv"
+}

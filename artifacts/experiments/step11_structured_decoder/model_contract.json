@@ -1,0 +1,27 @@
+{
+  "family": "compact_deepsets_candidate_set",
+  "forbidden_inputs": [
+    "mapping_kind",
+    "GEM_flags",
+    "gold_cardinality",
+    "scenario_id",
+    "choice_list_id",
+    "candidate_is_gold",
+    "split",
+    "TEST_outcome"
+  ],
+  "heads": [
+    "mapping_form",
+    "cardinality",
+    "candidate_membership"
+  ],
+  "hierarchy_features": "excluded_primary; separate future ablation only",
+  "inputs": [
+    "frozen_source_embedding",
+    "frozen_candidate_embedding",
+    "retriever_score",
+    "normalized_retriever_score",
+    "candidate_rank"
+  ],
+  "schema": "step11_model_contract_v1"
+}

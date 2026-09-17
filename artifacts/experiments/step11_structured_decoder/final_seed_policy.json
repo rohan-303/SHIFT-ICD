@@ -1,0 +1,10 @@
+{
+  "canonical_seed": 17,
+  "schema": "step11_final_seed_policy_v1",
+  "seeds": [
+    17,
+    42,
+    2026
+  ],
+  "source": "existing project convention; frozen before R2"
+}

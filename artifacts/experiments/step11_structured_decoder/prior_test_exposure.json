@@ -1,0 +1,10 @@
+{
+  "disclosure": "prior exposure is acknowledged; no Step 11 TEST scoring in R1",
+  "hierarchy": true,
+  "medcpt": true,
+  "retrieval": true,
+  "schema": "step11_prior_test_exposure_v1",
+  "step10_fusion_test_access": false,
+  "step11_selection": "TRAIN-internal only",
+  "step9_structural_correction": true
+}

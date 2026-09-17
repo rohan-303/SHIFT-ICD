@@ -1,0 +1,11 @@
+{
+  "exact_round_trip_passes": 86271,
+  "failures": [],
+  "sources_audited": 86271,
+  "split_counts": {
+    "dev": 8627,
+    "test": 17254,
+    "train": 60390
+  },
+  "unrepresentable_gold_count": 0
+}

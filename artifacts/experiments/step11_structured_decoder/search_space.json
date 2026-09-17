@@ -1,0 +1,25 @@
+{
+  "epochs": [
+    3
+  ],
+  "hidden_size": [
+    64
+  ],
+  "learning_rates": [
+    0.0001,
+    0.0003
+  ],
+  "loss_variants": [
+    "unweighted",
+    "TRAIN_inverse_frequency"
+  ],
+  "model_family": [
+    "compact_deepsets_candidate_set"
+  ],
+  "schema": "step11_search_space_v1",
+  "seeds": [
+    17,
+    42,
+    2026
+  ]
+}

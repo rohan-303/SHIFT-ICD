@@ -1,0 +1,16 @@
+{
+  "not_flattened": true,
+  "predicted_targets": [
+    "mapping_form",
+    "scenario_count_bin",
+    "required_slot_count_bin",
+    "candidate_membership"
+  ],
+  "reported_diagnostics": [
+    "flat_unique_target_count",
+    "choice_list_count",
+    "valid_mapping_set_count"
+  ],
+  "schema": "step11_cardinality_target_contract_v1",
+  "source_balanced": true
+}

@@ -1,0 +1,6 @@
+baseline,role
+B0_TOP1_SINGLE,deployable
+B1_THRESHOLD_SET,deployable
+B2_ORACLE_FORM,diagnostic_only
+B3_ORACLE_CANDIDATES,diagnostic_only
+B4_FORM_STATISTICS,deployable_simple_mapping_form
