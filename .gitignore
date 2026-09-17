@@ -114,3 +114,16 @@ artifacts/experiments/shift_map_full_universe/r5_diagnostics/*.npz
 
 # Step 9 R2 local checkpoints remain local; compact manifests/tables are tracked.
 artifacts/experiments/step9_hierarchy/r2_runs/
+
+# GitHub publication mirror policy: generated large artifacts remain local.
+# Keep compact manifests, summaries, reports, source, tests, and configs trackable.
+artifacts/experiments/shift_map_v1_4/ledgers/*.json
+artifacts/experiments/bm25_full_universe/rankings/*.jsonl
+artifacts/experiments/bm25_v2/rankings/*.jsonl
+artifacts/experiments/dense_full_universe_v2/remote_test_sync/
+artifacts/experiments/step10_fusion/final_checkpoints/*.pt
+artifacts/experiments/step10_fusion/r2_checkpoints/
+**/*checkpoints/*.pt
+**/*checkpoints/*.pth
+**/*_cache/
+**/cache/

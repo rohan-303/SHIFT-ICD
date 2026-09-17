@@ -31,6 +31,10 @@ No models have been implemented. The current milestone has acquired the authorit
 
 Raw authoritative data will remain immutable. Every downloaded resource, release, license, checksum, transformation, split, configuration, software version, and command will be recorded. Test data will not be used for model selection. Ambiguous, one-to-many, information-loss, and no-map cases will be preserved rather than converted into artificial single labels.
 
+## GitHub publication mirror
+
+The authoritative research archive is maintained locally at `C:\\Users\\rohan\\SHIFT-ICD` and retains the full scientific history and generated evidence. The GitHub repository is a separate publication/reproducibility mirror: generated large ledgers, ranking exports, scored artifacts, caches, and checkpoints may be excluded from its history when hosting limits require it. Compact manifests, reports, tables, and provenance registries preserve hashes and regeneration references; omitted artifacts are not implied never to have existed.
+
 ## Repository structure
 
 ```text
