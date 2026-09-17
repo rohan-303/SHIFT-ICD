@@ -1,0 +1,71 @@
+{
+  "schema": "step10_closeout_manifest_v1",
+  "status": "STEP10_FUSION_CLOSED",
+  "test_lock": "ABSENT",
+  "artifacts": {
+    "r1_protocol": {
+      "path": "artifacts\\experiments\\step10_fusion\\r1_artifact_hashes.json",
+      "sha256": "45a6e70e05ddf78ac7e5ade680889a1ee959d49979fe4755a7ccc76e7e7002c8"
+    },
+    "r2_config_freeze": {
+      "path": "artifacts\\experiments\\step10_fusion\\config_freeze.json",
+      "sha256": "f1686da002e748a3018c9fb0d77e6439e38c85444daf1f37ddaa113c6c47cb43"
+    },
+    "r2_selection_provenance_correction": {
+      "path": "artifacts\\experiments\\step10_fusion\\r2_selection_provenance_correction.json",
+      "sha256": "83b0b9eab21dae10ef5b22b1f0fb5a5c4e40b63c64a71de0b81ff101ed74d6f5"
+    },
+    "final_seed_manifest": {
+      "path": "artifacts\\experiments\\step10_fusion\\final_seed_manifest.json",
+      "sha256": "ce7ef492bdb77af502b7879b2b98811475a0991935221279ffacc66bee585d45"
+    },
+    "official_dev_lock": {
+      "path": "artifacts\\experiments\\step10_fusion\\official_dev_confirmation_lock.json",
+      "sha256": "1d3851b73830ea398e3cdc9d34c930a55e5fc88a25c0e5eae9280d11e3cbcf9d"
+    },
+    "r3_reporting_correction": {
+      "path": "artifacts\\experiments\\step10_fusion\\r3_reporting_correction.json",
+      "sha256": "34d99fa53c06efe7079778a564041c3879bc2695351c059e3d0c5b4ca128fc6c"
+    },
+    "failure_analysis_residual": {
+      "path": "reports\\tables\\step10_fusion\\r3c_residual_distribution.csv",
+      "sha256": "fa42aed2098423e583b568641f6dcbf4c82bbad3e69aa4680af2f989492802db"
+    },
+    "failure_analysis_rank": {
+      "path": "reports\\tables\\step10_fusion\\r3c_rank_displacement.csv",
+      "sha256": "6f7571e710f124c2e95b9934142a56305ccac58a4f3095152f00c16a730b0a11"
+    },
+    "failure_analysis_mrr": {
+      "path": "reports\\tables\\step10_fusion\\r3c_mrr_movement_characteristics.csv",
+      "sha256": "c4d6f55621be7fbd72e4380239915cf701495964f20546fd70846e4f20d55115"
+    },
+    "failure_analysis_feature_shift": {
+      "path": "reports\\tables\\step10_fusion\\r3c_inner_vs_official_feature_shift.csv",
+      "sha256": "9c2846c759690ce26ea035ed341e053f2808fd9893e46e35d9d8cd8dcabe94bd"
+    },
+    "failure_analysis_inner_changed": {
+      "path": "reports\\tables\\step10_fusion\\r3c_inner_changed_sources.csv",
+      "sha256": "89f63a3585a87fef55c198d44f5035a6b031800c3f107f9ddd6bfcf45d00d2ae"
+    },
+    "failure_analysis_seed_variability": {
+      "path": "reports\\tables\\step10_fusion\\r3c_seed_variability.csv",
+      "sha256": "10219e71b0cf028dcda29ada311676bd1b9899d8a45f9feffe5a6f85760d94e4"
+    },
+    "failure_analysis_test_quarantine": {
+      "path": "reports\\tables\\step10_fusion\\r3c_test_quarantine.csv",
+      "sha256": "4621083e2365ddc7654cab58ebe47c1c6f4cd8881dffc1da9ece1c242a9f5602"
+    },
+    "final_step10_report": {
+      "path": "reports\\STEP_10_FINAL_SEMANTIC_HIERARCHY_FUSION.md",
+      "sha256": "04fae1162df9b0e098214071d25547f714e757ee33e494d22707acdbad2d1aa3"
+    },
+    "test_access_audit": {
+      "path": "artifacts\\experiments\\step10_fusion\\official_dev_access_audit.json",
+      "sha256": "b8a49322fec7f9c3f17daa80070f30e69f367df01688bd736269a745b5593a13"
+    },
+    "next_stage_decision": {
+      "path": "artifacts\\experiments\\step10_fusion\\next_stage_decision.json",
+      "sha256": "5121ccecb4958d052eae0ab13d8f0b97145c9fa60bb1b4b943c5df3659faf989"
+    }
+  }
+}

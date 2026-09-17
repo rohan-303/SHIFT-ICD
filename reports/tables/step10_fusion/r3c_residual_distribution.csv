@@ -1,0 +1,2 @@
+status,reason,residual_mean,residual_sd,residual_median,residual_p5,residual_p95,max_abs_residual,actual_fusion_delta_mean,actual_fusion_delta_sd,actual_fusion_delta_p95,maximum_abs_fusion_delta
+NOT_RECORDED,R3 retained aggregate max_abs_residual/max_abs_fusion_delta only; no per-row residual or score-delta vectors.,NOT_RECORDED,NOT_RECORDED,NOT_RECORDED,NOT_RECORDED,NOT_RECORDED,0.31893160939216614,NOT_RECORDED,NOT_RECORDED,NOT_RECORDED,0.06378632187843324

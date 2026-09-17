@@ -1,0 +1,10 @@
+{
+  "schema": "step10_r3_reporting_correction_v1",
+  "original_wording": "Hit@1 positive inner delta to official zero was labeled direction replicated: Yes.",
+  "corrected_wording": "NO_POSITIVE_DIRECTION_REPLICATION: inner positive -> official zero is not positive-direction replication.",
+  "affected_metric": "Hit@1",
+  "inner_delta": 0.0007062146892655718,
+  "official_delta": 0.0,
+  "metric_values_unchanged": true,
+  "scientific_classification_unchanged": "OFFICIAL_DEV_FAILS_TO_REPLICATE"
+}

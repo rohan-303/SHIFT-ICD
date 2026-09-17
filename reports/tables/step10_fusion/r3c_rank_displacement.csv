@@ -1,0 +1,2 @@
+status,seed,ordinary_source_count,candidate_count,mean_abs_rank_displacement,median_abs_rank_displacement,p95_abs_rank_displacement,maximum_abs_rank_displacement,fraction_candidates_unchanged,fraction_top1_unchanged,top1_improved,top1_worsened,top1_unchanged
+POSTHOC_ANALYSIS_ONLY,17,1348,134800,0.8468397626112759,0.0,3.0,19,0.5516023738872403,1.0,0,0,1348

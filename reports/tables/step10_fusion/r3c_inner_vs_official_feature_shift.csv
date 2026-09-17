@@ -1,0 +1,2 @@
+status,reason
+NOT_COMPUTED,Per-row H3 feature values and FUSION_VAL feature table were not retained in frozen R3 artifacts; no refit or re-extraction performed.

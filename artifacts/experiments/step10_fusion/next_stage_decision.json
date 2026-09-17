@@ -1,0 +1,8 @@
+{
+  "schema": "step10_next_stage_decision_v1",
+  "fusion_promotion_status": "NOT_PROMOTED",
+  "reason": "OFFICIAL_DEV_FAILS_TO_REPLICATE",
+  "test_evaluated": false,
+  "next_stage": "STEP 11-R1 \u2014 MAPPING CARDINALITY + STRUCTURED SET DECODER DESIGN AND PREREGISTRATION",
+  "scientific_rationale": "Step 10 preserved the semantic candidate set but its bounded H3 residual did not reproduce the microscopic inner gain. The next preregistered direction should model structured mapping cardinality and set form directly rather than perturbing rank positions."
+}
