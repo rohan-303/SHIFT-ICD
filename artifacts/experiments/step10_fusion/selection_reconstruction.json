@@ -1,0 +1,11 @@
+{
+  "classification": "FUSION_MIXED_RESULT",
+  "epoch_row_count": 37,
+  "pass": true,
+  "reconstructed_from": "reports/tables/step10_fusion/ablation_master.csv + configuration_representatives.csv",
+  "representative_count": 13,
+  "runner_up_configuration_id": "fusion_lambda_0p20_lr_3e-04_wd_1e-03",
+  "schema": "step10_deterministic_selection_reconstruction_v1",
+  "selected_configuration_id": "fusion_lambda_0p20_lr_3e-04_wd_1e-04",
+  "selected_epoch": 2
+}

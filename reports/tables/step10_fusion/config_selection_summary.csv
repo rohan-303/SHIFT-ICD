@@ -1,0 +1,2 @@
+classification,decisive_criterion,runner_up,selected_model
+FUSION_MIXED_RESULT,Hit@1;MRR;P_COMPLEX_CompleteScenarioRetrieval@10;P_COMPLEX_ChoiceListRecall@10;NDCG@10,fusion_lambda_0p20_lr_3e-04_wd_1e-03,fusion_lambda_0p20_lr_3e-04_wd_1e-04

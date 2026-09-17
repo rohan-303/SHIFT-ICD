@@ -1,0 +1,62 @@
+{
+  "b0_metric_vector": {
+    "Hit@1": 0.6899717514124294,
+    "MRR": 0.7671772889795364,
+    "NDCG@10": 0.7693795745481504,
+    "P_COMPLEX_ChoiceListRecall@10": 0.43485915492957744,
+    "P_COMPLEX_CompleteScenarioRetrieval@10": 0.16901408450704225
+  },
+  "batch_size": 32,
+  "configuration_grid_sha256": "9be491e45655e5a7182c92c90d4617f3d1cb62ebcfeb287a91926ca3eaf4f514",
+  "decisive_criterion": "Hit@1;MRR;P_COMPLEX_CompleteScenarioRetrieval@10;P_COMPLEX_ChoiceListRecall@10;NDCG@10;smaller_lambda;configuration_id;earlier_epoch",
+  "development_seed": 17,
+  "epochs": 3,
+  "fusion_train_source_sha256": "150a57de2e9101ee9bb5c1699bbb7b3a7f9b1fc1d0863018a8766808c151f24c",
+  "fusion_val_source_sha256": "225df0f8343bc5358e1980688018916df4c75675595a77f37ca65ceea17bbcb9",
+  "h3_feature_order": [
+    "candidate_same_parent_fraction",
+    "candidate_same_family_fraction",
+    "candidate_shared_ancestor_fraction",
+    "candidate_same_root_fraction"
+  ],
+  "inner_scaler_sha256": "ef7d83130e6e295587c8559263fa6c90a099026d78bdda2f04feba9b0f7231e5",
+  "inner_split_manifest_sha256": "570a3394467c9085d640aacdb780323cee49a23a798ca9f01c40cc7935625c34",
+  "interpretation": "FUSION_MIXED_RESULT",
+  "interpretation_contract_sha256": "45d3bd626ff101e3bddd2814078f8d10b1f22fe4647874120ec56b7af283cdc0",
+  "local_sync_verified": true,
+  "objective": "FULL_TOP100_SET_POSITIVE_LISTWISE",
+  "official_dev_access_count": 0,
+  "r1_hash_manifest_sha256": "45a6e70e05ddf78ac7e5ade680889a1ee959d49979fe4755a7ccc76e7e7002c8",
+  "r2_run_manifest_sha256": "00e4f2fdf8843c6ba816d2c88ea1ff8e95128e8edccf3141f65769ada777eee2",
+  "residual_bound": [
+    -1,
+    1
+  ],
+  "runner_up_configuration_id": "fusion_lambda_0p20_lr_3e-04_wd_1e-03",
+  "runner_up_metric_vector": {
+    "Hit@1": 0.690677966101695,
+    "MRR": 0.7677849981529529,
+    "NDCG@10": 0.7694500345304471,
+    "P_COMPLEX_ChoiceListRecall@10": 0.43485915492957744,
+    "P_COMPLEX_CompleteScenarioRetrieval@10": 0.16901408450704225
+  },
+  "schema": "step10_configuration_freeze_v1",
+  "selected_checkpoint_sha256": "d057e7c0653b633b225b8251a1a9b02aad59410416b84a5cc7f4b2c1bc7314a2",
+  "selected_configuration_id": "fusion_lambda_0p20_lr_3e-04_wd_1e-04",
+  "selected_epoch": 2,
+  "selected_lambda": 0.2,
+  "selected_learning_rate": 0.0003,
+  "selected_metric_vector": {
+    "Hit@1": 0.690677966101695,
+    "MRR": 0.7677976091295469,
+    "NDCG@10": 0.7694728098087795,
+    "P_COMPLEX_ChoiceListRecall@10": 0.43485915492957744,
+    "P_COMPLEX_CompleteScenarioRetrieval@10": 0.16901408450704225
+  },
+  "selected_model": "TRAINABLE_FUSION",
+  "selected_weight_decay": 0.0001,
+  "selection_rule_sha256": "42c58bfd176734d8071e224491444bb78f39c2f9273640ef3d284952fb8994c3",
+  "semantic_anchor_candidate_sha256": "d90dcb937748f1c0b173416d6b8f23f1c97ca8e8caf8934efdf8120993c1cb10",
+  "starting_head": "cd57fe297bdbf2623832b52c0a55fc16967d4039",
+  "test_access_count": 0
+}

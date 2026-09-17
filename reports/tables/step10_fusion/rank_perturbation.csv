@@ -1,0 +1,2 @@
+Hit@100_invariant,candidate_mutation_count,max_abs_rank_displacement,mean_abs_rank_displacement,median_abs_rank_displacement,p95_abs_rank_displacement,status,structural_at_100_invariant,top1_change_fraction
+True,0,12,0.654578706727629,0.0,3.0,COMPUTED_SELECTED_MODEL,True,0.002612671456564337
