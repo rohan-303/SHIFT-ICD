@@ -9,4 +9,3 @@ This file records authoritative sources for each publication synchronization.
 - Step 11 R1 authoritative tag: `step11-r1-structured-decoder-protocol-frozen`
 - Filtering scope: separate publication mirror only; authoritative history is never rewritten.
 - Excluded generated-large-artifact policy remains unchanged; no excluded path was copied in this synchronization.
-

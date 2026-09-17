@@ -33,6 +33,12 @@
       "authoritative_sha": "9aec7322c114286c6b5bd57599d2f720646ac30a",
       "mirror_sha": "a0dde0dc06ff32c29087185338dd17bc7f0f8bd3",
       "message": "chore: define GitHub publication mirror policy"
+    },
+    {
+      "milestone": "Step 11 R1 structured decoder protocol",
+      "authoritative_sha": "cdfd04abdd400086485dbebc7ad278d00b08154d",
+      "mirror_sha": "89439123bf5bed680b66681821c4957f936218f1",
+      "message": "feat: publish Step 11 R1 structured decoder protocol"
     }
   ]
 }
