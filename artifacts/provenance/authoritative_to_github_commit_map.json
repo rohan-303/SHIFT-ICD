@@ -39,6 +39,12 @@
       "authoritative_sha": "cdfd04abdd400086485dbebc7ad278d00b08154d",
       "mirror_sha": "89439123bf5bed680b66681821c4957f936218f1",
       "message": "feat: publish Step 11 R1 structured decoder protocol"
+    },
+    {
+      "milestone": "Step 11 R1B assignment decoder repair",
+      "authoritative_sha": "43db7f4c069000e1df783b4f7d7c027f4cb5a5f3",
+      "mirror_sha": "f411500384e3a740de86f11374d00271dd22fdeb",
+      "message": "fix: publish Step 11 R1B assignment decoder repair"
     }
   ]
 }
