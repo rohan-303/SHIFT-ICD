@@ -1,0 +1,8 @@
+fixture,status
+hierarchy_dominance,PASS
+macro_f1_tie,PASS
+no_map_tie,PASS
+flat_set_tie,PASS
+cardinality_tie,PASS
+configuration_id_tie,PASS
+earliest_epoch_tie,PASS

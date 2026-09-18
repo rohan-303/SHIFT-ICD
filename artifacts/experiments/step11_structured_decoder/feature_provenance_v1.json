@@ -1,0 +1,56 @@
+{
+  "base_model": "FremyCompany/BioLORD-2023",
+  "base_revision": "167aab527b238a50ca65224e6319215d2ff4fc9f",
+  "candidate_artifacts": {
+    "dev_sha256": "c7240c1f38dd87f54d63c97999cba71d91f6d0887d89bc2d4094f9ba38ad6a6f",
+    "k": 100,
+    "train_sha256": "d90dcb937748f1c0b173416d6b8f23f1c97ca8e8caf8934efdf8120993c1cb10"
+  },
+  "candidate_embedding": {
+    "dtype": "float32",
+    "embedding_artifact": "ON_THE_FLY_FROM_FROZEN_CANDIDATE_ARTIFACT",
+    "embedding_dim": 768,
+    "max_sequence_length": 64,
+    "model_id": "FremyCompany/BioLORD-2023",
+    "normalization": "L2",
+    "pooling": "SentenceTransformer native pooling",
+    "producer": "src/shift_icd/dense/models.py::SentenceTransformerEncoder.encode",
+    "revision": "167aab527b238a50ca65224e6319215d2ff4fc9f",
+    "source_artifact": "artifacts/candidates/shift_map_full_universe_v2/forward_{train,dev}_k100.jsonl.gz::target_description"
+  },
+  "candidate_rank": {
+    "definition": "frozen 1-based candidate_rank in forward Top-100",
+    "dtype": "float32_feature"
+  },
+  "canonical_checkpoint_sha256": "9e9739e45ad041a4027cdfd611fb83e398debb50658ede710482660e16efe302",
+  "deterministic_settings": {
+    "batch_size": 8,
+    "clean_dense_text": true,
+    "device": "cpu_for_protocol_audit",
+    "inference_mode": true
+  },
+  "feature_dimension": 1539,
+  "normalized_retriever_score": {
+    "ddof": 0,
+    "formula": "(score - mean(score))/max(population_sd(score),1e-8)",
+    "statistics_dtype": "float64"
+  },
+  "retriever_score": {
+    "dtype": "float64_before_feature_cast",
+    "source": "forward_*_k100.jsonl.gz::retriever_score"
+  },
+  "schema": "step11_feature_provenance_v1",
+  "source_embedding": {
+    "dtype": "float32",
+    "embedding_dim": 768,
+    "is_query": true,
+    "max_sequence_length": 64,
+    "model_id": "FremyCompany/BioLORD-2023",
+    "normalization": "L2",
+    "pooling": "SentenceTransformer native pooling",
+    "producer": "src/shift_icd/dense/models.py::SentenceTransformerEncoder.encode",
+    "revision": "167aab527b238a50ca65224e6319215d2ff4fc9f",
+    "source_artifact": "data/benchmarks/cms_track_a/v1.0/forward/all.jsonl"
+  },
+  "status": "FROZEN_PRE_OUTCOME"
+}

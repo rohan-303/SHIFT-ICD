@@ -1,0 +1,25 @@
+{
+  "architecture": "compact_deepsets_candidate_set_with_structural_queries",
+  "architecture_variants": 1,
+  "capacities": {
+    "L_MAX": 3,
+    "S_MAX": 6
+  },
+  "development_seed": 17,
+  "epochs": [
+    1,
+    2,
+    3
+  ],
+  "hidden_dim": 64,
+  "imbalance_variants": [
+    "UNWEIGHTED_PRIMARY",
+    "TRAIN_DERIVED_FORM_WEIGHTED"
+  ],
+  "learning_rates": [
+    0.0001,
+    0.0003
+  ],
+  "new_capacity_search": false,
+  "schema": "step11_search_space_v3"
+}

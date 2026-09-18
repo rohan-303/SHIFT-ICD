@@ -1,0 +1,9 @@
+{
+  "baseline_contract_v2.json": "16587bc3c10f6e3b641bc65fa85d570022eda6ce33220dc0fbb5856fb5158f3b",
+  "feature_provenance_v1.json": "adf7030faea7ff7f3dd3d9cd6af3fb5b03dcc7cba8e576e76545d240c10f6165",
+  "metric_contract_v2.json": "19fb3122266a3c6f11cec7e58d1bb0f5860faf2dbba113d7c3d099037de740a6",
+  "r2_configuration_grid_v2.json": "23ba18a85332f36f76e99f7696dfc717a1ad102a4a3b39079b4999f19f50f494",
+  "r2_protocol_completion_manifest.json": "f76d97429baaa0838ba49b8ced56d7d398f4f3a7519fe96426a811894a0ded8e",
+  "r2_search_protocol_v2.json": "23b5fc230a6c3d5b921361b4ee60e4bf875a68cc00c6da2f1bcc868f984e036e",
+  "search_space_v3.json": "2581e0d005109396ad4f5326a8f6975743768699949cb5167d2a8c0f28fc876d"
+}

@@ -1,0 +1,9 @@
+definition,metric,status
+all applicable canonical structural cardinalities exact after matching,CARDINALITY_EXACT_ACCURACY,FROZEN
+mean complex-source scenario satisfaction indicator under permutation-invariant scenario/slot matching,COMPLETE_SCENARIO_SUCCESS,FROZEN
+mean exact canonical semantic signature indicator,EXACT_CANONICAL_STRUCTURE_MATCH,FROZEN
+source-macro and micro set precision/recall/F1 with both-empty=1,FLAT_SET,FROZEN
+unweighted six-class macro-F1,MAPPING_FORM_MACRO_F1,FROZEN
+"TP/FP/FN/TN, precision/recall/F1, false forced-map and false-NO_MAP rates",NO_MAP,FROZEN
+nonexact prediction classified by frozen full-gold Top-100 representability,RETRIEVAL_VS_DECODER,FROZEN
+valid candidate-contained canonical outputs divided by all predictions,STRUCTURE_VALIDITY_RATE,FROZEN

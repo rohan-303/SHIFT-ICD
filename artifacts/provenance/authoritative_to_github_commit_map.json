@@ -45,6 +45,12 @@
       "authoritative_sha": "43db7f4c069000e1df783b4f7d7c027f4cb5a5f3",
       "mirror_sha": "f411500384e3a740de86f11374d00271dd22fdeb",
       "message": "fix: publish Step 11 R1B assignment decoder repair"
+    },
+    {
+      "milestone": "Step 11 R2P protocol completion",
+      "authoritative_sha": "4bacfbfdcbda3903d16bbd1d841c18f901941a2f",
+      "mirror_sha": "pending",
+      "message": "fix: complete Step 11 R2 scientific protocol"
     }
   ]
 }

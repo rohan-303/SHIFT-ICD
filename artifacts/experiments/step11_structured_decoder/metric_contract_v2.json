@@ -1,0 +1,17 @@
+{
+  "candidate_conditioned_population": "fully canonical-gold-representable in frozen Top-100, predeclared source IDs",
+  "canonicalization": "scenario and choice-list order invariant; duplicate alternatives removed within sets",
+  "metrics": {
+    "CARDINALITY_EXACT_ACCURACY": "all applicable canonical structural cardinalities exact after matching",
+    "COMPLETE_SCENARIO_SUCCESS": "mean complex-source scenario satisfaction indicator under permutation-invariant scenario/slot matching",
+    "EXACT_CANONICAL_STRUCTURE_MATCH": "mean exact canonical semantic signature indicator",
+    "FLAT_SET": "source-macro and micro set precision/recall/F1 with both-empty=1",
+    "MAPPING_FORM_MACRO_F1": "unweighted six-class macro-F1",
+    "NO_MAP": "TP/FP/FN/TN, precision/recall/F1, false forced-map and false-NO_MAP rates",
+    "RETRIEVAL_VS_DECODER": "nonexact prediction classified by frozen full-gold Top-100 representability",
+    "STRUCTURE_VALIDITY_RATE": "valid candidate-contained canonical outputs divided by all predictions"
+  },
+  "primary_population": "all FUSION_VAL sources",
+  "schema": "step11_metric_contract_v2",
+  "zero_division": 0
+}

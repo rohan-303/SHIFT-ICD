@@ -1,0 +1,9 @@
+field,resolution,status
+learning_rates,"literal [0.0001,0.0003] in search_space_v3",CLOSED
+epochs,"literal [1,2,3] and MAX_EPOCHS=3",CLOSED
+R2 seed,17,CLOSED
+optimization constants,explicit R2 protocol v2,CLOSED
+feature provenance,feature_provenance_v1,CLOSED
+baseline definitions,baseline_contract_v2,CLOSED
+metric definitions,metric_contract_v2,CLOSED
+selection-rule SHA,verified on-disk SHA ending c8a,CLOSED

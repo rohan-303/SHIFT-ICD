@@ -1,0 +1,67 @@
+{
+  "configuration_count": 4,
+  "configurations": [
+    {
+      "L_MAX": 3,
+      "S_MAX": 6,
+      "architecture": "compact_deepsets_candidate_set_with_structural_queries",
+      "configuration_id": "r2_lr_1e-04_unweighted_primary",
+      "epochs": [
+        1,
+        2,
+        3
+      ],
+      "hidden_dim": 64,
+      "imbalance_variant": "UNWEIGHTED_PRIMARY",
+      "learning_rate": 0.0001,
+      "seed": 17
+    },
+    {
+      "L_MAX": 3,
+      "S_MAX": 6,
+      "architecture": "compact_deepsets_candidate_set_with_structural_queries",
+      "configuration_id": "r2_lr_1e-04_train_derived_form_weighted",
+      "epochs": [
+        1,
+        2,
+        3
+      ],
+      "hidden_dim": 64,
+      "imbalance_variant": "TRAIN_DERIVED_FORM_WEIGHTED",
+      "learning_rate": 0.0001,
+      "seed": 17
+    },
+    {
+      "L_MAX": 3,
+      "S_MAX": 6,
+      "architecture": "compact_deepsets_candidate_set_with_structural_queries",
+      "configuration_id": "r2_lr_3e-04_unweighted_primary",
+      "epochs": [
+        1,
+        2,
+        3
+      ],
+      "hidden_dim": 64,
+      "imbalance_variant": "UNWEIGHTED_PRIMARY",
+      "learning_rate": 0.0003,
+      "seed": 17
+    },
+    {
+      "L_MAX": 3,
+      "S_MAX": 6,
+      "architecture": "compact_deepsets_candidate_set_with_structural_queries",
+      "configuration_id": "r2_lr_3e-04_train_derived_form_weighted",
+      "epochs": [
+        1,
+        2,
+        3
+      ],
+      "hidden_dim": 64,
+      "imbalance_variant": "TRAIN_DERIVED_FORM_WEIGHTED",
+      "learning_rate": 0.0003,
+      "seed": 17
+    }
+  ],
+  "epoch_row_count": 12,
+  "schema": "step11_r2_configuration_grid_v2"
+}

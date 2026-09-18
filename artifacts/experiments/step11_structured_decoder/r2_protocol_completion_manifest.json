@@ -1,0 +1,26 @@
+{
+  "blockers_closed": [
+    "R2-B001",
+    "R2-B002",
+    "R2-B003",
+    "R2-B004"
+  ],
+  "commits": {
+    "r1": "cdfd04abdd400086485dbebc7ad278d00b08154d",
+    "r1a_blocker": "205e78c8677c7a6ac5dcf417b38879152d28ab6e",
+    "r1b": "43db7f4c069000e1df783b4f7d7c027f4cb5a5f3",
+    "r2_preflight_blocker": "be6e85c216813bda9c729f2055b8c5390a4c1084"
+  },
+  "new_artifacts": {
+    "baseline_contract_v2": "16587bc3c10f6e3b641bc65fa85d570022eda6ce33220dc0fbb5856fb5158f3b",
+    "configuration_grid_v2": "23ba18a85332f36f76e99f7696dfc717a1ad102a4a3b39079b4999f19f50f494",
+    "feature_provenance_v1": "adf7030faea7ff7f3dd3d9cd6af3fb5b03dcc7cba8e576e76545d240c10f6165",
+    "metric_contract_v2": "19fb3122266a3c6f11cec7e58d1bb0f5860faf2dbba113d7c3d099037de740a6",
+    "r2_search_protocol_v2": "23b5fc230a6c3d5b921361b4ee60e4bf875a68cc00c6da2f1bcc868f984e036e",
+    "search_space_v3": "2581e0d005109396ad4f5326a8f6975743768699949cb5167d2a8c0f28fc876d"
+  },
+  "protocol_completion_occurred_before_any_r2_scientific_result": true,
+  "schema": "step11_r2_protocol_completion_manifest_v1",
+  "statement": "NO R2 SCIENTIFIC MODEL RESULT EXISTED WHEN THESE VALUES WERE FROZEN.",
+  "status": "COMPLETED_PRE_OUTCOME"
+}

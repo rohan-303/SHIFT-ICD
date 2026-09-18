@@ -1,0 +1,53 @@
+{
+  "B0_TOP1_SINGLE": {
+    "form": "most_frequent_SINGLE_subtype_in_FUSION_TRAIN",
+    "no_map": false,
+    "target": "rank_1_frozen_top100"
+  },
+  "B1_THRESHOLD_SET": {
+    "deltas": [
+      0.1,
+      0.25,
+      0.5,
+      1.0
+    ],
+    "selected_delta": 0.1,
+    "selected_train_scores": {
+      "0.1": 0.0,
+      "0.25": 0.0,
+      "0.5": 0.0,
+      "1.0": 0.0
+    },
+    "selection_metric": "SOURCE_MACRO_FLAT_SET_F1",
+    "selection_population": "FUSION_TRAIN",
+    "tie": "smaller_delta"
+  },
+  "B2_ORACLE_FORM": {
+    "diagnostic_only": true,
+    "replacement": "gold_form_only"
+  },
+  "B3_ORACLE_CANDIDATE_ASSIGNMENTS": {
+    "diagnostic_only": true,
+    "replacement": "candidate-contained gold membership/assignment only"
+  },
+  "RETRIEVAL_STATISTICS_FORM": {
+    "C": 1.0,
+    "classifier": "L2_multinomial_logistic_regression",
+    "eligible": false,
+    "features": [
+      "top1_score",
+      "top1_minus_top2",
+      "top1_minus_top5",
+      "mean_top100",
+      "sd_top100",
+      "normalized_top1"
+    ],
+    "max_iter": 2000,
+    "random_state": 17,
+    "scaler_fit": "FUSION_TRAIN"
+  },
+  "schema": "step11_baseline_contract_v2",
+  "selection_eligible": [
+    "trainable_r2_configurations"
+  ]
+}

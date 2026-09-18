@@ -1,0 +1,5 @@
+L_MAX,S_MAX,architecture,configuration_id,epochs,hidden_dim,imbalance_variant,learning_rate,seed
+3,6,compact_deepsets_candidate_set_with_structural_queries,r2_lr_1e-04_unweighted_primary,"[1, 2, 3]",64,UNWEIGHTED_PRIMARY,0.0001,17
+3,6,compact_deepsets_candidate_set_with_structural_queries,r2_lr_1e-04_train_derived_form_weighted,"[1, 2, 3]",64,TRAIN_DERIVED_FORM_WEIGHTED,0.0001,17
+3,6,compact_deepsets_candidate_set_with_structural_queries,r2_lr_3e-04_unweighted_primary,"[1, 2, 3]",64,UNWEIGHTED_PRIMARY,0.0003,17
+3,6,compact_deepsets_candidate_set_with_structural_queries,r2_lr_3e-04_train_derived_form_weighted,"[1, 2, 3]",64,TRAIN_DERIVED_FORM_WEIGHTED,0.0003,17

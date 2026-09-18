@@ -1,0 +1,6 @@
+baseline,eligibility,selected_delta,status
+B0_TOP1_SINGLE,comparison_only,,FROZEN
+B1_THRESHOLD_SET,comparison_only,0.1,FROZEN
+RETRIEVAL_STATISTICS_FORM,diagnostic_only,,FROZEN
+B2_ORACLE_FORM,diagnostic_only,,FROZEN
+B3_ORACLE_CANDIDATE_ASSIGNMENTS,diagnostic_only,,FROZEN
