@@ -49,7 +49,7 @@
     {
       "milestone": "Step 11 R2P protocol completion",
       "authoritative_sha": "4bacfbfdcbda3903d16bbd1d841c18f901941a2f",
-      "mirror_sha": "pending",
+      "mirror_sha": "a11ff5e811307f1c21e763a954c895697bb1ce6c",
       "message": "fix: complete Step 11 R2 scientific protocol"
     }
   ]
