@@ -1,0 +1,8 @@
+relation,loss,target,masked
+mapping_form,L_form,form_logits,no
+scenario_count,L_scenario_count,scenario_count_logits,no
+scenario_activity,L_scenario_activity,scenario_activity_logits,unmatched queries inactive
+slot_count,L_slot_count,slot_count_logits,matched scenarios only
+slot_activity,L_slot_activity,slot_activity_logits,unmatched queries inactive
+candidate_to_slot,L_assignment,assignment_logits,gold slot absent from Top-100
+flat_membership,L_flat_set,membership_logits,combination forms

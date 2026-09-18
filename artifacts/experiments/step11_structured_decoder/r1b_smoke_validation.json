@@ -1,0 +1,25 @@
+{
+  "checkpoint": "artifacts/experiments/step11_structured_decoder/smoke/step11_r1b_smoke_only_config_repaired_seed_17_epoch_1.pt",
+  "full_fusion_val_scientific_evaluation_count": 0,
+  "full_r2_configurations_trained": 0,
+  "gradients_finite": true,
+  "loss": 1.3507837057113647,
+  "loss_finite": true,
+  "official_dev_scientific_evaluation_count": 0,
+  "oracle_families_covered": [
+    "NO_MAP",
+    "SINGLE_EXACT",
+    "ALTERNATIVE",
+    "COMBINATION",
+    "COMBINATION_WITH_ALTERNATIVES"
+  ],
+  "parameter_updates": {
+    "assignment_head": true,
+    "scenario_queries": true,
+    "slot_queries": true
+  },
+  "reload_pass": true,
+  "status": "STEP11_R1B_SMOKE_ONLY",
+  "test_scoring_count": 0,
+  "train_subset_sources": 5
+}

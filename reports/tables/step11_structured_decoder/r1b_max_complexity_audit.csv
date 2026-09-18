@@ -1,0 +1,4 @@
+dimension,maximum,status
+scenario_count,6,SUPPORTED_BY_QUERY_CAPACITY
+slot_count_per_scenario,3,SUPPORTED_BY_QUERY_CAPACITY
+largest_candidate_contained_complex_source,188,AUDITED

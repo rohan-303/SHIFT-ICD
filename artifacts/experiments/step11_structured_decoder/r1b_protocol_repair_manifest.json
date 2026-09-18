@@ -1,0 +1,29 @@
+{
+  "new_contract_hashes": {
+    "assembler_contract_v2.json": "62b22e20798208726ef6dbd01444ee4968a1abf03a2035d0c0c7175327c9bc05",
+    "cardinality_target_contract_v2.json": "2f2fb0e6be37bc2517d22833e6aa95d138e0f4ee147e474a68b0cfa5b7942799",
+    "loss_contract_v2.json": "baf5097c321f71df2063d0403457d058a7a38e72052c5cfebeae3ed952bfc33b",
+    "model_contract_v2.json": "7c5d920934305985195827ff0396554c54e13cb126db115e5cf17fd384dd109d",
+    "search_space_v2.json": "08f440df60d42193fcc416148dc4454f69bd4b177dd890ab1cbbf913793897de"
+  },
+  "original_r1_protocol_commit": "cdfd04abdd400086485dbebc7ad278d00b08154d",
+  "r1a_blocker_commit": "205e78c8677c7a6ac5dcf417b38879152d28ab6e",
+  "r1a_blocker_sha256": "34bc9c326261bfe26f9bce367be07c2712c9a104057d3db530c4386ad556f8d0",
+  "reason": "R1A proved missing scenario/choice-list assignment information",
+  "schema": "step11_r1b_protocol_repair_manifest_v1",
+  "statement": "REPAIR OCCURRED BEFORE ANY FULL STEP 11 SCIENTIFIC MODEL EVALUATION.",
+  "superseded_contracts": [
+    "model_contract.json",
+    "assembler_contract.json",
+    "loss_contract.json",
+    "cardinality_target_contract.json",
+    "search_space.json"
+  ],
+  "unchanged_contracts": [
+    "structured_gold_contract.json",
+    "selection_rule.json",
+    "interpretation_contract.json",
+    "inner_split_manifest_or_reference.json",
+    "prior_test_exposure.json"
+  ]
+}

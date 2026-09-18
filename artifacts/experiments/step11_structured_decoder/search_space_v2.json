@@ -1,0 +1,18 @@
+{
+  "architecture_variants": 1,
+  "capacities": {
+    "L_MAX": 3,
+    "S_MAX": 6
+  },
+  "change_scope": "assignment heads and repaired losses only",
+  "hidden_dim": "reuse R1 model contract",
+  "imbalance_variants": [
+    "unweighted",
+    "TRAIN-derived form-weighted"
+  ],
+  "learning_rates": [
+    "reuse R1 frozen grid"
+  ],
+  "new_capacity_search": false,
+  "schema": "step11_search_space_v2"
+}

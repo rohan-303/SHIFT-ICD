@@ -1,0 +1,11 @@
+{
+  "contracts": {
+    "assembler_contract_v2.json": "62b22e20798208726ef6dbd01444ee4968a1abf03a2035d0c0c7175327c9bc05",
+    "cardinality_target_contract_v2.json": "2f2fb0e6be37bc2517d22833e6aa95d138e0f4ee147e474a68b0cfa5b7942799",
+    "loss_contract_v2.json": "baf5097c321f71df2063d0403457d058a7a38e72052c5cfebeae3ed952bfc33b",
+    "model_contract_v2.json": "7c5d920934305985195827ff0396554c54e13cb126db115e5cf17fd384dd109d",
+    "r1b_protocol_repair_manifest.json": "0b0dc365f549ef34b1bad04ed0c173dedbbdedcc936de3f095be92f912c4c4a4",
+    "search_space_v2.json": "08f440df60d42193fcc416148dc4454f69bd4b177dd890ab1cbbf913793897de"
+  },
+  "information_sufficiency_table_sha256": "2aa7abeba9035ec21ed4bbaa2a395b41c8fc60119ac6aae615414a88457d9b43"
+}

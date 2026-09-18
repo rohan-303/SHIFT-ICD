@@ -1,0 +1,8 @@
+field,model_input,result
+mapping_kind,UNCHANGED/EXCLUDED,PASS
+scenario_id,UNCHANGED/EXCLUDED,PASS
+choice_list_id,UNCHANGED/EXCLUDED,PASS
+candidate_is_gold,UNCHANGED/EXCLUDED,PASS
+approximate_flag,UNCHANGED/EXCLUDED,PASS
+split,UNCHANGED/EXCLUDED,PASS
+TEST_outcome,UNCHANGED/EXCLUDED,PASS

@@ -1,0 +1,16 @@
+{
+  "candidate_containment": true,
+  "form_rules": {
+    "ALTERNATIVE": "thresholded flat membership with top-score fallback",
+    "COMBINATION": "one top assignment per active slot",
+    "COMBINATION_WITH_ALTERNATIVES": "thresholded assignment alternatives per active slot with top-score fallback",
+    "NO_MAP": "empty",
+    "SINGLE_APPROXIMATE": "one flat candidate",
+    "SINGLE_EXACT": "one flat candidate"
+  },
+  "gold_only_input_count": 0,
+  "scenario_selection": "argmax count then top activity with query-index tie-break",
+  "schema": "step11_assembler_contract_v2",
+  "serialization": "canonical scenario/choice ordering independent of query indices",
+  "slot_selection": "argmax count then top activity with query-index tie-break"
+}

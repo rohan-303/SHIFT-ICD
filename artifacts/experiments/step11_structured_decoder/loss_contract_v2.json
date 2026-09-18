@@ -1,0 +1,17 @@
+{
+  "assignment_mask": "skip slots with zero candidate-contained valid alternatives",
+  "components": [
+    "L_form",
+    "L_scenario_count",
+    "L_scenario_activity",
+    "L_slot_count",
+    "L_slot_activity",
+    "L_assignment",
+    "L_flat_set"
+  ],
+  "imbalance": "unweighted primary; TRAIN-derived weighted alternative",
+  "matching": "deterministic exhaustive hierarchical scenario/slot matching; query-index tie-break",
+  "normalization": "normalize applicable components within source, combine, then mean sources",
+  "schema": "step11_loss_contract_v2",
+  "weights": "equal fixed weight per applicable normalized component"
+}

@@ -1,0 +1,8 @@
+name,shape,scope,activation,target
+form_logits,"[B,6]",source,raw logits,mapping form
+scenario_count_logits,"[B,7]",source,raw logits,scenario count
+scenario_activity_logits,"[B,6]",scenario query,raw logits,active scenario
+slot_count_logits,"[B,6,4]",scenario query,raw logits,slot count
+slot_activity_logits,"[B,6,3]",slot query,raw logits,active slot
+assignment_logits,"[B,K,6,3]",candidate/scenario/slot,raw logits,candidate alternatives per choice list
+membership_logits,"[B,K]",candidate,raw logits,flat non-combination membership

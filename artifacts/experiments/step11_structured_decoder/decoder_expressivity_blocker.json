@@ -1,0 +1,165 @@
+{
+  "adversarial_results": {
+    "alternative_vs_combination_same_flat_set": "FORM_HEAD_CAN_DISTINGUISH_LABELS_BUT_CURRENT_ASSEMBLER_REQUIRES_GOLD_STRUCTURE",
+    "overlapping_alternatives": {
+      "TRAIN_sources": 2,
+      "examples": [
+        "8280",
+        "8281"
+      ],
+      "supported_by_canonical_contract": true
+    },
+    "same_form_different_choice_list_partition": "NOT_IDENTIFIABLE",
+    "same_form_different_scenario_partition": "NOT_IDENTIFIABLE"
+  },
+  "assembler_inputs": [
+    {
+      "classification": "GOLD_ONLY_METADATA in prior oracle; MODEL_OUTPUT absent as structured object",
+      "name": "structure.mapping_form"
+    },
+    {
+      "classification": "GOLD_ONLY_METADATA in prior oracle",
+      "name": "structure.scenarios[].choice_lists[].alternatives"
+    },
+    {
+      "classification": "MODEL_OUTPUT / candidate-level scores",
+      "name": "candidate_scores"
+    },
+    {
+      "classification": "CANDIDATE_IDENTITY",
+      "name": "candidate identities"
+    }
+  ],
+  "candidate_retrieval_independence": "The counterexamples use identical synthetic candidate identities; failure occurs before candidate membership or Top-100 availability is considered.",
+  "classification": "DECODER_STRUCTURE_NOT_IDENTIFIABLE",
+  "counterexamples": [
+    {
+      "flat_set": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "left": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "C",
+          "D"
+        ]
+      ],
+      "name": "same_form_choice_partition",
+      "right": [
+        [
+          "A",
+          "C"
+        ],
+        [
+          "B",
+          "D"
+        ]
+      ],
+      "scenario_count": 1,
+      "slot_count": 2
+    },
+    {
+      "flat_set": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "left": [
+        [
+          [
+            "A",
+            "B"
+          ]
+        ],
+        [
+          [
+            "C",
+            "D"
+          ]
+        ]
+      ],
+      "name": "same_form_scenario_partition",
+      "right": [
+        [
+          [
+            "A",
+            "C"
+          ]
+        ],
+        [
+          [
+            "B",
+            "D"
+          ]
+        ]
+      ],
+      "scenario_count": 2,
+      "slot_count": 1
+    }
+  ],
+  "gold_only_assembler_input_count": 2,
+  "information_sufficiency_table": "reports/tables/step11_structured_decoder/model_output_information_sufficiency.csv",
+  "information_sufficiency_table_sha256": "7b032470ba14e02ac598ae8da68c1a3413eb0bff69573e99a84737edbf4c1817",
+  "max_complexity": {
+    "candidate_contained_oracle_reconstruction_rate": "NOT_VALIDATED; prior oracle is invalid for this question",
+    "max_scenario_count": 6,
+    "max_slot_count": 3
+  },
+  "missing_structural_information": [
+    "scenario_assignment",
+    "slot_assignment",
+    "choice_list_assignment",
+    "scenario_count_specific_decoder"
+  ],
+  "model_output_tensor_schema": [
+    {
+      "activation": "raw logits",
+      "assembler_consumer": "none directly; required to choose form",
+      "name": "form_logits",
+      "scope": "source-level",
+      "shape": "[B, 6]",
+      "target": "mapping_form"
+    },
+    {
+      "activation": "raw logits",
+      "assembler_consumer": "none directly; no separate scenario/slot decoding",
+      "name": "cardinality_logits",
+      "scope": "source-level",
+      "shape": "[B, 4]",
+      "target": "single cardinality class"
+    },
+    {
+      "activation": "raw logits",
+      "assembler_consumer": "candidate scores only",
+      "name": "membership_logits",
+      "scope": "candidate-level",
+      "shape": "[B, K]",
+      "target": "candidate membership"
+    }
+  ],
+  "prior_oracle_authenticity": "ORACLE_INJECTS_EXTRA_STRUCTURAL_INFORMATION",
+  "schema": "step11_decoder_expressivity_blocker_v1",
+  "scientific_evaluation_counts": {
+    "full_fusion_val": 0,
+    "official_dev": 0,
+    "test": 0
+  },
+  "train_counts": {
+    "collision_capable_structures": 254,
+    "collision_free_structures": 9943,
+    "combination": 225,
+    "combination_with_alternatives": 243,
+    "more_than_one_choice_list": 468,
+    "multi_scenario": 39,
+    "requiring_explicit_assignment_information": 254,
+    "structure_collision_count": 254,
+    "total_forward_train": 10197
+  }
+}

@@ -1,0 +1,10 @@
+structural_decision,current_model_output,supervised,identifiable
+NO_MAP,form_logits,L_form,yes
+scenario_count,scenario_count_logits,L_scenario_count,yes
+active_scenarios,scenario_activity_logits,L_scenario_activity,yes
+slot_count,slot_count_logits,L_slot_count,yes
+active_slots,slot_activity_logits,L_slot_activity,yes
+candidate_inclusion,membership_logits/assignment_logits,L_flat_set/L_assignment,yes
+candidate_to_slot_assignment,assignment_logits,L_assignment,yes
+candidate_to_scenario_assignment,assignment_logits + scenario queries,hierarchical matching + L_assignment,yes
+choice_list_alternatives,assignment_logits,masked L_assignment,yes

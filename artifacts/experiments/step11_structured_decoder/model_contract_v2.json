@@ -1,0 +1,62 @@
+{
+  "capacities": {
+    "L_MAX": 3,
+    "S_MAX": 6
+  },
+  "family": "compact_deepsets_candidate_set_with_structural_queries",
+  "forbidden_inputs": [
+    "gold_form",
+    "gold_scenario_id",
+    "gold_choice_list_id",
+    "candidate_is_gold",
+    "GEM_flags",
+    "gold_cardinality",
+    "TEST_outcome"
+  ],
+  "inputs": [
+    "frozen_source_representation",
+    "frozen_candidate_representation",
+    "retriever_score",
+    "normalized_retriever_score",
+    "candidate_rank",
+    "candidate_identity"
+  ],
+  "schema": "step11_model_contract_v2",
+  "tensors": {
+    "assignment_logits": {
+      "activation": "raw logits",
+      "scope": "candidate/scenario/slot",
+      "shape": "[B,K,6,3]"
+    },
+    "form_logits": {
+      "activation": "raw logits",
+      "scope": "source",
+      "shape": "[B,6]"
+    },
+    "membership_logits": {
+      "activation": "raw logits",
+      "scope": "candidate",
+      "shape": "[B,K]"
+    },
+    "scenario_activity_logits": {
+      "activation": "raw logits",
+      "scope": "scenario",
+      "shape": "[B,6]"
+    },
+    "scenario_count_logits": {
+      "activation": "raw logits",
+      "scope": "source",
+      "shape": "[B,7]"
+    },
+    "slot_activity_logits": {
+      "activation": "raw logits",
+      "scope": "slot",
+      "shape": "[B,6,3]"
+    },
+    "slot_count_logits": {
+      "activation": "raw logits",
+      "scope": "scenario",
+      "shape": "[B,6,4]"
+    }
+  }
+}

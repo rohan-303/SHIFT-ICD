@@ -1,0 +1,8 @@
+{
+  "complex_assignment": "candidate x scenario x slot",
+  "flat_non_combination_membership": "candidate-level membership",
+  "retrieval_missing_slots": "mask assignment loss, retain structural losses",
+  "scenario_count": "0..6; 0 for non-combination",
+  "schema": "step11_cardinality_target_contract_v2",
+  "slot_count_per_scenario": "0..3"
+}
