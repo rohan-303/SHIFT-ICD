@@ -55,7 +55,7 @@
     {
       "milestone": "Step 11 R2P2 form-weighting protocol amendment",
       "authoritative_sha": "71c634349170bc443da5470acaf7ebfe8e051690",
-      "mirror_sha": "pending",
+      "mirror_sha": "d7d8106bb7f8beedee0d4952d3259367f5c32b63",
       "message": "fix: freeze Step 11 TRAIN-derived form weighting"
     }
   ]
