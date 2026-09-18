@@ -1,0 +1,66 @@
+{
+  "baseline_eligibility": {
+    "comparison_only": [
+      "B0_TOP1_SINGLE",
+      "B1_THRESHOLD_SET"
+    ],
+    "diagnostic_only": [
+      "RETRIEVAL_STATISTICS_FORM",
+      "B2_ORACLE_FORM",
+      "B3_ORACLE_CANDIDATE_ASSIGNMENTS"
+    ],
+    "trainable": [
+      "four R2 configurations"
+    ]
+  },
+  "candidate_dev_sha256": "c7240c1f38dd87f54d63c97999cba71d91f6d0887d89bc2d4094f9ba38ad6a6f",
+  "candidate_train_sha256": "d90dcb937748f1c0b173416d6b8f23f1c97ca8e8caf8934efdf8120993c1cb10",
+  "configuration_count": 4,
+  "configuration_grid_sha256": "23ba18a85332f36f76e99f7696dfc717a1ad102a4a3b39079b4999f19f50f494",
+  "configuration_grid_v3_sha256": "de2e98fd71df1ae2026e43a2a3b973cdbcdbe2da463fed3628b8487f4de445c5",
+  "development_seed": 17,
+  "epoch_selection": "frozen lexicographic hierarchy; earliest epoch on complete tie; no early stopping",
+  "epochs": [
+    1,
+    2,
+    3
+  ],
+  "feature_provenance_sha256": "adf7030faea7ff7f3dd3d9cd6af3fb5b03dcc7cba8e576e76545d240c10f6165",
+  "form_weighting_contract_v1_sha256": "eac3a1bd0b0848b9e7635c68dd0153a6b33b5c0dfab8e0e2f74264482a5ed6a4",
+  "global_selection": "one representative epoch per configuration, same hierarchy, configuration ID ascending final tie",
+  "inner_split": {
+    "overlap": 0,
+    "train_count": 8666,
+    "val_count": 1531
+  },
+  "interpretation_contract_sha256": "ecad6ee74d4bd48e3efca7f45597de729dae0fb8079c0dd8a62087c9f9efb5ef",
+  "invalid_run_rules": [
+    "NaN_or_Inf_loss",
+    "nonfinite_gradient",
+    "checkpoint_hash_failure",
+    "feature_provenance_mismatch"
+  ],
+  "loss_contract_v3_sha256": "f1a246b581199e45cf06f2cf9b39bb084977ca7cd1b86b23921b2bbf1e77e959",
+  "maximum_epochs": 3,
+  "metric_contract_v2_sha256": "19fb3122266a3c6f11cec7e58d1bb0f5860faf2dbba113d7c3d099037de740a6",
+  "official_dev": "STEP11_OFFICIAL_DEV_ACCESS_FORBIDDEN",
+  "optimization": {
+    "dropout": 0.0,
+    "gradient_clipping": 1.0,
+    "initialization": "torch default seeded initialization",
+    "optimizer": "AdamW",
+    "precision": "FP32",
+    "scheduler": "NONE",
+    "source_batch_size": 8,
+    "warmup": 0,
+    "weight_decay": 0.0001
+  },
+  "schema": "step11_r2_search_protocol_v3",
+  "scientific_execution_count_at_freeze": 0,
+  "search_space_v3_sha256": "2581e0d005109396ad4f5326a8f6975743768699949cb5167d2a8c0f28fc876d",
+  "search_space_v4_sha256": "69bec96cb49ffac41e3352820097e47f45878c916b00080c39fbcc84fea54456",
+  "selection_rule_sha256": "f17bd93e0a864070ee13b015c3dc72770ab5c3444f42ebbcecf2ca7eb98cdc8a",
+  "status": "FROZEN_PRE_OUTCOME",
+  "supersedes": "r2_search_protocol_v2",
+  "test": "STEP11_TEST_ACCESS_FORBIDDEN"
+}

@@ -1,0 +1,24 @@
+{
+  "assignment_mask": "skip slots with zero candidate-contained valid alternatives",
+  "components": [
+    "L_form",
+    "L_scenario_count",
+    "L_scenario_activity",
+    "L_slot_count",
+    "L_slot_activity",
+    "L_assignment",
+    "L_flat_set"
+  ],
+  "form_weighting_contract_sha256": "eac3a1bd0b0848b9e7635c68dd0153a6b33b5c0dfab8e0e2f74264482a5ed6a4",
+  "imbalance": {
+    "TRAIN_DERIVED_FORM_WEIGHTED": "balanced inverse-frequency weights from form_weighting_contract_v1",
+    "UNWEIGHTED_PRIMARY": "six unit form weights"
+  },
+  "matching": "deterministic exhaustive hierarchical scenario/slot matching; query-index tie-break",
+  "normalization": "normalize applicable components within source, combine, then mean sources",
+  "schema": "step11_loss_contract_v3",
+  "scope": "only L_form; all structural components remain unchanged",
+  "supersedes": "loss_contract_v2",
+  "weights": "equal fixed weight per applicable normalized component",
+  "zero_count_behavior": "STEP11_FORM_WEIGHT_UNDEFINED_ZERO_CLASS"
+}

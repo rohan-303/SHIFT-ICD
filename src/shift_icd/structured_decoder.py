@@ -326,12 +326,40 @@ def hierarchical_match(structure: Mapping[str, Any], scenario_costs: torch.Tenso
     return tuple((query_index, gold_index, best[2][gold_index]) for gold_index, query_index in enumerate(best[1]))
 
 
-def structured_assignment_loss(outputs: Mapping[str, torch.Tensor], structures: Sequence[Mapping[str, Any]], candidate_batches: Sequence[Sequence[str]]) -> torch.Tensor:
+_FORM_CLASS_ORDER = ("NO_MAP", "SINGLE_EXACT", "SINGLE_APPROXIMATE", "ALTERNATIVE", "COMBINATION", "COMBINATION_WITH_ALTERNATIVES")
+
+
+def train_derived_form_weights(counts: Mapping[str, int]) -> dict[str, float]:
+    """Balanced inverse-frequency weights computed from TRAIN source counts only."""
+    missing = [name for name in _FORM_CLASS_ORDER if int(counts.get(name, 0)) <= 0]
+    if missing:
+        raise ValueError("STEP11_FORM_WEIGHT_UNDEFINED_ZERO_CLASS:" + ",".join(missing))
+    total = float(sum(int(counts[name]) for name in _FORM_CLASS_ORDER))
+    classes = float(len(_FORM_CLASS_ORDER))
+    return {name: total / (classes * float(int(counts[name]))) for name in _FORM_CLASS_ORDER}
+
+
+def form_cross_entropy(logits: torch.Tensor, targets: torch.Tensor, class_weights: torch.Tensor | None = None) -> torch.Tensor:
+    """Per-source form CE; optional balanced weight applies only to this component."""
+    values = F.cross_entropy(logits, targets, reduction="none")
+    if class_weights is None:
+        return values.mean()
+    selected = class_weights.to(device=logits.device, dtype=logits.dtype)[targets]
+    return (values * selected).mean()
+
+def structured_assignment_loss(
+    outputs: Mapping[str, torch.Tensor],
+    structures: Sequence[Mapping[str, Any]],
+    candidate_batches: Sequence[Sequence[str]],
+    form_class_weights: torch.Tensor | None = None,
+) -> torch.Tensor:
     """Source-balanced repaired loss with masked missing-slot assignment targets."""
     losses: list[torch.Tensor] = []
     for batch_index, (structure, candidates) in enumerate(zip(structures, candidate_batches)):
         form = _FORM_INDEX[_normal_form(structure)]
-        source_terms = [F.cross_entropy(outputs["form_logits"][batch_index:batch_index + 1], torch.tensor([form], device=outputs["form_logits"].device))]
+        targets = torch.tensor([form], device=outputs["form_logits"].device)
+        form_ce = form_cross_entropy(outputs["form_logits"][batch_index:batch_index + 1], targets, form_class_weights)
+        source_terms = [form_ce]
         scenarios = _sorted_scenarios(structure)
         scenario_count = 0 if form < _FORM_INDEX["COMBINATION"] else len(scenarios)
         source_terms.append(F.cross_entropy(outputs["scenario_count_logits"][batch_index:batch_index + 1], torch.tensor([scenario_count], device=outputs["form_logits"].device)))

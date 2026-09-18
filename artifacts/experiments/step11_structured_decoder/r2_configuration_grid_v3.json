@@ -1,0 +1,78 @@
+{
+  "configuration_count": 4,
+  "configurations": [
+    {
+      "L_MAX": 3,
+      "S_MAX": 6,
+      "architecture": "compact_deepsets_candidate_set_with_structural_queries",
+      "configuration_id": "r2_lr_1e-04_unweighted_primary",
+      "epochs": [
+        1,
+        2,
+        3
+      ],
+      "form_weighting_contract_sha256": "UNIT_WEIGHTS",
+      "hidden_dim": 64,
+      "imbalance_variant": "UNWEIGHTED_PRIMARY",
+      "learning_rate": 0.0001,
+      "loss_contract_sha256": "f1a246b581199e45cf06f2cf9b39bb084977ca7cd1b86b23921b2bbf1e77e959",
+      "seed": 17
+    },
+    {
+      "L_MAX": 3,
+      "S_MAX": 6,
+      "architecture": "compact_deepsets_candidate_set_with_structural_queries",
+      "configuration_id": "r2_lr_1e-04_train_derived_form_weighted",
+      "epochs": [
+        1,
+        2,
+        3
+      ],
+      "form_weighting_contract_sha256": "eac3a1bd0b0848b9e7635c68dd0153a6b33b5c0dfab8e0e2f74264482a5ed6a4",
+      "hidden_dim": 64,
+      "imbalance_variant": "TRAIN_DERIVED_FORM_WEIGHTED",
+      "learning_rate": 0.0001,
+      "loss_contract_sha256": "f1a246b581199e45cf06f2cf9b39bb084977ca7cd1b86b23921b2bbf1e77e959",
+      "seed": 17
+    },
+    {
+      "L_MAX": 3,
+      "S_MAX": 6,
+      "architecture": "compact_deepsets_candidate_set_with_structural_queries",
+      "configuration_id": "r2_lr_3e-04_unweighted_primary",
+      "epochs": [
+        1,
+        2,
+        3
+      ],
+      "form_weighting_contract_sha256": "UNIT_WEIGHTS",
+      "hidden_dim": 64,
+      "imbalance_variant": "UNWEIGHTED_PRIMARY",
+      "learning_rate": 0.0003,
+      "loss_contract_sha256": "f1a246b581199e45cf06f2cf9b39bb084977ca7cd1b86b23921b2bbf1e77e959",
+      "seed": 17
+    },
+    {
+      "L_MAX": 3,
+      "S_MAX": 6,
+      "architecture": "compact_deepsets_candidate_set_with_structural_queries",
+      "configuration_id": "r2_lr_3e-04_train_derived_form_weighted",
+      "epochs": [
+        1,
+        2,
+        3
+      ],
+      "form_weighting_contract_sha256": "eac3a1bd0b0848b9e7635c68dd0153a6b33b5c0dfab8e0e2f74264482a5ed6a4",
+      "hidden_dim": 64,
+      "imbalance_variant": "TRAIN_DERIVED_FORM_WEIGHTED",
+      "learning_rate": 0.0003,
+      "loss_contract_sha256": "f1a246b581199e45cf06f2cf9b39bb084977ca7cd1b86b23921b2bbf1e77e959",
+      "seed": 17
+    }
+  ],
+  "epoch_row_count": 12,
+  "form_weighting_contract_v1_sha256": "eac3a1bd0b0848b9e7635c68dd0153a6b33b5c0dfab8e0e2f74264482a5ed6a4",
+  "loss_contract_v3_sha256": "f1a246b581199e45cf06f2cf9b39bb084977ca7cd1b86b23921b2bbf1e77e959",
+  "schema": "step11_r2_configuration_grid_v3",
+  "search_space_v4_sha256": "69bec96cb49ffac41e3352820097e47f45878c916b00080c39fbcc84fea54456"
+}

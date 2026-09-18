@@ -1,0 +1,37 @@
+{
+  "configuration_grid_v3_sha256": "de2e98fd71df1ae2026e43a2a3b973cdbcdbe2da463fed3628b8487f4de445c5",
+  "form_weighting_contract_v1_sha256": "eac3a1bd0b0848b9e7635c68dd0153a6b33b5c0dfab8e0e2f74264482a5ed6a4",
+  "fusion_train_class_counts": {
+    "ALTERNATIVE": 1613,
+    "COMBINATION": 190,
+    "COMBINATION_WITH_ALTERNATIVES": 207,
+    "NO_MAP": 251,
+    "SINGLE_APPROXIMATE": 4310,
+    "SINGLE_EXACT": 2095
+  },
+  "fusion_train_source_sha256": "150a57de2e9101ee9bb5c1699bbb7b3a7f9b1fc1d0863018a8766808c151f24c",
+  "interpretation_contract_sha256": "ecad6ee74d4bd48e3efca7f45597de729dae0fb8079c0dd8a62087c9f9efb5ef",
+  "loss_contract_v3_sha256": "f1a246b581199e45cf06f2cf9b39bb084977ca7cd1b86b23921b2bbf1e77e959",
+  "metric_contract_v2_sha256": "19fb3122266a3c6f11cec7e58d1bb0f5860faf2dbba113d7c3d099037de740a6",
+  "r1b_commit": "43db7f4c069000e1df783b4f7d7c027f4cb5a5f3",
+  "r2_execution_blocker_commit": "eea9ef1b4d4b28d4a242c391146ad96fbc18cacd",
+  "r2_protocol_completion_commit": "4bacfbfdcbda3903d16bbd1d841c18f901941a2f",
+  "r2_search_protocol_v3_sha256": "c21491883eed378f9568823ac9a22554a84ab5ae56f85fc6df2f26c3bdd340d5",
+  "r2_x001_blocked_report_sha256": "902870284d5f9d8ae1bfb21e94497f7fb6417c2cf7c6a3310fd8d6addf66e6c9",
+  "r2_x001_blocker_sha256": "67112cf32f1245a70d3febfc5aebe65900a7a877a3bbdf7270f0577778eca319",
+  "reason": "TRAIN_DERIVED_FORM_WEIGHTED lacked an executable formula, scaling, scope, and zero-count behavior",
+  "schema": "step11_r2p2_protocol_amendment_manifest_v1",
+  "scientific_counts_at_amendment": {
+    "checkpoints": 0,
+    "configurations_trained": 0,
+    "epoch_rows": 0,
+    "feature_caches": 0,
+    "fusion_val_evaluations": 0,
+    "official_dev_evaluations": 0,
+    "test_scoring": 0
+  },
+  "search_space_v4_sha256": "69bec96cb49ffac41e3352820097e47f45878c916b00080c39fbcc84fea54456",
+  "selection_rule_sha256": "f17bd93e0a864070ee13b015c3dc72770ab5c3444f42ebbcecf2ca7eb98cdc8a",
+  "statement": "FORM WEIGHTING WAS EXPLICITLY FROZEN BEFORE FEATURE-CACHE MATERIALIZATION, TRAINING, CHECKPOINT CREATION, OR FUSION_VAL SCIENTIFIC SCORING.",
+  "status": "FROZEN_PRE_OUTCOME"
+}

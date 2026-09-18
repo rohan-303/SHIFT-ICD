@@ -1,0 +1,51 @@
+{
+  "C": 6,
+  "N": 8666,
+  "class_counts": {
+    "ALTERNATIVE": 1613,
+    "COMBINATION": 190,
+    "COMBINATION_WITH_ALTERNATIVES": 207,
+    "NO_MAP": 251,
+    "SINGLE_APPROXIMATE": 4310,
+    "SINGLE_EXACT": 2095
+  },
+  "class_order": [
+    "NO_MAP",
+    "SINGLE_EXACT",
+    "SINGLE_APPROXIMATE",
+    "ALTERNATIVE",
+    "COMBINATION",
+    "COMBINATION_WITH_ALTERNATIVES"
+  ],
+  "dtype_policy": "compute counts/weights in float64; cast weights to form_logits dtype/device at training",
+  "formula": "w_c = N / (C * n_c)",
+  "fusion_train_source_count": 8666,
+  "fusion_train_source_sha256": "150a57de2e9101ee9bb5c1699bbb7b3a7f9b1fc1d0863018a8766808c151f24c",
+  "fusion_val_rows_used": 0,
+  "normalization_property": "sum_c(n_c * w_c) / N = 1; no additional renormalization",
+  "official_dev_rows_used": 0,
+  "schema": "step11_form_weighting_contract_v1",
+  "scope": [
+    "L_form"
+  ],
+  "status": "FROZEN_PRE_OUTCOME",
+  "test_rows_used": 0,
+  "unweighted_primary": {
+    "ALTERNATIVE": 1.0,
+    "COMBINATION": 1.0,
+    "COMBINATION_WITH_ALTERNATIVES": 1.0,
+    "NO_MAP": 1.0,
+    "SINGLE_APPROXIMATE": 1.0,
+    "SINGLE_EXACT": 1.0
+  },
+  "weighted_average_normalization": 1.0,
+  "weights_float64": {
+    "ALTERNATIVE": 0.8954329406902253,
+    "COMBINATION": 7.601754385964912,
+    "COMBINATION_WITH_ALTERNATIVES": 6.977455716586151,
+    "NO_MAP": 5.754316069057105,
+    "SINGLE_APPROXIMATE": 0.3351121423047177,
+    "SINGLE_EXACT": 0.6894192521877486
+  },
+  "zero_count_behavior": "raise STEP11_FORM_WEIGHT_UNDEFINED_ZERO_CLASS"
+}

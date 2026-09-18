@@ -12,5 +12,6 @@ Filtering rewrites commit IDs only in the separate publication mirror. The autho
 | Step 11 R1 structured decoder protocol | `cdfd04abdd400086485dbebc7ad278d00b08154d` | `89439123bf5bed680b66681821c4957f936218f1` | feat: publish Step 11 R1 structured decoder protocol |
 | Step 11 R1B assignment decoder repair | `43db7f4c069000e1df783b4f7d7c027f4cb5a5f3` | `f411500384e3a740de86f11374d00271dd22fdeb` | fix: publish Step 11 R1B assignment decoder repair |
 | Step 11 R2P protocol completion | `4bacfbfdcbda3903d16bbd1d841c18f901941a2f` | `a11ff5e811307f1c21e763a954c895697bb1ce6c` | fix: complete Step 11 R2 scientific protocol |
+| Step 11 R2P2 form-weighting protocol amendment | `71c634349170bc443da5470acaf7ebfe8e051690` | pending | fix: freeze Step 11 TRAIN-derived form weighting |
 
 The Step 10 publication tag should target mirror commit `bff6d7ce1c926f74b80d368106efd40eaaf4ab08`, the filtered equivalent of authoritative closeout `4566b3e568db99852c71a6a1d6b4c6125454290a`.

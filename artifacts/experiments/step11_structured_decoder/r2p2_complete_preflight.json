@@ -1,0 +1,50 @@
+{
+  "class_order": [
+    "NO_MAP",
+    "SINGLE_EXACT",
+    "SINGLE_APPROXIMATE",
+    "ALTERNATIVE",
+    "COMBINATION",
+    "COMBINATION_WITH_ALTERNATIVES"
+  ],
+  "contracts": {
+    "assembler_contract_v2_sha256": "62b22e20798208726ef6dbd01444ee4968a1abf03a2035d0c0c7175327c9bc05",
+    "baseline_contract_v2_sha256": "16587bc3c10f6e3b641bc65fa85d570022eda6ce33220dc0fbb5856fb5158f3b",
+    "cardinality_target_contract_v2_sha256": "2f2fb0e6be37bc2517d22833e6aa95d138e0f4ee147e474a68b0cfa5b7942799",
+    "configuration_grid_v3": "de2e98fd71df1ae2026e43a2a3b973cdbcdbe2da463fed3628b8487f4de445c5",
+    "feature_provenance_v1_sha256": "adf7030faea7ff7f3dd3d9cd6af3fb5b03dcc7cba8e576e76545d240c10f6165",
+    "form_weighting_contract_v1": "eac3a1bd0b0848b9e7635c68dd0153a6b33b5c0dfab8e0e2f74264482a5ed6a4",
+    "interpretation_contract_sha256": "ecad6ee74d4bd48e3efca7f45597de729dae0fb8079c0dd8a62087c9f9efb5ef",
+    "loss_contract_v2_sha256": "baf5097c321f71df2063d0403457d058a7a38e72052c5cfebeae3ed952bfc33b",
+    "loss_contract_v3": "f1a246b581199e45cf06f2cf9b39bb084977ca7cd1b86b23921b2bbf1e77e959",
+    "metric_contract_v2_sha256": "19fb3122266a3c6f11cec7e58d1bb0f5860faf2dbba113d7c3d099037de740a6",
+    "model_contract_v2_sha256": "7c5d920934305985195827ff0396554c54e13cb126db115e5cf17fd384dd109d",
+    "r1b_repair_manifest_sha256": "0b0dc365f549ef34b1bad04ed0c173dedbbdedcc936de3f095be92f912c4c4a4",
+    "r2_search_protocol_v3": "c21491883eed378f9568823ac9a22554a84ab5ae56f85fc6df2f26c3bdd340d5",
+    "search_space_v4": "69bec96cb49ffac41e3352820097e47f45878c916b00080c39fbcc84fea54456",
+    "selection_rule_sha256": "f17bd93e0a864070ee13b015c3dc72770ab5c3444f42ebbcecf2ca7eb98cdc8a"
+  },
+  "counts_at_freeze": {
+    "checkpoints": 0,
+    "configurations_trained": 0,
+    "epoch_rows": 0,
+    "feature_caches": 0,
+    "fusion_val_evaluations": 0,
+    "official_dev_evaluations": 0,
+    "test_scoring": 0
+  },
+  "form_weighting_rule_frozen_before_any_r2_scientific_result": true,
+  "fusion_train_count": 8666,
+  "fusion_train_source_sha256": "150a57de2e9101ee9bb5c1699bbb7b3a7f9b1fc1d0863018a8766808c151f24c",
+  "fusion_val_count": 1531,
+  "fusion_val_source_sha256": "225df0f8343bc5358e1980688018916df4c75675595a77f37ca65ceea17bbcb9",
+  "future_configuration_count": 4,
+  "future_epoch_row_count": 12,
+  "official_dev_access": "STEP11_OFFICIAL_DEV_ACCESS_FORBIDDEN",
+  "overlap_count": 0,
+  "schema": "step11_r2p2_complete_preflight_v1",
+  "scientific_execution": false,
+  "starting_head": "eea9ef1b4d4b28d4a242c391146ad96fbc18cacd",
+  "status": "STEP11_R2_EXECUTION_PROTOCOL_COMPLETE_FROZEN",
+  "test_access": "STEP11_TEST_ACCESS_FORBIDDEN"
+}
