@@ -1,0 +1,4 @@
+test,result,evidence
+production_loss_calls_hierarchical_match,PASS,pytest spy integration test
+matching_precedes_structural_targets,PASS,loss implementation order
+query_index_tie_break,PASS,frozen hierarchical_match implementation

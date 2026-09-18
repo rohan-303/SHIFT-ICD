@@ -1,0 +1,16 @@
+{
+  "schema": "step11_r2_configuration_grid_v4",
+  "supersedes": "r2_configuration_grid_v3",
+  "scientific_identity_unchanged": true,
+  "configuration_count": 4,
+  "epoch_row_count": 12,
+  "loss_contract_v4_sha256": "76f479de8d3617c0a2d659615be6063466db2d9ec423e6366c16f83c9f700eb4",
+  "loss_implementation_contract_v1_sha256": "911691d8ab765042b1b0189517557472489849e07c0db0c30f81995b1afde9af",
+  "form_weighting_contract_v1_sha256": "eac3a1bd0b0848b9e7635c68dd0153a6b33b5c0dfab8e0e2f74264482a5ed6a4",
+  "configurations": [
+    {"configuration_id":"r2_lr_1e-04_unweighted_primary","learning_rate":0.0001,"imbalance_variant":"UNWEIGHTED_PRIMARY","seed":17,"epochs":[1,2,3],"hidden_dim":64,"S_MAX":6,"L_MAX":3},
+    {"configuration_id":"r2_lr_1e-04_train_derived_form_weighted","learning_rate":0.0001,"imbalance_variant":"TRAIN_DERIVED_FORM_WEIGHTED","seed":17,"epochs":[1,2,3],"hidden_dim":64,"S_MAX":6,"L_MAX":3},
+    {"configuration_id":"r2_lr_3e-04_unweighted_primary","learning_rate":0.0003,"imbalance_variant":"UNWEIGHTED_PRIMARY","seed":17,"epochs":[1,2,3],"hidden_dim":64,"S_MAX":6,"L_MAX":3},
+    {"configuration_id":"r2_lr_3e-04_train_derived_form_weighted","learning_rate":0.0003,"imbalance_variant":"TRAIN_DERIVED_FORM_WEIGHTED","seed":17,"epochs":[1,2,3],"hidden_dim":64,"S_MAX":6,"L_MAX":3}
+  ]
+}

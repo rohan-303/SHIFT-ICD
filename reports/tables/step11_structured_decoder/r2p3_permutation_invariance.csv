@@ -1,0 +1,6 @@
+quantity,result,tolerance
+L_scenario_activity,PASS,1e-7
+L_slot_count,PASS,1e-7
+L_slot_activity,PASS,1e-7
+L_assignment,PASS,1e-7
+total_loss,PASS,1e-7

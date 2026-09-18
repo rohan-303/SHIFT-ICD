@@ -13,5 +13,7 @@ This file records authoritative sources for each publication synchronization.
 - Step 11 R2P authoritative tag: `step11-r2-protocol-complete-frozen`
 - Step 11 R2P2 authoritative source HEAD: `71c634349170bc443da5470acaf7ebfe8e051690`
 - Step 11 R2P2 authoritative tag: `step11-r2-form-weighting-protocol-frozen`
+- Step 11 R2P3 authoritative source HEAD: `8fba5913f0d838c5a89dc8976363398114fc34df`
+- Step 11 R2P3 authoritative tag: `step11-r2-executable-loss-protocol-frozen`
 - Filtering scope: separate publication mirror only; authoritative history is never rewritten.
 - Excluded generated-large-artifact policy remains unchanged; no excluded path was copied in this synchronization.

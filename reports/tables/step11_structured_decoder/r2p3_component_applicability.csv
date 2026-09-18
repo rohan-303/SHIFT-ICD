@@ -1,0 +1,7 @@
+mapping_form,L_form,L_scenario_count,L_scenario_activity,L_slot_count,L_slot_activity,L_assignment,L_flat_set
+NO_MAP,1,1,1,0,0,0,0
+SINGLE_EXACT,1,1,1,0,0,0,1
+SINGLE_APPROXIMATE,1,1,1,0,0,0,1
+ALTERNATIVE,1,1,1,0,0,0,1
+COMBINATION,1,1,1,1,1,1,0
+COMBINATION_WITH_ALTERNATIVES,1,1,1,1,1,1,0

@@ -1,0 +1,8 @@
+component,definition,applicable_forms,normalization
+L_form,six-class cross entropy,all,source mean
+L_scenario_count,scenario count cross entropy,all,source mean
+L_scenario_activity,matched-query BCE,all,mean over S_MAX
+L_slot_count,matched scenario slot-count cross entropy,COMBINATION;COMBINATION_WITH_ALTERNATIVES,matched scenarios then source
+L_slot_activity,matched slot-query BCE,COMBINATION;COMBINATION_WITH_ALTERNATIVES,scenario then source
+L_assignment,candidate-membership BCE,COMBINATION;COMBINATION_WITH_ALTERNATIVES,K then slots then source
+L_flat_set,flat candidate-membership BCE,SINGLE_EXACT;SINGLE_APPROXIMATE;ALTERNATIVE,K then source

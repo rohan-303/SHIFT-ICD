@@ -1,0 +1,8 @@
+head,component,result
+form_head,L_form,PASS
+scenario_count_head,L_scenario_count,PASS
+scenario_activity_head,L_scenario_activity,PASS
+slot_count_head,L_slot_count,PASS
+slot_activity_head,L_slot_activity,PASS
+assignment_head,L_assignment,PASS
+membership_head,L_flat_set,PASS

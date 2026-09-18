@@ -1,0 +1,5 @@
+audit,result
+source_total_is_mean_of_applicable_components,PASS
+batch_total_is_mean_of_source_totals,PASS
+non_applicable_components_excluded,PASS
+form_weighting_only_L_form,PASS

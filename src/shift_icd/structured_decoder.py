@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import json
 from collections.abc import Mapping, Sequence
+from dataclasses import dataclass
 from itertools import permutations
 from typing import Any, Literal
 
@@ -347,40 +348,145 @@ def form_cross_entropy(logits: torch.Tensor, targets: torch.Tensor, class_weight
     selected = class_weights.to(device=logits.device, dtype=logits.dtype)[targets]
     return (values * selected).mean()
 
+@dataclass
+class StructuredLossResult:
+    """Differentiable loss ledger for the single production implementation."""
+
+    total_loss: torch.Tensor
+    L_form: torch.Tensor
+    L_scenario_count: torch.Tensor
+    L_scenario_activity: torch.Tensor
+    L_slot_count: torch.Tensor | None
+    L_slot_activity: torch.Tensor | None
+    L_assignment: torch.Tensor | None
+    L_flat_set: torch.Tensor | None
+    applicable_source_count: dict[str, int]
+    masked_assignment_slot_count: int
+    matched_scenario_count: int
+    matched_slot_count: int
+
+    def __getattr__(self, name: str) -> Any:
+        # Preserve the old smoke-call surface while exposing the ledger.
+        return getattr(self.total_loss, name)
+
+    @classmethod
+    def __torch_function__(cls, func: Any, types: Any, args: Any = (), kwargs: Any = None) -> Any:
+        kwargs = {} if kwargs is None else kwargs
+        if func is torch.isfinite:
+            value = next((arg.total_loss for arg in args if isinstance(arg, cls)), None)
+            return torch.isfinite(value) if value is not None else NotImplemented
+        return func(*tuple(arg.total_loss if isinstance(arg, cls) else arg for arg in args), **kwargs)
+
+    def __gt__(self, other: Any) -> Any:
+        return self.total_loss > (other.total_loss if isinstance(other, StructuredLossResult) else other)
+
+    def __lt__(self, other: Any) -> Any:
+        return self.total_loss < (other.total_loss if isinstance(other, StructuredLossResult) else other)
+
+
+def _component_mean(values: list[torch.Tensor], device: torch.device) -> torch.Tensor | None:
+    return torch.stack(values).mean() if values else None
+
+
+def _mean_applicable(values: list[torch.Tensor], device: torch.device) -> torch.Tensor:
+    return torch.stack(values).mean() if values else torch.zeros((), device=device, requires_grad=True)
+
+
 def structured_assignment_loss(
     outputs: Mapping[str, torch.Tensor],
     structures: Sequence[Mapping[str, Any]],
     candidate_batches: Sequence[Sequence[str]],
     form_class_weights: torch.Tensor | None = None,
-) -> torch.Tensor:
-    """Source-balanced repaired loss with masked missing-slot assignment targets."""
-    losses: list[torch.Tensor] = []
+) -> StructuredLossResult:
+    """Compute the frozen seven-component, permutation-invariant source-balanced loss."""
+    if len(structures) != len(candidate_batches):
+        raise ValueError("structures and candidate_batches must have equal length")
+    device = outputs["form_logits"].device
+    component_values: dict[str, list[torch.Tensor]] = {name: [] for name in (
+        "L_form", "L_scenario_count", "L_scenario_activity", "L_slot_count",
+        "L_slot_activity", "L_assignment", "L_flat_set",
+    )}
+    source_totals: list[torch.Tensor] = []
+    applicability = {name: 0 for name in component_values}
+    masked_slots = matched_scenarios = matched_slots = 0
     for batch_index, (structure, candidates) in enumerate(zip(structures, candidate_batches)):
-        form = _FORM_INDEX[_normal_form(structure)]
-        targets = torch.tensor([form], device=outputs["form_logits"].device)
-        form_ce = form_cross_entropy(outputs["form_logits"][batch_index:batch_index + 1], targets, form_class_weights)
-        source_terms = [form_ce]
+        form_name = _normal_form(structure)
+        form = _FORM_INDEX[form_name]
+        form_target = torch.tensor([form], device=device)
+        source_components: list[torch.Tensor] = []
+        form_loss = form_cross_entropy(outputs["form_logits"][batch_index:batch_index + 1], form_target, form_class_weights)
+        component_values["L_form"].append(form_loss)
+        applicability["L_form"] += 1
+        source_components.append(form_loss)
+        complex_form = form_name in {"COMBINATION", "COMBINATION_WITH_ALTERNATIVES"}
+        scenario_count = len(_sorted_scenarios(structure)) if complex_form else 0
+        count_loss = F.cross_entropy(outputs["scenario_count_logits"][batch_index:batch_index + 1], torch.tensor([scenario_count], device=device))
+        component_values["L_scenario_count"].append(count_loss)
+        applicability["L_scenario_count"] += 1
+        source_components.append(count_loss)
+
         scenarios = _sorted_scenarios(structure)
-        scenario_count = 0 if form < _FORM_INDEX["COMBINATION"] else len(scenarios)
-        source_terms.append(F.cross_entropy(outputs["scenario_count_logits"][batch_index:batch_index + 1], torch.tensor([scenario_count], device=outputs["form_logits"].device)))
-        if form < _FORM_INDEX["COMBINATION"]:
-            target = torch.tensor([1.0 if str(candidate) in structure.get("flat_alternatives", []) else 0.0 for candidate in candidates], device=outputs["form_logits"].device)
-            source_terms.append(F.binary_cross_entropy_with_logits(outputs["membership_logits"][batch_index], target))
-        else:
-            scenario_activity = torch.zeros(MAX_SCENARIOS, device=outputs["form_logits"].device)
-            for scenario_index, scenario in enumerate(scenarios):
-                scenario_activity[scenario_index] = 1.0
-                choices = _sorted_choice_lists(scenario)
-                source_terms.append(F.cross_entropy(outputs["slot_count_logits"][batch_index, scenario_index:scenario_index + 1], torch.tensor([len(choices)], device=outputs["form_logits"].device)))
-                slot_activity = torch.zeros(MAX_SLOTS, device=outputs["form_logits"].device)
-                slot_activity[:len(choices)] = 1.0
-                source_terms.append(F.binary_cross_entropy_with_logits(outputs["slot_activity_logits"][batch_index, scenario_index], slot_activity))
-                for slot_index, choice in enumerate(choices):
-                    valid = [str(target) for target in choice.get("alternatives", []) if str(target) in candidates]
+        scenario_count = len(scenarios) if complex_form else 0
+        scenario_costs = -outputs["scenario_activity_logits"][batch_index].detach().cpu().reshape(MAX_SCENARIOS, 1).expand(MAX_SCENARIOS, max(1, scenario_count))
+        slot_costs = -outputs["slot_activity_logits"][batch_index].detach().cpu().unsqueeze(1).unsqueeze(2).expand(MAX_SCENARIOS, MAX_SLOTS, max(1, scenario_count), MAX_SLOTS)
+        matches = hierarchical_match(structure, scenario_costs, slot_costs) if complex_form else ()
+        matched_query_to_gold = {query: (gold, slots) for query, gold, slots in matches}
+        matched_scenarios += len(matches)
+        matched_slots += sum(len(slots) for _, _, slots in matches)
+        activity_target = torch.zeros(MAX_SCENARIOS, device=device)
+        for query_index in matched_query_to_gold:
+            activity_target[query_index] = 1.0
+        activity_loss = F.binary_cross_entropy_with_logits(outputs["scenario_activity_logits"][batch_index], activity_target)
+        component_values["L_scenario_activity"].append(activity_loss)
+        applicability["L_scenario_activity"] += 1
+        source_components.append(activity_loss)
+
+        if complex_form:
+            slot_count_terms: list[torch.Tensor] = []
+            slot_activity_terms: list[torch.Tensor] = []
+            assignment_terms: list[torch.Tensor] = []
+            scenarios = _sorted_scenarios(structure)
+            for query_index, gold_index, slot_matches in matches:
+                gold_slots = _sorted_choice_lists(scenarios[gold_index])
+                slot_count_terms.append(F.cross_entropy(outputs["slot_count_logits"][batch_index, query_index:query_index + 1], torch.tensor([len(gold_slots)], device=device)))
+                slot_target = torch.zeros(MAX_SLOTS, device=device)
+                for query_slot, _ in slot_matches:
+                    slot_target[query_slot] = 1.0
+                slot_activity_terms.append(F.binary_cross_entropy_with_logits(outputs["slot_activity_logits"][batch_index, query_index], slot_target))
+                for query_slot, gold_slot in slot_matches:
+                    valid = {str(target) for target in gold_slots[gold_slot].get("alternatives", []) if str(target) in {str(c) for c in candidates}}
                     if not valid:
+                        masked_slots += 1
                         continue
-                    assignment_target = torch.tensor([1.0 if str(candidate) in valid else 0.0 for candidate in candidates], device=outputs["form_logits"].device)
-                    source_terms.append(F.binary_cross_entropy_with_logits(outputs["assignment_logits"][batch_index, :, scenario_index, slot_index], assignment_target))
-            source_terms.append(F.binary_cross_entropy_with_logits(outputs["scenario_activity_logits"][batch_index], scenario_activity))
-        losses.append(torch.stack(source_terms).mean())
-    return torch.stack(losses).mean()
+                    target = torch.tensor([1.0 if str(candidate) in valid else 0.0 for candidate in candidates], device=device)
+                    assignment_terms.append(F.binary_cross_entropy_with_logits(outputs["assignment_logits"][batch_index, :, query_index, query_slot], target))
+            for name, values in (("L_slot_count", slot_count_terms), ("L_slot_activity", slot_activity_terms), ("L_assignment", assignment_terms)):
+                if values:
+                    value = torch.stack(values).mean()
+                    component_values[name].append(value)
+                    applicability[name] += 1
+                    source_components.append(value)
+            # No synthetic zero is inserted for a non-applicable structural component.
+        elif form_name in {"SINGLE_EXACT", "SINGLE_APPROXIMATE", "ALTERNATIVE"}:
+            target = torch.tensor([1.0 if str(candidate) in {str(x) for x in structure.get("flat_alternatives", [])} else 0.0 for candidate in candidates], device=device)
+            flat_loss = F.binary_cross_entropy_with_logits(outputs["membership_logits"][batch_index], target)
+            component_values["L_flat_set"].append(flat_loss)
+            applicability["L_flat_set"] += 1
+            source_components.append(flat_loss)
+        source_totals.append(torch.stack(source_components).mean())
+    if not source_totals:
+        raise ValueError("loss requires at least one source")
+    return StructuredLossResult(
+        total_loss=torch.stack(source_totals).mean(),
+        L_form=_mean_applicable(component_values["L_form"], device),
+        L_scenario_count=_mean_applicable(component_values["L_scenario_count"], device),
+        L_scenario_activity=_mean_applicable(component_values["L_scenario_activity"], device),
+        L_slot_count=_component_mean(component_values["L_slot_count"], device),
+        L_slot_activity=_component_mean(component_values["L_slot_activity"], device),
+        L_assignment=_component_mean(component_values["L_assignment"], device),
+        L_flat_set=_component_mean(component_values["L_flat_set"], device),
+        applicable_source_count=applicability,
+        masked_assignment_slot_count=masked_slots,
+        matched_scenario_count=matched_scenarios,
+        matched_slot_count=matched_slots,
+    )

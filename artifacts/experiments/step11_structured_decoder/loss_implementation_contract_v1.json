@@ -1,0 +1,46 @@
+{
+  "schema": "step11_loss_implementation_contract_v1",
+  "status": "FROZEN_PRE_OUTCOME",
+  "production_module": "src/shift_icd/structured_decoder.py",
+  "production_function": "structured_assignment_loss",
+  "result_type": "StructuredLossResult",
+  "components": [
+    "L_form",
+    "L_scenario_count",
+    "L_scenario_activity",
+    "L_slot_count",
+    "L_slot_activity",
+    "L_assignment",
+    "L_flat_set"
+  ],
+  "applicability": {
+    "NO_MAP": ["L_form", "L_scenario_count", "L_scenario_activity"],
+    "SINGLE_EXACT": ["L_form", "L_scenario_count", "L_scenario_activity", "L_flat_set"],
+    "SINGLE_APPROXIMATE": ["L_form", "L_scenario_count", "L_scenario_activity", "L_flat_set"],
+    "ALTERNATIVE": ["L_form", "L_scenario_count", "L_scenario_activity", "L_flat_set"],
+    "COMBINATION": ["L_form", "L_scenario_count", "L_scenario_activity", "L_slot_count", "L_slot_activity", "L_assignment"],
+    "COMBINATION_WITH_ALTERNATIVES": ["L_form", "L_scenario_count", "L_scenario_activity", "L_slot_count", "L_slot_activity", "L_assignment"]
+  },
+  "component_semantics": {
+    "L_form": "six-class cross entropy; optional frozen TRAIN-derived class weight applies only here",
+    "L_scenario_count": "cross entropy over 0..S_MAX; canonical complex scenario count and zero for non-complex forms",
+    "L_scenario_activity": "BCE over S_MAX queries after hierarchical matching; matched queries one, unmatched queries zero",
+    "L_slot_count": "cross entropy over 0..L_MAX for matched active scenario queries only",
+    "L_slot_activity": "BCE over L_MAX slot queries within each matched active scenario",
+    "L_assignment": "candidate-membership BCE over K for matched applicable slots; zero-valid slots masked",
+    "L_flat_set": "candidate-membership BCE over K for simple mappable forms only; complex forms do not use it"
+  },
+  "hierarchical_match": {
+    "path": "src/shift_icd/structured_decoder.py::hierarchical_match",
+    "order": "called before scenario/slot/assignment structural targets are constructed",
+    "tie_break": "query index",
+    "cost_inputs": "detached scenario and slot activity logits; matching is discrete and supervision remains differentiable"
+  },
+  "normalization": "candidate membership within slot, slots within scenario, applicable structural terms within source; equal arithmetic mean of applicable component scalars per source; mean source totals across batch",
+  "non_applicable": "omitted from source denominator and component denominator; represented as null when no source is applicable",
+  "assignment_masking": "skip a required slot when no gold alternative is present in the frozen candidate universe",
+  "form_weighting_contract_v1_sha256": "eac3a1bd0b0848b9e7635c68dd0153a6b33b5c0dfab8e0e2f74264482a5ed6a4",
+  "loss_contract_v3_sha256": "f1a246b581199e45cf06f2cf9b39bb084977ca7cd1b86b23921b2bbf1e77e959",
+  "component_ledger_fields": ["total_loss", "L_form", "L_scenario_count", "L_scenario_activity", "L_slot_count", "L_slot_activity", "L_assignment", "L_flat_set", "applicable_source_count", "masked_assignment_slot_count", "matched_scenario_count", "matched_slot_count"],
+  "pre_outcome_statement": "LOSS_IMPLEMENTATION_REPAIR_OCCURRED_BEFORE_ANY_R2_SCIENTIFIC_RESULT"
+}

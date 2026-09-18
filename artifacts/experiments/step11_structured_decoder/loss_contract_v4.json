@@ -1,0 +1,16 @@
+{
+  "schema": "step11_loss_contract_v4",
+  "status": "FROZEN_PRE_OUTCOME",
+  "supersedes": "loss_contract_v3",
+  "loss_contract_v3_sha256": "f1a246b581199e45cf06f2cf9b39bb084977ca7cd1b86b23921b2bbf1e77e959",
+  "loss_implementation_contract_v1_sha256": "911691d8ab765042b1b0189517557472489849e07c0db0c30f81995b1afde9af",
+  "form_weighting_contract_v1_sha256": "eac3a1bd0b0848b9e7635c68dd0153a6b33b5c0dfab8e0e2f74264482a5ed6a4",
+  "components": ["L_form", "L_scenario_count", "L_scenario_activity", "L_slot_count", "L_slot_activity", "L_assignment", "L_flat_set"],
+  "matching": "production structured_assignment_loss calls hierarchical_match before structural supervision; deterministic exhaustive matching with query-index tie-break",
+  "aggregation": "equal arithmetic mean of applicable component losses within each source, then arithmetic mean of source totals",
+  "flat_set_scope": ["SINGLE_EXACT", "SINGLE_APPROXIMATE", "ALTERNATIVE"],
+  "flat_set_excluded": ["NO_MAP", "COMBINATION", "COMBINATION_WITH_ALTERNATIVES"],
+  "assignment_mask": "skip a matched gold slot with zero candidate-contained valid alternatives",
+  "non_applicable": "excluded from source and component denominators; no synthetic zero",
+  "pre_outcome_statement": "V4 IMPLEMENTATION RECONCILIATION OCCURRED BEFORE ANY R2 SCIENTIFIC RESULT"
+}
